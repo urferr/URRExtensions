@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: IDE Bundle for com.profidata.risk.commons
+Bundle-SymbolicName: com.profidata.risk.commons
+Bundle-Version: 0.0.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.profidata.xc.risk.domain,
+ com.profidata.xentis.domain.unified.attribute,
+ com.profidata.xentis.domain.unified.code,
+ com.profidata.xentis.domain.unified.impl.position,
+ com.profidata.xentis.domain.unified.position,
+ com.xnife.core.jaxb.adapter,
+ org.joda.time
+Export-Package: com.profidata.risk.commons
