@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+extraProperties=sonar.skipDesign\=true\r\nsonar.jdbc.username\=sonar\r\nsonar.jdbc.driver\=com.mysql.jdbc.Driver\r\nsonar.host.url\=http\://172.20.1.174\:9000\r\nsonar.profile\=javamis\r\nsonar.projectVersion\=5.2.0.1-SNAPSHOT\r\nsonar.jdbc.password\=sonar123\r\nsonar.skipPackageDesign\=true\r\nsonar.jdbc.url\=jdbc\:mysql\://172.20.1.174\:3306/sonar?useUnicode\=true\r\nsonar.sourceEncoding\=Cp1252
+projectKey=com.profidata.xnife\:com.xnife.domain
+serverUrl=http\://pdxenlin60\:9000
+version=2
