@@ -7,6 +7,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: com.xnife.core.jaxb.adapter,
  com.xnife.core.tuple,
  com.xnife.domain,
+ com.xnife.util,
  org.apache.commons.lang,
  org.apache.commons.lang.builder,
  org.joda.time
