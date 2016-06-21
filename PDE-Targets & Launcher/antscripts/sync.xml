@@ -1,0 +1,58 @@
+<project name="Sync Development Libraries" default="">
+	<property name="xentis.server.lib" value="${xentis.home}/packages/XENTIS/lib" />
+	<property name="workspace.loc" value="${basedir}" />
+
+	<target name="sincJavAMIS" depends="-checkprerequisites" description="updates the JavAMIS libraries on the development server">
+		<echo>workspace.loc: ${workspace.loc}</echo>
+		<echo>xentis.server.lib: ${xentis.server.lib}</echo>
+		<echo>maven.build.version: ${maven.build.version}</echo>
+
+		<copy todir="${xentis.server.lib}" overwrite="true" verbose="true" flatten="true">
+			<fileset dir="${workspace.loc}">
+				<include name="JavAMIS/JavAMIS/target/com.profidata.javamis-${maven.build.version}.jar" />
+				<include name="JavAMIS/XentisBODomain/target/com.profidata.xentis.bodomain-${maven.build.version}.jar" />
+				<include name="JavAMIS/XentisBOServer/target/com.profidata.xentis.server-${maven.build.version}.jar" />
+				<include name="JavAMIS/XentisBOClient/target/com.profidata.xentis.client-${maven.build.version}.jar" />
+
+				<include name="JavAMISXC/com.profidata.xnife.javamisxc/target/com.profidata.xnife.javamisxc-${maven.build.version}.jar" />
+				<include name="JavAMISXC/com.profidata.compxc.javamisxc/target/com.profidata.compxc.javamisxc-${maven.build.version}.jar" />
+
+				<!--
+				<include name="JavAMIS/com.profidata.xentis.collateral.shared/target/com.profidata.xentis.collateral.shared-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.collateral.server/target/com.profidata.xentis.collateral.server-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.collateral.client/target/com.profidata.xentis.collateral.client-${maven.build.version}.jar" />
+				-->
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="sincJavAMISXC" depends="-checkprerequisites" description="updates the JavAMISXC libraries on the development server">
+		<echo>workspace.loc: ${workspace.loc}</echo>
+		<echo>xentis.server.lib: ${xentis.server.lib}</echo>
+		<echo>maven.build.version: ${maven.build.version}</echo>
+
+		<copy todir="${xentis.server.lib}" overwrite="true" verbose="true" flatten="true">
+			<fileset dir="${workspace.loc}">
+				<include name="JavAMISXC/JavAMISXC/target/com.profidata.javamisxc-${maven.build.version}.jar" />
+				<include name="JavAMISXC/com.profidata.xnife.javamisxc/target/com.profidata.xnife.javamisxc-${maven.build.version}.jar" />
+				<include name="JavAMISXC/com.profidata.compxc.javamisxc/target/com.profidata.compxc.javamisxc-${maven.build.version}.jar" />
+			</fileset>
+		</copy>
+	</target>
+
+
+	<!-- global helpers -->
+	<target name="-checkprerequisites">
+		<check-required-property propertyname="basedir" />
+		<check-required-property propertyname="xentis.home" />
+		<check-required-property propertyname="maven.build.version" />
+	</target>
+
+	<macrodef name="check-required-property">
+		<attribute name="propertyName" />
+		<sequential>
+			<fail message="The required property '@{propertyName}' is not specified -- use '-D@{propertyName}=value' as command line argument (or set property in calling ant script)" unless="@{propertyName}" />
+		</sequential>
+	</macrodef>
+</project>
+

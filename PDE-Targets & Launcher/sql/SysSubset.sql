@@ -1,0 +1,7 @@
+select * from SYSCODE s where s.SYSCODE_ID = '1051000000045000';
+
+select * from SYSSUBSET s2 where s2.SYSCODEPARENT_ID = '1051000007000007';
+
+select * from SYSCODE s where s.SYSCODE_ID in (select s2.SYSCODECHILD_ID from SYSSUBSET s2 where s2.SYSCODEPARENT_ID = '1051000007000007');
+
+select * from TABBEZ t where t.REF_ID in (select s.SYSCODE_ID from SYSCODE s where s.SYSCODE_ID in (select s2.SYSCODECHILD_ID from SYSSUBSET s2 where s2.SYSCODEPARENT_ID = '1051000000015004'))

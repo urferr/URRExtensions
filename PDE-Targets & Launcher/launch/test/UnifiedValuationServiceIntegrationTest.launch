@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.junit.launchconfig">
+<setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/com.compxc.data.service.integration.test/src/com/compxc/data/service/unified/integration/test/UnifiedValuationServiceIntegrationTest.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="BO_HOSTNAME" value="pdxenlin51"/>
+<mapEntry key="BO_RMI_PORT" value="7360"/>
+</mapAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.junit.CONTAINER" value=""/>
+<booleanAttribute key="org.eclipse.jdt.junit.KEEPRUNNING_ATTR" value="false"/>
+<stringAttribute key="org.eclipse.jdt.junit.TESTNAME" value=""/>
+<stringAttribute key="org.eclipse.jdt.junit.TEST_KIND" value="org.eclipse.jdt.junit.loader.junit4"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.compxc.data.service.unified.integration.test.UnifiedValuationServiceIntegrationTest"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.compxc.data.service.integration.test"/>
+</launchConfiguration>

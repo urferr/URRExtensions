@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="XC One Server Product" uid="xc.one.server" application="org.eclipse.ui.ide.workbench" version="0.0.0" useFeatures="true" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-console
+      </programArgs>
+      <programArgsLin>-os linux -ws gtk -arch x86_64
+      </programArgsLin>
+      <vmArgs>-Declipse.ignoreApp=true
+-Dosgi.noShutdown=true
+-Dosgi.clean=true
+-Dosgi.parentClassloader=ext
+
+-Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook
+-Daj.weaving.verbose=true
+-Dorg.aspectj.osgi.verbose=true
+-Dorg.aspectj.weaver.showWeaveInfo=true
+
+-Dcom.xnife.logging.propertiesLocation=/com/profidata/xc/one/server/configuration/logging.properties
+-Dcom.xnife.logging.level.com.xnife.cache.impl.index=warn
+-Dcom.xnife.logging.level.org.hibernate.tool.hbm2ddl=info
+-Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
+-Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor.com.compxc.data.service.instrument.service.ValorDelegatedElementContainer=info
+-Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor.com.compxc.data.service.kennzahlbroker.service.KennzahlBrokerService=info
+-Dcom.xnife.logging.level.com.xnife.objectquery.plan.executor.ExecutionPlanExecutorImpl=trace
+
+-Dcom.xnife.logging.level.oracle.ucp.common=trace
+
+-Dorg.osgi.service.http.port=4196
+-Dorg.eclipse.equinox.http.jetty.http.port=4196
+
+-Doracle.net.tns_admin=${env_var:TNS_ADMIN}
+
+-Dcom.sun.management.jmxremote.port=4199
+-Dcom.sun.management.jmxremote.ssl=false
+-Dcom.sun.management.jmxremote.authenticate=false
+
+-ea
+-Xms256m
+-Xmx2048m
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:+UnlockCommercialFeatures 
+-XX:+FlightRecorder
+
+-XX:+UseG1GC
+-XX:MaxGCPauseMillis=50
+-XX:GCPauseIntervalMillis=1000
+-XX:+UseStringDeduplication
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+   </launcherArgs>
+
+   <windowImages/>
+
+   <launcher name="xcServer">
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="_com.profidata.xc.one.server.feature"/>
+      <feature id="_com.profidata.xc.one.server.frontoffice.feature"/>
+      <feature id="_com.compxc.xentis.feature"/>
+      <feature id="_com.compxc.eclipse.feature"/>
+   </features>
+
+   <configurations>
+      <plugin id="com.compxc.persistence" autoStart="true" startLevel="0" />
+      <plugin id="com.compxc.security.backoffice.remote.proxy" autoStart="true" startLevel="0" />
+      <plugin id="com.compxc.server.remote" autoStart="true" startLevel="0" />
+      <plugin id="com.compxc.transaction" autoStart="true" startLevel="0" />
+      <plugin id="com.compxc.translation.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.compxc.translation.service.sql" autoStart="true" startLevel="0" />
+      <plugin id="com.eclipsesource.jaxrs.provider.gson" autoStart="true" startLevel="3" />
+      <plugin id="com.eclipsesource.jaxrs.publisher" autoStart="true" startLevel="3" />
+      <plugin id="com.profidata.xc.authentication.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.calendar.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.cashflow.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.codevalue.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.corporation.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.data.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.data.service.remote.proxy" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.flexibleentity.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.frontoffice.businessintelligence.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.frontoffice.cacheloader.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.frontoffice.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.frontoffice.servicefacade.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.fund.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.instrument.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.localization.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.metadata.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.objectquery.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.one.server.configuration" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.one.server.monitor" autoStart="true" startLevel="2" />
+      <plugin id="com.profidata.xc.optimizer.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.order.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.order.servicefacade.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.persistence.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.portfolio.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.position.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.rest.admin.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.rest.analysis.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.rest.common.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.rest.investmentcompliance.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.rest.order.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.rule.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.trx.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.unified.service.impl" autoStart="true" startLevel="0" />      
+      <plugin id="com.profidata.xc.valutaposition.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.context.persistence" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.context.remote" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.context.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.environment" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.http.server" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.remoting.server" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.security.remote" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.tools.jmx.osgiconsole" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.cm" autoStart="true" startLevel="3" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.http.jetty" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.http.servlet" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.gemini.blueprint.extender" autoStart="true" startLevel="3" />
+   </configurations>
+
+</product>
