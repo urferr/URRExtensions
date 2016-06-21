@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
+<booleanAttribute key="append.args" value="true"/>
+<stringAttribute key="application" value="com.compxc.workbench.presentation.application"/>
+<booleanAttribute key="askclear" value="true"/>
+<booleanAttribute key="automaticAdd" value="false"/>
+<booleanAttribute key="automaticValidate" value="false"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="true"/>
+<booleanAttribute key="clearws" value="true"/>
+<booleanAttribute key="clearwslog" value="false"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/xc.one.client.osgi.urr.local.product"/>
+<booleanAttribute key="default" value="false"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<stringAttribute key="location" value="${workspace_loc}/../runtime-xc.one.client.osgi.urr.local.product"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="XC_HOSTNAME" value="localhost"/>
+<mapEntry key="XC_HTTP_PORT" value="4196"/>
+</mapAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console -plugincustomization platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini -clearPersistedState"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dosgi.clean=true -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dcom.xnife.runtime.mode=DEVELOPMENT -Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective -Deamis.home=platform:/plugin/JavAMIS/xentis-externals -Dcom.xnife.logging.propertiesLocation=/com/profidata/xc/one/client/configuration/logging.properties -Dcom.xnife.logging.level.com.xnife.remoting.messaging.jms=debug -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -ea -Xms512m -Xmx1024m -XX:+UnlockCommercialFeatures -XX:+FlightRecorder -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -XX:GCPauseIntervalMillis=1000 -XX:+UseStringDeduplication"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<stringAttribute key="product" value="_com.profidata.xc.one.client.build.product.xcClient"/>
+<stringAttribute key="productFile" value="\PDE-Targets &amp; Launcher\products\xc.one.client.osgi.product"/>
+<stringAttribute key="selected_workspace_plugins" value="JavAMIS@default:true,_com.profidata.xc.one.client.build.product@default:default,com.compxc.admin.presentation@default:default,com.compxc.backoffice.application@default:true,com.compxc.backoffice.presentation@default:default,com.compxc.calculationengine@default:default,com.compxc.common.domain@default:default,com.compxc.common.metadata@default:default,com.compxc.common.persistence@default:default,com.compxc.customizing.help@default:default,com.compxc.frontoffice.application@default:default,com.compxc.frontoffice.common@default:default,com.compxc.frontoffice.help@default:default,com.compxc.frontoffice.presentation@default:default,com.compxc.keyfigure@default:default,com.compxc.order.domain@default:default,com.compxc.order.presentation@default:default,com.compxc.platform.common@default:default,com.compxc.platform.domain@default:default,com.compxc.server.remote.proxy@default:true,com.compxc.version@default:default,com.compxc.workbench.application@default:default,com.compxc.workbench.branding@default:default,com.compxc.workbench.lookandfeel@default:default,com.compxc.workbench.presentation@default:true,com.profidata.reporting.common@default:default,com.profidata.xc.aspectj.eclipse.e4.workbench.addon@default:default,com.profidata.xc.codevalue.server.remote.proxy@default:false,com.profidata.xc.codevalue@default:default,com.profidata.xc.customizingconsole.application@default:true,com.profidata.xc.customizingconsole.presentation@default:default,com.profidata.xc.customizingconsole.server.remote.proxy@default:false,com.profidata.xc.customizingconsole@default:default,com.profidata.xc.data.service.domain@default:default,com.profidata.xc.data.service@default:default,com.profidata.xc.frontoffice.server.remote.proxy@default:false,com.profidata.xc.frontoffice@default:default,com.profidata.xc.localization.server.remote.proxy@default:false,com.profidata.xc.localization@default:default,com.profidata.xc.metadata.server.remote.proxy@default:false,com.profidata.xc.metadata@default:default,com.profidata.xc.objectquery.server.remote.proxy@default:false,com.profidata.xc.objectquery@default:default,com.profidata.xc.one.client.configuration@default:true,com.profidata.xc.one.client.logback.configuration@default:false,com.profidata.xc.optimizer@default:default,com.profidata.xc.order@default:default,com.profidata.xc.orderblotter.server.remote.proxy@default:false,com.profidata.xc.persistence.server.remote.proxy@default:false,com.profidata.xc.persistence@default:default,com.profidata.xc.rule.server.remote.proxy@default:false,com.profidata.xc.rule@default:default,com.profidata.xentis.fix.engine.commons@default:default,com.xnife.albireo.core@default:default,com.xnife.application@default:default,com.xnife.aspectj.eclipse.e4.workbench.addon@default:default,com.xnife.aspectj.eclipse.equinox.localization@default:default,com.xnife.aspectj.eclipse.jface@default:default,com.xnife.aspectj.eclipse.workbench@default:default,com.xnife.aspectj.nebula.widgets.patch@default:default,com.xnife.browser.presentation@default:default,com.xnife.cache@default:default,com.xnife.context.application@default:true,com.xnife.context.remote.proxy@default:true,com.xnife.context.remoting@default:default,com.xnife.context@default:default,com.xnife.contract@default:default,com.xnife.core@default:default,com.xnife.domain@default:default,com.xnife.environment@default:default,com.xnife.exception@default:default,com.xnife.http@default:default,com.xnife.localization@default:default,com.xnife.logging.bridge.jakarta.commons.logging@default:false,com.xnife.logging.bridge.jboss.logging@default:default,com.xnife.logging.bridge.log4j@default:default,com.xnife.logging.slf4j.logback@default:false,com.xnife.logging@default:default,com.xnife.metadata@default:default,com.xnife.nebula.widgets.grid@default:default,com.xnife.objectquery@default:default,com.xnife.osgi@default:default,com.xnife.persistence.hibernate@default:default,com.xnife.persistence@default:default,com.xnife.presentation.integration.ole@default:default,com.xnife.presentation@default:default,com.xnife.remoting.client@default:true,com.xnife.remoting@default:default,com.xnife.resource@default:default,com.xnife.security.application@default:true,com.xnife.security.remote.proxy@default:true,com.xnife.security@default:default,com.xnife.service@default:default,com.xnife.spring.osgi@default:default,com.xnife.spring@default:default,com.xnife.tools.osgi.command@default:default,com.xnife.tools.rcp.configurator@default:default,com.xnife.widgets.togglegroup@default:default"/>
+<booleanAttribute key="show_selected_only" value="false"/>
+<stringAttribute key="timestamp" value="1347896986497"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useCustomFeatures" value="false"/>
+<booleanAttribute key="useDefaultConfig" value="true"/>
+<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<booleanAttribute key="useProduct" value="true"/>
+<booleanAttribute key="usefeatures" value="false"/>
+</launchConfiguration>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>PDE-Targets &amp; Launcher</name>
+	<comment></comment>
+	<projects>
+		<project>com.profidata.xc.workflow.server.URR</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.dell.toadext.editors.project.ToadextProjectBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.dell.toadext.ToadextNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>javamis-config</name>
+			<type>2</type>
+			<locationURI>WORKSPACE_LOC/JavAMIS/JavAMIS/xentis-externals/Resources/config</locationURI>
+		</link>
+		<link>
+			<name>targets/XC.target</name>
+			<type>1</type>
+			<locationURI>WORKSPACE_LOC/xc_tools/ProfidataEclipsePreferrences/target/XC.target</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>

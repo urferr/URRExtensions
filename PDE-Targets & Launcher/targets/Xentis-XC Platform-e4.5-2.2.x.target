@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?><target name="XC Targetplatform Blueprint 2.0" sequenceNumber="60">
+<locations>
+<location path="${pde-targets}\xc-target.platform-e45-2.2.x_BLUEPRINT20" type="Directory"/>
+</locations>
+</target>

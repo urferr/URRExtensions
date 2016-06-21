@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="XC One Client Product" uid="xc.one.client" id="_com.profidata.xc.one.client.build.product.xcClient" application="com.compxc.workbench.presentation.application" version="0.0.0" useFeatures="true" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="/com.compxc.workbench.branding/images/about/about.gif"/>
+      <text>
+         %aboutText
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+      <linux>/_com.compxc.fo.client.build.product/configuration/config.ini</linux>
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-console 
+-plugincustomization 
+platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini
+-clearPersistedState
+      </programArgs>
+      <vmArgs>-Dosgi.clean=true
+
+-Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook
+-Daj.weaving.verbose=true
+-Dorg.aspectj.osgi.verbose=true
+-Dorg.aspectj.weaver.showWeaveInfo=true
+
+-Deamis.home=platform:/plugin/JavAMIS/xentis-externals
+
+-Dcom.xnife.runtime.mode=DEVELOPMENT
+-Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective
+
+-Dcom.xnife.logging.propertiesLocation=/com/profidata/xc/one/client/configuration/logging.properties
+-Dcom.xnife.logging.level.com.xnife.remoting.messaging.jms=debug
+-Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
+
+-ea
+-Xms512m
+-Xmx1024m
+-XX:+UnlockCommercialFeatures 
+-XX:+FlightRecorder
+
+-XX:+UseG1GC
+-XX:MaxGCPauseMillis=50
+-XX:GCPauseIntervalMillis=1000
+-XX:+UseStringDeduplication
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="/com.compxc.workbench.branding/images/ApplicationWindowIcon_16x16.gif" i32="/com.compxc.workbench.branding/images/ApplicationWindowIcon_32x32.gif"/>
+
+   <splash
+      location="com.compxc.workbench.branding"
+      startupProgressRect="30,305,260,10" />
+   <launcher name="xcClient">
+      <solaris/>
+      <win useIco="true">
+         <ico path="/com.compxc.workbench.branding/images/DesktopAndLauncherIcon.ico"/>
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="_com.profidata.xc.one.client.feature"/>
+      <feature id="_com.profidata.xc.one.client.customizingconsole.feature"/>
+      <feature id="_com.profidata.xc.one.client.frontoffice.feature"/>
+      <feature id="_com.profidata.xc.one.client.middleoffice.feature"/>
+      <feature id="_com.profidata.xc.one.client.backoffice.feature"/>
+      <feature id="_com.compxc.xentis.rcp.feature"/>
+      <feature id="_com.compxc.eclipse.rcp.feature"/>
+      <feature id="_com.compxc.eclipse4.spy.feature"/>
+   </features>
+
+   <configurations>
+      <plugin id="JavAMIS" autoStart="true" startLevel="0" />
+      <plugin id="com.compxc.backoffice.application" autoStart="true" startLevel="0" />
+      <plugin id="com.compxc.server.remote.proxy" autoStart="true" startLevel="0" />
+      <plugin id="com.compxc.workbench.presentation" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.customizingconsole.application" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.one.client.configuration" autoStart="true" startLevel="0" />
+      <plugin id="com.profidatagroup.javamis.stub" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.context.application" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.context.remote.proxy" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.remoting.client" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.security.application" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.security.remote.proxy" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.gemini.blueprint.extender" autoStart="true" startLevel="0" />
+   </configurations>
+
+</product>

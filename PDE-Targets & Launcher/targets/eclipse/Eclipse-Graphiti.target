@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?><target name="Eclipse-Graphiti" sequenceNumber="2">
+<locations>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.graphiti.export.feature.feature.group" version="0.12.2.v20160120-1255"/>
+<unit id="org.eclipse.graphiti.sdk.feature.feature.group" version="0.12.2.v20160120-1255"/>
+<repository location="http://download.eclipse.org/releases/mars"/>
+</location>
+</locations>
+</target>

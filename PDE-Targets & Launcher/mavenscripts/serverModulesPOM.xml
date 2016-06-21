@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.profidata.xentis</groupId>
+		<artifactId>com.profidata.xentis.parent</artifactId>
+		<version>5.2.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.profidata.xentis</groupId>
+	<artifactId>com.profidata.common.master</artifactId>
+	<version>5.2.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>../../URRExtensions/maven/com.xnife.core.maven</module>
+		<module>../../JavAMIS/com.profidatagroup.xentis.jni.common</module>
+		<module>../../JavAMIS/com.profidata.xentis.env.shared</module>
+		<module>../../JavAMIS/com.profidata.xentis.jms.shared</module>
+		<module>../../JavAMIS/XentisBODomain</module>
+		<module>../../URRExtensions/maven/com.xnife.domain.maven</module>
+		<module>../../URRExtensions/maven/com.profidata.xnife.javamisxc.urr</module>
+		<module>../../URRExtensions/maven/com.profidata.compxc.javamisxc.urr</module>
+		<module>../../JavAMIS/com.profidata.xentis.domain.unified</module>
+		<module>../../JavAMIS/com.profidata.xentis.env.server</module>
+		<module>../../JavAMIS/com.profidata.xentis.jms.server</module>
+		<module>../../JavAMIS/com.profidatagroup.xentis.jni</module>
+		<module>../../JavAMIS/com.profidata.xentis.sn</module>
+		<module>../../JavAMIS/com.profidata.xentis.server.bloomberg</module>
+		<module>../../URRExtensions/maven/com.profidata.javamis</module>
+		<module>../../JavAMISXC/JavAMISXC</module>
+		<module>../../xrs/com.profidata.risk.commons</module>
+		<module>../../xrs/com.profidata.xc.risk.domain</module>
+	</modules>
+
+</project>
