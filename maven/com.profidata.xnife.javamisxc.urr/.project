@@ -41,12 +41,12 @@
 		<link>
 			<name>src-domain</name>
 			<type>2</type>
-			<location>D:/JavaProjects/xc52/workspace520/xnife/main/com.xnife.domain/src</location>
+			<location>WORKSPACE_LOC/xnife/main/com.xnife.domain/src</location>
 		</link>
 		<link>
 			<name>src-environment</name>
 			<type>2</type>
-			<location>D:/JavaProjects/xc52/workspace520/xnife/main/com.xnife.environment/src</location>
+			<location>WORKSPACE_LOC/xnife/main/com.xnife.environment/src</location>
 		</link>
 		<link>
 			<name>src-localization</name>
