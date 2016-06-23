@@ -39,5 +39,6 @@ Export-Package: com.profidata.xentis.domain.unified,
  com.profidata.xentis.domain.unified.instrument.swap,
  com.profidata.xentis.domain.unified.instrument.swap.leg,
  com.profidata.xentis.domain.unified.position,
+ com.profidata.xentis.domain.unified.profile,
  com.profidata.xentis.domain.unified.valuation,
  com.profidata.xentis.domain.unified.value
