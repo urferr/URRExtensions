@@ -1,45 +1,36 @@
-<project name="Sync Development Libraries" default="">
+<project name="Sync Development Libraries" default="syncXentisServer">
 	<property name="xentis.server.lib" value="${xentis.home}/packages/XENTIS/lib" />
 	<property name="workspace.loc" value="${basedir}" />
 
-	<target name="sincJavAMIS" depends="-checkprerequisites" description="updates the JavAMIS libraries on the development server">
+	<target name="syncXentisServer" depends="-checkprerequisites" description="updates all Xentis server libraries on the development server">
 		<echo>workspace.loc: ${workspace.loc}</echo>
 		<echo>xentis.server.lib: ${xentis.server.lib}</echo>
 		<echo>maven.build.version: ${maven.build.version}</echo>
 
 		<copy todir="${xentis.server.lib}" overwrite="true" verbose="true" flatten="true">
 			<fileset dir="${workspace.loc}">
-				<include name="JavAMIS/JavAMIS/target/com.profidata.javamis-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.core.maven/target/com.xnife.core-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidatagroup.xentis.jni.common/target/com.profidata.xentis.jni.common-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.env.shared/target/com.profidata.xentis.env.shared-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.jms.shared/target/com.profidata.xentis.jms.shared-${maven.build.version}.jar" />
 				<include name="JavAMIS/XentisBODomain/target/com.profidata.xentis.bodomain-${maven.build.version}.jar" />
-				<include name="JavAMIS/XentisBOServer/target/com.profidata.xentis.server-${maven.build.version}.jar" />
-				<include name="JavAMIS/XentisBOClient/target/com.profidata.xentis.client-${maven.build.version}.jar" />
-
-				<include name="JavAMISXC/com.profidata.xnife.javamisxc/target/com.profidata.xnife.javamisxc-${maven.build.version}.jar" />
-				<include name="JavAMISXC/com.profidata.compxc.javamisxc/target/com.profidata.compxc.javamisxc-${maven.build.version}.jar" />
-
-				<!--
-				<include name="JavAMIS/com.profidata.xentis.collateral.shared/target/com.profidata.xentis.collateral.shared-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.collateral.server/target/com.profidata.xentis.collateral.server-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.collateral.client/target/com.profidata.xentis.collateral.client-${maven.build.version}.jar" />
-				-->
-			</fileset>
-		</copy>
-	</target>
-
-	<target name="sincJavAMISXC" depends="-checkprerequisites" description="updates the JavAMISXC libraries on the development server">
-		<echo>workspace.loc: ${workspace.loc}</echo>
-		<echo>xentis.server.lib: ${xentis.server.lib}</echo>
-		<echo>maven.build.version: ${maven.build.version}</echo>
-
-		<copy todir="${xentis.server.lib}" overwrite="true" verbose="true" flatten="true">
-			<fileset dir="${workspace.loc}">
+				<include name="URRExtensions/maven/com.xnife.domain.maven/target/com.xnife.domain-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.profidata.xnife.javamisxc.urr/target/com.profidata.xnife.javamisxc-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.profidata.compxc.javamisxc.urr/target/com.profidata.compxc.javamisxc-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.domain.unified/target/com.profidata.xentis.domain.unified-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.env.server/target/com.profidata.xentis.env.server-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.jms.server/target/com.profidata.xentis.jms.server-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidatagroup.xentis.jni/target/com.profidata.xentis.jni-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.sn/target/com.profidata.xentis.sn-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.server.bloomberg/target/com.profidata.xentis.server.bloomberg-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.profidata.javamis/target/com.profidata.javamis-${maven.build.version}.jar" />
 				<include name="JavAMISXC/JavAMISXC/target/com.profidata.javamisxc-${maven.build.version}.jar" />
-				<include name="JavAMISXC/com.profidata.xnife.javamisxc/target/com.profidata.xnife.javamisxc-${maven.build.version}.jar" />
-				<include name="JavAMISXC/com.profidata.compxc.javamisxc/target/com.profidata.compxc.javamisxc-${maven.build.version}.jar" />
+				<include name="xrs/com.profidata.risk.commons/target/com.profidata.risk.commons-${maven.build.version}.jar" />
+				<include name="fix/com.profidata.xentis.fix.engine.commons/target/com.profidata.xentis.fix.commons-${maven.build.version}.jar" />
+				<include name="xtl/com.profidata.xentis.etl.commons/target/com.profidata.xentis.etl.commons-${maven.build.version}.jar" />
 			</fileset>
 		</copy>
 	</target>
-
 
 	<!-- global helpers -->
 	<target name="-checkprerequisites">
