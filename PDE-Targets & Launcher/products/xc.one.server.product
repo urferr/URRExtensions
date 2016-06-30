@@ -28,10 +28,6 @@
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor.com.compxc.data.service.instrument.service.ValorDelegatedElementContainer=info
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor.com.compxc.data.service.kennzahlbroker.service.KennzahlBrokerService=info
 -Dcom.xnife.logging.level.com.xnife.objectquery.plan.executor.ExecutionPlanExecutorImpl=trace
--Dcom.xnife.logging.level.com.xnife.context.persistence.internal.stub.NonpersistentContextDaoStub=debug
--Dcom.xnife.logging.level.com.compxc.frontoffice.common.CacheRefreshNotificationReceiver=trace
-
--Dcom.xnife.logging.level.oracle.ucp.common=trace
 
 -Dorg.osgi.service.http.port=4196
 -Dorg.eclipse.equinox.http.jetty.http.port=4196
