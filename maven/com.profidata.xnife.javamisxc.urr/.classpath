@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry including="**/TextResource.java" kind="src" path="src-localization"/>
-	<classpathentry kind="src" path="src-context"/>
-	<classpathentry including="**/ContextConstants.java|**/ContextExtractingRemoteInvocationFilter.java|**/ContextExtractingRmiServiceExporter.java|**/RmiLogProxyFactoryBean.java|**/ContextGetter.java|**/ContextHolder.java|**/ContextInjectingRemoteInvocationFactory.java|**/ContextInjectingRmiProxyFactoryBean.java|**/ContextSetter.java|**/JmsInvokerFactoryBean.java|**/JmsInvokerLogProxyFactoryBean.java|**/JmsInvokerService.java|**/JmsMessagingUtil.java|**/LogMethodInterceptor.java|**/ThreadLocalContextHolder.java|**/MessagingException.java|**/SessionMessage.java|**/RemoteInvocationCleanup.java|**/RemoteInvocationFilter.java|**/RemoteInvocationResultFilter.java|**/RmiServiceExporter.java|**/SimpleJmsInvokerService.java" kind="src" path="src-remoting"/>
-	<classpathentry kind="src" path="src-logging-log4j"/>
-	<classpathentry kind="src" path="src-objectquery"/>
-	<classpathentry kind="src" path="src-security"/>
-	<classpathentry kind="src" path="src-contract"/>
-	<classpathentry kind="src" path="src-metadata"/>
-	<classpathentry including="com/xnife/spring/beans/**/*.java|com/xnife/spring/config/PropertyResolver.java" kind="src" path="src-spring"/>
-	<classpathentry kind="src" path="src-logging"/>
-	<classpathentry kind="src" path="src-domain"/>
-	<classpathentry kind="src" path="src-environment"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

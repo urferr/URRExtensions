@@ -29,59 +29,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>src-codevalue</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/xc_pltf/main/com.profidata.xc.codevalue/src</locationURI>
-		</link>
-		<link>
-			<name>src-common-domain</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/xc_pltf/main/com.compxc.common.domain/src</locationURI>
-		</link>
-		<link>
-			<name>src-common-metadata</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/xc_pltf/main/com.compxc.common.metadata/src</locationURI>
-		</link>
-		<link>
-			<name>src-common-persistence</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/xc_pltf/main/com.compxc.common.persistence/src</locationURI>
-		</link>
-		<link>
-			<name>src-dataservice</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/xc_pltf/main/com.profidata.xc.data.service/src</locationURI>
-		</link>
-		<link>
-			<name>src-dataservice-domain</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/xc_pltf/main/com.profidata.xc.data.service.domain/src</locationURI>
-		</link>
-		<link>
 			<name>src-frontofficecommon</name>
 			<type>2</type>
 			<locationURI>WORKSPACE_LOC/xc_fo/main/com.compxc.frontoffice.common/src</locationURI>
-		</link>
-		<link>
-			<name>src-metadata</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/xc_pltf/main/com.profidata.xc.metadata/src</locationURI>
-		</link>
-		<link>
-			<name>src-persistence</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/xc_pltf/main/com.profidata.xc.persistence/src</locationURI>
-		</link>
-		<link>
-			<name>src-platformcommon</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/xc_pltf/main/com.compxc.platform.common/src</locationURI>
-		</link>
-		<link>
-			<name>src-unified-service</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/xc_pltf/main/com.profidata.xc.unified.service/src</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

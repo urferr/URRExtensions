@@ -17,54 +17,55 @@
 			<artifactId>com.xnife.core</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-
 		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
+			<groupId>com.profidata.xnife</groupId>
+			<artifactId>com.xnife.domain</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
+			<groupId>com.profidata.xnife</groupId>
+			<artifactId>com.xnife.logging</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jms</artifactId>
+			<groupId>com.profidata.xnife</groupId>
+			<artifactId>com.xnife.logging.log4j</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>javax.jms</groupId>
-			<artifactId>com.springsource.javax.jms</artifactId>
+			<groupId>com.profidata.xnife</groupId>
+			<artifactId>com.xnife.environment</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
+			<groupId>com.profidata.xnife</groupId>
+			<artifactId>com.xnife.metadata</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
+			<groupId>com.profidata.xnife</groupId>
+			<artifactId>com.xnife.contract</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
+			<groupId>com.profidata.xnife</groupId>
+			<artifactId>com.xnife.context</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
+			<groupId>com.profidata.xnife</groupId>
+			<artifactId>com.xnife.security</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.easymock</groupId>
-			<artifactId>easymock</artifactId>
-			<scope>test</scope>
+			<groupId>com.profidata.xnife</groupId>
+			<artifactId>com.xnife.objectquery</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<scope>test</scope>
+			<groupId>com.profidata.xnife</groupId>
+			<artifactId>com.xnife.localization</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 </project>

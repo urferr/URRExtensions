@@ -17,29 +17,60 @@
 			<artifactId>com.profidata.xentis.domain.unified</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.compxc.platform.common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.compxc.common.domain</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.compxc.common.persistence</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.compxc.common.metadata</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.profidata.xc.data.service.domain</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.profidata.xc.data.service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.profidata.xc.unified.service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.profidata.xc.metadata</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.profidata.xc.persistence</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.profidata.xc.codevalue</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 
 		<dependency>
-			<groupId>org.eclipse.persistence</groupId>
-			<artifactId>javax.persistence</artifactId>
-			<version>2.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.javassist</groupId>
-			<artifactId>javassist</artifactId>
-			<version>3.18.1-GA</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.uuid</groupId>
-			<artifactId>java-uuid-generator</artifactId>
-			<version>3.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>com.profidata.xnife.javamisxc</artifactId>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.compxc.frontoffice.common</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

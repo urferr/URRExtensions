@@ -9,19 +9,48 @@
 
 		<copy todir="${xentis.server.lib}" overwrite="true" verbose="true" flatten="true">
 			<fileset dir="${workspace.loc}">
+				<include name="URRExtensions/maven/com.xnife.context.maven/target/com.xnife.context-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.contract.maven/target/com.xnife.contract-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.xnife.core.maven/target/com.xnife.core-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.domain.maven/target/com.xnife.domain-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.environment.maven/target/com.xnife.environment-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.http.maven/target/com.xnife.http-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.localization.maven/target/com.xnife.localization-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.logging.maven/target/com.xnife.logging-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.logging.log4j.maven/target/com.xnife.logging.log4j-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.metadata.maven/target/com.xnife.metadata-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.objectquery.maven/target/com.xnife.objectquery-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.remoting.maven/target/com.xnife.remoting-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.security.maven/target/com.xnife.security-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.spring.maven/target/com.xnife.spring-${maven.build.version}.jar" />
+
 				<include name="JavAMIS/com.profidatagroup.xentis.jni.common/target/com.profidata.xentis.jni.common-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.env.shared/target/com.profidata.xentis.env.shared-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.jms.shared/target/com.profidata.xentis.jms.shared-${maven.build.version}.jar" />
 				<include name="JavAMIS/XentisBODomain/target/com.profidata.xentis.bodomain-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.xnife.domain.maven/target/com.xnife.domain-${maven.build.version}.jar" />
+
 				<include name="URRExtensions/maven/com.profidata.xnife.javamisxc.urr/target/com.profidata.xnife.javamisxc-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.profidata.compxc.javamisxc.urr/target/com.profidata.compxc.javamisxc-${maven.build.version}.jar" />
+
+				<include name="URRExtensions/maven/com.compxc.platform.common.maven/target/com.compxc.platform.common-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.compxc.common.domain.maven/target/com.compxc.common.domain-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.compxc.common.persistence.maven/target/com.compxc.common.persistence-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.compxc.common.metadata.maven/target/com.compxc.common.metadata-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.profidata.xc.data.service.domain.maven/target/com.profidata.xc.data.service.domain-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.profidata.xc.data.service.maven/target/com.profidata.xc.data.service-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.profidata.xc.codevalue.maven/target/com.profidata.xc.codevalue-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.profidata.xc.metadata.maven/target/com.profidata.xc.metadata-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.profidata.xc.persistence.maven/target/com.profidata.xc.persistence-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.profidata.xc.unified.service.maven/target/com.profidata.xc.unified.service-${maven.build.version}.jar" />
+
+				<include name="URRExtensions/maven/com.compxc.frontoffice.common.maven/target/com.compxc.frontoffice.common-${maven.build.version}.jar" />
+
 				<include name="JavAMIS/com.profidata.xentis.domain.unified/target/com.profidata.xentis.domain.unified-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.env.server/target/com.profidata.xentis.env.server-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.jms.server/target/com.profidata.xentis.jms.server-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidatagroup.xentis.jni/target/com.profidata.xentis.jni-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.sn/target/com.profidata.xentis.sn-${maven.build.version}.jar" />
+				<include name="JavAMIS/XentisBOServer/target/com.profidata.xentis.server-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.server.bloomberg/target/com.profidata.xentis.server.bloomberg-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.profidata.javamis/target/com.profidata.javamis-${maven.build.version}.jar" />
 				<include name="JavAMISXC/JavAMISXC/target/com.profidata.javamisxc-${maven.build.version}.jar" />

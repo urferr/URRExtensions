@@ -28,12 +28,39 @@
 	</build>
 
 	<modules>
+		<module>../../../URRExtensions/maven/com.xnife.contract.maven</module>
+		<module>../../../URRExtensions/maven/com.xnife.context.maven</module>
 		<module>../../../URRExtensions/maven/com.xnife.core.maven</module>
+		<module>../../../URRExtensions/maven/com.xnife.domain.maven</module>
+		<module>../../../URRExtensions/maven/com.xnife.environment.maven</module>
+		<module>../../../URRExtensions/maven/com.xnife.http.maven</module>
+		<module>../../../URRExtensions/maven/com.xnife.localization.maven</module>
+		<module>../../../URRExtensions/maven/com.xnife.logging.maven</module>
+		<module>../../../URRExtensions/maven/com.xnife.logging.log4j.maven</module>
+		<module>../../../URRExtensions/maven/com.xnife.metadata.maven</module>
+		<module>../../../URRExtensions/maven/com.xnife.objectquery.maven</module>
+		<module>../../../URRExtensions/maven/com.xnife.remoting.maven</module>
+		<module>../../../URRExtensions/maven/com.xnife.security.maven</module>
+		<module>../../../URRExtensions/maven/com.xnife.spring.maven</module>
+		
 		<module>../../../JavAMIS/com.profidatagroup.xentis.jni.common</module>
 		<module>../../../JavAMIS/com.profidata.xentis.env.shared</module>
 		<module>../../../JavAMIS/com.profidata.xentis.jms.shared</module>
 		<module>../../../JavAMIS/XentisBODomain</module>
-		<module>../../../URRExtensions/maven/com.xnife.domain.maven</module>
+		
+		<module>../../../URRExtensions/maven/com.compxc.platform.common.maven</module>
+		<module>../../../URRExtensions/maven/com.compxc.common.domain.maven</module>
+		<module>../../../URRExtensions/maven/com.compxc.common.persistence.maven</module>
+		<module>../../../URRExtensions/maven/com.compxc.common.metadata.maven</module>
+		<module>../../../URRExtensions/maven/com.profidata.xc.data.service.domain.maven</module>
+		<module>../../../URRExtensions/maven/com.profidata.xc.data.service.maven</module>
+		<module>../../../URRExtensions/maven/com.profidata.xc.codevalue.maven</module>
+		<module>../../../URRExtensions/maven/com.profidata.xc.metadata.maven</module>
+		<module>../../../URRExtensions/maven/com.profidata.xc.persistence.maven</module>
+		<module>../../../URRExtensions/maven/com.profidata.xc.unified.service.maven</module>
+
+		<module>../../../URRExtensions/maven/com.compxc.frontoffice.common.maven</module>
+
 		<module>../../../URRExtensions/maven/com.profidata.xnife.javamisxc.urr</module>
 		<module>../../../URRExtensions/maven/com.profidata.compxc.javamisxc.urr</module>
 		<module>../../../JavAMIS/com.profidata.xentis.domain.unified</module>
@@ -41,9 +68,11 @@
 		<module>../../../JavAMIS/com.profidata.xentis.jms.server</module>
 		<module>../../../JavAMIS/com.profidatagroup.xentis.jni</module>
 		<module>../../../JavAMIS/com.profidata.xentis.sn</module>
+		<module>../../../JavAMIS/XentisBOServer</module>
 		<module>../../../JavAMIS/com.profidata.xentis.server.bloomberg</module>
 		<module>../../../URRExtensions/maven/com.profidata.javamis</module>
 		<module>../../../JavAMISXC/JavAMISXC</module>
+		
 		<module>../../../xrs/com.profidata.risk.commons</module>
 		<module>../../../fix/com.profidata.xentis.fix.engine.commons</module>
 		<module>../../../xtl/com.profidata.xentis.etl.commons</module>
