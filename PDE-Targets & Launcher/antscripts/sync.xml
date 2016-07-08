@@ -29,9 +29,6 @@
 				<include name="JavAMIS/com.profidata.xentis.jms.shared/target/com.profidata.xentis.jms.shared-${maven.build.version}.jar" />
 				<include name="JavAMIS/XentisBODomain/target/com.profidata.xentis.bodomain-${maven.build.version}.jar" />
 
-				<include name="URRExtensions/maven/com.profidata.xnife.javamisxc.urr/target/com.profidata.xnife.javamisxc-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.profidata.compxc.javamisxc.urr/target/com.profidata.compxc.javamisxc-${maven.build.version}.jar" />
-
 				<include name="URRExtensions/maven/com.compxc.platform.common.maven/target/com.compxc.platform.common-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.compxc.common.domain.maven/target/com.compxc.common.domain-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.compxc.common.persistence.maven/target/com.compxc.common.persistence-${maven.build.version}.jar" />

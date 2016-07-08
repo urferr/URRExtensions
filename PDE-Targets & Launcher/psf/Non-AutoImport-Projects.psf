@@ -37,8 +37,6 @@
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.xnife.security.maven"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.xnife.spring.maven"/>
 
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.profidata.xnife.javamisxc.urr"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.profidata.compxc.javamisxc.urr"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.compxc.platform.common.maven"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.compxc.common.domain.maven"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.compxc.common.persistence.maven"/>
