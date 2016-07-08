@@ -1,5 +1,0 @@
-eclipse.preferences.version=1
-extraProperties=sonar.skipDesign\=true\r\nsonar.jdbc.username\=SONAR_20140829_ENTW\r\nsonar.jdbc.driver\=oracle.jdbc.driver.OracleDriver\r\nsonar.host.url\=http\://pdxenlin60\:9000\r\nsonar.profile\=javamis\r\nsonar.projectVersion\=1.0\r\nsonar.jdbc.password\=clzlabo1\r\nsonar.skipPackageDesign\=true\r\nsonar.jdbc.url\=jdbc\:oracle\:thin\:SONAR_20140829_ENTW/clzlabo1@pdxendb08\:1521/XNT081\r\nsonar.sourceEncoding\=Cp1252
-projectKey=com.profidata.xentis\:com.profidata.compxc.javamisxc
-serverUrl=http\://pdxenlin60\:9000
-version=2

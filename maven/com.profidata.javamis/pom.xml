@@ -12,6 +12,37 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.compxc.common.domain</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.compxc.common.persistence</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.profidata.xc.data.service.domain</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.profidata.xc.metadata</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.profidata.xc.persistence</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.profidata.xc.codevalue</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>com.profidata.xentis.env.shared</artifactId>
 			<version>${project.version}</version>
@@ -79,16 +110,6 @@
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>com.profidata.xentis.sn</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>com.profidata.compxc.javamisxc</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>com.profidata.xnife.javamisxc</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
