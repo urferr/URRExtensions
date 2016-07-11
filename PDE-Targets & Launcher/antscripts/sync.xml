@@ -23,6 +23,7 @@
 				<include name="JavAMIS/com.profidatagroup.xentis.jni/target/com.profidata.xentis.jni-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.sn/target/com.profidata.xentis.sn-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.server.bloomberg/target/com.profidata.xentis.server.bloomberg-${maven.build.version}.jar" />
+				<include name="JavAMIS/XentisBOServer/target/com.profidata.xentis.server-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.profidata.javamis/target/com.profidata.javamis-${maven.build.version}.jar" />
 				<include name="JavAMISXC/JavAMISXC/target/com.profidata.javamisxc-${maven.build.version}.jar" />
 				<include name="xrs/com.profidata.risk.commons/target/com.profidata.risk.commons-${maven.build.version}.jar" />

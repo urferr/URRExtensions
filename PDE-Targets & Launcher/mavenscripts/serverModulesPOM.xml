@@ -42,6 +42,7 @@
 		<module>../../../JavAMIS/com.profidatagroup.xentis.jni</module>
 		<module>../../../JavAMIS/com.profidata.xentis.sn</module>
 		<module>../../../JavAMIS/com.profidata.xentis.server.bloomberg</module>
+		<module>../../../JavAMIS/XentisBOServer</module>
 		<module>../../../URRExtensions/maven/com.profidata.javamis</module>
 		<module>../../../JavAMISXC/JavAMISXC</module>
 		<module>../../../xrs/com.profidata.risk.commons</module>
