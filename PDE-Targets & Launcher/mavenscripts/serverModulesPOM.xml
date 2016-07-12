@@ -64,6 +64,7 @@
 		<module>../../../JavAMIS/com.profidata.xentis.domain.unified</module>
 		<module>../../../JavAMIS/com.profidata.xentis.env.server</module>
 		<module>../../../JavAMIS/com.profidata.xentis.jms.server</module>
+		<module>../../../JavAMIS/com.profidata.xentis.ratex</module>
 		<module>../../../JavAMIS/com.profidatagroup.xentis.jni</module>
 		<module>../../../JavAMIS/com.profidata.xentis.sn</module>
 		<module>../../../JavAMIS/XentisBOServer</module>

@@ -16,6 +16,7 @@
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidatagroup.xentis.jni"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.env.server"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.jms.server"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.ratex"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,XentisBOServer"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.sn"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.server.bloomberg"/>
