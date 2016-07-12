@@ -19,5 +19,5 @@
 <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
 <listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="D:/JavaProjects/xc53/workspace530/JavAMIS/com.profidatagroup.xentis.jni"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="D:/JavaProjects/xc54/workspace540/JavAMIS/com.profidatagroup.xentis.jni"/>
 </launchConfiguration>

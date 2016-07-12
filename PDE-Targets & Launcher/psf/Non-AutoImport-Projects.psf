@@ -7,8 +7,11 @@
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.jms.shared"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.test"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.xscomm"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidatagroup.xentis.devtools"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidatagroup.xentis.jni.common"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.4.0,XentisBODomain"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.domain.unified"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.xentis.bodomain.bundle.urr"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.xentis.domain.unified.bundle.urr"/>
 
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidatagroup.xentis.jni"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.env.server"/>
@@ -50,15 +53,6 @@
 
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.compxc.frontoffice.common.maven"/>
 
-<project reference="1.0,git@gitserver:JavAMIS,5.4.0,XentisBODomain"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.xentis.bodomain.bundle.urr"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.domain.unified"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.xentis.domain.unified.bundle.urr"/>
-<project reference="1.0,git@gitserver:xrs,5.4.0,com.profidata.risk.commons"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.risk.commons.bundle.urr"/>
-<project reference="1.0,git@gitserver:xrs,5.4.0,com.profidata.xc.risk.domain"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.xc.risk.domain.bundle.urr"/>
-
 <!-- ETL projects -->
 <project reference="1.0,git@gitserver:xtl,5.4.0,com.profidata.xentis.etl.commons"/>
 <project reference="1.0,git@gitserver:xtl,5.4.0,com.profidata.xentis.etl"/>
@@ -73,12 +67,11 @@
 <project reference="1.0,git@gitserver:jobs,5.4.0,com.profidata.etl.job.wm.searchvalor"/>
 <project reference="1.0,git@gitserver:jobs,5.4.0,com.profidata.etl.job.wm.update"/>
 
-
 <!-- XRS projects -->
 <project reference="1.0,git@gitserver:xrs,5.4.0,com.profidata.risk.commons"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.risk.commons.bundle.urr"/>
 <project reference="1.0,git@gitserver:xrs,5.4.0,com.profidata.risk"/>
 <project reference="1.0,git@gitserver:xrs,5.4.0,com.profidata.risk.server"/>
-
 
 </provider>
 </psf>
