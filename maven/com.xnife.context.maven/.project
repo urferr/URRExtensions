@@ -29,7 +29,7 @@
 		<link>
 			<name>src-xnife-context</name>
 			<type>2</type>
-			<location>WORKSPACE_LOC/xnife/main/com.xnife.context/src</location>
+			<locationURI>WORKSPACE_LOC/xnife/main/com.xnife.context/src</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
