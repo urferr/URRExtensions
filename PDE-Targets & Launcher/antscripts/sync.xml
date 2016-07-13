@@ -1,13 +1,13 @@
-<project name="Sync Development Libraries" default="syncXentisServer">
-	<property name="xentis.server.lib" value="${xentis.home}/packages/XENTIS/lib" />
+<project name="Sync Development Libraries" default="syncXentisServerLibraries">
 	<property name="workspace.loc" value="${basedir}" />
 
-	<target name="syncXentisServer" depends="-checkprerequisites" description="updates all Xentis server libraries on the development server">
+	<target name="syncXentisServerLibraries" depends="-checkPrerequisites" description="updates all Xentis server libraries on the development server">
 		<echo>workspace.loc: ${workspace.loc}</echo>
-		<echo>xentis.server.lib: ${xentis.server.lib}</echo>
+		<echo>xentis.home: ${xentis.home}</echo>
 		<echo>maven.build.version: ${maven.build.version}</echo>
+		<echo>target directory: ${${xentis.home}/packages/XENTIS/lib}</echo>
 
-		<copy todir="${xentis.server.lib}" overwrite="true" verbose="true" flatten="true">
+		<copy todir="${xentis.home}/packages/XENTIS/lib" overwrite="true" verbose="true" flatten="true">
 			<fileset dir="${workspace.loc}">
 				<include name="URRExtensions/maven/com.xnife.context.maven/target/com.xnife.context-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.xnife.contract.maven/target/com.xnife.contract-${maven.build.version}.jar" />
@@ -59,9 +59,35 @@
 		</copy>
 	</target>
 
+	<target name="syncGeneratedJniSources" depends="-checkPrerequisites" description="replaces all the jni/jc source in com.profidatagroup.xentis.jni project">
+		<echo>workspace.loc: ${workspace.loc}</echo>
+		<echo>xentis.home: ${xentis.home}</echo>
+		<echo>maven.build.version: ${maven.build.version}</echo>
+		<echo>target directory: ${workspace.loc}/com.profidatagroup.xentis.jni/targets</echo>
+
+		<delete>
+			<fileset dir="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/src/main/java" includes="**/*" />
+		</delete>
+
+		<copy todir="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/target" overwrite="true" verbose="true">
+			<fileset dir="${xentis.home}/builddir/java/XENTIS/shared/com.profidata.xentis.jni">
+				<include name="com.profidata.xentis.jni-${maven.build.version}-sources.jar" />
+			</fileset>
+		</copy>
+
+		<unzip src="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/target/com.profidata.xentis.jni-${maven.build.version}-sources.jar" dest="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/src/main/java">
+			<patternset>
+				<include name="jni/*.java" />
+				<include name="jc/*.java" />
+			</patternset>
+		</unzip>
+
+		<delete file="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/target/com.profidata.xentis.jni-${maven.build.version}-sources.jar" />
+	</target>
+
 	<!-- global helpers -->
-	<target name="-checkprerequisites">
-		<check-required-property propertyname="basedir" />
+	<target name="-checkPrerequisites">
+		<check-required-property propertyname="workspace.loc" />
 		<check-required-property propertyname="xentis.home" />
 		<check-required-property propertyname="maven.build.version" />
 	</target>
