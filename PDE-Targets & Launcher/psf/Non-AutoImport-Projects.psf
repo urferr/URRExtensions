@@ -9,9 +9,13 @@
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.xscomm"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidatagroup.xentis.jni.common"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,XentisBODomain"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.domain.unified"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.xentis.bodomain.bundle.urr"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.domain.unified"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.xentis.domain.unified.bundle.urr"/>
+<project reference="1.0,git@gitserver:reporting,5.4.0,com.profidata.reporting.common"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.reporting.common.bundle.urr"/>
+<project reference="1.0,git@gitserver:fix,5.4.0,com.profidata.xentis.fix.engine.commons"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.xentis.fix.engine.commons.bundle.urr"/>
 
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidatagroup.xentis.jni"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.env.server"/>
