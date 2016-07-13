@@ -48,6 +48,9 @@
 		<module>../../../xrs/com.profidata.risk.commons</module>
 		<module>../../../fix/com.profidata.xentis.fix.engine.commons</module>
 		<module>../../../xtl/com.profidata.xentis.etl.commons</module>
+		<module>../../../JavAMIS/com.profidata.xentis.env.client</module>
+		<module>../../../JavAMIS/com.profidatagroup.xentis.ui.base</module>
+		<module>../../../JavAMIS/XentisBOClient</module>
 	</modules>
 
 </project>

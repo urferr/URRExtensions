@@ -29,6 +29,9 @@
 				<include name="xrs/com.profidata.risk.commons/target/com.profidata.risk.commons-${maven.build.version}.jar" />
 				<include name="fix/com.profidata.xentis.fix.engine.commons/target/com.profidata.xentis.fix.commons-${maven.build.version}.jar" />
 				<include name="xtl/com.profidata.xentis.etl.commons/target/com.profidata.xentis.etl.commons-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.env.client/target/com.profidata.xentis.env.client-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidatagroup.xentis.ui.base/target/com.profidata.xentis.ui.base-${maven.build.version}.jar" />
+				<include name="JavAMIS/XentisBOClient/target/com.profidata.xentis.client-${maven.build.version}.jar" />
 			</fileset>
 		</copy>
 	</target>
