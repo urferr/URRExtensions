@@ -12,9 +12,6 @@
 <booleanAttribute key="M2_UPDATE_SNAPSHOTS" value="false"/>
 <stringAttribute key="M2_USER_SETTINGS" value=""/>
 <booleanAttribute key="M2_WORKSPACE_RESOLUTION" value="false"/>
-<mapAttribute key="org.eclipse.debug.core.environmentVariables">
-<mapEntry key="XENTIS_HOME" value="//pdxenlin51/urr/xentis520branch_xcdemo/xentis"/>
-</mapAttribute>
 <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
 <listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
 </listAttribute>
