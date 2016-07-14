@@ -19,6 +19,7 @@
 				<include name="URRExtensions/maven/com.profidata.compxc.javamisxc.urr/target/com.profidata.compxc.javamisxc-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.domain.unified/target/com.profidata.xentis.domain.unified-${maven.build.version}.jar" />
 
+				<include name="JavAMIS/com.profidata.xentis.server.commons/target/com.profidata.xentis.server.commons-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.env.server/target/com.profidata.xentis.env.server-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.jms.server/target/com.profidata.xentis.jms.server-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidatagroup.xentis.jni/target/com.profidata.xentis.jni-${maven.build.version}.jar" />

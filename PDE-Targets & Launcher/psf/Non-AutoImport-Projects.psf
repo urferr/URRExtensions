@@ -8,6 +8,7 @@
 <project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.devtools"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidatagroup.xentis.jni.common"/>
 
+<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.server.commons"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidatagroup.xentis.jni"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.env.server"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.jms.server"/>
@@ -42,6 +43,7 @@
 <project reference="1.0,git@gitserver:xtl,5.2.1,com.profidata.xentis.etl.commons"/>
 <project reference="1.0,git@gitserver:xtl,5.2.1,com.profidata.xentis.etl"/>
 <project reference="1.0,git@gitserver:xtl,5.2.1,com.profidata.xentis.etl.appstarter"/>
+<project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.commons"/>
 <project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.bloomberg"/>
 <project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.bloomberg.mobiliar"/>
 <project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.reorg"/>
