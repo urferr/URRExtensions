@@ -62,6 +62,7 @@
 		<module>../../../URRExtensions/maven/com.compxc.frontoffice.common.maven</module>
 
 		<module>../../../JavAMIS/com.profidata.xentis.domain.unified</module>
+		<module>../../../JavAMIS/com.profidata.xentis.server.commons</module>
 		<module>../../../JavAMIS/com.profidata.xentis.env.server</module>
 		<module>../../../JavAMIS/com.profidata.xentis.jms.server</module>
 		<module>../../../JavAMIS/com.profidata.xentis.ratex</module>

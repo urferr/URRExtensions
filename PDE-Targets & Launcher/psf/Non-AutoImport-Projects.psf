@@ -17,6 +17,7 @@
 <project reference="1.0,git@gitserver:fix,5.4.0,com.profidata.xentis.fix.engine.commons"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.xentis.fix.engine.commons.bundle.urr"/>
 
+<project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.server.commons"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidatagroup.xentis.jni"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.env.server"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.jms.server"/>
@@ -62,6 +63,7 @@
 <project reference="1.0,git@gitserver:xtl,5.4.0,com.profidata.xentis.etl.commons"/>
 <project reference="1.0,git@gitserver:xtl,5.4.0,com.profidata.xentis.etl"/>
 <project reference="1.0,git@gitserver:xtl,5.4.0,com.profidata.xentis.etl.appstarter"/>
+<project reference="1.0,git@gitserver:jobs,5.4.0,com.profidata.etl.job.commons"/>
 <project reference="1.0,git@gitserver:jobs,5.4.0,com.profidata.etl.job.bloomberg"/>
 <project reference="1.0,git@gitserver:jobs,5.4.0,com.profidata.etl.job.bloomberg.mobiliar"/>
 <project reference="1.0,git@gitserver:jobs,5.4.0,com.profidata.etl.job.reorg"/>
