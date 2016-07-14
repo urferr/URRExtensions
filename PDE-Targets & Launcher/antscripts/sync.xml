@@ -10,7 +10,7 @@
 		<copy todir="${xentis.home}/packages/XENTIS/lib" overwrite="true" verbose="true" flatten="true">
 			<fileset dir="${workspace.loc}">
 				<include name="URRExtensions/maven/com.xnife.core.maven/target/com.xnife.core-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidatagroup.xentis.jni.common/target/com.profidata.xentis.jni.common-${maven.build.version}.jar" />
+				<include name="URRExtensions/eclipse/com.profidatagroup.xentis.jni.common.ide/target/com.profidata.xentis.jni.common-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.env.shared/target/com.profidata.xentis.env.shared-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.jms.shared/target/com.profidata.xentis.jms.shared-${maven.build.version}.jar" />
 				<include name="JavAMIS/XentisBODomain/target/com.profidata.xentis.bodomain-${maven.build.version}.jar" />
