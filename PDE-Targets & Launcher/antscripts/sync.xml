@@ -69,8 +69,8 @@
 		<echo>maven.build.version: ${maven.build.version}</echo>
 		<echo>target directory: ${workspace.loc}/com.profidatagroup.xentis.jni/targets</echo>
 
-		<delete>
-			<fileset dir="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/src/main/java" includes="**/*" />
+		<delete quiet="true">
+			<fileset dir="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/src/main/java" includes="**/*"  />
 		</delete>
 
 		<copy todir="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/target" overwrite="true" verbose="true">
