@@ -7,7 +7,7 @@
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.jms.shared"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.test"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.xscomm"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidatagroup.xentis.jni.common"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,eclipse\com.profidatagroup.xentis.jni.common.ide"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,XentisBODomain"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.xentis.bodomain.bundle.urr"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.4.0,com.profidata.xentis.domain.unified"/>
