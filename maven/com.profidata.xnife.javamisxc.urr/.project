@@ -20,6 +20,11 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+		<buildCommand>
+			<name>org.sonarlint.eclipse.core.sonarlintBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.springframework.ide.eclipse.core.springnature</nature>
@@ -41,12 +46,12 @@
 		<link>
 			<name>src-domain</name>
 			<type>2</type>
-			<location>WORKSPACE_LOC/xnife/main/com.xnife.domain/src</location>
+			<locationURI>WORKSPACE_LOC/xnife/main/com.xnife.domain/src</locationURI>
 		</link>
 		<link>
 			<name>src-environment</name>
 			<type>2</type>
-			<location>WORKSPACE_LOC/xnife/main/com.xnife.environment/src</location>
+			<locationURI>WORKSPACE_LOC/xnife/main/com.xnife.environment/src</locationURI>
 		</link>
 		<link>
 			<name>src-localization</name>
