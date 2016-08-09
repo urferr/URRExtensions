@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <psf version="2.0">
 <provider id="org.eclipse.egit.core.GitProvider">
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.1,maven\com.xnife.integritycheck.maven"/>
+
 <project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.env.shared"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.jms.shared"/>
 <project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.test"/>
