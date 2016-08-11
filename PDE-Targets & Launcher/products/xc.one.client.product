@@ -85,6 +85,7 @@ platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini
    </features>
 
    <configurations>
+      <plugin id="JavAMIS" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.backoffice.application" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.server.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.workbench.presentation" autoStart="true" startLevel="0" />
