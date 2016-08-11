@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.profidata.xnife</groupId>
+		<artifactId>com.xnife.allmodules</artifactId>
+		<version>5.4.0-SNAPSHOT</version>
+	</parent>
+
+
+	<artifactId>com.xnife.integriticheck</artifactId>
+	<name>${project.artifactId} - ${project.version}</name>
+	<packaging>jar</packaging>
+
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>com.profidata.xnife</groupId>
+			<artifactId>com.xnife.logging</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+</project>
