@@ -77,8 +77,9 @@
       <feature id="_com.profidata.xc.one.server.frontoffice.incubator.securities.feature"/>
       <feature id="_com.profidata.xc.one.server.frontoffice.incubator.workflow.feature"/>
       <feature id="_com.profidata.xc.one.server.middleoffice.feature"/>
-      <feature id="_com.compxc.eclipse.incubator.workflow.feature"/>
+      <feature id="_com.profidata.xc.one.server.risk.feature"/>
       <feature id="_com.compxc.xentis.feature"/>
+      <feature id="_com.compxc.eclipse.incubator.workflow.feature"/>
       <feature id="_com.compxc.eclipse.feature"/>
    </features>
 
