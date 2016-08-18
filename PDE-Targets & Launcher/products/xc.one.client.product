@@ -33,7 +33,6 @@ platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini
 -Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective
 
 -Dcom.xnife.logging.propertiesLocation=/com/profidata/xc/one/client/configuration/logging.properties
--Dcom.xnife.logging.level.com.xnife.remoting.messaging.jms=debug
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
 
 -Dcom.xnife.logging.level.ksLogger=warn
