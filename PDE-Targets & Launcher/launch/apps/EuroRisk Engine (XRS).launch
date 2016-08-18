@@ -14,7 +14,7 @@
 </listAttribute>
 <mapAttribute key="org.eclipse.debug.core.environmentVariables">
 <mapEntry key="EAMIS_CLUSTER_VAR" value="target"/>
-<mapEntry key="EAMIS_JMS_URL" value="tcp://pdxenlin51:7365"/>
+<mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://pdxenlin51:7365)"/>
 </mapAttribute>
 <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
 <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
