@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.profidata.xnife</groupId>
 		<artifactId>com.xnife.allmodules</artifactId>
-		<version>5.2.1-SNAPSHOT</version>
+		<version>5.2.5-SNAPSHOT</version>
 	</parent>
 
 

@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <psf version="2.0">
 <provider id="org.eclipse.egit.core.GitProvider">
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.1,maven\com.xnife.integritycheck.maven"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.5,maven\com.xnife.integritycheck.maven"/>
 
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.env.shared"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.jms.shared"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.test"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.xscomm"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.devtools"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.1,eclipse\com.profidatagroup.xentis.jni.common.ide"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidata.xentis.env.shared"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidata.xentis.jms.shared"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidata.xentis.test"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidata.xentis.xscomm"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidata.xentis.devtools"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.5,eclipse\com.profidatagroup.xentis.jni.common.ide"/>
 
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.server.commons"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidatagroup.xentis.jni"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.env.server"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.jms.server"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,XentisBOServer"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.sn"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.server.bloomberg"/>
-<project reference="1.0,git@gitserver:JavAMISXC,5.2.1,JavAMISXC"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidata.xentis.server.commons"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidatagroup.xentis.jni"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidata.xentis.env.server"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidata.xentis.jms.server"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,XentisBOServer"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidata.xentis.sn"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidata.xentis.server.bloomberg"/>
+<project reference="1.0,git@gitserver:JavAMISXC,5.2.5,JavAMISXC"/>
 
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.env.client"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidatagroup.xentis.ui.base"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,XentisBOClient"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidata.xentis.env.client"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidatagroup.xentis.ui.base"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,XentisBOClient"/>
 
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.1,maven\com.xnife.core.maven"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.1,maven\com.xnife.domain.maven"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.1,maven\com.profidata.xnife.javamisxc.urr"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.1,maven\com.profidata.compxc.javamisxc.urr"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.1,maven\com.profidata.javamis"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.5,maven\com.xnife.core.maven"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.5,maven\com.xnife.domain.maven"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.5,maven\com.profidata.xnife.javamisxc.urr"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.5,maven\com.profidata.compxc.javamisxc.urr"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.5,maven\com.profidata.javamis"/>
 
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,XentisBODomain"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.1,bundle\com.profidata.xentis.bodomain.bundle.urr"/>
-<project reference="1.0,git@gitserver:JavAMIS,5.2.1,com.profidata.xentis.domain.unified"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.1,bundle\com.profidata.xentis.domain.unified.bundle.urr"/>
-<project reference="1.0,git@gitserver:reporting,5.2.1,com.profidata.reporting.common"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.1,bundle\com.profidata.reporting.common.bundle.urr"/>
-<project reference="1.0,git@gitserver:fix,5.2.1,com.profidata.xentis.fix.engine.commons"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.1,bundle\com.profidata.xentis.fix.engine.commons.bundle.urr"/>
-<project reference="1.0,git@gitserver:xrs,5.2.1,com.profidata.risk.commons"/>
-<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.1,bundle\com.profidata.risk.commons.bundle.urr"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,XentisBODomain"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.5,bundle\com.profidata.xentis.bodomain.bundle.urr"/>
+<project reference="1.0,git@gitserver:JavAMIS,5.2.5,com.profidata.xentis.domain.unified"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.5,bundle\com.profidata.xentis.domain.unified.bundle.urr"/>
+<project reference="1.0,git@gitserver:reporting,5.2.5,com.profidata.reporting.common"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.5,bundle\com.profidata.reporting.common.bundle.urr"/>
+<project reference="1.0,git@gitserver:fix,5.2.5,com.profidata.xentis.fix.engine.commons"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.5,bundle\com.profidata.xentis.fix.engine.commons.bundle.urr"/>
+<project reference="1.0,git@gitserver:xrs,5.2.5,com.profidata.risk.commons"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.2.5,bundle\com.profidata.risk.commons.bundle.urr"/>
 
 
 <!-- ETL projects -->
-<project reference="1.0,git@gitserver:xtl,5.2.1,com.profidata.xentis.etl.commons"/>
-<project reference="1.0,git@gitserver:xtl,5.2.1,com.profidata.xentis.etl"/>
-<project reference="1.0,git@gitserver:xtl,5.2.1,com.profidata.xentis.etl.appstarter"/>
-<project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.commons"/>
-<project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.bloomberg"/>
-<project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.bloomberg.mobiliar"/>
-<project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.reorg"/>
-<project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.talendexecutor"/>
-<project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.wm.commons"/>
-<project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.wm.import"/>
-<project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.wm.searchemittent"/>
-<project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.wm.searchvalor"/>
-<project reference="1.0,git@gitserver:jobs,5.2.1,com.profidata.etl.job.wm.update"/>
+<project reference="1.0,git@gitserver:xtl,5.2.5,com.profidata.xentis.etl.commons"/>
+<project reference="1.0,git@gitserver:xtl,5.2.5,com.profidata.xentis.etl"/>
+<project reference="1.0,git@gitserver:xtl,5.2.5,com.profidata.xentis.etl.appstarter"/>
+<project reference="1.0,git@gitserver:jobs,5.2.5,com.profidata.etl.job.commons"/>
+<project reference="1.0,git@gitserver:jobs,5.2.5,com.profidata.etl.job.bloomberg"/>
+<project reference="1.0,git@gitserver:jobs,5.2.5,com.profidata.etl.job.bloomberg.mobiliar"/>
+<project reference="1.0,git@gitserver:jobs,5.2.5,com.profidata.etl.job.reorg"/>
+<project reference="1.0,git@gitserver:jobs,5.2.5,com.profidata.etl.job.talendexecutor"/>
+<project reference="1.0,git@gitserver:jobs,5.2.5,com.profidata.etl.job.wm.commons"/>
+<project reference="1.0,git@gitserver:jobs,5.2.5,com.profidata.etl.job.wm.import"/>
+<project reference="1.0,git@gitserver:jobs,5.2.5,com.profidata.etl.job.wm.searchemittent"/>
+<project reference="1.0,git@gitserver:jobs,5.2.5,com.profidata.etl.job.wm.searchvalor"/>
+<project reference="1.0,git@gitserver:jobs,5.2.5,com.profidata.etl.job.wm.update"/>
 
 
 <!-- XRS projects -->
-<project reference="1.0,git@gitserver:xrs,5.2.1,com.profidata.risk.commons"/>
-<project reference="1.0,git@gitserver:xrs,5.2.1,com.profidata.risk"/>
-<project reference="1.0,git@gitserver:xrs,5.2.1,com.profidata.risk.server"/>
+<project reference="1.0,git@gitserver:xrs,5.2.5,com.profidata.risk.commons"/>
+<project reference="1.0,git@gitserver:xrs,5.2.5,com.profidata.risk"/>
+<project reference="1.0,git@gitserver:xrs,5.2.5,com.profidata.risk.server"/>
 
 
 </provider>
