@@ -19,7 +19,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.profidata.xnife</groupId>
-			<artifactId>com.xnife.logging</artifactId>
+			<artifactId>com.xnife.logging.impl</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>

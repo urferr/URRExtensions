@@ -40,6 +40,7 @@
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.xnife.http.maven"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.xnife.localization.maven"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.xnife.logging.maven"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.xnife.logging.impl.maven"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.xnife.logging.log4j.maven"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.xnife.metadata.maven"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,maven\com.xnife.objectquery.maven"/>

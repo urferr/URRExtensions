@@ -17,6 +17,7 @@
 				<include name="URRExtensions/maven/com.xnife.http.maven/target/com.xnife.http-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.xnife.localization.maven/target/com.xnife.localization-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.xnife.logging.maven/target/com.xnife.logging-${maven.build.version}.jar" />
+				<include name="URRExtensions/maven/com.xnife.logging.impl.maven/target/com.xnife.logging.impl-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.xnife.logging.log4j.maven/target/com.xnife.logging.log4j-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.xnife.metadata.maven/target/com.xnife.metadata-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.xnife.objectquery.maven/target/com.xnife.objectquery-${maven.build.version}.jar" />
