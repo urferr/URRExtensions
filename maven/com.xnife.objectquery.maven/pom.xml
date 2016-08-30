@@ -15,6 +15,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.profidata.xnife</groupId>
+			<artifactId>com.xnife.core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.xnife</groupId>
 			<artifactId>com.xnife.metadata</artifactId>
 			<version>${project.version}</version>
 		</dependency>
