@@ -9,8 +9,7 @@ Import-Package: com.xnife.core.jaxb.adapter,
  com.xnife.domain,
  com.xnife.util,
  org.apache.commons.lang3,
- org.apache.commons.lang3.builder,
- org.joda.time
+ org.apache.commons.lang3.builder
 Export-Package: com.profidata.xentis.domain.unified,
  com.profidata.xentis.domain.unified.attribute,
  com.profidata.xentis.domain.unified.code,
