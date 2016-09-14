@@ -203,10 +203,6 @@
 			<artifactId>com.profidatagroup.util.keymigration.model</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>net.java.dev.jna</groupId>
-			<artifactId>platform</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-exec</artifactId>
 		</dependency>
@@ -215,12 +211,8 @@
 			<artifactId>commons-collections</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>quickfixj</groupId>
+			<groupId>org.quickfixj</groupId>
 			<artifactId>quickfixj-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>net.java.dev.jna</groupId>
-			<artifactId>jna</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.jidesoft</groupId>
