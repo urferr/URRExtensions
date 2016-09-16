@@ -239,7 +239,7 @@
 			<artifactId>foxtrot-core</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>fop</groupId>
+			<groupId>org.apache.xmlgraphics</groupId>
 			<artifactId>fop</artifactId>
 		</dependency>
 		<dependency>
