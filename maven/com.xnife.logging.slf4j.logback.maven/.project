@@ -24,7 +24,7 @@
 		<link>
 			<name>src-xnife-logging-slf4jlogback</name>
 			<type>2</type>
-			<location>D:/JavaProjects/xc54/workspace540/xnife/main/com.xnife.logging.slf4j.logback/src</location>
+			<locationURI>WORKSPACE_LOC/xnife/main/com.xnife.logging.slf4j.logback/src</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

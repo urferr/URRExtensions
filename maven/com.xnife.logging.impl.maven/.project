@@ -24,7 +24,7 @@
 		<link>
 			<name>src-xnife.loggingimpl</name>
 			<type>2</type>
-			<location>D:/JavaProjects/xc54/workspace540/xnife/main/com.xnife.logging.impl/src</location>
+			<locationURI>WORKSPACE_LOC/xnife/main/com.xnife.logging.impl/src</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
