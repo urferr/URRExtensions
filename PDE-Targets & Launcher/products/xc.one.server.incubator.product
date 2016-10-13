@@ -78,8 +78,8 @@
       <feature id="_com.profidata.xc.one.server.frontoffice.incubator.workflow.feature"/>
       <feature id="_com.profidata.xc.one.server.middleoffice.feature"/>
       <feature id="_com.profidata.xc.one.server.risk.feature"/>
-      <feature id="_com.compxc.xentis.feature"/>
       <feature id="_com.compxc.eclipse.incubator.workflow.feature"/>
+      <feature id="_com.compxc.xentis.feature"/>
       <feature id="_com.compxc.eclipse.feature"/>
    </features>
 
@@ -122,11 +122,14 @@
       <plugin id="com.profidata.xc.rest.admin.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.analysis.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.common.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.rest.data.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.investmentcompliance.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.order.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.risk.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rule.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.securities.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.trx.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.unified.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.valutaposition.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.workflow.server" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.workflow.service.impl" autoStart="true" startLevel="0" />

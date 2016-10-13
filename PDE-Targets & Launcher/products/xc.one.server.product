@@ -75,6 +75,7 @@
    <features>
       <feature id="_com.profidata.xc.one.server.feature"/>
       <feature id="_com.profidata.xc.one.server.customizingconsole.feature"/>
+      <feature id="_com.profidata.xc.one.server.backoffice.feature"/>
       <feature id="_com.profidata.xc.one.server.frontoffice.feature"/>
       <feature id="_com.profidata.xc.one.server.middleoffice.feature"/>
       <feature id="_com.profidata.xc.one.server.risk.feature"/>
@@ -120,6 +121,7 @@
       <plugin id="com.profidata.xc.rest.admin.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.analysis.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.common.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.rest.data.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.investmentcompliance.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.order.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.risk.service.impl" autoStart="true" startLevel="0" />
