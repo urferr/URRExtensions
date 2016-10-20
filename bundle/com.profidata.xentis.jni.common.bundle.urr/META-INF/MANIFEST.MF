@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Urr
+Bundle-SymbolicName: com.profidata.xentis.jni.common.bundle.urr
+Bundle-Version: 0.0.0
+Bundle-Vendor: PROFIDATA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: com.profidata.xentis.jni.common,
+ com.profidata.xentis.jni.common.dataaccess.base,
+ com.profidatagroup.javamis.env.dataaccess.base

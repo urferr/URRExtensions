@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: IDE Bundle for com.profidata.xentis.env.client
+Bundle-SymbolicName: com.profidata.xentis.env.client.bunde.urr
+Bundle-Version: 0.0.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.profidata.xentis.env.shared.adapter,
+ com.profidata.xentis.env.shared.io,
+ com.profidata.xentis.env.shared.log4j,
+ com.profidata.xentis.env.shared.util,
+ com.sun.jna.platform.win32,
+ org.slf4j
+Export-Package: com.profidata.xentis.env.client,
+ com.profidata.xentis.env.client.adapter,
+ com.profidata.xentis.env.client.io,
+ com.profidata.xentis.env.client.util
