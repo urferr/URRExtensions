@@ -47,6 +47,9 @@
 				<include name="JavAMIS/com.profidata.xentis.server.commons/target/com.profidata.xentis.server.commons-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.env.server/target/com.profidata.xentis.env.server-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.jms.server/target/com.profidata.xentis.jms.server-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.user.shared/target/com.profidata.xentis.user.shared-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.user.server/target/com.profidata.xentis.user.server-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.user.ldap/target/com.profidata.xentis.user.ldap-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.ratex/target/com.profidata.xentis.ratex-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidatagroup.xentis.jni/target/com.profidata.xentis.jni-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.sn/target/com.profidata.xentis.sn-${maven.build.version}.jar" />
@@ -57,6 +60,7 @@
 				<include name="xrs/com.profidata.risk.commons/target/com.profidata.risk.commons-${maven.build.version}.jar" />
 				<include name="fix/com.profidata.xentis.fix.engine.commons/target/com.profidata.xentis.fix.commons-${maven.build.version}.jar" />
 				<include name="xtl/com.profidata.xentis.etl.commons/target/com.profidata.xentis.etl.commons-${maven.build.version}.jar" />
+				<include name="reporting/com.profidata.reporting.common/target/com.profidata.reporting.common-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.env.client/target/com.profidata.xentis.env.client-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidatagroup.xentis.ui.base/target/com.profidata.xentis.ui.base-${maven.build.version}.jar" />
 				<include name="JavAMIS/XentisBOClient/target/com.profidata.xentis.client-${maven.build.version}.jar" />

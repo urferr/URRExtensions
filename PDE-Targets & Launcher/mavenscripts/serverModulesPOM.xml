@@ -52,6 +52,9 @@
 		<module>../../../JavAMIS/com.profidata.xentis.server.commons</module>
 		<module>../../../JavAMIS/com.profidata.xentis.env.server</module>
 		<module>../../../JavAMIS/com.profidata.xentis.jms.server</module>
+		<module>../../../JavAMIS/com.profidata.xentis.user.shared</module>
+		<module>../../../JavAMIS/com.profidata.xentis.user.server</module>
+		<module>../../../JavAMIS/com.profidata.xentis.user.ldap</module>
 		<module>../../../JavAMIS/com.profidata.xentis.ratex</module>
 		<module>../../../JavAMIS/com.profidatagroup.xentis.jni</module>
 		<module>../../../JavAMIS/com.profidata.xentis.sn</module>
