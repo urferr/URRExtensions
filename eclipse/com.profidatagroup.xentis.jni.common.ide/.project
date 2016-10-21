@@ -32,6 +32,11 @@
 			<locationURI>WORKSPACE_LOC/JavAMIS/com.profidatagroup.xentis.jni.common/src/main/java</locationURI>
 		</link>
 		<link>
+			<name>src-main-java-ide</name>
+			<type>2</type>
+			<locationURI>WORKSPACE_LOC/URRExtensions/bundle/com.profidata.xentis.jni.common.bundle.urr/src-ide</locationURI>
+		</link>
+		<link>
 			<name>src-test-java</name>
 			<type>2</type>
 			<locationURI>WORKSPACE_LOC/JavAMIS/com.profidatagroup.xentis.jni.common/src/test/java</locationURI>
