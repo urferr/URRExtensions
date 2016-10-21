@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: IDE Bundle for com.profidata.xentis.env.client
-Bundle-SymbolicName: com.profidata.xentis.env.client.bunde.urr
+Bundle-SymbolicName: com.profidata.xentis.env.client
 Bundle-Version: 0.0.0
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: com.profidata.xentis.env.shared.adapter,
