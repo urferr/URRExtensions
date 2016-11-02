@@ -4,13 +4,14 @@ Bundle-Name: IDE Bundle for com.profidata.xentis.user.shared
 Bundle-SymbolicName: com.profidata.xentis.user.shared
 Bundle-Version: 0.0.0
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Import-Package: org.slf4j
+Import-Package: com.profidata.xentis.jni.common,
+ org.slf4j
 Export-Package: com.profidata.xentis.user.shared.client.rmi.presentation.login,
  com.profidata.xentis.user.shared.client.ui.admin.login,
  com.profidata.xentis.user.shared.domain,
  com.profidata.xentis.user.shared.domain.authorization,
  com.profidata.xentis.user.shared.domain.license,
  com.profidata.xentis.user.shared.domain.service,
- com.profidata.xentis.user.shared.env,
  com.profidata.xentis.user.shared.external.authentication.domain,
+ com.profidata.xentis.user.shared.login,
  com.profidata.xentis.user.shared.service
