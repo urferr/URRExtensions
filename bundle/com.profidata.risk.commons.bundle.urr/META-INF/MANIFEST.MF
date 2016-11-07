@@ -8,6 +8,7 @@ Import-Package: com.profidata.xc.risk.domain,
  com.profidata.xentis.domain.unified.attribute,
  com.profidata.xentis.domain.unified.code,
  com.profidata.xentis.domain.unified.impl.position,
+ com.profidata.xentis.domain.unified.marketfactor,
  com.profidata.xentis.domain.unified.position,
  com.profidata.xentis.domain.unified.profile,
  com.xnife.core.jaxb.adapter
