@@ -51,6 +51,7 @@
 				<include name="JavAMIS/com.profidata.xentis.user.server/target/com.profidata.xentis.user.server-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.user.ldap/target/com.profidata.xentis.user.ldap-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.ratex/target/com.profidata.xentis.ratex-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.logger.server.logback/target/com.profidata.xentis.logger.server.logback-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidatagroup.xentis.jni/target/com.profidata.xentis.jni-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidata.xentis.sn/target/com.profidata.xentis.sn-${maven.build.version}.jar" />
 				<include name="JavAMIS/XentisBOServer/target/com.profidata.xentis.server-${maven.build.version}.jar" />
