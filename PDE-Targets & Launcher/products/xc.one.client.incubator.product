@@ -75,23 +75,23 @@ platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini
       <feature id="_com.profidata.xc.one.client.feature"/>
       <feature id="_com.profidata.xc.one.client.customizingconsole.feature"/>
       <feature id="_com.profidata.xc.one.client.frontoffice.incubator.securities.feature"/>
-      <feature id="_com.profidata.xc.one.client.frontoffice.incubator.workflow.feature"/>
+      <feature id="_com.profidata.xc.one.client.frontoffice.feature"/>
       <feature id="_com.profidata.xc.one.client.middleoffice.feature"/>
       <feature id="_com.profidata.xc.one.client.backoffice.feature"/>
-      <feature id="_com.compxc.eclipse.rcp.incubator.workflow.feature"/>
+      <feature id="_com.profidata.xc.one.client.risk.feature"/>
       <feature id="_com.compxc.xentis.rcp.feature"/>
       <feature id="_com.compxc.eclipse.rcp.feature"/>
       <feature id="_com.compxc.eclipse4.spy.feature"/>
    </features>
 
    <configurations>
+      <plugin id="JavAMIS" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.backoffice.application" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.server.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.workbench.presentation" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.messaging.application" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.customizingconsole.application" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.one.client.configuration" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.workflow.application" autoStart="true" startLevel="0" />
-      <plugin id="com.profidatagroup.javamis.stub" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.application" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.remoting.client" autoStart="true" startLevel="0" />

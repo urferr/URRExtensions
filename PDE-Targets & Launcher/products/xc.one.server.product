@@ -45,8 +45,6 @@
 -Xms256m
 -Xmx2048m
 -XX:+HeapDumpOnOutOfMemoryError
--XX:+UnlockCommercialFeatures 
--XX:+FlightRecorder
 
 -XX:+UseG1GC
 -XX:MaxGCPauseMillis=50
@@ -58,6 +56,7 @@
    </launcherArgs>
 
    <windowImages/>
+
 
    <launcher name="xcServer">
       <solaris/>
@@ -100,6 +99,7 @@
       <plugin id="com.profidata.xc.corporation.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.customizingconsole.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.data.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.data.service.messaging.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.data.service.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.flexibleentity.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.frontoffice.businessintelligence.impl" autoStart="true" startLevel="0" />
@@ -109,6 +109,7 @@
       <plugin id="com.profidata.xc.fund.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.instrument.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.localization.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.messaging.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.metadata.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.objectquery.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.one.server.configuration" autoStart="true" startLevel="0" />
