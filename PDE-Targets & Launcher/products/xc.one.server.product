@@ -42,8 +42,6 @@
 -Xms256m
 -Xmx2048m
 -XX:+HeapDumpOnOutOfMemoryError
--XX:+UnlockCommercialFeatures 
--XX:+FlightRecorder
 
 -XX:+UseG1GC
 -XX:MaxGCPauseMillis=50
@@ -119,6 +117,7 @@
       <plugin id="com.profidata.xc.rest.common.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.investmentcompliance.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.order.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.rest.data.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.risk.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rule.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.trx.service.impl" autoStart="true" startLevel="0" />

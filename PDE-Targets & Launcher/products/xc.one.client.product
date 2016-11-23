@@ -40,8 +40,6 @@ platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini
 -ea
 -Xms512m
 -Xmx1024m
--XX:+UnlockCommercialFeatures 
--XX:+FlightRecorder
 
 -XX:+UseG1GC
 -XX:MaxGCPauseMillis=50
