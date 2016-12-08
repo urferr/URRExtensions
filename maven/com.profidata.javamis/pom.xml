@@ -22,6 +22,11 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>com.profidata.xentis</groupId>
+			<artifactId>com.profidata.xc.common.logger</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>com.profidata.compxc</groupId>
 			<artifactId>com.profidata.xc.data.service.domain</artifactId>
 			<version>${project.version}</version>

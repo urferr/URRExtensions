@@ -45,6 +45,7 @@
 		<module>../../../URRExtensions/maven/com.profidata.xc.metadata.maven</module>
 		<module>../../../URRExtensions/maven/com.profidata.xc.persistence.maven</module>
 		<module>../../../URRExtensions/maven/com.profidata.xc.unified.service.maven</module>
+		<module>../../../xc_pltf/main/com.profidata.xc.common.logger</module>
 
 		<module>../../../URRExtensions/maven/com.compxc.frontoffice.common.maven</module>
 

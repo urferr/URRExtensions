@@ -40,6 +40,7 @@
 				<include name="URRExtensions/maven/com.profidata.xc.metadata.maven/target/com.profidata.xc.metadata-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.profidata.xc.persistence.maven/target/com.profidata.xc.persistence-${maven.build.version}.jar" />
 				<include name="URRExtensions/maven/com.profidata.xc.unified.service.maven/target/com.profidata.xc.unified.service-${maven.build.version}.jar" />
+				<include name="xc_pltf/main/com.profidata.xc.common.logger/target/com.profidata.xc.common.logger-${maven.build.version}.jar" />
 
 				<include name="URRExtensions/maven/com.compxc.frontoffice.common.maven/target/com.compxc.frontoffice.common-${maven.build.version}.jar" />
 

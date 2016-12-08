@@ -21,6 +21,7 @@
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.reporting.common.bundle.urr"/>
 <project reference="1.0,ssh://gitserver:29418/fix,5.4.0,com.profidata.xentis.fix.engine.commons"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.xentis.fix.engine.commons.bundle.urr"/>
+<project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.0,bundle\com.profidata.xc.common.logger.bundle.urr"/>
 
 <project reference="1.0,ssh://gitserver:29418/JavAMIS,5.4.0,com.profidata.xentis.server.commons"/>
 <project reference="1.0,ssh://gitserver:29418/JavAMIS,5.4.0,com.profidatagroup.xentis.jni"/>
