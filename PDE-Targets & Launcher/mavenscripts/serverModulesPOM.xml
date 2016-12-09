@@ -10,7 +10,7 @@
 	</parent>
 
 	<groupId>com.profidata.xentis</groupId>
-	<artifactId>com.profidata.common.master</artifactId>
+	<artifactId>com.profidata.server.modules</artifactId>
 	<packaging>pom</packaging>
 
 	<modules>
