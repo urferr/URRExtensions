@@ -57,7 +57,6 @@
 
    <windowImages/>
 
-
    <launcher name="xcServer">
       <solaris/>
       <win useIco="false">
@@ -120,6 +119,7 @@
       <plugin id="com.profidata.xc.persistence.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.portfolio.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.position.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.requestcache.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.admin.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.analysis.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.common.service.impl" autoStart="true" startLevel="0" />

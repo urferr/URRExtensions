@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.profidata.compxc</groupId>
 		<artifactId>com.compxc.platform.allmodules</artifactId>
-		<version>5.4.2-SNAPSHOT</version>
+		<version>5.4.1-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>com.profidata.xc.data.service.domain</artifactId>

@@ -16,7 +16,7 @@
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="PDE-Targets &amp; Launcher"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.ant.ui.AntClasspathProvider"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="${workspace_loc:/PDE-Targets &amp; Launcher/antscripts/sync.xml}"/>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="-Dxentis.home=//pdxenlin51/urr/xentis540branch_xcdemo/xentis -Dmaven.build.version=5.4.0-SNAPSHOT"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="-Dxentis.home=//pdxenlin51/urr/xentis541branch_xcdemo/xentis -Dmaven.build.version=5.4.1-SNAPSHOT"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${workspace_loc}"/>
 <stringAttribute key="process_factory_id" value="org.eclipse.ant.ui.remoteAntProcessFactory"/>
 </launchConfiguration>
