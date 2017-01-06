@@ -58,6 +58,7 @@
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.2,maven\com.xnife.remoting.maven"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.2,maven\com.xnife.security.maven"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.2,maven\com.xnife.spring.maven"/>
+<project reference="1.0,ssh://gitserver:29418/xnife,5.4.2,main\com.xnife.testing.logger"/>
 
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.2,maven\com.compxc.platform.common.maven"/>
 <project reference="1.0,https://github.com/urferr/URRExtensions.git,5.4.2,maven\com.compxc.common.domain.maven"/>
