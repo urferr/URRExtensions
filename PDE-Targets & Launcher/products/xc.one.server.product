@@ -25,10 +25,9 @@
 -Dcom.xnife.logging.level.com.xnife.cache.impl.index=warn
 -Dcom.xnife.logging.level.org.hibernate.tool.hbm2ddl=info
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
--Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor.com.compxc.data.service.instrument.service.ValorDelegatedElementContainer=info
--Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor.com.compxc.data.service.kennzahlbroker.service.KennzahlBrokerService=info
+-Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor.Xcom.compxc.data.service.kennzahlbroker.service.KennzahlBrokerService=info
+-Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor.com.compxc.data.service.flexiblefield.service.FlexibleFieldService.getValue=info
 -Dcom.xnife.logging.level.com.xnife.objectquery.plan.executor.ExecutionPlanExecutorImpl=trace
--Dcom.xnife.logging.level.com.xnife.context.persistence.internal.stub.NonpersistentContextDaoStub=debug
 
 -Dcom.xnife.logging.level.oracle.ucp.common=trace
 
@@ -56,7 +55,6 @@
    </launcherArgs>
 
    <windowImages/>
-
 
    <launcher name="xcServer">
       <solaris/>
