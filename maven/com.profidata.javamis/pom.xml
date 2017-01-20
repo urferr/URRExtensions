@@ -18,12 +18,12 @@
 		</dependency>
 		<dependency>
 			<groupId>com.profidata.compxc</groupId>
-			<artifactId>com.compxc.common.persistence</artifactId>
+			<artifactId>com.compxc.common.metadata</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.profidata.xentis</groupId>
-			<artifactId>com.profidata.xc.common.logger</artifactId>
+			<groupId>com.profidata.compxc</groupId>
+			<artifactId>com.compxc.common.persistence</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
@@ -70,11 +70,6 @@
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>com.profidata.xentis.jms.shared</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>com.profidata.xentis.user.shared</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
@@ -156,14 +151,6 @@
 		<dependency>
 			<groupId>commons-cli</groupId>
 			<artifactId>commons-cli</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.activemq</groupId>
@@ -280,6 +267,21 @@
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>com.profidata.xentis.user.shared</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.profidata.xentis</groupId>
+			<artifactId>com.profidata.xc.common.logger</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>${slf4j-version}</version>
 		</dependency>
 	</dependencies>
 </project>
