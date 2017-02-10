@@ -13,7 +13,7 @@
 <listEntry value="1"/>
 </listAttribute>
 <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-<mapEntry key="EAMIS_JMS_URL" value="tcp://pdxenlin51:7365"/>
+<mapEntry key="EAMIS_JMS_URL" value="tcp://pdxenlin51:7305"/>
 </mapAttribute>
 <stringAttribute key="org.eclipse.jdt.junit.CONTAINER" value=""/>
 <booleanAttribute key="org.eclipse.jdt.junit.KEEPRUNNING_ATTR" value="false"/>
@@ -23,4 +23,5 @@
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.risk.RiskEntityMappingServiceIntegrationTest"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.risk"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dxentis.xrs.messaging.prefix=ersk."/>
 </launchConfiguration>

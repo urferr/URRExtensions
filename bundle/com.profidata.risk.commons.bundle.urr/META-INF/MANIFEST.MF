@@ -5,6 +5,7 @@ Bundle-SymbolicName: com.profidata.risk.commons
 Bundle-Version: 0.0.0
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: com.profidata.xc.risk.domain,
+ com.profidata.xentis.domain.unified,
  com.profidata.xentis.domain.unified.attribute,
  com.profidata.xentis.domain.unified.code,
  com.profidata.xentis.domain.unified.impl.position,
