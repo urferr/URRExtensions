@@ -25,18 +25,16 @@
 -Dcom.xnife.logging.level.com.xnife.cache.impl.index=warn
 -Dcom.xnife.logging.level.org.hibernate.tool.hbm2ddl=info
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
--Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor.Xcom.compxc.data.service.kennzahlbroker.service.KennzahlBrokerService=info
--Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor.com.compxc.data.service.flexiblefield.service.FlexibleFieldService.getValue=info
--Dcom.xnife.logging.level.com.xnife.objectquery.plan.executor.ExecutionPlanExecutorImpl=trace
+-DXcom.xnife.logging.level.com.xnife.objectquery.plan.executor.ExecutionPlanExecutorImpl=trace
 
--Dcom.xnife.logging.level.oracle.ucp.common=trace
+-Dcom.xnife.logging.level.com.profidata.xc.objectquery.service.impl.ObjectQueryServiceImpl=debug
 
--Dorg.osgi.service.http.port=4266
--Dorg.eclipse.equinox.http.jetty.http.port=4266
+-Dorg.osgi.service.http.port=7316
+-Dorg.eclipse.equinox.http.jetty.http.port=7316
 
 -Doracle.net.tns_admin=${env_var:TNS_ADMIN}
 
--Dcom.sun.management.jmxremote.port=4279
+-Dcom.sun.management.jmxremote.port=7319
 -Dcom.sun.management.jmxremote.ssl=false
 -Dcom.sun.management.jmxremote.authenticate=false
 
