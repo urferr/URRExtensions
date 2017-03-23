@@ -5,7 +5,7 @@
 		<echo>workspace.loc: ${workspace.loc}</echo>
 		<echo>xentis.home: ${xentis.home}</echo>
 		<echo>maven.build.version: ${maven.build.version}</echo>
-		<echo>target directory: ${${xentis.home}/packages/XENTIS/lib}</echo>
+		<echo>target directory: ${xentis.home}/packages/XENTIS/lib</echo>
 
 		<copy todir="${xentis.home}/packages/XENTIS/lib" overwrite="true" verbose="true" flatten="true">
 			<fileset dir="${workspace.loc}">
