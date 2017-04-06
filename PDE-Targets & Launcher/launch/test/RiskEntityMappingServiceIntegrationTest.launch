@@ -13,6 +13,7 @@
 <listEntry value="1"/>
 </listAttribute>
 <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="EAMIS_CLUSTER_VAR" value="target"/>
 <mapEntry key="EAMIS_JMS_URL" value="tcp://pdxenlin51:7305"/>
 </mapAttribute>
 <stringAttribute key="org.eclipse.jdt.junit.CONTAINER" value=""/>

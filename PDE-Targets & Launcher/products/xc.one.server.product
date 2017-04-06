@@ -80,6 +80,7 @@
 
    <configurations>
       <plugin id="com.compxc.persistence" autoStart="true" startLevel="0" />
+      <plugin id="com.compxc.platform.server" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.security.backoffice.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.server.remote" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.transaction" autoStart="true" startLevel="0" />
