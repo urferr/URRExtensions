@@ -100,7 +100,6 @@
       <plugin id="com.profidata.xc.data.service.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.flexibleentity.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.frontoffice.businessintelligence.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.frontoffice.cacheloader.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.frontoffice.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.frontoffice.servicefacade.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.fund.service.impl" autoStart="true" startLevel="0" />
