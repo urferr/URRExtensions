@@ -37,7 +37,7 @@
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xc.rest.analysis.service.test"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Drest.uri=http://localhost:4266/rest/&#13;&#10;-Drest.user=PD_URR&#13;&#10;-Dportfolio=720001"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Drest.uri=http://localhost:7316/rest/&#13;&#10;-Drest.user=PD_URR&#13;&#10;-Dportfolio=720001"/>
 <stringAttribute key="pde.version" value="3.3"/>
 <stringAttribute key="product" value="_com.profidata.xc.one.client.build.product.xcClient"/>
 <booleanAttribute key="run_in_ui_thread" value="true"/>

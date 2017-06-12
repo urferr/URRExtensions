@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="Eclipse-JDT" sequenceNumber="19">
+<?pde version="3.8"?><target name="Eclipse-JDT" sequenceNumber="20">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.jdt.feature.group" version="3.12.2.v20161124-1400"/>
-<unit id="org.eclipse.jdt.source.feature.group" version="3.12.2.v20161124-1400"/>
+<unit id="org.eclipse.jdt.source.feature.group" version="3.12.3.v20170301-0400"/>
+<unit id="org.eclipse.jdt.feature.group" version="3.12.3.v20170301-0400"/>
 <repository location="http://download.eclipse.org/eclipse/updates/4.6"/>
 </location>
 </locations>

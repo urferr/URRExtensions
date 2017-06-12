@@ -70,7 +70,7 @@
 <unit id="org.eclipse.ecf.remoteservice.servlet.feature.source.feature.group" version="1.0.0.v20160913-1604"/>
 <unit id="org.eclipse.ecf.docshare.feature.feature.group" version="1.0.0.v20160921-1006"/>
 <unit id="org.eclipse.ecf.filetransfer.httpclient4.feature.source.feature.group" version="3.13.3.v20161011-1419"/>
-<repository location="http://download.eclipse.org/rt/ecf/3.13.3/site.p2"/>
+<repository location="http://download.eclipse.org/rt/ecf/3.13.7/site.p2"/>
 </location>
 </locations>
 </target>

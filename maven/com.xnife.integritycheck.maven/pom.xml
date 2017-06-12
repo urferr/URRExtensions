@@ -22,7 +22,6 @@
 		<dependency>
 			<groupId>com.profidata.xnife</groupId>
 			<artifactId>com.xnife.logging</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 </project>

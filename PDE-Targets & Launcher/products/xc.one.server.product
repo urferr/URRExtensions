@@ -28,6 +28,11 @@
 -Dcom.xnife.logging.level.com.xnife.objectquery.plan.executor.ExecutionPlanExecutorImpl=trace
 
 -Dcom.xnife.logging.level.com.profidata.xc.objectquery.service.impl.ObjectQueryServiceImpl=debug
+-Dcom.xnife.logging.level.com.compxc.calculationengine.recalculate.impl.ValuatedPositionServiceRecalculator=debug
+-Dcom.xnife.logging.level.com.compxc.calculationengine.recalculate.impl.ValuatedComparativeCapitalBasedEntityPositionServiceRecalculator=debug
+-Dcom.xnife.logging.level.com.compxc.calculationengine.recalculate.impl.config.FlexibleFieldCalculationEngineConfigurator$FlexibleFieldServiceRecalculator=debug
+-Dcom.xnife.logging.level.com.compxc.calculationengine.recalculate.impl.KennzahlBrokerKeyFigureRecalculator=debug
+-Dcom.xnife.logging.level.com.profidata.xc.codevalue.service.impl.CodeValueServiceImpl=debug
 
 -Dorg.osgi.service.http.port=7316
 -Dorg.eclipse.equinox.http.jetty.http.port=7316

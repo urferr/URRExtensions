@@ -15,15 +15,15 @@
 <listEntry value="1"/>
 </listAttribute>
 <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-<mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_DEV_20150602_S520_XC/clzlabo1@pdxendb08.profidatagroup.com:1521/XNT081"/>
+<mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_540_XC/clzlabo1@pdxendb12.profidatagroup.com:1521/XNT121"/>
 <mapEntry key="EAMIS_APP_VAR" value="target"/>
 <mapEntry key="EAMIS_CLUSTER_VAR" value="target"/>
 <mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://pdxenlin51:7305)"/>
 <mapEntry key="EAMIS_PACKAGES" value="target"/>
-<mapEntry key="EAMIS_VDB_ALIAS" value="XNT041"/>
+<mapEntry key="EAMIS_VDB_ALIAS" value="XNT121"/>
 <mapEntry key="EAMIS_VDB_BB_FTP_MAX_POLL_TIME" value="3"/>
 <mapEntry key="EAMIS_VDB_BB_FTP_TYPE" value="i"/>
-<mapEntry key="EAMIS_VDB_BB_KEY" value="nPwB7vV9"/>
+<mapEntry key="EAMIS_VDB_BB_KEY" value="Ujz3ro?O"/>
 <mapEntry key="EAMIS_VDB_BB_PASSWORD" value="urr"/>
 <mapEntry key="EAMIS_VDB_BB_PORT" value="21"/>
 <mapEntry key="EAMIS_VDB_BB_PROTOCOL" value="ftp"/>

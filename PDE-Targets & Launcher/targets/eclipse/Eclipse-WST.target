@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="Eclipse-WST" sequenceNumber="3">
+<?pde version="3.8"?><target name="Eclipse-WST" sequenceNumber="4">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.wst.server_core.feature.feature.group" version="3.3.601.v201605201456"/>
-<unit id="org.eclipse.wst.xml_core.feature.feature.group" version="3.8.0.v201608061842"/>
-<unit id="org.eclipse.wst.common_core.feature.feature.group" version="3.7.1.v201508262220"/>
+<unit id="org.eclipse.wst.web_core.feature.feature.group" version="3.8.2.v201702270442"/>
 <unit id="org.eclipse.wst.ws_core.feature.feature.group" version="3.7.0.v201505131719"/>
+<unit id="org.eclipse.wst.xml_core.feature.feature.group" version="3.8.2.v201702270442"/>
 <unit id="org.eclipse.wst.common.fproj.feature.group" version="3.7.0.v201505072140"/>
-<unit id="org.eclipse.wst.web_core.feature.feature.group" version="3.8.1.v201609072018"/>
-<unit id="org.eclipse.wst.json_core.feature.feature.group" version="1.0.0.v201609072018"/>
+<unit id="org.eclipse.wst.common_core.feature.feature.group" version="3.8.2.v201701191735"/>
+<unit id="org.eclipse.wst.json_core.feature.feature.group" version="1.0.2.v201612232230"/>
+<unit id="org.eclipse.wst.server_core.feature.feature.group" version="3.3.601.v201610211907"/>
 <repository location="http://download.eclipse.org/releases/neon"/>
 </location>
 </locations>
