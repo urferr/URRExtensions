@@ -191,6 +191,7 @@
 		<dependency>
 			<groupId>quickfixj</groupId>
 			<artifactId>quickfixj-core</artifactId>
+			<version>1.5.3</version>
 		</dependency>
 		<dependency>
 			<groupId>net.java.dev.jna</groupId>
