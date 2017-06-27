@@ -5,7 +5,9 @@ Bundle-SymbolicName: com.profidata.xc.common.logger
 Bundle-Version: 0.0.0
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: Profidata AG
-Import-Package: com.xnife.core.beanutil,
- com.xnife.logging
+Import-Package: ch.qos.logback.classic,
+ ch.qos.logback.core.spi,
+ com.xnife.core.beanutil,
+ org.slf4j
 Export-Package: com.profidata.xc.common.logger,
  com.profidata.xc.common.logger.dto
