@@ -21,7 +21,6 @@
 -Dorg.aspectj.osgi.verbose=true
 -Dorg.aspectj.weaver.showWeaveInfo=true
 
--Dcom.xnife.logging.propertiesLocation=/com/profidata/xc/one/server/configuration/logging.properties
 -Dcom.xnife.logging.level.com.xnife.cache.impl.index=warn
 -Dcom.xnife.logging.level.org.hibernate.tool.hbm2ddl=info
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
@@ -138,6 +137,7 @@
       <plugin id="com.xnife.context.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.environment" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.http.server" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.logging.slf4j.over.jul" autoStart="true" startLevel="2" />
       <plugin id="com.xnife.remoting.server" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.security.remote" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.tools.jmx.osgiconsole" autoStart="true" startLevel="0" />
