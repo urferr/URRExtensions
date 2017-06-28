@@ -137,6 +137,7 @@
       <plugin id="com.xnife.context.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.environment" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.http.server" autoStart="true" startLevel="0" />
+      <plugin id="com.xnife.logging.slf4j.logback.commandline" autoStart="true" startLevel="2" />
       <plugin id="com.xnife.logging.slf4j.over.jul" autoStart="true" startLevel="2" />
       <plugin id="com.xnife.remoting.server" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.security.remote" autoStart="true" startLevel="0" />
