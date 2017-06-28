@@ -4,13 +4,13 @@ Bundle-Name: IDE Bundle for com.profidata.xentis.bodomain
 Bundle-SymbolicName: com.profidata.xentis.bodomain
 Bundle-Version: 0.0.0
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Import-Package: com.compxc.platform.common
+Import-Package: com.compxc.platform.common,
+ com.xnife.core.jaxb.adapter
 Export-Package: com.profidatagroup.bodomain.connection,
  com.profidatagroup.bodomain.dataexport,
  com.profidatagroup.bodomain.dataexport.dto,
  com.profidatagroup.bodomain.env,
  com.profidatagroup.bodomain.finalmodul,
- com.profidatagroup.bodomain.jaxb,
  com.profidatagroup.bodomain.jms,
  com.profidatagroup.bodomain.jms.alerter,
  com.profidatagroup.bodomain.order.blotter,
