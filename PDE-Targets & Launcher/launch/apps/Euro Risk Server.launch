@@ -7,7 +7,7 @@
 <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
 <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/re-service-point-ers/lib/re-service-point-2016.03.12.jar"/>
+<listEntry value="/re-service-point-ers/lib/re-service-point-2017.1.03.5.jar"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
