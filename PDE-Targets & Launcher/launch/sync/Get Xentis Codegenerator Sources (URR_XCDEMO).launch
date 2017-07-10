@@ -19,7 +19,7 @@
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_ANT_TARGETS" value="syncGeneratedJniSources,"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_LAUNCH_CONFIGURATION_BUILD_SCOPE" value="${projects:com.profidatagroup.xentis.jni}"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="${workspace_loc:/PDE-Targets &amp; Launcher/antscripts/sync.xml}"/>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="-Dxentis.home=//jenkins/jenkins/.jenkins/jobs/xentis-master-topic/lastSuccessful/archive/eamis -Dmaven.build.version=5.5.0-SNAPSHOT"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="-Dxentis.home=//pdxenlin51/urr/xentisMASTERbranch_xcdemo -Dmaven.build.version=5.5.0-SNAPSHOT"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${workspace_loc}"/>
 <stringAttribute key="process_factory_id" value="org.eclipse.ant.ui.remoteAntProcessFactory"/>
 </launchConfiguration>
