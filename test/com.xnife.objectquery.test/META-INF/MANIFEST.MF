@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test fragment for com.xnife.objectquery bundle
+Bundle-SymbolicName: com.xnife.objectquery.test
+Bundle-Version: 0.0.0
+Fragment-Host: com.xnife.objectquery;bundle-version="0.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.thoughtworks.xstream,
+ com.xnife.testing.junit,
+ junit.framework,
+ org.easymock,
+ org.hamcrest.core,
+ org.junit

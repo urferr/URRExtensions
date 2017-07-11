@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test fragment for com.xnife.logging.slf4j.logback bundle
+Bundle-SymbolicName: com.xnife.logging.slf4j.logback.test
+Bundle-Version: 0.0.0
+Bundle-Vendor: XNIFE
+Fragment-Host: com.xnife.logging.slf4j.logback;bundle-version="0.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.hamcrest,
+ org.junit
