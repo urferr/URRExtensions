@@ -71,6 +71,7 @@ public class CreateDummyJavaProject {
 				.createProject()
 				.toJavaProject()
 				.addSourceFolder("src")
+				.addLinkedSourceFolder("src-link", new Path("WORKSPACE_LOC/dummy.java.ease/src"))
 				.setOutputFolder("bin")
 				.addNature("org.eclipse.pde.PluginNature")
 				.addBuilder("org.eclipse.pde.ManifestBuilder")
@@ -80,9 +81,7 @@ public class CreateDummyJavaProject {
 								new Path("org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8")))
 				.addClasspathEntry(
 						theProject -> JavaCore.newContainerEntry(
-								new Path("org.eclipse.pde.core.requiredPlugins")))
-				.createPackage("src", "com.test")
-				.createTestClass("src", "com.test");
+								new Path("org.eclipse.pde.core.requiredPlugins")));
 
 		if (aProjectWrapper.hasError()) {
 			err.println("Creation of project 'dummy.plugin.ease' failed:\n-> " + aProjectWrapper.getErrorMessage());

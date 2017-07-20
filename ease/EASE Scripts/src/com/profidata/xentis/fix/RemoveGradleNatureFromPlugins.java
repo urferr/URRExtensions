@@ -8,15 +8,13 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.eclipse.core.resources.ICommand;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspace;
-import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.IJavaProject;
@@ -24,8 +22,11 @@ import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 
+import com.profidata.xentis.util.ProjectWrapper;
+
 public class RemoveGradleNatureFromPlugins {
 	private static final String PLUGIN_NATURE_ID = "org.eclipse.pde.PluginNature";
+	private static final String PLUGIN_CLASSPATH_ID = "org.eclipse.pde.core.requiredPlugins";
 	private static final String GRADLE_NATURE_ID = "org.eclipse.buildship.core.gradleprojectnature";
 	private static final String GRADLE_CLASSPATH_ID = "org.eclipse.buildship.core.gradleclasspathcontainer";
 
@@ -46,8 +47,19 @@ public class RemoveGradleNatureFromPlugins {
 
 		findProjectsWithPluginAndGradleNature(aWorkspace).stream()
 				.forEach(theProject -> {
-					out.println("Project with double classpath nature: " + theProject.getName());
-					removeGradleNature(aWorkspace, theProject);
+					out.println("Fix project with Plugin/Gradle nature: " + theProject.getName());
+					ProjectWrapper aProjectWrapper = ProjectWrapper.of(theProject)
+							.toJavaProject()
+							.removeNature(GRADLE_NATURE_ID)
+							.removeClasspathEntry(new Path(GRADLE_CLASSPATH_ID))
+							.build();
+
+					if (aProjectWrapper.hasError()) {
+						err.println("Fix project '" + theProject.getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
+					}
+					else {
+						migrateTestSourceFolderToTestFragmentProject(theProject);
+					}
 				});
 
 		try {
@@ -64,51 +76,7 @@ public class RemoveGradleNatureFromPlugins {
 				.collect(Collectors.toSet());
 	}
 
-	private void removeGradleNature(IWorkspace theWorkspace, IProject theProject) {
-		IProjectDescription aProjectDescription = getProjectDescription(theProject);
-
-		if (aProjectDescription != null) {
-			String[] someResultingNatures = Arrays.stream(aProjectDescription.getNatureIds())
-					.filter(theNatureId -> !theNatureId.equals(GRADLE_NATURE_ID))
-					.toArray(String[]::new);
-			IStatus aStatus = theWorkspace.validateNatureSet(someResultingNatures);
-
-			if (aStatus.getCode() == IStatus.OK) {
-				aProjectDescription.setNatureIds(someResultingNatures);
-				setProjectDescription(theProject, aProjectDescription);
-
-				removeGradleClasspathContainer(theProject);
-				removeTestSourceFolder(theProject);
-				try {
-					theProject.build(IncrementalProjectBuilder.FULL_BUILD, null);
-				}
-				catch (CoreException theCause) {
-					err.println("Could not build project '" + theProject.getName() + "': " + theCause.getMessage());
-				}
-			}
-		}
-	}
-
-	private void removeGradleClasspathContainer(IProject theProject) {
-		IJavaProject aJavaProject = JavaCore.create(theProject);
-
-		try {
-			IClasspathEntry[] allClasspathEntries = aJavaProject.getRawClasspath();
-			IClasspathEntry[] allChangedClasspathEntries = Arrays.stream(allClasspathEntries)
-					.filter(theEntry -> !theEntry.getPath().toString().equals(GRADLE_CLASSPATH_ID))
-					.toArray(IClasspathEntry[]::new);
-
-			if (allClasspathEntries.length != allChangedClasspathEntries.length) {
-				aJavaProject.setRawClasspath(allChangedClasspathEntries, null);
-			}
-		}
-		catch (JavaModelException theCause) {
-			err.println("Could not access class path of project '" + theProject.getName() + "': " + theCause.getMessage());
-		}
-
-	}
-
-	private void removeTestSourceFolder(IProject theProject) {
+	private void migrateTestSourceFolderToTestFragmentProject(IProject theProject) {
 		IJavaProject aJavaProject = JavaCore.create(theProject);
 
 		try {
@@ -134,82 +102,49 @@ public class RemoveGradleNatureFromPlugins {
 
 	}
 
-	private void createTestProject(IProject theProject, List<IClasspathEntry> theAllTestSourceClasspathEntries) {
+	private void createTestProject(IProject theProject, List<IClasspathEntry> theTestSourceClasspathEntries) {
 		IWorkspace aWorkspace = theProject.getWorkspace();
 		String aTestProjectName = theProject.getName() + ".test";
 
-		IProject aTestProject = aWorkspace.getRoot().getProject(aTestProjectName);
+		out.println(" -> Create Test project: " + aTestProjectName);
+		ProjectWrapper aProjectWrapper = ProjectWrapper
+				.of(aWorkspace, aTestProjectName)
+				.createProject()
+				.toJavaProject()
+				.removeDefaultSourceFolder()
+				.setOutputFolder("bin")
+				.addNature(PLUGIN_NATURE_ID)
+				.addBuilder("org.eclipse.pde.ManifestBuilder")
+				.addBuilder("org.eclipse.pde.SchemaBuilder")
+				.addClasspathEntry(
+						theTestProject -> JavaCore.newContainerEntry(
+								new Path("org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8")))
+				.addClasspathEntry(
+						theTestProject -> JavaCore.newContainerEntry(
+								new Path(PLUGIN_CLASSPATH_ID)));
 
-		if (aTestProject.exists()) {
-			return;
-		}
-
-		out.println("Create Test project: " + aTestProjectName);
-		IJavaProject aTestJavaProject = JavaCore.create(theProject);
-		IProjectDescription aTestProjectDescription = aWorkspace.newProjectDescription(aTestProjectName);
-
-		try {
-			aTestProjectDescription.setLocation(null);
-			aTestProject.create(aTestProjectDescription, null);
-			aTestProject.open(null);
-
-			addTestProjectNatures(aTestProjectDescription);
-			addTestProjectBuilders(aTestProjectDescription);
-			addTestProjectClasspath(aTestJavaProject);
-			addSourceLinkToTestSource(aTestJavaProject, theProject, theAllTestSourceClasspathEntries);
-
-			aTestProject.setDescription(aTestProjectDescription, null);
-		}
-		catch (CoreException theCause) {
-			err.println("Could not properly create test project '" + aTestProjectName + "': " + theCause.getMessage());
-		}
-	}
-
-	private void addTestProjectNatures(IProjectDescription theTestProjectDescription) {
-		String[] allTestProjectNatures = new String[] {
-				JavaCore.NATURE_ID,
-				"org.eclipse.pde.PluginNature" };
-
-		theTestProjectDescription.setNatureIds(allTestProjectNatures);
-	}
-
-	private void addTestProjectBuilders(IProjectDescription theTestProjectDescription) {
-		ICommand aJavaBuilder = theTestProjectDescription.newCommand();
-		ICommand aManifestBuilder = theTestProjectDescription.newCommand();
-		ICommand aSchemaBuilder = theTestProjectDescription.newCommand();
-
-		aJavaBuilder.setBuilderName(JavaCore.BUILDER_ID);
-		aManifestBuilder.setBuilderName("org.eclipse.pde.ManifestBuilder");
-		aSchemaBuilder.setBuilderName("org.eclipse.pde.SchemaBuilder");
-
-		theTestProjectDescription.setBuildSpec(
-				new ICommand[] {
-						aJavaBuilder,
-						aManifestBuilder,
-						aSchemaBuilder });
-	}
-
-	private void addTestProjectClasspath(IJavaProject theTestJavaProject) {
-		IClasspathEntry[] allClasspathEntries = new IClasspathEntry[] {
-				JavaCore.newSourceEntry(new Path("/" + theTestJavaProject.getProject().getName() + "/src")),
-				JavaCore.newContainerEntry(
-						new Path("org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8")),
-				JavaCore.newContainerEntry(
-						new Path("org.eclipse.pde.core.requiredPlugins")) };
-
-		try {
-			theTestJavaProject.getRawClasspath();
-			theTestJavaProject.setRawClasspath(allClasspathEntries, null);
-			theTestJavaProject.setOutputLocation(new Path("/" + theTestJavaProject.getProject().getName() + "/bin"), null);
-		}
-		catch (JavaModelException theCause) {
-			err.println("Could set the class path to project '" + theTestJavaProject.getProject().getName() + "': " + theCause.getMessage());
-		}
-	}
-
-	private void addSourceLinkToTestSource(IJavaProject theTestJavaProject, IProject theSourceProject, List<IClasspathEntry> theTestSourceClasspathEntries) {
+		IPath aWorkspaceLocation = theProject.getWorkspace().getRoot().getLocation();
+		IPath aProjectLocation = theProject.getLocation();
 		for (IClasspathEntry aTestSourceClasspathEntry : theTestSourceClasspathEntries) {
-			out.println(aTestSourceClasspathEntry.getPath());
+			out.println(Arrays.toString(aTestSourceClasspathEntry.getPath().segments()));
+
+			IPath aRelativeProjectLocation = aProjectLocation.makeRelativeTo(aWorkspaceLocation);
+			IPath aSourceLocation = new Path("WORKSPACE_LOC").append(aRelativeProjectLocation).append(aTestSourceClasspathEntry.getPath().removeFirstSegments(1));
+
+			if (aTestSourceClasspathEntry.getPath().lastSegment().equals("java")) {
+				aProjectWrapper.addLinkedSourceFolder("test-java", aSourceLocation);
+			}
+			if (aTestSourceClasspathEntry.getPath().lastSegment().equals("resources")) {
+				aProjectWrapper.addLinkedSourceFolder("test-resources", aSourceLocation);
+			}
+		}
+
+		aProjectWrapper
+				.createFragmentManifest(theProject)
+				.createFragmentBuildProperties();
+
+		if (aProjectWrapper.hasError()) {
+			err.println("Create test project '" + aTestProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
 		}
 	}
 
