@@ -2,9 +2,13 @@ package com.profidata.xentis.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.ICommand;
@@ -17,22 +21,28 @@ import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
+import org.eclipse.jdt.core.Flags;
 import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.ICompilationUnit;
+import org.eclipse.jdt.core.IImportDeclaration;
+import org.eclipse.jdt.core.IJavaElement;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.IPackageFragment;
 import org.eclipse.jdt.core.IPackageFragmentRoot;
-import org.eclipse.jdt.core.IType;
+import org.eclipse.jdt.core.IParent;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.pde.core.IEditableModel;
 import org.eclipse.pde.core.build.IBuildEntry;
 import org.eclipse.pde.core.build.IBuildModelFactory;
 import org.eclipse.pde.core.plugin.IFragmentModel;
+import org.eclipse.pde.core.plugin.IPluginModel;
 import org.eclipse.pde.internal.core.build.WorkspaceBuildModel;
 import org.eclipse.pde.internal.core.bundle.WorkspaceBundleFragmentModel;
+import org.eclipse.pde.internal.core.bundle.WorkspaceBundlePluginModel;
 import org.eclipse.pde.internal.core.ibundle.IBundle;
 import org.eclipse.pde.internal.core.ibundle.IBundleFragment;
+import org.eclipse.pde.internal.core.ibundle.IBundlePlugin;
 import org.eclipse.pde.internal.core.ibundle.IBundlePluginModelBase;
 import org.eclipse.pde.internal.core.project.PDEProject;
 import org.osgi.framework.Constants;
@@ -101,7 +111,7 @@ public class ProjectWrapper {
 	public ProjectWrapper removeNature(String theNatureId) {
 		if (!hasError()) {
 			try {
-				if (!project.hasNature(theNatureId)) {
+				if (project.hasNature(theNatureId)) {
 					IProjectDescription aProjectDescription = project.getDescription();
 					List<String> allNatureIds = Arrays.asList(aProjectDescription.getNatureIds()).stream()
 							.filter(theExistingNatureId -> !theExistingNatureId.equals(theNatureId))
@@ -116,6 +126,15 @@ public class ProjectWrapper {
 			}
 		}
 		return this;
+	}
+
+	public boolean hasNature(String theNatureId) {
+		try {
+			return project.hasNature(theNatureId);
+		}
+		catch (CoreException theCause) {
+			throw new RuntimeException(theCause);
+		}
 	}
 
 	public ProjectWrapper addBuilder(String theBuilderId) {
@@ -142,8 +161,10 @@ public class ProjectWrapper {
 		}
 		if (!hasError()) {
 			try {
-				IFolder folder = project.getFolder(theFolderName);
-				folder.create(true, true, null);
+				IFolder aSourceFolder = project.getFolder(theFolderName);
+				if (!aSourceFolder.exists()) {
+					aSourceFolder.create(true, true, null);
+				}
 			}
 			catch (CoreException theCause) {
 				errorMessage = "Could not create source folder '" + theFolderName + "' in Java project '" + project.getName() + "': " + theCause.getMessage();
@@ -221,7 +242,9 @@ public class ProjectWrapper {
 			IFolder aBinaryFolder = project.getFolder(theFolderName);
 
 			try {
-				aBinaryFolder.create(false, true, null);
+				if (!aBinaryFolder.exists()) {
+					aBinaryFolder.create(false, true, null);
+				}
 				javaProject.setOutputLocation(aBinaryFolder.getFullPath(), null);
 			}
 			catch (CoreException theCause) {
@@ -289,28 +312,91 @@ public class ProjectWrapper {
 	@SuppressWarnings({
 			"restriction",
 			"deprecation" })
-	public ProjectWrapper createFragmentManifest(IProject theHostBundleProject) {
+	public ProjectWrapper createPluginManifest(Supplier<Set<String>> theAdditionalPackageDependencies) {
+		verifyJavaProject();
+
+		if (!hasError()) {
+			IPluginModel aBundleModel = new WorkspaceBundlePluginModel(PDEProject.getManifest(project), PDEProject.getPluginXml(project));
+			IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aBundleModel;
+			IBundlePlugin aBundlePlugin = (IBundlePlugin) aBundleModel.getPluginBase();
+
+			try {
+				IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();
+
+				aBundlePlugin.setSchemaVersion("1.0");
+				aBundle.setHeader(Constants.BUNDLE_MANIFESTVERSION, "2");
+
+				aBundlePlugin.setId(project.getName());
+				aBundlePlugin.setVersion("0.0.0");
+				aBundlePlugin.setProviderName("Reto Urfer (Profidata AG)");
+
+				aBundle.setHeader(Constants.BUNDLE_REQUIREDEXECUTIONENVIRONMENT, "JavaSE-1.8");
+
+				// Determine package dependencies from source code, exclude the ones starting with "java."
+				Set<String> allSourcePackages = getSourcePackages();
+				Set<String> allImportedPackages = getImportedPackages().stream()
+						.filter(thePackage -> !thePackage.startsWith("java."))
+						.collect(Collectors.toSet());
+
+				allImportedPackages.addAll(theAdditionalPackageDependencies.get());
+				allImportedPackages.removeAll(allSourcePackages);
+
+				List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
+				Collections.sort(allSortedImportedPackages);
+				aBundle.setHeader(Constants.IMPORT_PACKAGE, toManifestString(allSortedImportedPackages));
+
+				List<String> allSortedSourcePackages = new ArrayList<>(allSourcePackages);
+				Collections.sort(allSortedSourcePackages);
+				aBundle.setHeader(Constants.EXPORT_PACKAGE, toManifestString(allSortedSourcePackages));
+
+				aBundleModelBase.save();
+			}
+			catch (CoreException theCause) {
+				errorMessage = "Could not manifest for plugin project '" + project.getName() + "': " + theCause.getMessage();
+			}
+		}
+		return this;
+	}
+
+	@SuppressWarnings({
+			"restriction",
+			"deprecation" })
+	public ProjectWrapper createTestFragmentManifest(IProject theHostBundleProject, Supplier<Set<String>> theAdditionalPackageDependencies) {
 		verifyJavaProject();
 
 		if (!hasError()) {
 			IFragmentModel aFragmentModel = new WorkspaceBundleFragmentModel(PDEProject.getManifest(project), PDEProject.getFragmentXml(project));
 			IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aFragmentModel;
-			IBundleFragment aFragment = (IBundleFragment) aFragmentModel.getPluginBase();
+			IBundleFragment aBundleFragment = (IBundleFragment) aFragmentModel.getPluginBase();
 
 			try {
 				IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();
 
-				aFragment.setSchemaVersion("1.0");
+				aBundleFragment.setSchemaVersion("1.0");
 				aBundle.setHeader(Constants.BUNDLE_MANIFESTVERSION, "2");
 
-				aFragment.setName("Test wrapper fragment to " + theHostBundleProject.getName());
-				aFragment.setId(project.getName());
-				aFragment.setVersion("0.0.0");
-				aFragment.setProviderName("Reto Urfer (Profidata AG)");
+				aBundleFragment.setName("Test wrapper fragment to " + theHostBundleProject.getName());
+				aBundleFragment.setId(project.getName());
+				aBundleFragment.setVersion("0.0.0");
+				aBundleFragment.setProviderName("Reto Urfer (Profidata AG)");
 
-				aFragment.setPluginId(theHostBundleProject.getName());
+				aBundleFragment.setPluginId(theHostBundleProject.getName());
 
 				aBundle.setHeader(Constants.BUNDLE_REQUIREDEXECUTIONENVIRONMENT, "JavaSE-1.8");
+
+				// Determine package dependencies from source code, exclude the ones starting with "java."
+				Set<String> allImportedPackages = getImportedPackages().stream()
+						.filter(thePackage -> !thePackage.startsWith("java."))
+						.collect(Collectors.toSet());
+
+				allImportedPackages.addAll(theAdditionalPackageDependencies.get());
+
+				allImportedPackages.removeAll(getSourcePackages());
+
+				List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
+
+				Collections.sort(allSortedImportedPackages);
+				aBundle.setHeader(Constants.IMPORT_PACKAGE, toManifestString(allSortedImportedPackages));
 
 				aBundleModelBase.save();
 			}
@@ -322,7 +408,7 @@ public class ProjectWrapper {
 	}
 
 	@SuppressWarnings("restriction")
-	public ProjectWrapper createFragmentBuildProperties() {
+	public ProjectWrapper createBuildProperties() {
 		verifyJavaProject();
 
 		if (!hasError()) {
@@ -351,7 +437,7 @@ public class ProjectWrapper {
 				((IEditableModel) aBuildModel).save();
 			}
 			catch (CoreException theCause) {
-				errorMessage = "Could not build.properties file for project '" + project.getName() + "': " + theCause.getMessage();
+				errorMessage = "Could not build.properties file for bundle project '" + project.getName() + "': " + theCause.getMessage();
 			}
 		}
 		return this;
@@ -364,6 +450,18 @@ public class ProjectWrapper {
 			}
 			catch (CoreException theCause) {
 				errorMessage = "Could not build project '" + project.getName() + "': " + theCause.getMessage();
+			}
+		}
+		return this;
+	}
+
+	public ProjectWrapper refresh() {
+		if (!hasError()) {
+			try {
+				project.refreshLocal(IResource.DEPTH_INFINITE, null);
+			}
+			catch (CoreException theCause) {
+				errorMessage = "Could not refresh project '" + project.getName() + "': " + theCause.getMessage();
 			}
 		}
 		return this;
@@ -384,10 +482,119 @@ public class ProjectWrapper {
 		return this;
 	}
 
+	public Set<String> getSourcePackages() {
+		Set<String> allSourcePackages = new HashSet<>();
+
+		verifyJavaProject();
+
+		if (!hasError()) {
+			try {
+				IPackageFragmentRoot[] allPackageFragmentRoots = javaProject.getAllPackageFragmentRoots();
+
+				for (IPackageFragmentRoot aPackageFragmentRoot : allPackageFragmentRoots) {
+					if (aPackageFragmentRoot.getKind() == IPackageFragmentRoot.K_SOURCE) {
+						allSourcePackages.addAll(getSourcePackages(aPackageFragmentRoot));
+					}
+				}
+			}
+			catch (JavaModelException theCause) {
+				errorMessage = "Could not extract source packages for project '" + project.getName() + theCause.getMessage();
+			}
+		}
+
+		return allSourcePackages;
+	}
+
+	private Set<String> getSourcePackages(IJavaElement theJavaElement) throws JavaModelException {
+		Set<String> allSourcePackages = new HashSet<>();
+
+		if (theJavaElement instanceof IPackageFragment) {
+			IPackageFragment aPackageFragment = (IPackageFragment) theJavaElement;
+
+			Arrays.stream(aPackageFragment.getChildren())
+					.filter(theChild -> theChild instanceof ICompilationUnit)
+					.findAny().ifPresent(theCompilationUnit -> allSourcePackages.add(aPackageFragment.getElementName()));
+		}
+
+		if (theJavaElement instanceof IParent) {
+			IParent aContainerElement = (IParent) theJavaElement;
+
+			for (IJavaElement aJavaElement : aContainerElement.getChildren()) {
+				allSourcePackages.addAll(getSourcePackages(aJavaElement));
+			}
+		}
+
+		return allSourcePackages;
+	}
+
+	public Set<String> getImportedPackages() {
+		Set<String> allImportedPackages = new HashSet<>();
+
+		verifyJavaProject();
+
+		if (!hasError()) {
+			try {
+				IPackageFragmentRoot[] allPackageFragmentRoots = javaProject.getAllPackageFragmentRoots();
+
+				for (IPackageFragmentRoot aPackageFragmentRoot : allPackageFragmentRoots) {
+					if (aPackageFragmentRoot.getKind() == IPackageFragmentRoot.K_SOURCE) {
+						allImportedPackages.addAll(getImportedPackages(aPackageFragmentRoot));
+					}
+				}
+			}
+			catch (JavaModelException theCause) {
+				errorMessage = "Could not extract imported packages for project '" + project.getName() + theCause.getMessage();
+			}
+		}
+
+		return allImportedPackages;
+	}
+
+	private Set<String> getImportedPackages(IJavaElement theJavaElement) throws JavaModelException {
+		Set<String> allImportedPackages = new HashSet<>();
+
+		if (theJavaElement instanceof ICompilationUnit) {
+			ICompilationUnit aCompilationUnit = (ICompilationUnit) theJavaElement;
+
+			for (IImportDeclaration aImportDeclaration : aCompilationUnit.getImports()) {
+				allImportedPackages.add(extractPackage(aImportDeclaration));
+			}
+
+		}
+		else if (theJavaElement instanceof IParent) {
+			IParent aContainerElement = (IParent) theJavaElement;
+
+			for (IJavaElement aJavaElement : aContainerElement.getChildren()) {
+				allImportedPackages.addAll(getImportedPackages(aJavaElement));
+			}
+		}
+
+		return allImportedPackages;
+	}
+
+	private String extractPackage(IImportDeclaration theImportDeclaration) throws JavaModelException {
+		final int skipLastElements = Flags.isStatic(theImportDeclaration.getFlags()) ? 2 : 1;
+
+		List<String> allImportTokens = new ArrayList<>(Arrays.asList(theImportDeclaration.getElementName().split("\\.")));
+		Collections.reverse(allImportTokens);
+
+		List<String> aImportPackageTokens = allImportTokens.stream()
+				.skip(skipLastElements)
+				.filter(thePackageToken -> Character.isLowerCase(thePackageToken.codePointAt(0)))
+				.collect(Collectors.toList());
+		Collections.reverse(aImportPackageTokens);
+
+		return aImportPackageTokens.stream().collect(Collectors.joining("."));
+	}
+
 	private void verifyJavaProject() {
 		if (!hasError() && javaProject == null) {
 			errorMessage = "project '" + project.getName() + "' is not a Java project";
 		}
+	}
+
+	private String toManifestString(List<String> theAllImportedPackages) {
+		return theAllImportedPackages.stream().collect(Collectors.joining(",\n "));
 	}
 
 	public boolean hasError() {
@@ -396,42 +603,5 @@ public class ProjectWrapper {
 
 	public String getErrorMessage() {
 		return errorMessage;
-	}
-
-	public ProjectWrapper createTestClass(String theSourceFolder, String thePackage) {
-		if (!hasError()) {
-			try {
-
-				// get folder by using resources package
-				IFolder aFolder = project.getFolder(theSourceFolder);
-
-				// Add folder to Java element
-				IPackageFragmentRoot srcFolder = javaProject.getPackageFragmentRoot(aFolder);
-
-				// get package fragment
-				IPackageFragment fragment = srcFolder.getPackageFragment(thePackage);
-
-				//init code string and create compilation unit
-				String str = "package " + thePackage + ";" + "\n"
-						+ "public class Test  {" + "\n" + " private String name;"
-						+ "\n" + "}";
-
-				ICompilationUnit cu = fragment.createCompilationUnit(
-						"Test.java",
-						str,
-						false,
-						null);
-
-				//create a field
-				IType type = cu.getType("Test");
-
-				type.createField("private String age;", null, true, null);
-			}
-			catch (CoreException theCause) {
-				errorMessage = "Could not create test class: " + theCause.getMessage();
-			}
-		}
-
-		return this;
 	}
 }

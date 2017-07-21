@@ -1,16 +1,19 @@
 package com.profidata.xentis.fix;
 
-import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
-import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
@@ -22,24 +25,34 @@ import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 
+import com.profidata.xentis.util.ProjectConstants;
 import com.profidata.xentis.util.ProjectWrapper;
 
 public class RemoveGradleNatureFromPlugins {
-	private static final String PLUGIN_NATURE_ID = "org.eclipse.pde.PluginNature";
-	private static final String PLUGIN_CLASSPATH_ID = "org.eclipse.pde.core.requiredPlugins";
-	private static final String GRADLE_NATURE_ID = "org.eclipse.buildship.core.gradleprojectnature";
-	private static final String GRADLE_CLASSPATH_ID = "org.eclipse.buildship.core.gradleclasspathcontainer";
+	private static final Map<String, Set<String>> additionalTestFragmentDependencies;
 
-	private static PrintStream out;
-	private static PrintStream err;
+	static {
+		Set<String> somePackages;
 
-	public static void initialize(InputStream in, PrintStream out, PrintStream error) {
-		RemoveGradleNatureFromPlugins.out = out;
-		RemoveGradleNatureFromPlugins.err = error;
+		additionalTestFragmentDependencies = new HashMap<>();
+
+		somePackages = new HashSet<>();
+		somePackages.add("com.profidata.xentis.domain.unified");
+		somePackages.add("com.xnife.domain");
+		additionalTestFragmentDependencies.put("com.profidata.risk.commons.test", somePackages);
 	}
 
-	public static void main(String[] args) throws Exception {
-		new RemoveGradleNatureFromPlugins().execute();
+	private final PrintStream output;
+	private final PrintStream error;
+
+	public static void run(PrintStream theOutput, PrintStream theError) {
+		new RemoveGradleNatureFromPlugins(theOutput, theError).execute();
+	}
+
+	private RemoveGradleNatureFromPlugins(PrintStream theOutput, PrintStream theError) {
+		super();
+		output = theOutput;
+		error = theError;
 	}
 
 	private void execute() {
@@ -47,32 +60,27 @@ public class RemoveGradleNatureFromPlugins {
 
 		findProjectsWithPluginAndGradleNature(aWorkspace).stream()
 				.forEach(theProject -> {
-					out.println("Fix project with Plugin/Gradle nature: " + theProject.getName());
+					output.println("Fix project with Plugin/Gradle nature: " + theProject.getName());
 					ProjectWrapper aProjectWrapper = ProjectWrapper.of(theProject)
 							.toJavaProject()
-							.removeNature(GRADLE_NATURE_ID)
-							.removeClasspathEntry(new Path(GRADLE_CLASSPATH_ID))
+							.removeNature(ProjectConstants.GRADLE_NATURE_ID)
+							.removeClasspathEntry(new Path(ProjectConstants.GRADLE_CLASSPATH_ID))
+							.refresh()
 							.build();
 
 					if (aProjectWrapper.hasError()) {
-						err.println("Fix project '" + theProject.getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
+						error.println("Fix project '" + theProject.getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
 					}
 					else {
 						migrateTestSourceFolderToTestFragmentProject(theProject);
 					}
 				});
 
-		try {
-			aWorkspace.getRoot().refreshLocal(IResource.DEPTH_INFINITE, null);
-		}
-		catch (CoreException theCause) {
-			err.print("Could not refresh resource: " + theCause.getMessage());
-		}
 	}
 
 	private Collection<IProject> findProjectsWithPluginAndGradleNature(IWorkspace theWorkspace) {
 		return Arrays.stream(theWorkspace.getRoot().getProjects())
-				.filter(theProject -> hasNature(theProject, PLUGIN_NATURE_ID) && hasNature(theProject, GRADLE_NATURE_ID))
+				.filter(theProject -> hasNature(theProject, ProjectConstants.PLUGIN_NATURE_ID) && hasNature(theProject, ProjectConstants.GRADLE_NATURE_ID))
 				.collect(Collectors.toSet());
 	}
 
@@ -83,7 +91,10 @@ public class RemoveGradleNatureFromPlugins {
 			IClasspathEntry[] allClasspathEntries = aJavaProject.getRawClasspath();
 			List<IClasspathEntry> allTestSourceClasspathEntries = Arrays.stream(allClasspathEntries)
 					.filter(theEntry -> theEntry.getContentKind() == IPackageFragmentRoot.K_SOURCE && theEntry.getEntryKind() == IClasspathEntry.CPE_SOURCE)
-					.filter(theEntry -> theEntry.getPath().removeFirstSegments(1).segment(0).equals("test"))
+					.filter(
+							theEntry -> theEntry.getPath().removeFirstSegments(1).segment(0).equals("test")
+									|| (theEntry.getPath().removeFirstSegments(1).segmentCount() > 1 && theEntry.getPath().removeFirstSegments(1).segment(0).equals("src")
+											&& theEntry.getPath().removeFirstSegments(1).segment(1).equals("test")))
 					.collect(Collectors.toList());
 
 			if (!allTestSourceClasspathEntries.isEmpty()) {
@@ -97,7 +108,7 @@ public class RemoveGradleNatureFromPlugins {
 			}
 		}
 		catch (JavaModelException theCause) {
-			err.println("Could not access class path of project '" + theProject.getName() + "': " + theCause.getMessage());
+			error.println("Could not access class path of project '" + theProject.getName() + "': " + theCause.getMessage());
 		}
 
 	}
@@ -106,14 +117,14 @@ public class RemoveGradleNatureFromPlugins {
 		IWorkspace aWorkspace = theProject.getWorkspace();
 		String aTestProjectName = theProject.getName() + ".test";
 
-		out.println(" -> Create Test project: " + aTestProjectName);
+		output.println(" -> Create OSGi Test fragment project: " + aTestProjectName);
 		ProjectWrapper aProjectWrapper = ProjectWrapper
 				.of(aWorkspace, aTestProjectName)
 				.createProject()
 				.toJavaProject()
 				.removeDefaultSourceFolder()
 				.setOutputFolder("bin")
-				.addNature(PLUGIN_NATURE_ID)
+				.addNature(ProjectConstants.PLUGIN_NATURE_ID)
 				.addBuilder("org.eclipse.pde.ManifestBuilder")
 				.addBuilder("org.eclipse.pde.SchemaBuilder")
 				.addClasspathEntry(
@@ -121,13 +132,11 @@ public class RemoveGradleNatureFromPlugins {
 								new Path("org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8")))
 				.addClasspathEntry(
 						theTestProject -> JavaCore.newContainerEntry(
-								new Path(PLUGIN_CLASSPATH_ID)));
+								new Path(ProjectConstants.PLUGIN_CLASSPATH_ID)));
 
 		IPath aWorkspaceLocation = theProject.getWorkspace().getRoot().getLocation();
 		IPath aProjectLocation = theProject.getLocation();
 		for (IClasspathEntry aTestSourceClasspathEntry : theTestSourceClasspathEntries) {
-			out.println(Arrays.toString(aTestSourceClasspathEntry.getPath().segments()));
-
 			IPath aRelativeProjectLocation = aProjectLocation.makeRelativeTo(aWorkspaceLocation);
 			IPath aSourceLocation = new Path("WORKSPACE_LOC").append(aRelativeProjectLocation).append(aTestSourceClasspathEntry.getPath().removeFirstSegments(1));
 
@@ -140,11 +149,20 @@ public class RemoveGradleNatureFromPlugins {
 		}
 
 		aProjectWrapper
-				.createFragmentManifest(theProject)
-				.createFragmentBuildProperties();
+				.createTestFragmentManifest(theProject, () -> {
+					Set<String> someAdditionalPackages = new HashSet<>();
+					// package org.hamcrest is opften used to run unit tests
+					someAdditionalPackages.add("org.hamcrest");
+					Optional.ofNullable(additionalTestFragmentDependencies.get(aTestProjectName)).ifPresent(thePackages -> someAdditionalPackages.addAll(thePackages));
+
+					return someAdditionalPackages;
+				})
+				.createBuildProperties()
+				.refresh()
+				.build();
 
 		if (aProjectWrapper.hasError()) {
-			err.println("Create test project '" + aTestProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
+			error.println("Create test project '" + aTestProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
 		}
 	}
 
@@ -171,7 +189,7 @@ public class RemoveGradleNatureFromPlugins {
 			theProject.setDescription(theProjectDescription, null);
 		}
 		catch (CoreException theCause) {
-			err.println("Could not set project description: " + theCause.getMessage());
+			error.println("Could not set project description: " + theCause.getMessage());
 		}
 	}
 }
