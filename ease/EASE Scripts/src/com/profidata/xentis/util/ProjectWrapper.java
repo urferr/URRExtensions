@@ -1,5 +1,6 @@
 package com.profidata.xentis.util;
 
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -61,6 +62,23 @@ public class ProjectWrapper {
 		return new ProjectWrapper(theProject);
 	}
 
+	public static ProjectWrapper of(IWorkspace theWorkspace, IPath theProjectPath, PrintStream theOutput) {
+		theOutput.println("load project description");
+		ProjectWrapper aProjectWrapper = null;
+		try {
+			IProjectDescription aProjectDescription = theWorkspace.loadProjectDescription(theProjectPath.append(".project"));
+			theOutput.println(aProjectDescription.getLocation());
+
+			aProjectWrapper = new ProjectWrapper(theWorkspace.getRoot().getProject(aProjectDescription.getName()));
+
+			aProjectWrapper.setProjectDescription(aProjectDescription);
+		}
+		catch (CoreException theCause) {
+			theCause.printStackTrace(theOutput);
+		}
+		return aProjectWrapper;
+	}
+
 	private ProjectWrapper(IProject theProject) {
 		project = Objects.requireNonNull(theProject);
 	}
@@ -69,7 +87,6 @@ public class ProjectWrapper {
 		if (!project.exists()) {
 			try {
 				project.create(null);
-				project.open(null);
 			}
 			catch (CoreException theCause) {
 				errorMessage = "Could not create project '" + project.getName() + "': " + theCause.getMessage();
@@ -136,6 +153,59 @@ public class ProjectWrapper {
 			catch (CoreException theCause) {
 				errorMessage = "Could not add nature '" + theNatureId + "' to project '" + project.getName() + "': " + theCause.getMessage();
 			}
+		}
+		return this;
+	}
+
+	public boolean isExisting() {
+		return project.exists();
+	}
+
+	public IProject getProject() {
+		return project;
+	}
+
+	public IProjectDescription getProjectDescription() {
+		try {
+			return project.getDescription();
+		}
+		catch (CoreException theCause) {
+			return null;
+		}
+	}
+
+	public ProjectWrapper setProjectDescription(IProjectDescription theProjectDescription) {
+		if (!hasError()) {
+			try {
+				project.setDescription(theProjectDescription, null);
+			}
+			catch (CoreException theCause) {
+				errorMessage = "Could not set description for project '" + project.getName() + "': " + theCause.getMessage();
+			}
+		}
+		return this;
+	}
+
+	public ProjectWrapper open() {
+		try {
+			if (!project.isOpen()) {
+				project.open(null);
+			}
+		}
+		catch (CoreException theCause) {
+			errorMessage = "Could not open project '" + project.getName() + "': " + theCause.getMessage();
+		}
+		return this;
+	}
+
+	public ProjectWrapper close() {
+		try {
+			if (project.isOpen()) {
+				project.close(null);
+			}
+		}
+		catch (CoreException theCause) {
+			errorMessage = "Could not close project '" + project.getName() + "': " + theCause.getMessage();
 		}
 		return this;
 	}

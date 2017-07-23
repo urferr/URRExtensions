@@ -8,6 +8,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jdt.core.JavaCore;
 
@@ -43,7 +44,7 @@ public class XentisWorkspace {
 		output.println("");
 		output.println("Import missing projects");
 		output.println("=======================");
-		//importAllFeatures("");
+		importAllFeatures(aWorkspace, "/URRExtensions/PDE-Targets & Launcher");
 
 		try {
 			aWorkspace.getRoot().refreshLocal(IResource.DEPTH_INFINITE, null);
@@ -70,6 +71,21 @@ public class XentisWorkspace {
 		}
 		if (aProjectWrapper.hasError()) {
 			error.println("Exchange Gradle with Plugin nature for project: " + theProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
+		}
+	}
+
+	private void importAllFeatures(IWorkspace theWorkspace, String thePath) {
+		IPath aProjectLocation = theWorkspace.getRoot().getLocation().append(thePath);
+		String aProjectName = aProjectLocation.lastSegment();
+
+		output.println("Import project '" + aProjectName + "' from '" + aProjectLocation + "'");
+		ProjectWrapper aProjectWrapper = ProjectWrapper.of(theWorkspace, aProjectName);
+
+		if (!aProjectWrapper.isExisting()) {
+			aProjectWrapper = ProjectWrapper.of(theWorkspace, aProjectLocation, output).open();
+		}
+		if (aProjectWrapper.hasError()) {
+			error.println("Importng all features failed: :\n-> " + aProjectWrapper.getErrorMessage());
 		}
 	}
 }

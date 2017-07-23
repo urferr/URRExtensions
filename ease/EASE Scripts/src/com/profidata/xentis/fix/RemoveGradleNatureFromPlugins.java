@@ -121,6 +121,7 @@ public class RemoveGradleNatureFromPlugins {
 		ProjectWrapper aProjectWrapper = ProjectWrapper
 				.of(aWorkspace, aTestProjectName)
 				.createProject()
+				.open()
 				.toJavaProject()
 				.removeDefaultSourceFolder()
 				.setOutputFolder("bin")
