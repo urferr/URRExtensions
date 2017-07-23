@@ -89,6 +89,18 @@ public class ProjectWrapper {
 		return this;
 	}
 
+	public ProjectWrapper asJavaProject() {
+		if (!hasError()) {
+			if (hasNature(JavaCore.NATURE_ID)) {
+				javaProject = JavaCore.create(project);
+			}
+			else {
+				errorMessage = "Project '" + project.getName() + "' is no Java project";
+			}
+		}
+		return this;
+	}
+
 	public ProjectWrapper addNature(String theNatureId) {
 		if (!hasError()) {
 			try {
@@ -130,7 +142,10 @@ public class ProjectWrapper {
 
 	public boolean hasNature(String theNatureId) {
 		try {
-			return project.hasNature(theNatureId);
+			if (project.exists()) {
+				return project.hasNature(theNatureId);
+			}
+			return false;
 		}
 		catch (CoreException theCause) {
 			throw new RuntimeException(theCause);
@@ -316,9 +331,9 @@ public class ProjectWrapper {
 		verifyJavaProject();
 
 		if (!hasError()) {
-			IPluginModel aBundleModel = new WorkspaceBundlePluginModel(PDEProject.getManifest(project), PDEProject.getPluginXml(project));
-			IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aBundleModel;
-			IBundlePlugin aBundlePlugin = (IBundlePlugin) aBundleModel.getPluginBase();
+			IPluginModel aBundlePluginModel = new WorkspaceBundlePluginModel(PDEProject.getManifest(project), PDEProject.getPluginXml(project));
+			IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aBundlePluginModel;
+			IBundlePlugin aBundlePlugin = (IBundlePlugin) aBundlePluginModel.getPluginBase();
 
 			try {
 				IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();

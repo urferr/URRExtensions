@@ -6,10 +6,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
@@ -24,6 +27,19 @@ import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.IParent;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
+import org.eclipse.pde.internal.core.feature.WorkspaceFeatureModel;
+import org.eclipse.pde.internal.core.ifeature.IFeature;
+import org.eclipse.pde.internal.core.ifeature.IFeatureChild;
+import org.eclipse.pde.internal.core.ifeature.IFeatureModel;
+import org.eclipse.pde.internal.core.ifeature.IFeaturePlugin;
+import org.eclipse.pde.internal.core.iproduct.IProduct;
+import org.eclipse.pde.internal.core.iproduct.IProductFeature;
+import org.eclipse.pde.internal.core.iproduct.IProductModel;
+import org.eclipse.pde.internal.core.iproduct.IProductPlugin;
+import org.eclipse.pde.internal.core.product.WorkspaceProductModel;
+import org.eclipse.pde.internal.core.project.PDEProject;
+
+import com.profidata.xentis.util.ProjectConstants;
 
 public class ShowProjectProperties {
 	private static final String INDENT = "   ";
@@ -47,9 +63,13 @@ public class ShowProjectProperties {
 		Arrays.stream(aWorkspace.getRoot().getProjects())
 				.forEach(theProject -> {
 					listProject(theProject);
-					listNature(theProject);
-					listClasspath(theProject);
-					listPackages(theProject);
+					if (theProject.isOpen()) {
+						listNature(theProject);
+						listClasspath(theProject);
+						listPackages(theProject);
+						listFeature(theProject);
+						listProduct(theProject);
+					}
 				});
 	}
 
@@ -74,22 +94,81 @@ public class ShowProjectProperties {
 	}
 
 	private void listClasspath(IProject theProject) {
-		IJavaProject aJavaProject = JavaCore.create(theProject);
 
 		try {
-			out.println(INDENT + "Classpath entries:");
-			Arrays.stream(aJavaProject.getRawClasspath())
-					.forEach(
-							theClasspathEntry -> out.println(
-									INDENT + "- " + theClasspathEntry.getPath() +
-											" - " + "Entry: " + toEntryKind(theClasspathEntry.getEntryKind()) +
-											" - " + "Content: " + toContentKind(theClasspathEntry.getContentKind())));
-			out.println(INDENT + "- " + aJavaProject.getOutputLocation() + " - " + "output");
+			if (theProject.hasNature(JavaCore.NATURE_ID)) {
+				IJavaProject aJavaProject = JavaCore.create(theProject);
+
+				out.println(INDENT + "Classpath entries:");
+				Arrays.stream(aJavaProject.getRawClasspath())
+						.forEach(
+								theClasspathEntry -> out.println(
+										INDENT + "- " + theClasspathEntry.getPath() + " - "
+												+ "Entry: " + toEntryKind(theClasspathEntry.getEntryKind()) + " - " + "Content: "
+												+ toContentKind(theClasspathEntry.getContentKind())));
+				out.println(INDENT + "- " + aJavaProject.getOutputLocation() + " - " + "output");
+			}
 		}
-		catch (JavaModelException theCause) {
+		catch (CoreException theCause) {
 			err.println("Could not access class path of project '" + theProject.getName() + "': " + theCause.getMessage());
 		}
 
+	}
+
+	private void listFeature(IProject theProject) {
+		try {
+			if (theProject.hasNature(ProjectConstants.FEATURE_NATURE_ID)) {
+				IFeatureModel aFeatureModel = new WorkspaceFeatureModel(PDEProject.getFeatureXml(theProject));
+				IFeature aFeature = aFeatureModel.getFeature();
+
+				aFeatureModel.load();
+
+				out.println(INDENT + "Referenced plugins:");
+				for (IFeaturePlugin aPlugin : aFeature.getPlugins()) {
+					out.println(INDENT + "- " + aPlugin.getId());
+				}
+
+				out.println(INDENT + "Included features:");
+				for (IFeatureChild aFeatureChild : aFeature.getIncludedFeatures()) {
+					out.println(INDENT + "- " + aFeatureChild.getId());
+				}
+			}
+		}
+		catch (CoreException theCause) {
+			err.println("Could not access feature descriptor of project '" + theProject.getName() + "': " + theCause.getMessage());
+		}
+	}
+
+	private void listProduct(IProject theProject) {
+		try {
+			if (theProject.hasNature(ProjectConstants.PLUGIN_NATURE_ID)) {
+				out.println(INDENT + "Included products:");
+				for (IResource aProjectMember : theProject.members()) {
+					if (aProjectMember instanceof IFile && Optional.ofNullable(aProjectMember.getFileExtension()).map(theExtension -> theExtension.equals("product")).orElse(false)) {
+						IFile aProjectProductFile = (IFile) aProjectMember;
+
+						out.println(INDENT + "- " + aProjectProductFile.getName());
+						IProductModel aProductModel = new WorkspaceProductModel(aProjectProductFile, false);
+						IProduct aProduct = aProductModel.getProduct();
+
+						aProductModel.load();
+
+						out.println(INDENT + INDENT + "Referenced plugins:");
+						for (IProductPlugin aPlugin : aProduct.getPlugins()) {
+							out.println(INDENT + INDENT + "- " + aProduct.getId());
+						}
+
+						out.println(INDENT + INDENT + "Included features:");
+						for (IProductFeature aFeatureChild : aProduct.getFeatures()) {
+							out.println(INDENT + INDENT + "- " + aFeatureChild.getId());
+						}
+					}
+				}
+			}
+		}
+		catch (CoreException theCause) {
+			err.println("Could not access feature descriptor of project '" + theProject.getName() + "': " + theCause.getMessage());
+		}
 	}
 
 	private IProjectDescription getProjectDescription(IProject theProject) {
@@ -130,20 +209,22 @@ public class ShowProjectProperties {
 	}
 
 	public void listPackages(IProject theProject) {
-		IJavaProject aJavaProject = JavaCore.create(theProject);
-
-		IPackageFragmentRoot[] allPackageFragmentRoots;
 		try {
-			allPackageFragmentRoots = aJavaProject.getPackageFragmentRoots();
+			if (theProject.hasNature(JavaCore.NATURE_ID)) {
+				IJavaProject aJavaProject = JavaCore.create(theProject);
+				IPackageFragmentRoot[] allPackageFragmentRoots;
 
-			out.println(INDENT + "Package fragment roots:");
-			for (IPackageFragmentRoot aPackageFragmentRoot : allPackageFragmentRoots) {
-				if (aPackageFragmentRoot.getKind() == IPackageFragmentRoot.K_SOURCE) {
-					listPackages(aPackageFragmentRoot);
+				allPackageFragmentRoots = aJavaProject.getPackageFragmentRoots();
+
+				out.println(INDENT + "Package fragment roots:");
+				for (IPackageFragmentRoot aPackageFragmentRoot : allPackageFragmentRoots) {
+					if (aPackageFragmentRoot.getKind() == IPackageFragmentRoot.K_SOURCE) {
+						listPackages(aPackageFragmentRoot);
+					}
 				}
 			}
 		}
-		catch (JavaModelException theCause) {
+		catch (CoreException theCause) {
 			err.println("Could not access package fragment roots of project '" + theProject.getName() + "': " + theCause.getMessage());
 		}
 	}
@@ -189,11 +270,11 @@ public class ShowProjectProperties {
 	private String extractPackage(IImportDeclaration theImportDeclaration) throws JavaModelException {
 		final int skipLastElements = Flags.isStatic(theImportDeclaration.getFlags()) ? 2 : 1;
 
-		List<String> allImportTokens = new ArrayList<>(Arrays.asList(theImportDeclaration.getElementName().split("\\.")));
+		List<String> allImportTokens = new ArrayList<>(
+				Arrays.asList(theImportDeclaration.getElementName().split("\\.")));
 		Collections.reverse(allImportTokens);
 
-		List<String> aImportPackageTokens = allImportTokens.stream()
-				.skip(skipLastElements)
+		List<String> aImportPackageTokens = allImportTokens.stream().skip(skipLastElements)
 				.filter(thePackageToken -> Character.isLowerCase(thePackageToken.codePointAt(0)))
 				.collect(Collectors.toList());
 		Collections.reverse(aImportPackageTokens);

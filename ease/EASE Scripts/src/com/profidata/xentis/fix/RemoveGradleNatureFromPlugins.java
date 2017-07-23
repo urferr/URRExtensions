@@ -62,7 +62,7 @@ public class RemoveGradleNatureFromPlugins {
 				.forEach(theProject -> {
 					output.println("Fix project with Plugin/Gradle nature: " + theProject.getName());
 					ProjectWrapper aProjectWrapper = ProjectWrapper.of(theProject)
-							.toJavaProject()
+							.asJavaProject()
 							.removeNature(ProjectConstants.GRADLE_NATURE_ID)
 							.removeClasspathEntry(new Path(ProjectConstants.GRADLE_CLASSPATH_ID))
 							.refresh()

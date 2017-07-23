@@ -43,6 +43,7 @@ public class XentisWorkspace {
 		output.println("");
 		output.println("Import missing projects");
 		output.println("=======================");
+		//importAllFeatures("");
 
 		try {
 			aWorkspace.getRoot().refreshLocal(IResource.DEPTH_INFINITE, null);
@@ -58,7 +59,7 @@ public class XentisWorkspace {
 		if (aProjectWrapper.hasNature(ProjectConstants.GRADLE_NATURE_ID)) {
 			output.println("Exchange Gradle with Plugin nature for project: " + theProjectName);
 			aProjectWrapper
-					.toJavaProject()
+					.asJavaProject()
 					.removeClasspathEntry(new Path(ProjectConstants.GRADLE_CLASSPATH_ID))
 					.removeNature(ProjectConstants.GRADLE_NATURE_ID)
 					.addNature(ProjectConstants.PLUGIN_NATURE_ID)
