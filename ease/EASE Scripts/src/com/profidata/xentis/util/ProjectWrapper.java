@@ -1,6 +1,5 @@
 package com.profidata.xentis.util;
 
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -62,23 +61,6 @@ public class ProjectWrapper {
 		return new ProjectWrapper(theProject);
 	}
 
-	public static ProjectWrapper of(IWorkspace theWorkspace, IPath theProjectPath, PrintStream theOutput) {
-		theOutput.println("load project description");
-		ProjectWrapper aProjectWrapper = null;
-		try {
-			IProjectDescription aProjectDescription = theWorkspace.loadProjectDescription(theProjectPath.append(".project"));
-			theOutput.println(aProjectDescription.getLocation());
-
-			aProjectWrapper = new ProjectWrapper(theWorkspace.getRoot().getProject(aProjectDescription.getName()));
-
-			aProjectWrapper.setProjectDescription(aProjectDescription);
-		}
-		catch (CoreException theCause) {
-			theCause.printStackTrace(theOutput);
-		}
-		return aProjectWrapper;
-	}
-
 	private ProjectWrapper(IProject theProject) {
 		project = Objects.requireNonNull(theProject);
 	}
@@ -90,6 +72,23 @@ public class ProjectWrapper {
 			}
 			catch (CoreException theCause) {
 				errorMessage = "Could not create project '" + project.getName() + "': " + theCause.getMessage();
+			}
+		}
+		else {
+			errorMessage = "Project '" + project.getName() + "' already exists";
+		}
+		return this;
+	}
+
+	public ProjectWrapper importProject(IWorkspace theWorkspace, IPath theProjectPath) {
+		if (!project.exists()) {
+			try {
+				IProjectDescription aProjectDescription = theWorkspace.loadProjectDescription(theProjectPath.append(IProjectDescription.DESCRIPTION_FILE_NAME));
+
+				project.create(aProjectDescription, null);
+			}
+			catch (CoreException theCause) {
+				errorMessage = "Could not create project '" + project.getName() + " with project description': " + theCause.getMessage();
 			}
 		}
 		else {
@@ -196,6 +195,13 @@ public class ProjectWrapper {
 			errorMessage = "Could not open project '" + project.getName() + "': " + theCause.getMessage();
 		}
 		return this;
+	}
+
+	public boolean isOpen() {
+		if (project.exists()) {
+			return project.isOpen();
+		}
+		return false;
 	}
 
 	public ProjectWrapper close() {

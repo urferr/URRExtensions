@@ -147,7 +147,7 @@ public class ShowProjectProperties {
 					if (aProjectMember instanceof IFile && Optional.ofNullable(aProjectMember.getFileExtension()).map(theExtension -> theExtension.equals("product")).orElse(false)) {
 						IFile aProjectProductFile = (IFile) aProjectMember;
 
-						out.println(INDENT + "- " + aProjectProductFile.getName());
+						out.println(INDENT + "- " + aProjectProductFile.getName() + " -> " + aProjectProductFile.getLocation());
 						IProductModel aProductModel = new WorkspaceProductModel(aProjectProductFile, false);
 						IProduct aProduct = aProductModel.getProduct();
 
