@@ -30,6 +30,19 @@ import com.profidata.xentis.util.ProjectWrapper;
 
 public class RemoveGradleNatureFromPlugins {
 	private static final Map<String, Set<String>> additionalTestFragmentDependencies;
+	private static final Map<String, Set<String>> additionalBundleDependencies;
+
+	static {
+		Set<String> somePackages;
+
+		additionalBundleDependencies = new HashMap<>();
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.springframework.beans");
+		somePackages.add("org.springframework.beans.factory");
+		somePackages.add("org.springframework.core.io.support");
+		additionalBundleDependencies.put("com.profidata.xentis.env.shared", somePackages);
+	}
 
 	static {
 		Set<String> somePackages;
@@ -65,6 +78,7 @@ public class RemoveGradleNatureFromPlugins {
 							.asJavaProject()
 							.removeNature(ProjectConstants.GRADLE_NATURE_ID)
 							.removeClasspathEntry(new Path(ProjectConstants.GRADLE_CLASSPATH_ID))
+							.addPackageDependenciesToPluginManifest(() -> additionalBundleDependencies.get(theProject.getName()))
 							.refresh()
 							.build();
 
@@ -116,54 +130,56 @@ public class RemoveGradleNatureFromPlugins {
 	private void createTestProject(IProject theProject, List<IClasspathEntry> theTestSourceClasspathEntries) {
 		IWorkspace aWorkspace = theProject.getWorkspace();
 		String aTestProjectName = theProject.getName() + ".test";
-
-		output.println(" -> Create OSGi Test fragment project: " + aTestProjectName);
 		ProjectWrapper aProjectWrapper = ProjectWrapper
-				.of(aWorkspace, aTestProjectName)
-				.createProject()
-				.open()
-				.toJavaProject()
-				.removeDefaultSourceFolder()
-				.setOutputFolder("bin")
-				.addNature(ProjectConstants.PLUGIN_NATURE_ID)
-				.addBuilder("org.eclipse.pde.ManifestBuilder")
-				.addBuilder("org.eclipse.pde.SchemaBuilder")
-				.addClasspathEntry(
-						theTestProject -> JavaCore.newContainerEntry(
-								new Path("org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8")))
-				.addClasspathEntry(
-						theTestProject -> JavaCore.newContainerEntry(
-								new Path(ProjectConstants.PLUGIN_CLASSPATH_ID)));
+				.of(aWorkspace, aTestProjectName);
 
-		IPath aWorkspaceLocation = theProject.getWorkspace().getRoot().getLocation();
-		IPath aProjectLocation = theProject.getLocation();
-		for (IClasspathEntry aTestSourceClasspathEntry : theTestSourceClasspathEntries) {
-			IPath aRelativeProjectLocation = aProjectLocation.makeRelativeTo(aWorkspaceLocation);
-			IPath aSourceLocation = new Path("WORKSPACE_LOC").append(aRelativeProjectLocation).append(aTestSourceClasspathEntry.getPath().removeFirstSegments(1));
+		if (!aProjectWrapper.isExisting()) {
+			output.println(" -> Create OSGi Test fragment project: " + aTestProjectName);
+			aProjectWrapper.createProject()
+					.open()
+					.toJavaProject()
+					.removeDefaultSourceFolder()
+					.setOutputFolder("bin")
+					.addNature(ProjectConstants.PLUGIN_NATURE_ID)
+					.addBuilder("org.eclipse.pde.ManifestBuilder")
+					.addBuilder("org.eclipse.pde.SchemaBuilder")
+					.addClasspathEntry(
+							theTestProject -> JavaCore.newContainerEntry(
+									new Path("org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8")))
+					.addClasspathEntry(
+							theTestProject -> JavaCore.newContainerEntry(
+									new Path(ProjectConstants.PLUGIN_CLASSPATH_ID)));
 
-			if (aTestSourceClasspathEntry.getPath().lastSegment().equals("java")) {
-				aProjectWrapper.addLinkedSourceFolder("test-java", aSourceLocation);
+			IPath aWorkspaceLocation = theProject.getWorkspace().getRoot().getLocation();
+			IPath aProjectLocation = theProject.getLocation();
+			for (IClasspathEntry aTestSourceClasspathEntry : theTestSourceClasspathEntries) {
+				IPath aRelativeProjectLocation = aProjectLocation.makeRelativeTo(aWorkspaceLocation);
+				IPath aSourceLocation = new Path("WORKSPACE_LOC").append(aRelativeProjectLocation).append(aTestSourceClasspathEntry.getPath().removeFirstSegments(1));
+
+				if (aTestSourceClasspathEntry.getPath().lastSegment().equals("java")) {
+					aProjectWrapper.addLinkedSourceFolder("test-java", aSourceLocation);
+				}
+				if (aTestSourceClasspathEntry.getPath().lastSegment().equals("resources")) {
+					aProjectWrapper.addLinkedSourceFolder("test-resources", aSourceLocation);
+				}
 			}
-			if (aTestSourceClasspathEntry.getPath().lastSegment().equals("resources")) {
-				aProjectWrapper.addLinkedSourceFolder("test-resources", aSourceLocation);
+
+			aProjectWrapper
+					.createTestFragmentManifest(theProject, () -> {
+						Set<String> someAdditionalPackages = new HashSet<>();
+						// package org.hamcrest is opften used to run unit tests
+						someAdditionalPackages.add("org.hamcrest");
+						Optional.ofNullable(additionalTestFragmentDependencies.get(aTestProjectName)).ifPresent(thePackages -> someAdditionalPackages.addAll(thePackages));
+
+						return someAdditionalPackages;
+					})
+					.createBuildProperties()
+					.refresh()
+					.build();
+
+			if (aProjectWrapper.hasError()) {
+				error.println("Create test project '" + aTestProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
 			}
-		}
-
-		aProjectWrapper
-				.createTestFragmentManifest(theProject, () -> {
-					Set<String> someAdditionalPackages = new HashSet<>();
-					// package org.hamcrest is opften used to run unit tests
-					someAdditionalPackages.add("org.hamcrest");
-					Optional.ofNullable(additionalTestFragmentDependencies.get(aTestProjectName)).ifPresent(thePackages -> someAdditionalPackages.addAll(thePackages));
-
-					return someAdditionalPackages;
-				})
-				.createBuildProperties()
-				.refresh()
-				.build();
-
-		if (aProjectWrapper.hasError()) {
-			error.println("Create test project '" + aTestProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
 		}
 	}
 

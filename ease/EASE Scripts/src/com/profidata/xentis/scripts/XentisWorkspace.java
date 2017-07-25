@@ -7,6 +7,7 @@ import java.util.Collections;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspace;
+import org.eclipse.core.resources.IWorkspaceDescription;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
@@ -44,6 +45,7 @@ public class XentisWorkspace {
 
 	private void execute() {
 		IWorkspace aWorkspace = ResourcesPlugin.getWorkspace();
+		boolean aAutoBuildWasEnabled = disableAutoBuild(aWorkspace);
 
 		output.println("Fix projects with Plugin/Gradle nature");
 		output.println("======================================");
@@ -56,7 +58,7 @@ public class XentisWorkspace {
 
 		output.println("");
 		output.println("Import products/features/projects");
-		output.println("===========================");
+		output.println("=================================");
 		importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.server.product");
 		importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.client.product");
 
@@ -66,6 +68,9 @@ public class XentisWorkspace {
 		importProjectsOfFeature(aWorkspace, "xentis/xc_bld/_com.profidata.xc.one.all.build.feature");
 		importProjectsOfFeature(aWorkspace, "xentis/JavAMIS/_com.profidata.xc.one.client.backoffice.feature");
 
+		if (aAutoBuildWasEnabled) {
+			enableAutoBuild(aWorkspace);
+		}
 		try {
 			aWorkspace.getRoot().refreshLocal(IResource.DEPTH_INFINITE, null);
 		}
@@ -204,4 +209,34 @@ public class XentisWorkspace {
 		return aProjectWrapper;
 	}
 
+	private boolean disableAutoBuild(IWorkspace theWorkspace) {
+		IWorkspaceDescription aWorkspaceDescription = theWorkspace.getDescription();
+
+		if (aWorkspaceDescription.isAutoBuilding()) {
+			try {
+				output.println("Disable autobuild in workspace\n");
+				aWorkspaceDescription.setAutoBuilding(false);
+				theWorkspace.setDescription(aWorkspaceDescription);
+				return true;
+			}
+			catch (CoreException theCause) {
+				error.println("Disable autobuild failed");
+			}
+		}
+		return false;
+	}
+
+	private void enableAutoBuild(IWorkspace theWorkspace) {
+		IWorkspaceDescription aWorkspaceDescription = theWorkspace.getDescription();
+
+		if (!aWorkspaceDescription.isAutoBuilding()) {
+			try {
+				aWorkspaceDescription.setAutoBuilding(true);
+				theWorkspace.setDescription(aWorkspaceDescription);
+			}
+			catch (CoreException theCause) {
+				error.println("Enable autobuild failed");
+			}
+		}
+	}
 }

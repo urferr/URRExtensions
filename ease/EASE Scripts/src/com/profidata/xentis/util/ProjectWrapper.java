@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -429,7 +430,7 @@ public class ProjectWrapper {
 						.filter(thePackage -> !thePackage.startsWith("java."))
 						.collect(Collectors.toSet());
 
-				allImportedPackages.addAll(theAdditionalPackageDependencies.get());
+				allImportedPackages.addAll(Optional.ofNullable(theAdditionalPackageDependencies.get()).orElseGet(() -> Collections.emptySet()));
 				allImportedPackages.removeAll(allSourcePackages);
 
 				List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
@@ -445,6 +446,29 @@ public class ProjectWrapper {
 			catch (CoreException theCause) {
 				errorMessage = "Could not manifest for plugin project '" + project.getName() + "': " + theCause.getMessage();
 			}
+		}
+		return this;
+	}
+
+	public ProjectWrapper addPackageDependenciesToPluginManifest(Supplier<Set<String>> theAdditionalPackageDependencies) {
+		verifyJavaProject();
+
+		if (!hasError()) {
+			IPluginModel aBundlePluginModel = new WorkspaceBundlePluginModel(PDEProject.getManifest(project), PDEProject.getPluginXml(project));
+			IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aBundlePluginModel;
+			IBundlePlugin aBundlePlugin = (IBundlePlugin) aBundlePluginModel.getPluginBase();
+			IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();
+
+			// Determine package dependencies from source code, exclude the ones starting with "java."
+			Set<String> allPackagesDependencies = new HashSet<>(fromManifestString(aBundle.getHeader(Constants.EXPORT_PACKAGE)));
+
+			allPackagesDependencies.addAll(Optional.ofNullable(theAdditionalPackageDependencies.get()).orElseGet(() -> Collections.emptySet()));
+
+			List<String> allSortedPackageDependencies = new ArrayList<>(allPackagesDependencies);
+			Collections.sort(allSortedPackageDependencies);
+			aBundle.setHeader(Constants.IMPORT_PACKAGE, toManifestString(allSortedPackageDependencies));
+
+			aBundleModelBase.save();
 		}
 		return this;
 	}
@@ -537,7 +561,7 @@ public class ProjectWrapper {
 	public ProjectWrapper build() {
 		if (!hasError()) {
 			try {
-				project.build(IncrementalProjectBuilder.FULL_BUILD, null);
+				project.build(IncrementalProjectBuilder.CLEAN_BUILD, null);
 			}
 			catch (CoreException theCause) {
 				errorMessage = "Could not build project '" + project.getName() + "': " + theCause.getMessage();
@@ -686,6 +710,10 @@ public class ProjectWrapper {
 
 	private String toManifestString(List<String> theAllImportedPackages) {
 		return theAllImportedPackages.stream().collect(Collectors.joining(",\n "));
+	}
+
+	private List<String> fromManifestString(String theHeaderValue) {
+		return Arrays.asList(theHeaderValue.replace("\n", "").split(", "));
 	}
 
 	public boolean hasError() {
