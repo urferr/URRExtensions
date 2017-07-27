@@ -42,6 +42,10 @@ public class RemoveGradleNatureFromPlugins {
 		somePackages.add("org.springframework.beans.factory");
 		somePackages.add("org.springframework.core.io.support");
 		additionalBundleDependencies.put("com.profidata.xentis.env.shared", somePackages);
+		
+		somePackages = new HashSet<>();
+		somePackages.add("org.springframework.context");
+		additionalBundleDependencies.put("com.profidata.xentis.jms.shared", somePackages);
 	}
 
 	static {
@@ -103,7 +107,10 @@ public class RemoveGradleNatureFromPlugins {
 
 		try {
 			IClasspathEntry[] allClasspathEntries = aJavaProject.getRawClasspath();
-			List<IClasspathEntry> allTestSourceClasspathEntries = Arrays.stream(allClasspathEntries)
+			List<IClasspathEntry> allTestSourceClasspathEntries;
+			
+			// first we check for unit tests
+			allTestSourceClasspathEntries = Arrays.stream(allClasspathEntries)
 					.filter(theEntry -> theEntry.getContentKind() == IPackageFragmentRoot.K_SOURCE && theEntry.getEntryKind() == IClasspathEntry.CPE_SOURCE)
 					.filter(
 							theEntry -> theEntry.getPath().removeFirstSegments(1).segment(0).equals("test")
@@ -118,7 +125,26 @@ public class RemoveGradleNatureFromPlugins {
 
 				aJavaProject.setRawClasspath(allChangedClasspathEntries.toArray(new IClasspathEntry[allChangedClasspathEntries.size()]), null);
 
-				createTestProject(theProject, allTestSourceClasspathEntries);
+				createTestProject(theProject, "test", allTestSourceClasspathEntries);
+			}
+			
+			// second we check for integration tests
+			allTestSourceClasspathEntries = Arrays.stream(allClasspathEntries)
+					.filter(theEntry -> theEntry.getContentKind() == IPackageFragmentRoot.K_SOURCE && theEntry.getEntryKind() == IClasspathEntry.CPE_SOURCE)
+					.filter(
+							theEntry -> theEntry.getPath().removeFirstSegments(1).segment(0).equals("integration")
+									|| (theEntry.getPath().removeFirstSegments(1).segmentCount() > 1 && theEntry.getPath().removeFirstSegments(1).segment(0).equals("src")
+											&& theEntry.getPath().removeFirstSegments(1).segment(1).equals("integration")))
+					.collect(Collectors.toList());
+
+			if (!allTestSourceClasspathEntries.isEmpty()) {
+				List<IClasspathEntry> allChangedClasspathEntries = new ArrayList<>(Arrays.asList(allClasspathEntries));
+
+				allChangedClasspathEntries.removeAll(allTestSourceClasspathEntries);
+
+				aJavaProject.setRawClasspath(allChangedClasspathEntries.toArray(new IClasspathEntry[allChangedClasspathEntries.size()]), null);
+
+				createTestProject(theProject, "test.integration", allTestSourceClasspathEntries);
 			}
 		}
 		catch (JavaModelException theCause) {
@@ -127,9 +153,9 @@ public class RemoveGradleNatureFromPlugins {
 
 	}
 
-	private void createTestProject(IProject theProject, List<IClasspathEntry> theTestSourceClasspathEntries) {
+	private void createTestProject(IProject theProject, String theTestType, List<IClasspathEntry> theTestSourceClasspathEntries) {
 		IWorkspace aWorkspace = theProject.getWorkspace();
-		String aTestProjectName = theProject.getName() + ".test";
+		String aTestProjectName = theProject.getName() + "."+theTestType;
 		ProjectWrapper aProjectWrapper = ProjectWrapper
 				.of(aWorkspace, aTestProjectName);
 

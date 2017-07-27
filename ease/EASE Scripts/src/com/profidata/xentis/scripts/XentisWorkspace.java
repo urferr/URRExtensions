@@ -12,6 +12,8 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.jdt.core.IAccessRule;
+import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.pde.internal.core.feature.WorkspaceFeatureModel;
 import org.eclipse.pde.internal.core.ifeature.IFeature;
@@ -57,16 +59,21 @@ public class XentisWorkspace {
 		convertProjectFromGradleToPlugin(aWorkspace, "com.profidata.xentis.test");
 
 		output.println("");
+		output.println("Fix specific plugins");
+		output.println("====================");
+		fixComProfidataXentisJavamis(aWorkspace);
+
+		output.println("");
 		output.println("Import products/features/projects");
 		output.println("=================================");
-		importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.server.product");
-		importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.client.product");
+		//		importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.server.product");
+		//		importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.client.product");
 
 		output.println("");
 		output.println("Import missing features/projects");
 		output.println("================================");
-		importProjectsOfFeature(aWorkspace, "xentis/xc_bld/_com.profidata.xc.one.all.build.feature");
-		importProjectsOfFeature(aWorkspace, "xentis/JavAMIS/_com.profidata.xc.one.client.backoffice.feature");
+		//		importProjectsOfFeature(aWorkspace, "xentis/xc_bld/_com.profidata.xc.one.all.build.feature");
+		//		importProjectsOfFeature(aWorkspace, "xentis/JavAMIS/_com.profidata.xc.one.client.backoffice.feature");
 
 		if (aAutoBuildWasEnabled) {
 			enableAutoBuild(aWorkspace);
@@ -82,12 +89,16 @@ public class XentisWorkspace {
 	private void convertProjectFromGradleToPlugin(IWorkspace theWorkspace, String theProjectName) {
 		ProjectWrapper aProjectWrapper = ProjectWrapper.of(theWorkspace, theProjectName);
 
+		if (aProjectWrapper.isExisting() && !aProjectWrapper.isOpen()) {
+			aProjectWrapper.open();
+		}
+
 		if (aProjectWrapper.isOpen() && aProjectWrapper.hasNature(ProjectConstants.GRADLE_NATURE_ID)) {
 			output.println("Exchange Gradle with Plugin nature for project: " + theProjectName);
 			aProjectWrapper
 					.asJavaProject()
-					.removeClasspathEntry(new Path(ProjectConstants.GRADLE_CLASSPATH_ID))
 					.removeNature(ProjectConstants.GRADLE_NATURE_ID)
+					.removeClasspathEntry(new Path(ProjectConstants.GRADLE_CLASSPATH_ID))
 					.addNature(ProjectConstants.PLUGIN_NATURE_ID)
 					.addClasspathEntry(theProject -> JavaCore.newContainerEntry(new Path(ProjectConstants.PLUGIN_CLASSPATH_ID)))
 					.createPluginManifest(() -> Collections.emptySet())
@@ -96,6 +107,51 @@ public class XentisWorkspace {
 		}
 		if (aProjectWrapper.hasError()) {
 			error.println("Exchange Gradle with Plugin nature for project: " + theProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
+		}
+	}
+
+	private void fixComProfidataXentisJavamis(IWorkspace theWorkspace) {
+		ProjectWrapper aProjectWrapper = ProjectWrapper.of(theWorkspace, "com.profidata.xentis.javamis").asJavaProject();
+		IPath aJavaContainerPath = new Path("org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8");
+		IClasspathEntry aJavaContainerClasspathEntry = aProjectWrapper.getClasspathEntry(aJavaContainerPath);
+
+		if (aJavaContainerClasspathEntry != null && aJavaContainerClasspathEntry.getAccessRules().length == 0) {
+			output.println("Set access rules in Java container definition of project '" + aProjectWrapper.getProject().getName() + "'");
+			aProjectWrapper
+					.removeClasspathEntry(aJavaContainerPath)
+					.addClasspathEntry(theProject -> {
+						return JavaCore.newContainerEntry(
+								new Path("org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"),
+								new IAccessRule[] {
+										JavaCore.newAccessRule(new Path("com/sun/java/swing/plaf/windows/*"), IAccessRule.K_ACCESSIBLE),
+										JavaCore.newAccessRule(new Path("sun/awt/shell/*"), IAccessRule.K_ACCESSIBLE) },
+								null,
+								false);
+					});
+		}
+
+		IPath aProvidedLibraryPath = aProjectWrapper.getProject().getLocation().append("provided");
+
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("atdl4j.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.env.client.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.env.server.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.etl.commons.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.jni.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.ratex.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.sn.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.ui.base.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidatagroup.util.keymigration.model.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("foxtrot.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("hawtbuf.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("jaxrpc.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("org.jzy3d.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("ratex.jar"), null, null));
+
+		aProjectWrapper
+				.refresh()
+				.build();
+		if (aProjectWrapper.hasError()) {
+			error.println("Fix project: " + aProjectWrapper.getProject().getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
 		}
 	}
 

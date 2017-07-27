@@ -1,5 +1,6 @@
 package com.profidata.xentis.util;
 
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -46,6 +47,8 @@ import org.eclipse.pde.internal.core.ibundle.IBundleFragment;
 import org.eclipse.pde.internal.core.ibundle.IBundlePlugin;
 import org.eclipse.pde.internal.core.ibundle.IBundlePluginModelBase;
 import org.eclipse.pde.internal.core.project.PDEProject;
+import org.eclipse.pde.internal.core.text.bundle.ExportPackageHeader;
+import org.eclipse.pde.internal.core.text.bundle.ImportPackageHeader;
 import org.osgi.framework.Constants;
 
 public class ProjectWrapper {
@@ -351,14 +354,16 @@ public class ProjectWrapper {
 
 		if (!hasError()) {
 			IClasspathEntry aClasspathEntry = theClasspathEntrySupplier.apply(project);
-			try {
-				List<IClasspathEntry> allClasspathEntries = new ArrayList<>(Arrays.asList(javaProject.getRawClasspath()));
+			if (!hasClasspathEntry(aClasspathEntry.getPath())) {
+				try {
+					List<IClasspathEntry> allClasspathEntries = new ArrayList<>(Arrays.asList(javaProject.getRawClasspath()));
 
-				allClasspathEntries.add(aClasspathEntry);
-				javaProject.setRawClasspath(allClasspathEntries.toArray(new IClasspathEntry[allClasspathEntries.size()]), null);
-			}
-			catch (JavaModelException theCause) {
-				errorMessage = "Could not add classpath entry '" + aClasspathEntry + "' to Java project '" + project.getName() + "': " + theCause.getMessage();
+					allClasspathEntries.add(aClasspathEntry);
+					javaProject.setRawClasspath(allClasspathEntries.toArray(new IClasspathEntry[allClasspathEntries.size()]), null);
+				}
+				catch (JavaModelException theCause) {
+					errorMessage = "Could not add classpath entry '" + aClasspathEntry + "' to Java project '" + project.getName() + "': " + theCause.getMessage();
+				}
 			}
 		}
 		return this;
@@ -401,6 +406,23 @@ public class ProjectWrapper {
 		return this;
 	}
 
+	public boolean hasClasspathEntry(IPath thePath) {
+		return getClasspathEntry(thePath) != null;
+	}
+
+	public IClasspathEntry getClasspathEntry(IPath thePath) {
+		verifyJavaProject();
+
+		try {
+			return new ArrayList<>(Arrays.asList(javaProject.getRawClasspath())).stream()
+					.filter(theClasspathEntry -> theClasspathEntry.getPath().equals(thePath))
+					.findFirst().orElse(null);
+		}
+		catch (JavaModelException theCause) {
+			throw new RuntimeException(theCause);
+		}
+	}
+
 	@SuppressWarnings({
 			"restriction",
 			"deprecation" })
@@ -435,11 +457,11 @@ public class ProjectWrapper {
 
 				List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
 				Collections.sort(allSortedImportedPackages);
-				aBundle.setHeader(Constants.IMPORT_PACKAGE, toManifestString(allSortedImportedPackages));
+				addtoImportPackageHeader(aBundle, allSortedImportedPackages);
 
 				List<String> allSortedSourcePackages = new ArrayList<>(allSourcePackages);
 				Collections.sort(allSortedSourcePackages);
-				aBundle.setHeader(Constants.EXPORT_PACKAGE, toManifestString(allSortedSourcePackages));
+				addtoExortPackageHeader(aBundle, allSortedSourcePackages);
 
 				aBundleModelBase.save();
 			}
@@ -450,25 +472,58 @@ public class ProjectWrapper {
 		return this;
 	}
 
+	@SuppressWarnings("restriction")
+	private void addtoImportPackageHeader(IBundle theBundle, List<String> theImportPackages) {
+		ImportPackageHeader aImportPackageHeader = (ImportPackageHeader) theBundle.getManifestHeader(Constants.IMPORT_PACKAGE);
+		List<String> someImportPackages = new ArrayList<>(theImportPackages);
+
+		if (aImportPackageHeader == null) {
+			theBundle.setHeader(Constants.IMPORT_PACKAGE, someImportPackages.get(0));
+
+			someImportPackages.remove(0);
+			aImportPackageHeader = (ImportPackageHeader) theBundle.getManifestHeader(Constants.IMPORT_PACKAGE);
+		}
+
+		for (String aPackage : someImportPackages) {
+			aImportPackageHeader.addPackage(aPackage);
+		}
+	}
+
+	@SuppressWarnings("restriction")
+	private void addtoExortPackageHeader(IBundle theBundle, List<String> theImportPackages) {
+		ExportPackageHeader aExportPackageHeader = (ExportPackageHeader) theBundle.getManifestHeader(Constants.EXPORT_PACKAGE);
+		List<String> someExportPackages = new ArrayList<>(theImportPackages);
+
+		if (aExportPackageHeader == null) {
+			theBundle.setHeader(Constants.EXPORT_PACKAGE, someExportPackages.get(0));
+
+			someExportPackages.remove(0);
+			aExportPackageHeader = (ExportPackageHeader) theBundle.getManifestHeader(Constants.EXPORT_PACKAGE);
+		}
+
+		for (String aPackage : someExportPackages) {
+			aExportPackageHeader.addPackage(aPackage);
+		}
+	}
+
 	public ProjectWrapper addPackageDependenciesToPluginManifest(Supplier<Set<String>> theAdditionalPackageDependencies) {
 		verifyJavaProject();
 
 		if (!hasError()) {
 			IPluginModel aBundlePluginModel = new WorkspaceBundlePluginModel(PDEProject.getManifest(project), PDEProject.getPluginXml(project));
 			IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aBundlePluginModel;
-			IBundlePlugin aBundlePlugin = (IBundlePlugin) aBundlePluginModel.getPluginBase();
 			IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();
+			Set<String> someAdditionalPackageDependencies = Optional.ofNullable(theAdditionalPackageDependencies.get()).orElseGet(() -> Collections.emptySet());
 
-			// Determine package dependencies from source code, exclude the ones starting with "java."
-			Set<String> allPackagesDependencies = new HashSet<>(fromManifestString(aBundle.getHeader(Constants.EXPORT_PACKAGE)));
+			if (!someAdditionalPackageDependencies.isEmpty()) {
+				ImportPackageHeader aImportPackageHeader = (ImportPackageHeader) aBundle.getManifestHeader(Constants.IMPORT_PACKAGE);
 
-			allPackagesDependencies.addAll(Optional.ofNullable(theAdditionalPackageDependencies.get()).orElseGet(() -> Collections.emptySet()));
+				for (String aPackage : someAdditionalPackageDependencies) {
+					aImportPackageHeader.addPackage(aPackage);
+				}
 
-			List<String> allSortedPackageDependencies = new ArrayList<>(allPackagesDependencies);
-			Collections.sort(allSortedPackageDependencies);
-			aBundle.setHeader(Constants.IMPORT_PACKAGE, toManifestString(allSortedPackageDependencies));
-
-			aBundleModelBase.save();
+				aBundleModelBase.save();
+			}
 		}
 		return this;
 	}
@@ -511,7 +566,7 @@ public class ProjectWrapper {
 				List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
 
 				Collections.sort(allSortedImportedPackages);
-				aBundle.setHeader(Constants.IMPORT_PACKAGE, toManifestString(allSortedImportedPackages));
+				addtoImportPackageHeader(aBundle, allSortedImportedPackages);
 
 				aBundleModelBase.save();
 			}
@@ -706,14 +761,6 @@ public class ProjectWrapper {
 		if (!hasError() && javaProject == null) {
 			errorMessage = "project '" + project.getName() + "' is not a Java project";
 		}
-	}
-
-	private String toManifestString(List<String> theAllImportedPackages) {
-		return theAllImportedPackages.stream().collect(Collectors.joining(",\n "));
-	}
-
-	private List<String> fromManifestString(String theHeaderValue) {
-		return Arrays.asList(theHeaderValue.replace("\n", "").split(", "));
 	}
 
 	public boolean hasError() {
