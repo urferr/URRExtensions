@@ -168,6 +168,10 @@ public class ProjectWrapper {
 		return project;
 	}
 
+	public IJavaProject getJavaProject() {
+		return javaProject;
+	}
+
 	public IProjectDescription getProjectDescription() {
 		try {
 			return project.getDescription();
@@ -531,10 +535,11 @@ public class ProjectWrapper {
 	@SuppressWarnings({
 			"restriction",
 			"deprecation" })
-	public ProjectWrapper createTestFragmentManifest(IProject theHostBundleProject, Supplier<Set<String>> theAdditionalPackageDependencies) {
+	public ProjectWrapper createTestFragmentManifest(IProject theHostBundleProject, Supplier<Set<String>> theAdditionalPackageDependencies, Supplier<Set<String>> theIgnorePackageDependencies) {
 		verifyJavaProject();
 
 		if (!hasError()) {
+			ProjectWrapper aHostBundleProjectWrapper = ProjectWrapper.of(theHostBundleProject).asJavaProject();
 			IFragmentModel aFragmentModel = new WorkspaceBundleFragmentModel(PDEProject.getManifest(project), PDEProject.getFragmentXml(project));
 			IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aFragmentModel;
 			IBundleFragment aBundleFragment = (IBundleFragment) aFragmentModel.getPluginBase();
@@ -561,11 +566,25 @@ public class ProjectWrapper {
 
 				allImportedPackages.addAll(theAdditionalPackageDependencies.get());
 
+				// remove all the packages defined in the host bundle
+				allImportedPackages.removeAll(aHostBundleProjectWrapper.getSourcePackages());
+
+				// remove all the packages defined in this test fragment
 				allImportedPackages.removeAll(getSourcePackages());
 
-				List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
+				// remove all the packages defined as to be ignored
+				Set<String> someIgnoredPackages = new HashSet<>();
+				for (String aPackagePrefix : theIgnorePackageDependencies.get()) {
+					someIgnoredPackages.addAll(
+							allImportedPackages.stream()
+									.filter(thePackage -> thePackage.startsWith(aPackagePrefix))
+									.collect(Collectors.toSet()));
+				}
+				allImportedPackages.removeAll(someIgnoredPackages);
 
+				List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
 				Collections.sort(allSortedImportedPackages);
+
 				addtoImportPackageHeader(aBundle, allSortedImportedPackages);
 
 				aBundleModelBase.save();

@@ -11,6 +11,7 @@ import org.eclipse.core.resources.IWorkspaceDescription;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jdt.core.IAccessRule;
 import org.eclipse.jdt.core.IClasspathEntry;
@@ -36,8 +37,8 @@ public class XentisWorkspace {
 	private static PrintStream output;
 	private static PrintStream error;
 
-	public static void initialize(InputStream theInput, PrintStream theOuotput, PrintStream theError) {
-		XentisWorkspace.output = theOuotput;
+	public static void initialize(InputStream theInput, PrintStream theOutput, PrintStream theError) {
+		XentisWorkspace.output = theOutput;
 		XentisWorkspace.error = theError;
 	}
 
@@ -62,18 +63,19 @@ public class XentisWorkspace {
 		output.println("Fix specific plugins");
 		output.println("====================");
 		fixComProfidataXentisJavamis(aWorkspace);
+		fixComXnifeOsgi(aWorkspace);
 
 		output.println("");
 		output.println("Import products/features/projects");
 		output.println("=================================");
-		//		importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.server.product");
-		//		importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.client.product");
+				importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.server.product");
+				importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.client.product");
 
 		output.println("");
 		output.println("Import missing features/projects");
 		output.println("================================");
-		//		importProjectsOfFeature(aWorkspace, "xentis/xc_bld/_com.profidata.xc.one.all.build.feature");
-		//		importProjectsOfFeature(aWorkspace, "xentis/JavAMIS/_com.profidata.xc.one.client.backoffice.feature");
+				importProjectsOfFeature(aWorkspace, "xentis/xc_bld/_com.profidata.xc.one.all.build.feature");
+				importProjectsOfFeature(aWorkspace, "xentis/JavAMIS/_com.profidata.xc.one.client.backoffice.feature");
 
 		if (aAutoBuildWasEnabled) {
 			enableAutoBuild(aWorkspace);
@@ -102,8 +104,7 @@ public class XentisWorkspace {
 					.addNature(ProjectConstants.PLUGIN_NATURE_ID)
 					.addClasspathEntry(theProject -> JavaCore.newContainerEntry(new Path(ProjectConstants.PLUGIN_CLASSPATH_ID)))
 					.createPluginManifest(() -> Collections.emptySet())
-					.refresh()
-					.build();
+					.refresh();
 		}
 		if (aProjectWrapper.hasError()) {
 			error.println("Exchange Gradle with Plugin nature for project: " + theProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
@@ -133,25 +134,36 @@ public class XentisWorkspace {
 		IPath aProvidedLibraryPath = aProjectWrapper.getProject().getLocation().append("provided");
 
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("atdl4j.jar"), null, null));
-		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.env.client.jar"), null, null));
-		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.env.server.jar"), null, null));
-		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.etl.commons.jar"), null, null));
-		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.jni.jar"), null, null));
-		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.ratex.jar"), null, null));
-		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.sn.jar"), null, null));
-		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.ui.base.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.env.client.jar"), null, null, null, null, true));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.env.server.jar"), null, null, null, null, true));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.etl.commons.jar"), null, null, null, null, true));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.jni.jar"), null, null, null, null, true));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.ratex.jar"), null, null, null, null, true));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.sn.jar"), null, null, null, null, true));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.ui.base.jar"), null, null, null, null, true));
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidatagroup.util.keymigration.model.jar"), null, null));
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("foxtrot.jar"), null, null));
-		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("hawtbuf.jar"), null, null));
+		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("hawtbuf.jar"), null, null, null, null, true));
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("jaxrpc.jar"), null, null));
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("org.jzy3d.jar"), null, null));
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("ratex.jar"), null, null));
 
 		aProjectWrapper
-				.refresh()
-				.build();
-		if (aProjectWrapper.hasError()) {
-			error.println("Fix project: " + aProjectWrapper.getProject().getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
+				.refresh();
+		verifyFixFailed(aProjectWrapper);
+	}
+
+	private void fixComXnifeOsgi(IWorkspace theWorkspace) {
+		ProjectWrapper aProjectWrapper = ProjectWrapper.of(theWorkspace, "com.xnife.osgi")
+				.asJavaProject()
+				.removeNature(ProjectConstants.GRADLE_NATURE_ID)
+				.refresh();
+		verifyFixFailed(aProjectWrapper);
+	}
+		
+	private void verifyFixFailed(ProjectWrapper theProjectWrapper) {
+		if (theProjectWrapper.hasError()) {
+			error.println("Fix project: " + theProjectWrapper.getProject().getName() + "' failed:\n-> " + theProjectWrapper.getErrorMessage());
 		}
 	}
 

@@ -4,6 +4,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -15,6 +16,7 @@ import java.util.stream.Collectors;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.IWorkspace;
+import org.eclipse.core.resources.ResourceAttributes;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
@@ -30,6 +32,8 @@ import com.profidata.xentis.util.ProjectWrapper;
 
 public class RemoveGradleNatureFromPlugins {
 	private static final Map<String, Set<String>> additionalTestFragmentDependencies;
+	private static final Map<String, Set<String>> ignoreTestFragmentDependencies;
+
 	private static final Map<String, Set<String>> additionalBundleDependencies;
 
 	static {
@@ -42,9 +46,11 @@ public class RemoveGradleNatureFromPlugins {
 		somePackages.add("org.springframework.beans.factory");
 		somePackages.add("org.springframework.core.io.support");
 		additionalBundleDependencies.put("com.profidata.xentis.env.shared", somePackages);
-		
+
 		somePackages = new HashSet<>();
 		somePackages.add("org.springframework.context");
+		somePackages.add("org.springframework.jms.support");
+		somePackages.add("com.profidata.xentis.jni.common");
 		additionalBundleDependencies.put("com.profidata.xentis.jms.shared", somePackages);
 	}
 
@@ -52,11 +58,26 @@ public class RemoveGradleNatureFromPlugins {
 		Set<String> somePackages;
 
 		additionalTestFragmentDependencies = new HashMap<>();
+		ignoreTestFragmentDependencies = new HashMap<>();
 
 		somePackages = new HashSet<>();
 		somePackages.add("com.profidata.xentis.domain.unified");
 		somePackages.add("com.xnife.domain");
 		additionalTestFragmentDependencies.put("com.profidata.risk.commons.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("com.profidata.etl.commons");
+		somePackages.add("com.profidata.xentis.env.client");
+		somePackages.add("com.profidata.xentis.env.server");
+		somePackages.add("com.profidata.xentis.sn");
+		somePackages.add("org.fusesource.hawtbuf");
+		somePackages.add("com.profidatagroup.javamis.client.ui.mainframe.schnittstelle.editor"); // don't know were it gets from???
+		ignoreTestFragmentDependencies.put("com.profidata.xentis.javamis.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("com.profidatagroup.javamis.client.rmi.presentation.snRATEX.definition"); // don't know were it gets from???
+		ignoreTestFragmentDependencies.put("com.profidata.xentis.javamis.integration", somePackages);
+
 	}
 
 	private final PrintStream output;
@@ -83,14 +104,14 @@ public class RemoveGradleNatureFromPlugins {
 							.removeNature(ProjectConstants.GRADLE_NATURE_ID)
 							.removeClasspathEntry(new Path(ProjectConstants.GRADLE_CLASSPATH_ID))
 							.addPackageDependenciesToPluginManifest(() -> additionalBundleDependencies.get(theProject.getName()))
-							.refresh()
-							.build();
+							.refresh();
 
 					if (aProjectWrapper.hasError()) {
 						error.println("Fix project '" + theProject.getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
 					}
 					else {
-						migrateTestSourceFolderToTestFragmentProject(theProject);
+						migrateTestSourceFolderToTestFragmentProject(theProject, "test");
+						migrateTestSourceFolderToTestFragmentProject(theProject, "integration");
 					}
 				});
 
@@ -102,20 +123,20 @@ public class RemoveGradleNatureFromPlugins {
 				.collect(Collectors.toSet());
 	}
 
-	private void migrateTestSourceFolderToTestFragmentProject(IProject theProject) {
+	private void migrateTestSourceFolderToTestFragmentProject(IProject theProject, String theTestType) {
 		IJavaProject aJavaProject = JavaCore.create(theProject);
 
 		try {
 			IClasspathEntry[] allClasspathEntries = aJavaProject.getRawClasspath();
 			List<IClasspathEntry> allTestSourceClasspathEntries;
-			
+
 			// first we check for unit tests
 			allTestSourceClasspathEntries = Arrays.stream(allClasspathEntries)
 					.filter(theEntry -> theEntry.getContentKind() == IPackageFragmentRoot.K_SOURCE && theEntry.getEntryKind() == IClasspathEntry.CPE_SOURCE)
 					.filter(
-							theEntry -> theEntry.getPath().removeFirstSegments(1).segment(0).equals("test")
+							theEntry -> theEntry.getPath().removeFirstSegments(1).segment(0).equals(theTestType)
 									|| (theEntry.getPath().removeFirstSegments(1).segmentCount() > 1 && theEntry.getPath().removeFirstSegments(1).segment(0).equals("src")
-											&& theEntry.getPath().removeFirstSegments(1).segment(1).equals("test")))
+											&& theEntry.getPath().removeFirstSegments(1).segment(1).equals(theTestType)))
 					.collect(Collectors.toList());
 
 			if (!allTestSourceClasspathEntries.isEmpty()) {
@@ -125,26 +146,7 @@ public class RemoveGradleNatureFromPlugins {
 
 				aJavaProject.setRawClasspath(allChangedClasspathEntries.toArray(new IClasspathEntry[allChangedClasspathEntries.size()]), null);
 
-				createTestProject(theProject, "test", allTestSourceClasspathEntries);
-			}
-			
-			// second we check for integration tests
-			allTestSourceClasspathEntries = Arrays.stream(allClasspathEntries)
-					.filter(theEntry -> theEntry.getContentKind() == IPackageFragmentRoot.K_SOURCE && theEntry.getEntryKind() == IClasspathEntry.CPE_SOURCE)
-					.filter(
-							theEntry -> theEntry.getPath().removeFirstSegments(1).segment(0).equals("integration")
-									|| (theEntry.getPath().removeFirstSegments(1).segmentCount() > 1 && theEntry.getPath().removeFirstSegments(1).segment(0).equals("src")
-											&& theEntry.getPath().removeFirstSegments(1).segment(1).equals("integration")))
-					.collect(Collectors.toList());
-
-			if (!allTestSourceClasspathEntries.isEmpty()) {
-				List<IClasspathEntry> allChangedClasspathEntries = new ArrayList<>(Arrays.asList(allClasspathEntries));
-
-				allChangedClasspathEntries.removeAll(allTestSourceClasspathEntries);
-
-				aJavaProject.setRawClasspath(allChangedClasspathEntries.toArray(new IClasspathEntry[allChangedClasspathEntries.size()]), null);
-
-				createTestProject(theProject, "test.integration", allTestSourceClasspathEntries);
+				createTestProject(theProject, theTestType, allTestSourceClasspathEntries);
 			}
 		}
 		catch (JavaModelException theCause) {
@@ -155,7 +157,7 @@ public class RemoveGradleNatureFromPlugins {
 
 	private void createTestProject(IProject theProject, String theTestType, List<IClasspathEntry> theTestSourceClasspathEntries) {
 		IWorkspace aWorkspace = theProject.getWorkspace();
-		String aTestProjectName = theProject.getName() + "."+theTestType;
+		String aTestProjectName = theProject.getName() + "." + theTestType;
 		ProjectWrapper aProjectWrapper = ProjectWrapper
 				.of(aWorkspace, aTestProjectName);
 
@@ -198,10 +200,23 @@ public class RemoveGradleNatureFromPlugins {
 						Optional.ofNullable(additionalTestFragmentDependencies.get(aTestProjectName)).ifPresent(thePackages -> someAdditionalPackages.addAll(thePackages));
 
 						return someAdditionalPackages;
-					})
+					}, () -> Optional.ofNullable(ignoreTestFragmentDependencies.get(aTestProjectName)).orElse(Collections.emptySet()))
 					.createBuildProperties()
-					.refresh()
-					.build();
+					.refresh();
+
+			// Some of the Xentis projects have now set the encoding UTF-8 which is not the default. 
+			// Therefore the corresponding test fragment should have the same encoding
+			try {
+				String aTestCharset = aProjectWrapper.getProject().getDefaultCharset();
+				String aHostCharset = theProject.getDefaultCharset();
+
+				if (!aHostCharset.equals(aTestCharset)) {
+					aProjectWrapper.getProject().setDefaultCharset(aHostCharset, null);
+				}
+			}
+			catch (CoreException theCause) {
+				error.println("Access to default charset of project '" + aTestProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
+			}
 
 			if (aProjectWrapper.hasError()) {
 				error.println("Create test project '" + aTestProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
