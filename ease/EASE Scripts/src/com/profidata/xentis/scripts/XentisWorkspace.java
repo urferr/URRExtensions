@@ -63,19 +63,18 @@ public class XentisWorkspace {
 		output.println("Fix specific plugins");
 		output.println("====================");
 		fixComProfidataXentisJavamis(aWorkspace);
-		fixComXnifeOsgi(aWorkspace);
 
 		output.println("");
 		output.println("Import products/features/projects");
 		output.println("=================================");
-				importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.server.product");
-				importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.client.product");
+		importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.server.product");
+		importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.client.product");
 
 		output.println("");
 		output.println("Import missing features/projects");
 		output.println("================================");
-				importProjectsOfFeature(aWorkspace, "xentis/xc_bld/_com.profidata.xc.one.all.build.feature");
-				importProjectsOfFeature(aWorkspace, "xentis/JavAMIS/_com.profidata.xc.one.client.backoffice.feature");
+		importProjectsOfFeature(aWorkspace, "xentis/xc_bld/_com.profidata.xc.one.all.build.feature");
+		importProjectsOfFeature(aWorkspace, "xentis/JavAMIS/_com.profidata.xc.one.client.backoffice.feature");
 
 		if (aAutoBuildWasEnabled) {
 			enableAutoBuild(aWorkspace);
@@ -95,17 +94,30 @@ public class XentisWorkspace {
 			aProjectWrapper.open();
 		}
 
+		aProjectWrapper.asJavaProject();
 		if (aProjectWrapper.isOpen() && aProjectWrapper.hasNature(ProjectConstants.GRADLE_NATURE_ID)) {
-			output.println("Exchange Gradle with Plugin nature for project: " + theProjectName);
+			output.println("Remove Gradle nature from project: " + theProjectName);
 			aProjectWrapper
-					.asJavaProject()
 					.removeNature(ProjectConstants.GRADLE_NATURE_ID)
 					.removeClasspathEntry(new Path(ProjectConstants.GRADLE_CLASSPATH_ID))
+					.refresh();
+		}
+
+		if (aProjectWrapper.isOpen() && !aProjectWrapper.hasNature(ProjectConstants.PLUGIN_NATURE_ID)) {
+			output.println("Add Plugin nature to project: " + theProjectName);
+			aProjectWrapper
 					.addNature(ProjectConstants.PLUGIN_NATURE_ID)
 					.addClasspathEntry(theProject -> JavaCore.newContainerEntry(new Path(ProjectConstants.PLUGIN_CLASSPATH_ID)))
 					.createPluginManifest(() -> Collections.emptySet())
 					.refresh();
 		}
+
+		if (aProjectWrapper.isOpen() && !aProjectWrapper.hasClasspathEntry(new Path(ProjectConstants.PLUGIN_CLASSPATH_ID))) {
+			aProjectWrapper
+					.addClasspathEntry(theProject -> JavaCore.newContainerEntry(new Path(ProjectConstants.PLUGIN_CLASSPATH_ID)))
+					.refresh();
+		}
+
 		if (aProjectWrapper.hasError()) {
 			error.println("Exchange Gradle with Plugin nature for project: " + theProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
 		}
@@ -153,14 +165,6 @@ public class XentisWorkspace {
 		verifyFixFailed(aProjectWrapper);
 	}
 
-	private void fixComXnifeOsgi(IWorkspace theWorkspace) {
-		ProjectWrapper aProjectWrapper = ProjectWrapper.of(theWorkspace, "com.xnife.osgi")
-				.asJavaProject()
-				.removeNature(ProjectConstants.GRADLE_NATURE_ID)
-				.refresh();
-		verifyFixFailed(aProjectWrapper);
-	}
-		
 	private void verifyFixFailed(ProjectWrapper theProjectWrapper) {
 		if (theProjectWrapper.hasError()) {
 			error.println("Fix project: " + theProjectWrapper.getProject().getName() + "' failed:\n-> " + theProjectWrapper.getErrorMessage());
@@ -299,6 +303,7 @@ public class XentisWorkspace {
 
 		if (!aWorkspaceDescription.isAutoBuilding()) {
 			try {
+				output.println("\nRe-enable autobuild in workspace");
 				aWorkspaceDescription.setAutoBuilding(true);
 				theWorkspace.setDescription(aWorkspaceDescription);
 			}

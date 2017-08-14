@@ -418,9 +418,12 @@ public class ProjectWrapper {
 		verifyJavaProject();
 
 		try {
-			return new ArrayList<>(Arrays.asList(javaProject.getRawClasspath())).stream()
-					.filter(theClasspathEntry -> theClasspathEntry.getPath().equals(thePath))
-					.findFirst().orElse(null);
+			if (!hasError()) {
+				return new ArrayList<>(Arrays.asList(javaProject.getRawClasspath())).stream()
+						.filter(theClasspathEntry -> theClasspathEntry.getPath().equals(thePath))
+						.findFirst().orElse(null);
+			}
+			return null;
 		}
 		catch (JavaModelException theCause) {
 			throw new RuntimeException(theCause);
