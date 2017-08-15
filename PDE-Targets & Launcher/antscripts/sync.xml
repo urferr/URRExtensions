@@ -4,101 +4,76 @@
 	<target name="syncXentisServerLibraries" depends="-checkPrerequisites" description="updates all Xentis server libraries on the development server">
 		<echo>workspace.loc: ${workspace.loc}</echo>
 		<echo>xentis.home: ${xentis.home}</echo>
-		<echo>maven.build.version: ${maven.build.version}</echo>
+		<echo>gradle.build.version: ${gradle.build.version}</echo>
 		<echo>target directory: ${xentis.home}/packages/XENTIS/lib</echo>
 
 		<copy todir="${xentis.home}/packages/XENTIS/lib" overwrite="true" verbose="true" flatten="true">
 			<fileset dir="${workspace.loc}">
-				<include name="URRExtensions/maven/com.xnife.context.maven/target/com.xnife.context-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.xnife.contract.maven/target/com.xnife.contract-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.xnife.core.maven/target/com.xnife.core-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.xnife.domain.maven/target/com.xnife.domain-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.xnife.environment.maven/target/com.xnife.environment-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.xnife.http.maven/target/com.xnife.http-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.xnife.localization.maven/target/com.xnife.localization-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.xnife.logging.slf4j.logback.maven/target/com.xnife.logging.slf4j.logback-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.xnife.metadata.maven/target/com.xnife.metadata-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.xnife.objectquery.maven/target/com.xnife.objectquery-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.xnife.remoting.maven/target/com.xnife.remoting-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.xnife.security.maven/target/com.xnife.security-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.xnife.spring.maven/target/com.xnife.spring-${maven.build.version}.jar" />
+				<include name="xentis/xnife/main/com.xnife.context/target/libs/com.xnife.context-${gradle.build.version}.jar" />
+				<include name="xentis/xnife/main/com.xnife.contract/target/libs/com.xnife.contract-${gradle.build.version}.jar" />
+				<include name="xentis/xnife/main/com.xnife.core/target/libs/com.xnife.core-${gradle.build.version}.jar" />
+				<include name="xentis/xnife/main/com.xnife.domain/target/libs/com.xnife.domain-${gradle.build.version}.jar" />
+				<include name="xentis/xnife/main/com.xnife.environment/target/libs/com.xnife.environment-${gradle.build.version}.jar" />
+				<include name="xentis/xnife/main/com.xnife.http/target/libs/com.xnife.http-${gradle.build.version}.jar" />
+				<include name="xentis/xnife/main/com.xnife.localization/target/libs/com.xnife.localization-${gradle.build.version}.jar" />
+				<include name="xentis/xnife/main/com.xnife.logging.slf4j.logback/target/libs/com.xnife.logging.slf4j.logback-${gradle.build.version}.jar" />
+				<include name="xentis/xnife/main/com.xnife.metadata/target/libs/com.xnife.metadata-${gradle.build.version}.jar" />
+				<include name="xentis/xnife/main/com.xnife.objectquery/target/libs/com.xnife.objectquery-${gradle.build.version}.jar" />
+				<include name="xentis/xnife/main/com.xnife.remoting/target/libs/com.xnife.remoting-${gradle.build.version}.jar" />
+				<include name="xentis/xnife/main/com.xnife.security/target/libs/com.xnife.security-${gradle.build.version}.jar" />
+				<include name="xentis/xnife/main/com.xnife.spring/target/libs/com.xnife.spring-${gradle.build.version}.jar" />
 
-				<include name="URRExtensions/eclipse/com.profidatagroup.xentis.jni.common.ide/target/com.profidata.xentis.jni.common-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.env.shared/target/com.profidata.xentis.env.shared-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.jms.shared/target/com.profidata.xentis.jms.shared-${maven.build.version}.jar" />
-				<include name="JavAMIS/XentisBODomain/target/com.profidata.xentis.bodomain-${maven.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.jni.common/target/libs/com.profidata.xentis.jni.common-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.env.shared/target/libs/com.profidata.xentis.env.shared-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.jms.shared/target/libs/com.profidata.xentis.jms.shared-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.bodomain/target/libs/com.profidata.xentis.bodomain-${gradle.build.version}.jar" />
 
-				<include name="URRExtensions/maven/com.compxc.platform.common.maven/target/com.compxc.platform.common-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.compxc.common.domain.maven/target/com.compxc.common.domain-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.compxc.common.persistence.maven/target/com.compxc.common.persistence-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.compxc.common.metadata.maven/target/com.compxc.common.metadata-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.profidata.xc.data.service.domain.maven/target/com.profidata.xc.data.service.domain-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.profidata.xc.data.service.maven/target/com.profidata.xc.data.service-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.profidata.xc.codevalue.maven/target/com.profidata.xc.codevalue-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.profidata.xc.metadata.maven/target/com.profidata.xc.metadata-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.profidata.xc.persistence.maven/target/com.profidata.xc.persistence-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.profidata.xc.unified.service.maven/target/com.profidata.xc.unified.service-${maven.build.version}.jar" />
-				<include name="xc_pltf/main/com.profidata.xc.common.logger/target/com.profidata.xc.common.logger-${maven.build.version}.jar" />
+				<include name="xentis/xc_pltf/main/com.compxc.platform.common/target/libs/com.compxc.platform.common-${gradle.build.version}.jar" />
+				<include name="xentis/xc_pltf/main/com.compxc.common.domain/target/libs/com.compxc.common.domain-${gradle.build.version}.jar" />
+				<include name="xentis/xc_pltf/main/com.compxc.common.persistence/target/libs/com.compxc.common.persistence-${gradle.build.version}.jar" />
+				<include name="xentis/xc_pltf/main/com.compxc.common.metadata/target/libs/com.compxc.common.metadata-${gradle.build.version}.jar" />
+				<include name="xentis/xc_pltf/main/com.profidata.xc.data.service.domain/target/libs/com.profidata.xc.data.service.domain-${gradle.build.version}.jar" />
+				<include name="xentis/xc_pltf/main/com.profidata.xc.data.service/target/libs/com.profidata.xc.data.service-${gradle.build.version}.jar" />
+				<include name="xentis/xc_pltf/main/com.profidata.xc.codevalue/target/libs/com.profidata.xc.codevalue-${gradle.build.version}.jar" />
+				<include name="xentis/xc_pltf/main/com.profidata.xc.metadata/target/libs/com.profidata.xc.metadata-${gradle.build.version}.jar" />
+				<include name="xentis/xc_pltf/main/com.profidata.xc.persistence/target/libs/com.profidata.xc.persistence-${gradle.build.version}.jar" />
+				<include name="xentis/xc_pltf/main/com.profidata.xc.unified.service/target/libs/com.profidata.xc.unified.service-${gradle.build.version}.jar" />
+				<include name="xentis/xc_pltf/main/com.profidata.xc.common.logger/target/libs/com.profidata.xc.common.logger-${gradle.build.version}.jar" />
 
-				<include name="URRExtensions/maven/com.compxc.frontoffice.common.maven/target/com.compxc.frontoffice.common-${maven.build.version}.jar" />
+				<include name="xentis/xc_fo/main/com.compxc.frontoffice.common/target/libs/com.compxc.frontoffice.common-${gradle.build.version}.jar" />
 
-				<include name="JavAMIS/com.profidata.xentis.domain.unified/target/com.profidata.xentis.domain.unified-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.server.commons/target/com.profidata.xentis.server.commons-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.env.server/target/com.profidata.xentis.env.server-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.jms.server/target/com.profidata.xentis.jms.server-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.user.shared/target/com.profidata.xentis.user.shared-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.user.server/target/com.profidata.xentis.user.server-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.user.ldap/target/com.profidata.xentis.user.ldap-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.ratex/target/com.profidata.xentis.ratex-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.logger.server.logback/target/com.profidata.xentis.logger.server.logback-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidatagroup.xentis.jni/target/com.profidata.xentis.jni-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.sn/target/com.profidata.xentis.sn-${maven.build.version}.jar" />
-				<include name="JavAMIS/XentisBOServer/target/com.profidata.xentis.server-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.server.bloomberg/target/com.profidata.xentis.server.bloomberg-${maven.build.version}.jar" />
-				<include name="URRExtensions/maven/com.profidata.javamis/target/com.profidata.javamis-${maven.build.version}.jar" />
-				<include name="JavAMISXC/JavAMISXC/target/com.profidata.javamisxc-${maven.build.version}.jar" />
-				<include name="xrs/com.profidata.risk.commons/target/com.profidata.risk.commons-${maven.build.version}.jar" />
-				<include name="fix/com.profidata.xentis.fix.engine.commons/target/com.profidata.xentis.fix.commons-${maven.build.version}.jar" />
-				<include name="xtl/com.profidata.xentis.etl.commons/target/com.profidata.xentis.etl.commons-${maven.build.version}.jar" />
-				<include name="reporting/com.profidata.reporting.common/target/com.profidata.reporting.common-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidata.xentis.env.client/target/com.profidata.xentis.env.client-${maven.build.version}.jar" />
-				<include name="JavAMIS/com.profidatagroup.xentis.ui.base/target/com.profidata.xentis.ui.base-${maven.build.version}.jar" />
-				<include name="JavAMIS/XentisBOClient/target/com.profidata.xentis.client-${maven.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.domain.unified/target/libs/com.profidata.xentis.domain.unified-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.server.commons/target/libs/com.profidata.xentis.server.commons-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.env.server/target/libs/com.profidata.xentis.env.server-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.jms.server/target/libs/com.profidata.xentis.jms.server-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.user.shared/target/libs/com.profidata.xentis.user.shared-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.user.server/target/libs/com.profidata.xentis.user.server-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.user.ldap/target/libs/com.profidata.xentis.user.ldap-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.ratex/target/libs/com.profidata.xentis.ratex-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.logger.server.logback/target/libs/com.profidata.xentis.logger.server.logback-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.jni/target/libs/com.profidata.xentis.jni-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.sn/target/libs/com.profidata.xentis.sn-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.xscomm/target/libs/com.profidata.xentis.xscomm-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.server/target/libs/com.profidata.xentis.server-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.server.bloomberg/target/libs/com.profidata.xentis.server.bloomberg-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.javamis/target/libs/com.profidata.xentis.javamis-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMISXC/com.profidata.xentis.javamisxc/target/libs/com.profidata.xentis.javamisxc-${gradle.build.version}.jar" />
+				<include name="xentis/xrs/com.profidata.risk.commons/target/libs/com.profidata.risk.commons-${gradle.build.version}.jar" />
+				<include name="xentis/fix/com.profidata.xentis.fix.commons/target/libs/com.profidata.xentis.fix.commons-${gradle.build.version}.jar" />
+				<include name="xentis/xtl/com.profidata.xentis.etl.commons/target/libs/com.profidata.xentis.etl.commons-${gradle.build.version}.jar" />
+				<include name="reporting/com.profidata.reporting.common/target/libs/com.profidata.reporting.common-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.env.client/target/libs/com.profidata.xentis.env.client-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.ui.base/target/libs/com.profidata.xentis.ui.base-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.client/target/libs/com.profidata.xentis.client-${gradle.build.version}.jar" />
 			</fileset>
 		</copy>
-	</target>
-
-	<target name="syncGeneratedJniSources" depends="-checkPrerequisites" description="replaces all the jni/jc source in com.profidatagroup.xentis.jni project">
-		<echo>workspace.loc: ${workspace.loc}</echo>
-		<echo>xentis.home: ${xentis.home}</echo>
-		<echo>maven.build.version: ${maven.build.version}</echo>
-		<echo>target directory: ${workspace.loc}/com.profidatagroup.xentis.jni/targets</echo>
-
-		<delete quiet="true">
-			<fileset dir="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/src/main/java" includes="**/*"  />
-		</delete>
-
-		<copy todir="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/target" overwrite="true" verbose="true">
-			<fileset dir="${xentis.home}">
-				<include name="com.profidata.xentis.jni-${maven.build.version}-sources.jar" />
-			</fileset>
-		</copy>
-
-		<unzip src="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/target/com.profidata.xentis.jni-${maven.build.version}-sources.jar" dest="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/src/main/java">
-			<patternset>
-				<include name="jni/*.java" />
-				<include name="jc/*.java" />
-			</patternset>
-		</unzip>
-
-		<delete file="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/target/com.profidata.xentis.jni-${maven.build.version}-sources.jar" />
 	</target>
 
 	<!-- global helpers -->
 	<target name="-checkPrerequisites">
 		<check-required-property propertyname="workspace.loc" />
 		<check-required-property propertyname="xentis.home" />
-		<check-required-property propertyname="maven.build.version" />
+		<check-required-property propertyname="gradle.build.version" />
 	</target>
 
 	<macrodef name="check-required-property">
