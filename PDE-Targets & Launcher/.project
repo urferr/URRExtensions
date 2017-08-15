@@ -24,7 +24,7 @@
 		<link>
 			<name>javamis-config</name>
 			<type>2</type>
-			<locationURI>WORKSPACE_LOC/JavAMIS/JavAMIS/xentis-externals/Resources/config</locationURI>
+			<locationURI>WORKSPACE_LOC/xentis/JavAMIS/com.profidata.xentis.javamis/src/main/resources/config</locationURI>
 		</link>
 		<link>
 			<name>targets/XC.target</name>
