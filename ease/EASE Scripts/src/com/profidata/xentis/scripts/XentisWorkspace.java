@@ -11,7 +11,6 @@ import org.eclipse.core.resources.IWorkspaceDescription;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jdt.core.IAccessRule;
 import org.eclipse.jdt.core.IClasspathEntry;
@@ -63,6 +62,7 @@ public class XentisWorkspace {
 		output.println("Fix specific plugins");
 		output.println("====================");
 		fixComProfidataXentisJavamis(aWorkspace);
+		fixComXnifeOsgi(aWorkspace);
 
 		output.println("");
 		output.println("Import products/features/projects");
@@ -161,6 +161,14 @@ public class XentisWorkspace {
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("ratex.jar"), null, null));
 
 		aProjectWrapper
+				.refresh();
+		verifyFixFailed(aProjectWrapper);
+	}
+
+	private void fixComXnifeOsgi(IWorkspace theWorkspace) {
+		ProjectWrapper aProjectWrapper = ProjectWrapper.of(theWorkspace, "com.xnife.osgi")
+				.asJavaProject()
+				.removeNature(ProjectConstants.GRADLE_NATURE_ID)
 				.refresh();
 		verifyFixFailed(aProjectWrapper);
 	}

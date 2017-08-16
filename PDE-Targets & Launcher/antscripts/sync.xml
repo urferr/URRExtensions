@@ -58,6 +58,7 @@
 				<include name="xentis/JavAMIS/com.profidata.xentis.server.bloomberg/target/libs/com.profidata.xentis.server.bloomberg-${gradle.build.version}.jar" />
 				<include name="xentis/JavAMIS/com.profidata.xentis.javamis/target/libs/com.profidata.xentis.javamis-${gradle.build.version}.jar" />
 				<include name="xentis/JavAMISXC/com.profidata.xentis.javamisxc/target/libs/com.profidata.xentis.javamisxc-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMISXC/com.profidata.xentis.objectquery/target/libs/com.profidata.xentis.objectquery-${gradle.build.version}.jar" />
 				<include name="xentis/xrs/com.profidata.risk.commons/target/libs/com.profidata.risk.commons-${gradle.build.version}.jar" />
 				<include name="xentis/fix/com.profidata.xentis.fix.commons/target/libs/com.profidata.xentis.fix.commons-${gradle.build.version}.jar" />
 				<include name="xentis/xtl/com.profidata.xentis.etl.commons/target/libs/com.profidata.xentis.etl.commons-${gradle.build.version}.jar" />
