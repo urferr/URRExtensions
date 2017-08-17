@@ -167,8 +167,9 @@ public class XentisWorkspace {
 
 	private void fixComXnifeOsgi(IWorkspace theWorkspace) {
 		ProjectWrapper aProjectWrapper = ProjectWrapper.of(theWorkspace, "com.xnife.osgi")
-				.asJavaProject()
+				.toJavaProject()
 				.removeNature(ProjectConstants.GRADLE_NATURE_ID)
+				.addNature(ProjectConstants.PLUGIN_NATURE_ID)
 				.refresh();
 		verifyFixFailed(aProjectWrapper);
 	}
