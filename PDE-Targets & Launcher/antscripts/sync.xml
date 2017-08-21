@@ -62,7 +62,7 @@
 				<include name="xentis/xrs/com.profidata.risk.commons/target/libs/com.profidata.risk.commons-${gradle.build.version}.jar" />
 				<include name="xentis/fix/com.profidata.xentis.fix.commons/target/libs/com.profidata.xentis.fix.commons-${gradle.build.version}.jar" />
 				<include name="xentis/xtl/com.profidata.xentis.etl.commons/target/libs/com.profidata.xentis.etl.commons-${gradle.build.version}.jar" />
-				<include name="reporting/com.profidata.reporting.common/target/libs/com.profidata.reporting.common-${gradle.build.version}.jar" />
+				<include name="xentis/reporting/com.profidata.reporting.common/target/libs/com.profidata.reporting.common-${gradle.build.version}.jar" />
 				<include name="xentis/JavAMIS/com.profidata.xentis.env.client/target/libs/com.profidata.xentis.env.client-${gradle.build.version}.jar" />
 				<include name="xentis/JavAMIS/com.profidata.xentis.ui.base/target/libs/com.profidata.xentis.ui.base-${gradle.build.version}.jar" />
 				<include name="xentis/JavAMIS/com.profidata.xentis.client/target/libs/com.profidata.xentis.client-${gradle.build.version}.jar" />
