@@ -27,6 +27,7 @@
 				<include name="xentis/JavAMIS/com.profidata.xentis.env.shared/target/libs/com.profidata.xentis.env.shared-${gradle.build.version}.jar" />
 				<include name="xentis/JavAMIS/com.profidata.xentis.jms.shared/target/libs/com.profidata.xentis.jms.shared-${gradle.build.version}.jar" />
 				<include name="xentis/JavAMIS/com.profidata.xentis.bodomain/target/libs/com.profidata.xentis.bodomain-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.api/target/libs/com.profidata.xentis.api-${gradle.build.version}.jar" />
 
 				<include name="xentis/xc_pltf/main/com.compxc.platform.common/target/libs/com.compxc.platform.common-${gradle.build.version}.jar" />
 				<include name="xentis/xc_pltf/main/com.compxc.common.domain/target/libs/com.compxc.common.domain-${gradle.build.version}.jar" />
@@ -59,6 +60,10 @@
 				<include name="xentis/JavAMIS/com.profidata.xentis.javamis/target/libs/com.profidata.xentis.javamis-${gradle.build.version}.jar" />
 				<include name="xentis/JavAMISXC/com.profidata.xentis.javamisxc/target/libs/com.profidata.xentis.javamisxc-${gradle.build.version}.jar" />
 				<include name="xentis/JavAMISXC/com.profidata.xentis.objectquery/target/libs/com.profidata.xentis.objectquery-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.http.api.application/target/libs/com.profidata.xentis.http.api.application-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.http.api.handler.base/target/libs/com.profidata.xentis.http.api.handler.base-${gradle.build.version}.jar" />
+				<include name="xentis/JavAMIS/com.profidata.xentis.permission.api.service/target/libs/com.profidata.xentis.permission.api.service-${gradle.build.version}.jar" />
+
 				<include name="xentis/xrs/com.profidata.risk.commons/target/libs/com.profidata.risk.commons-${gradle.build.version}.jar" />
 				<include name="xentis/fix/com.profidata.xentis.fix.commons/target/libs/com.profidata.xentis.fix.commons-${gradle.build.version}.jar" />
 				<include name="xentis/xtl/com.profidata.xentis.etl.commons/target/libs/com.profidata.xentis.etl.commons-${gradle.build.version}.jar" />

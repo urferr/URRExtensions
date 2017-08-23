@@ -21,6 +21,8 @@
 -Dorg.aspectj.osgi.verbose=true
 -Dorg.aspectj.weaver.showWeaveInfo=true
 
+-Dcom.profidata.xc.monitor.exitonfail=false
+
 -Dcom.xnife.logging.level.com.xnife.cache.impl.index=warn
 -Dcom.xnife.logging.level.org.hibernate.tool.hbm2ddl=info
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
@@ -59,7 +61,6 @@
    <windowImages/>
 
    <launcher name="xcServer">
-      <solaris/>
       <win useIco="false">
          <bmp/>
       </win>
