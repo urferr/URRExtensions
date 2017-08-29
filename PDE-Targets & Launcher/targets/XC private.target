@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="XC private" sequenceNumber="5">
+<?pde version="3.8"?><target name="XC 2.3.x" sequenceNumber="7">
 <locations>
-<location path="D:\JavaTargets\spring.ide" type="Directory"/>
-<location path="D:\JavaTargets\xc-target.platform-e46-2.3.1" type="Directory"/>
+<location path="D:\JavaTargets\xc-target.platform-e46-2.3.x" type="Directory"/>
 </locations>
 </target>
