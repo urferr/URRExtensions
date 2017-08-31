@@ -62,7 +62,6 @@ public class XentisWorkspace {
 		output.println("Fix specific plugins");
 		output.println("====================");
 		fixComProfidataXentisJavamis(aWorkspace);
-		fixComXnifeOsgi(aWorkspace);
 
 		output.println("");
 		output.println("Import products/features/projects");
@@ -161,15 +160,6 @@ public class XentisWorkspace {
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("ratex.jar"), null, null));
 
 		aProjectWrapper
-				.refresh();
-		verifyFixFailed(aProjectWrapper);
-	}
-
-	private void fixComXnifeOsgi(IWorkspace theWorkspace) {
-		ProjectWrapper aProjectWrapper = ProjectWrapper.of(theWorkspace, "com.xnife.osgi")
-				.toJavaProject()
-				.removeNature(ProjectConstants.GRADLE_NATURE_ID)
-				.addNature(ProjectConstants.PLUGIN_NATURE_ID)
 				.refresh();
 		verifyFixFailed(aProjectWrapper);
 	}

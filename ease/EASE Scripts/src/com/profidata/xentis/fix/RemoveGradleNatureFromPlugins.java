@@ -16,7 +16,6 @@ import java.util.stream.Collectors;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.IWorkspace;
-import org.eclipse.core.resources.ResourceAttributes;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
@@ -112,6 +111,7 @@ public class RemoveGradleNatureFromPlugins {
 					else {
 						migrateTestSourceFolderToTestFragmentProject(theProject, "test");
 						migrateTestSourceFolderToTestFragmentProject(theProject, "integration");
+						migrateTestSourceFolderToTestFragmentProject(theProject, "manual");
 					}
 				});
 
@@ -204,7 +204,7 @@ public class RemoveGradleNatureFromPlugins {
 					.createBuildProperties()
 					.refresh();
 
-			// Some of the Xentis projects have now set the encoding UTF-8 which is not the default. 
+			// Some of the Xentis projects have now set the encoding UTF-8 which is not the default.
 			// Therefore the corresponding test fragment should have the same encoding
 			try {
 				String aTestCharset = aProjectWrapper.getProject().getDefaultCharset();
