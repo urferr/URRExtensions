@@ -129,8 +129,12 @@ public class RemoveGradleNatureFromPlugins {
 							.asJavaProject()
 							.removeNature(ProjectConstants.GRADLE_NATURE_ID)
 							.removeClasspathEntry(new Path(ProjectConstants.GRADLE_CLASSPATH_ID))
-							.addPackageDependenciesToPluginManifest(() -> additionalBundleDependencies.get(theProject.getName()))
-							.refresh();
+							.addPackageDependenciesToPluginManifest(() -> additionalBundleDependencies.get(theProject.getName()));
+					if (theProject.getName().contains(".aspectj.")) {
+						aProjectWrapper.addNature("org.eclipse.ajdt.ui.ajnature");
+					}
+
+					aProjectWrapper.refresh();
 
 					if (aProjectWrapper.hasError()) {
 						error.println("Fix project '" + theProject.getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
