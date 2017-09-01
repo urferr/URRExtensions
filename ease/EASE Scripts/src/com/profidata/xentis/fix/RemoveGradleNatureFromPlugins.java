@@ -65,6 +65,24 @@ public class RemoveGradleNatureFromPlugins {
 		additionalTestFragmentDependencies.put("com.profidata.risk.commons.test", somePackages);
 
 		somePackages = new HashSet<>();
+		somePackages.add("org.objenesis");
+		additionalTestFragmentDependencies.put("com.profidata.xentis.bodomain.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.objenesis");
+		somePackages.add("org.apache.commons.logging");
+		somePackages.add("org.springframework.aop");
+		somePackages.add("org.springframework.expression");
+		additionalTestFragmentDependencies.put("com.profidata.xentis.env.shared.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.objenesis");
+		additionalTestFragmentDependencies.put("com.profidata.xentis.etl.commons.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.objenesis");
+		additionalTestFragmentDependencies.put("com.profidata.xentis.javamis.test", somePackages);
+		somePackages = new HashSet<>();
 		somePackages.add("com.profidata.etl.commons");
 		somePackages.add("com.profidata.xentis.env.client");
 		somePackages.add("com.profidata.xentis.env.server");
@@ -76,6 +94,15 @@ public class RemoveGradleNatureFromPlugins {
 		somePackages = new HashSet<>();
 		somePackages.add("com.profidatagroup.javamis.client.rmi.presentation.snRATEX.definition"); // don't know were it gets from???
 		ignoreTestFragmentDependencies.put("com.profidata.xentis.javamis.integration", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.objenesis");
+		somePackages.add("javax.management.j2ee.statistics");
+		additionalTestFragmentDependencies.put("com.profidata.xentis.jms.shared.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.springframework.expression");
+		additionalTestFragmentDependencies.put("com.xnife.spring.test", somePackages);
 
 	}
 
