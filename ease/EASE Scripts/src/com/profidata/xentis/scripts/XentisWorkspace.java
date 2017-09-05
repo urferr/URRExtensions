@@ -27,7 +27,9 @@ import org.eclipse.pde.internal.core.product.WorkspaceProductModel;
 import org.eclipse.pde.internal.core.project.PDEProject;
 
 import com.profidata.xentis.config.ImportConfiguration;
-import com.profidata.xentis.config.ImportConfiguration.ImportFeatureProject;
+import com.profidata.xentis.config.ImportFeatureProject;
+import com.profidata.xentis.config.URRImportConfiguration;
+import com.profidata.xentis.config.XCImportConfiguration;
 import com.profidata.xentis.fix.RemoveGradleNatureFromPlugins;
 import com.profidata.xentis.util.ProjectConstants;
 import com.profidata.xentis.util.ProjectWrapper;
@@ -49,35 +51,39 @@ public class XentisWorkspace {
 		IWorkspace aWorkspace = ResourcesPlugin.getWorkspace();
 		boolean aAutoBuildWasEnabled = disableAutoBuild(aWorkspace);
 
-		output.println("Fix projects with Plugin/Gradle nature");
-		output.println("======================================");
-		RemoveGradleNatureFromPlugins.run(output, error);
+		try {
+			output.println("Fix projects with Plugin/Gradle nature");
+			output.println("======================================");
+			RemoveGradleNatureFromPlugins.run(output, error);
 
-		output.println("");
-		output.println("Exchange Gradle with Plugin nature");
-		output.println("==================================");
-		convertProjectFromGradleToPlugin(aWorkspace, "com.profidata.xentis.test");
+			output.println("");
+			output.println("Exchange Gradle with Plugin nature");
+			output.println("==================================");
+			convertProjectFromGradleToPlugin(aWorkspace, "com.profidata.xentis.test");
 
-		output.println("");
-		output.println("Fix specific plugins");
-		output.println("====================");
-		fixComProfidataXentisJavamis(aWorkspace);
+			output.println("");
+			output.println("Fix specific plugins");
+			output.println("====================");
+			fixComProfidataXentisJavamis(aWorkspace);
 
-		output.println("");
-		output.println("Import products/features/projects");
-		output.println("=================================");
-		importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.server.product");
-		importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.client.product");
+			output.println("");
+			output.println("Import products/features/projects");
+			output.println("=================================");
+			importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.server.product", XCImportConfiguration.getInstance());
+			importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.client.product", XCImportConfiguration.getInstance());
 
-		output.println("");
-		output.println("Import missing features/projects");
-		output.println("================================");
-		importProjectsOfFeature(aWorkspace, "xentis/xc_bld/_com.profidata.xc.one.all.build.feature");
-		importProjectsOfFeature(aWorkspace, "xentis/JavAMIS/_com.profidata.xc.one.client.backoffice.feature");
+			output.println("");
+			output.println("Import missing features/projects");
+			output.println("================================");
+			importProjectsOfFeature(aWorkspace, "/URRExtensions/features/_com.profidata.xc.one.test.feature", URRImportConfiguration.getInstance());
 
-		if (aAutoBuildWasEnabled) {
-			enableAutoBuild(aWorkspace);
 		}
+		finally {
+			if (aAutoBuildWasEnabled) {
+				enableAutoBuild(aWorkspace);
+			}
+		}
+
 		try {
 			aWorkspace.getRoot().refreshLocal(IResource.DEPTH_INFINITE, null);
 		}
@@ -171,7 +177,7 @@ public class XentisWorkspace {
 	}
 
 	@SuppressWarnings("restriction")
-	private void importProjectsOfProduct(IWorkspace theWorkspace, String theProjectPath, String theProductFilePath) {
+	private void importProjectsOfProduct(IWorkspace theWorkspace, String theProjectPath, String theProductFilePath, ImportConfiguration theImportConfiguration) {
 		ProjectWrapper aProjectWrapper = importProject(theWorkspace, theProjectPath);
 
 		if (!aProjectWrapper.hasError()) {
@@ -181,7 +187,7 @@ public class XentisWorkspace {
 			if (aProductFile.exists()) {
 				IProductModel aProductModel = new WorkspaceProductModel(aProductFile, false);
 				IProduct aProduct = aProductModel.getProduct();
-				ImportConfiguration aImportConfiguration = ImportConfiguration.getInstance();
+				ImportConfiguration aImportConfiguration = XCImportConfiguration.getInstance();
 
 				try {
 					aProductModel.load();
@@ -190,12 +196,12 @@ public class XentisWorkspace {
 						ImportFeatureProject aImportFeatureProject = aImportConfiguration.getFeatureProject(aFeatureChild.getId());
 
 						if (aImportFeatureProject != null) {
-							String aFeatureProjectPath = aImportConfiguration.getXentisRootProjectPath() + "/" + aImportFeatureProject.getPath() + "/" + aFeatureChild.getId();
+							String aFeatureProjectPath = aImportConfiguration.getRootProjectPath() + "/" + aImportFeatureProject.getPath() + "/" + aFeatureChild.getId();
 
 							ProjectWrapper aFeatureProject = importProject(theWorkspace, aFeatureProjectPath);
 
 							if (!aFeatureProject.hasError() && aImportFeatureProject.getContentPath() != null) {
-								importProjectsOfFeature(aFeatureProject, aImportFeatureProject.getContentPath());
+								importProjectsOfFeature(aFeatureProject, aImportFeatureProject.getContentPath(), theImportConfiguration);
 							}
 						}
 						else {
@@ -214,15 +220,14 @@ public class XentisWorkspace {
 		}
 	}
 
-	private void importProjectsOfFeature(IWorkspace theWorkspace, String theProjectPath) {
+	private void importProjectsOfFeature(IWorkspace theWorkspace, String theProjectPath, ImportConfiguration theImportConfiguration) {
 		ProjectWrapper aProjectWrapper = importProject(theWorkspace, theProjectPath);
 
 		if (!aProjectWrapper.hasError()) {
-			ImportConfiguration aImportConfiguration = ImportConfiguration.getInstance();
-			ImportFeatureProject aImportFeatureProject = aImportConfiguration.getFeatureProject(aProjectWrapper.getProject().getName());
+			ImportFeatureProject aImportFeatureProject = theImportConfiguration.getFeatureProject(aProjectWrapper.getProject().getName());
 
 			if (aImportFeatureProject != null) {
-				importProjectsOfFeature(aProjectWrapper, aImportFeatureProject.getContentPath());
+				importProjectsOfFeature(aProjectWrapper, aImportFeatureProject.getContentPath(), theImportConfiguration);
 			}
 			else {
 				error.println("No configuration found for feature '" + aProjectWrapper.getProject().getName() + "'");
@@ -231,9 +236,7 @@ public class XentisWorkspace {
 	}
 
 	@SuppressWarnings("restriction")
-	private void importProjectsOfFeature(ProjectWrapper theFeatureProject, String theContentPath) {
-		ImportConfiguration aImportConfiguration = ImportConfiguration.getInstance();
-
+	private void importProjectsOfFeature(ProjectWrapper theFeatureProject, String theContentPath, ImportConfiguration theImportConfiguration) {
 		if (theFeatureProject.hasNature(ProjectConstants.FEATURE_NATURE_ID)) {
 			try {
 				IFeatureModel aFeatureModel = new WorkspaceFeatureModel(PDEProject.getFeatureXml(theFeatureProject.getProject()));
@@ -242,17 +245,25 @@ public class XentisWorkspace {
 				aFeatureModel.load();
 
 				for (IFeatureChild aFeatureChild : aFeature.getIncludedFeatures()) {
-					ImportFeatureProject aImportFeatureProject = aImportConfiguration.getFeatureProject(aFeatureChild.getId());
-					String aFeatureProjectPath = aImportConfiguration.getXentisRootProjectPath() + "/" + aImportFeatureProject.getPath() + "/" + aFeatureChild.getId();
+					ImportFeatureProject aImportFeatureProject = theImportConfiguration.getFeatureProject(aFeatureChild.getId());
+					String aFeatureProjectPath = "";
+
+					if (!theImportConfiguration.getRootProjectPath().isEmpty()) {
+						aFeatureProjectPath += theImportConfiguration.getRootProjectPath() + "/";
+					}
+					if (!aImportFeatureProject.getPath().isEmpty()) {
+						aFeatureProjectPath += aImportFeatureProject.getPath() + "/";
+					}
+					aFeatureProjectPath += aFeatureChild.getId();
 
 					ProjectWrapper aChildFeatureProject = importProject(theFeatureProject.getProject().getWorkspace(), aFeatureProjectPath);
 					if (!aChildFeatureProject.hasError() && aImportFeatureProject.getContentPath() != null) {
-						importProjectsOfFeature(aChildFeatureProject, aImportFeatureProject.getContentPath());
+						importProjectsOfFeature(aChildFeatureProject, aImportFeatureProject.getContentPath(), theImportConfiguration);
 					}
 				}
 
 				for (IFeaturePlugin aPlugin : aFeature.getPlugins()) {
-					String aPluginProjectPath = aImportConfiguration.getXentisRootProjectPath() + "/" + theContentPath + "/" + aPlugin.getId();
+					String aPluginProjectPath = theImportConfiguration.getRootProjectPath() + "/" + theContentPath + "/" + aPlugin.getId();
 
 					importProject(theFeatureProject.getProject().getWorkspace(), aPluginProjectPath);
 				}
