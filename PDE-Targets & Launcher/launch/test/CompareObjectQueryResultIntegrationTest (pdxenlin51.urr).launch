@@ -24,7 +24,7 @@
 <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
 <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/com.profidata.xc.objectquery.verification.integration.test/src/com/profidata/xc/objectquery/service/integration/test/verification/CompareObjectQueryResultIntegrationTest.java"/>
+<listEntry value="/com.profidata.xc.objectquery.verification.integration.test/src/com/profidata/xc/objectquery/service/integration/test/verification/CompareObjectQueryResultIntegrationTestSuite.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
@@ -33,25 +33,29 @@
 <mapEntry key="BO_HOSTNAME" value="pdxenlin51"/>
 <mapEntry key="BO_JMS_PORT" value="7305"/>
 <mapEntry key="BO_RMI_PORT" value="7300"/>
-<mapEntry key="EAMIS_DB_SERVER" value="XNT041"/>
-<mapEntry key="EAMIS_DB_USER" value="X_DEV_540_XC"/>
+<mapEntry key="EAMIS_DB_SERVER" value="XNT121"/>
+<mapEntry key="EAMIS_DB_USER" value="X_MOBIDEV_540_XC"/>
 <mapEntry key="EAMIS_SYSTEMTYPE" value="T"/>
 <mapEntry key="XC_APP_NAME" value="URR-XCAS-URR-DAILY_DEV"/>
-<mapEntry key="XC_APP_VERSION" value="5.4.2"/>
+<mapEntry key="XC_APP_VERSION" value="master"/>
 <mapEntry key="XC_DB_DDL" value="validate"/>
 <mapEntry key="XC_DB_PASSWORD" value="clzlabo1"/>
 <mapEntry key="XC_DB_PORT" value="1521"/>
-<mapEntry key="XC_DB_SCHEMA" value="X_DEV_540_XC"/>
-<mapEntry key="XC_DB_USER" value="X_DEV_540_XC"/>
+<mapEntry key="XC_DB_SCHEMA" value="X_MOBIDEV_540_XC"/>
+<mapEntry key="XC_DB_USER" value="X_MOBIDEV_540_XC"/>
 <mapEntry key="XC_FRONTOFFICE_ENABLED" value="false"/>
 <mapEntry key="XC_SERVER_INSTANCE_NAME" value="XENTIS"/>
 </mapAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
 <stringAttribute key="org.eclipse.jdt.junit.CONTAINER" value=""/>
 <booleanAttribute key="org.eclipse.jdt.junit.KEEPRUNNING_ATTR" value="false"/>
 <stringAttribute key="org.eclipse.jdt.junit.TESTNAME" value=""/>
 <stringAttribute key="org.eclipse.jdt.junit.TEST_KIND" value="org.eclipse.jdt.junit.loader.junit4"/>
 <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.xc.objectquery.service.integration.test.verification.CompareObjectQueryResultIntegrationTest"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.xc.objectquery.service.integration.test.verification.CompareObjectQueryResultIntegrationTestSuite"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xc.objectquery.verification.integration.test"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
