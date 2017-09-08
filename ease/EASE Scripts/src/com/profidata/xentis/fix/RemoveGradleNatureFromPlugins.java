@@ -103,14 +103,6 @@ public class RemoveGradleNatureFromPlugins {
 		somePackages = new HashSet<>();
 		somePackages.add("org.springframework.expression");
 		additionalTestFragmentDependencies.put("com.xnife.spring.test", somePackages);
-
-		somePackages = new HashSet<>();
-		somePackages.add("com.xnife.util");
-		somePackages.add("org.springframework.remoting.support");
-		somePackages.add("com.compxc.common.domain");
-		somePackages.add("com.compxc.platform.domain.history");
-		somePackages.add("com.compxc.common.persistence.entity.db");
-		additionalTestFragmentDependencies.put("com.profidata.xc.unified.service.integration", somePackages);
 	}
 
 	private final PrintStream output;

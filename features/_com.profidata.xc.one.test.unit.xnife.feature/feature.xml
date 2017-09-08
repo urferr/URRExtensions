@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="_com.profidata.xc.one.test.unit.xnife.feature"
-      label="XC One Unit test Xnife Feature"
+      label="XC One Unit Test Xnife Feature"
       version="0.0.0">
 
    <description url="http://www.example.com/description">

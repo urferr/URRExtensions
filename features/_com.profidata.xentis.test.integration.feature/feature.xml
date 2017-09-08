@@ -32,7 +32,6 @@
          version="0.0.0"
          fragment="true"
          unpack="false"/>
--->
    <plugin
          id="com.profidata.xc.unified.service.integration"
          download-size="0"
@@ -40,5 +39,6 @@
          version="0.0.0"
          fragment="true"
          unpack="false"/>
+-->
 
 </feature>
