@@ -3,6 +3,8 @@
 <listAttribute key="arguments">
 <listEntry value="-x"/>
 <listEntry value="test"/>
+<listEntry value="-x"/>
+<listEntry value="jacocoReport"/>
 </listAttribute>
 <booleanAttribute key="build_scans_enabled" value="false"/>
 <stringAttribute key="gradle_distribution" value="GRADLE_DISTRIBUTION(WRAPPER)"/>

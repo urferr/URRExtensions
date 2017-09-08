@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -523,6 +524,15 @@ public class ProjectWrapper {
 
 			if (!someAdditionalPackageDependencies.isEmpty()) {
 				ImportPackageHeader aImportPackageHeader = (ImportPackageHeader) aBundle.getManifestHeader(Constants.IMPORT_PACKAGE);
+
+				if (aImportPackageHeader == null) {
+					Iterator<String> aIterator = someAdditionalPackageDependencies.iterator();
+
+					aBundle.setHeader(Constants.IMPORT_PACKAGE, aIterator.next());
+
+					aIterator.remove();
+					aImportPackageHeader = (ImportPackageHeader) aBundle.getManifestHeader(Constants.IMPORT_PACKAGE);
+				}
 
 				for (String aPackage : someAdditionalPackageDependencies) {
 					aImportPackageHeader.addPackage(aPackage);
