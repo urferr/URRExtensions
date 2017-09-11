@@ -128,7 +128,6 @@ public class RemoveGradleNatureFromPlugins {
 							.asJavaProject()
 							.removeNature(ProjectConstants.GRADLE_NATURE_ID)
 							.removeClasspathEntry(new Path(ProjectConstants.GRADLE_CLASSPATH_ID))
-							.addPackageDependenciesToPluginManifest(() -> additionalBundleDependencies.get(theProject.getName()))
 							.refresh();
 
 					if (aProjectWrapper.hasError()) {
@@ -139,6 +138,15 @@ public class RemoveGradleNatureFromPlugins {
 						migrateTestSourceFolderToTestFragmentProject(theProject, "integration");
 						migrateTestSourceFolderToTestFragmentProject(theProject, "manual");
 					}
+				});
+
+		additionalBundleDependencies.keySet().stream()
+				.forEach(theProjectName -> {
+					output.println("Add additional dependencies to MANIFEST.MF of project '" + theProjectName + "'");
+					ProjectWrapper.of(aWorkspace, theProjectName)
+							.asJavaProject()
+							.addPackageDependenciesToPluginManifest(() -> additionalBundleDependencies.get(theProjectName))
+							.refresh();
 				});
 
 	}
