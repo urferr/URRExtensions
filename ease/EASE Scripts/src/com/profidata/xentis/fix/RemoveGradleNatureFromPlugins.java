@@ -30,58 +30,13 @@ import com.profidata.xentis.util.ProjectConstants;
 import com.profidata.xentis.util.ProjectWrapper;
 
 public class RemoveGradleNatureFromPlugins {
-	private static final Map<String, Set<String>> additionalTestFragmentDependencies;
 	private static final Map<String, Set<String>> ignoreTestFragmentDependencies;
 
-	private static final Map<String, Set<String>> additionalBundleDependencies;
-
 	static {
 		Set<String> somePackages;
 
-		additionalBundleDependencies = new HashMap<>();
-
-		somePackages = new HashSet<>();
-		somePackages.add("org.springframework.beans");
-		somePackages.add("org.springframework.beans.factory");
-		somePackages.add("org.springframework.core.io.support");
-		additionalBundleDependencies.put("com.profidata.xentis.env.shared", somePackages);
-
-		somePackages = new HashSet<>();
-		somePackages.add("org.springframework.context");
-		somePackages.add("org.springframework.jms.support");
-		somePackages.add("com.profidata.xentis.jni.common");
-		additionalBundleDependencies.put("com.profidata.xentis.jms.shared", somePackages);
-	}
-
-	static {
-		Set<String> somePackages;
-
-		additionalTestFragmentDependencies = new HashMap<>();
 		ignoreTestFragmentDependencies = new HashMap<>();
 
-		somePackages = new HashSet<>();
-		somePackages.add("com.profidata.xentis.domain.unified");
-		somePackages.add("com.xnife.domain");
-		additionalTestFragmentDependencies.put("com.profidata.risk.commons.test", somePackages);
-
-		somePackages = new HashSet<>();
-		somePackages.add("org.objenesis");
-		additionalTestFragmentDependencies.put("com.profidata.xentis.bodomain.test", somePackages);
-
-		somePackages = new HashSet<>();
-		somePackages.add("org.objenesis");
-		somePackages.add("org.apache.commons.logging");
-		somePackages.add("org.springframework.aop");
-		somePackages.add("org.springframework.expression");
-		additionalTestFragmentDependencies.put("com.profidata.xentis.env.shared.test", somePackages);
-
-		somePackages = new HashSet<>();
-		somePackages.add("org.objenesis");
-		additionalTestFragmentDependencies.put("com.profidata.xentis.etl.commons.test", somePackages);
-
-		somePackages = new HashSet<>();
-		somePackages.add("org.objenesis");
-		additionalTestFragmentDependencies.put("com.profidata.xentis.javamis.test", somePackages);
 		somePackages = new HashSet<>();
 		somePackages.add("com.profidata.etl.commons");
 		somePackages.add("com.profidata.xentis.env.client");
@@ -94,15 +49,6 @@ public class RemoveGradleNatureFromPlugins {
 		somePackages = new HashSet<>();
 		somePackages.add("com.profidatagroup.javamis.client.rmi.presentation.snRATEX.definition"); // don't know were it gets from???
 		ignoreTestFragmentDependencies.put("com.profidata.xentis.javamis.integration", somePackages);
-
-		somePackages = new HashSet<>();
-		somePackages.add("org.objenesis");
-		somePackages.add("javax.management.j2ee.statistics");
-		additionalTestFragmentDependencies.put("com.profidata.xentis.jms.shared.test", somePackages);
-
-		somePackages = new HashSet<>();
-		somePackages.add("org.springframework.expression");
-		additionalTestFragmentDependencies.put("com.xnife.spring.test", somePackages);
 	}
 
 	private final PrintStream output;
@@ -138,15 +84,6 @@ public class RemoveGradleNatureFromPlugins {
 						migrateTestSourceFolderToTestFragmentProject(theProject, "integration");
 						migrateTestSourceFolderToTestFragmentProject(theProject, "manual");
 					}
-				});
-
-		additionalBundleDependencies.keySet().stream()
-				.forEach(theProjectName -> {
-					output.println("Add additional dependencies to MANIFEST.MF of project '" + theProjectName + "'");
-					ProjectWrapper.of(aWorkspace, theProjectName)
-							.asJavaProject()
-							.addPackageDependenciesToPluginManifest(() -> additionalBundleDependencies.get(theProjectName))
-							.refresh();
 				});
 
 	}
@@ -231,7 +168,6 @@ public class RemoveGradleNatureFromPlugins {
 						Set<String> someAdditionalPackages = new HashSet<>();
 						// package org.hamcrest is opften used to run unit tests
 						someAdditionalPackages.add("org.hamcrest");
-						Optional.ofNullable(additionalTestFragmentDependencies.get(aTestProjectName)).ifPresent(thePackages -> someAdditionalPackages.addAll(thePackages));
 
 						return someAdditionalPackages;
 					}, () -> Optional.ofNullable(ignoreTestFragmentDependencies.get(aTestProjectName)).orElse(Collections.emptySet()))

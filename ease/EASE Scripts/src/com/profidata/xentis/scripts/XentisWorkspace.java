@@ -28,6 +28,7 @@ import org.eclipse.pde.internal.core.project.PDEProject;
 
 import com.profidata.xentis.config.ImportConfiguration;
 import com.profidata.xentis.config.ImportFeatureProject;
+import com.profidata.xentis.config.PackageDependencyConfiguration;
 import com.profidata.xentis.config.URRImportConfiguration;
 import com.profidata.xentis.config.XCImportConfiguration;
 import com.profidata.xentis.fix.RemoveGradleNatureFromPlugins;
@@ -55,6 +56,11 @@ public class XentisWorkspace {
 			output.println("Fix projects with Plugin/Gradle nature");
 			output.println("======================================");
 			RemoveGradleNatureFromPlugins.run(output, error);
+
+			output.println("");
+			output.println("Add additional package dependencies for Eclipse IDE");
+			output.println("===================================================");
+			addAdditionalPackageDependencies(aWorkspace);
 
 			output.println("");
 			output.println("Exchange Gradle with Plugin nature");
@@ -90,6 +96,26 @@ public class XentisWorkspace {
 		catch (CoreException theCause) {
 			error.print("Could not refresh workspace: " + theCause.getMessage());
 		}
+	}
+
+	private void addAdditionalPackageDependencies(IWorkspace theWorkspace) {
+		PackageDependencyConfiguration.additionalBundlePackageDependencies.keySet().stream()
+				.forEach(theProjectName -> {
+					output.println("Verify additional dependencies in MANIFEST.MF of project '" + theProjectName + "'");
+					ProjectWrapper.of(theWorkspace, theProjectName)
+							.asJavaProject()
+							.addPackageDependenciesToPluginManifest(() -> PackageDependencyConfiguration.additionalBundlePackageDependencies.get(theProjectName))
+							.refresh();
+				});
+
+		PackageDependencyConfiguration.additionalTestFragmentPackageDependencies.keySet().stream()
+				.forEach(theProjectName -> {
+					output.println("Verify additional dependencies in MANIFEST.MF of test fragment '" + theProjectName + "'");
+					ProjectWrapper.of(theWorkspace, theProjectName)
+							.asJavaProject()
+							.addPackageDependenciesToPluginManifest(() -> PackageDependencyConfiguration.additionalTestFragmentPackageDependencies.get(theProjectName))
+							.refresh();
+				});
 	}
 
 	private void convertProjectFromGradleToPlugin(IWorkspace theWorkspace, String theProjectName) {
