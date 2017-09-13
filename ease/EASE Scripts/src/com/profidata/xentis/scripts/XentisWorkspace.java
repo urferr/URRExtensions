@@ -81,6 +81,7 @@ public class XentisWorkspace {
 			output.println("");
 			output.println("Import missing features/projects");
 			output.println("================================");
+			importProjectsOfFeature(aWorkspace, "/xentis/xc_bld/_com.profidata.xc.one.test.build.feature", XCImportConfiguration.getInstance());
 			importProjectsOfFeature(aWorkspace, "/URRExtensions/features/_com.profidata.xc.one.test.feature", URRImportConfiguration.getInstance());
 
 		}
@@ -271,20 +272,25 @@ public class XentisWorkspace {
 				aFeatureModel.load();
 
 				for (IFeatureChild aFeatureChild : aFeature.getIncludedFeatures()) {
-					ImportFeatureProject aImportFeatureProject = theImportConfiguration.getFeatureProject(aFeatureChild.getId());
+					ImportFeatureProject aIncludedFeatureProject = theImportConfiguration.getFeatureProject(aFeatureChild.getId());
 					String aFeatureProjectPath = "";
+
+					if (aIncludedFeatureProject == null) {
+						error.println("Feature project '" + aFeatureChild.getId() + "' not available -> included from '" + theFeatureProject.getProject().getName() + "'");
+						continue;
+					}
 
 					if (!theImportConfiguration.getRootProjectPath().isEmpty()) {
 						aFeatureProjectPath += theImportConfiguration.getRootProjectPath() + "/";
 					}
-					if (!aImportFeatureProject.getPath().isEmpty()) {
-						aFeatureProjectPath += aImportFeatureProject.getPath() + "/";
+					if (!aIncludedFeatureProject.getPath().isEmpty()) {
+						aFeatureProjectPath += aIncludedFeatureProject.getPath() + "/";
 					}
 					aFeatureProjectPath += aFeatureChild.getId();
 
 					ProjectWrapper aChildFeatureProject = importProject(theFeatureProject.getProject().getWorkspace(), aFeatureProjectPath);
-					if (!aChildFeatureProject.hasError() && aImportFeatureProject.getContentPath() != null) {
-						importProjectsOfFeature(aChildFeatureProject, aImportFeatureProject.getContentPath(), theImportConfiguration);
+					if (!aChildFeatureProject.hasError() && aIncludedFeatureProject.getContentPath() != null) {
+						importProjectsOfFeature(aChildFeatureProject, aIncludedFeatureProject.getContentPath(), theImportConfiguration);
 					}
 				}
 
