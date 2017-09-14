@@ -33,12 +33,12 @@
 -Dcom.xnife.logging.level.com.compxc.calculationengine.recalculate.impl.KennzahlBrokerKeyFigureRecalculator=debug
 -Dcom.xnife.logging.level.com.profidata.xc.codevalue.service.impl.CodeValueServiceImpl=debug
 
--Dorg.osgi.service.http.port=7316
--Dorg.eclipse.equinox.http.jetty.http.port=7316
+-Dorg.osgi.service.http.port=7336
+-Dorg.eclipse.equinox.http.jetty.http.port=7336
 
 -Doracle.net.tns_admin=${env_var:TNS_ADMIN}
 
--Dcom.sun.management.jmxremote.port=7319
+-Dcom.sun.management.jmxremote.port=7339
 -Dcom.sun.management.jmxremote.ssl=false
 -Dcom.sun.management.jmxremote.authenticate=false
 
@@ -59,7 +59,6 @@
    <windowImages/>
 
    <launcher name="xcServer">
-      <solaris/>
       <win useIco="false">
          <bmp/>
       </win>
