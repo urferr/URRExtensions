@@ -26,5 +26,5 @@
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="--standalone"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.risk"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dcom.profidata.risk.transient.keep=false&#13;&#10;-Dxentis.xrs.messaging.prefix=ersk.&#13;&#10;&#13;&#10;-Dlogback.configurationFile=logback.xml"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dcom.profidata.risk.transient.keep=false&#13;&#10;-Dcom.profidata.risk.recording=false&#13;&#10;-Dxentis.xrs.messaging.prefix=ersk.&#13;&#10;&#13;&#10;-Dlogback.configurationFile=logback.xml"/>
 </launchConfiguration>
