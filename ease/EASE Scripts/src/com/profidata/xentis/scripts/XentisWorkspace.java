@@ -58,11 +58,6 @@ public class XentisWorkspace {
 			RemoveGradleNatureFromPlugins.run(output, error);
 
 			output.println("");
-			output.println("Add additional package dependencies for Eclipse IDE");
-			output.println("===================================================");
-			addAdditionalPackageDependencies(aWorkspace);
-
-			output.println("");
 			output.println("Exchange Gradle with Plugin nature");
 			output.println("==================================");
 			convertProjectFromGradleToPlugin(aWorkspace, "com.profidata.xentis.test");
@@ -83,6 +78,11 @@ public class XentisWorkspace {
 			output.println("================================");
 			importProjectsOfFeature(aWorkspace, "/xentis/xc_bld/_com.profidata.xc.one.test.build.feature", XCImportConfiguration.getInstance());
 			importProjectsOfFeature(aWorkspace, "/URRExtensions/features/_com.profidata.xc.one.test.feature", URRImportConfiguration.getInstance());
+
+			output.println("");
+			output.println("Add additional package dependencies for Eclipse IDE");
+			output.println("===================================================");
+			addAdditionalPackageDependencies(aWorkspace);
 
 		}
 		finally {
