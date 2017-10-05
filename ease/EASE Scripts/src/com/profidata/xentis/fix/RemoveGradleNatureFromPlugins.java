@@ -80,9 +80,7 @@ public class RemoveGradleNatureFromPlugins {
 						error.println("Fix project '" + theProject.getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
 					}
 					else {
-						migrateTestSourceFolderToTestFragmentProject(theProject, "test");
-						migrateTestSourceFolderToTestFragmentProject(theProject, "integration");
-						migrateTestSourceFolderToTestFragmentProject(theProject, "manual");
+						migrateTestSourceFolderToTestFragmentProject(theProject, Arrays.asList("test", "integration", "manual"));
 					}
 				});
 
@@ -94,7 +92,7 @@ public class RemoveGradleNatureFromPlugins {
 				.collect(Collectors.toSet());
 	}
 
-	private void migrateTestSourceFolderToTestFragmentProject(IProject theProject, String theTestType) {
+	private void migrateTestSourceFolderToTestFragmentProject(IProject theProject, Collection<String> theTestTypes) {
 		IJavaProject aJavaProject = JavaCore.create(theProject);
 
 		try {
@@ -105,9 +103,9 @@ public class RemoveGradleNatureFromPlugins {
 			allTestSourceClasspathEntries = Arrays.stream(allClasspathEntries)
 					.filter(theEntry -> theEntry.getContentKind() == IPackageFragmentRoot.K_SOURCE && theEntry.getEntryKind() == IClasspathEntry.CPE_SOURCE)
 					.filter(
-							theEntry -> theEntry.getPath().removeFirstSegments(1).segment(0).equals(theTestType)
+							theEntry -> theTestTypes.contains(theEntry.getPath().removeFirstSegments(1).segment(0))
 									|| (theEntry.getPath().removeFirstSegments(1).segmentCount() > 1 && theEntry.getPath().removeFirstSegments(1).segment(0).equals("src")
-											&& theEntry.getPath().removeFirstSegments(1).segment(1).equals(theTestType)))
+											&& theTestTypes.contains(theEntry.getPath().removeFirstSegments(1).segment(1))))
 					.collect(Collectors.toList());
 
 			if (!allTestSourceClasspathEntries.isEmpty()) {
@@ -117,7 +115,7 @@ public class RemoveGradleNatureFromPlugins {
 
 				aJavaProject.setRawClasspath(allChangedClasspathEntries.toArray(new IClasspathEntry[allChangedClasspathEntries.size()]), null);
 
-				createTestProject(theProject, theTestType, allTestSourceClasspathEntries);
+				createTestProject(theProject, allTestSourceClasspathEntries);
 			}
 		}
 		catch (JavaModelException theCause) {
@@ -126,9 +124,9 @@ public class RemoveGradleNatureFromPlugins {
 
 	}
 
-	private void createTestProject(IProject theProject, String theTestType, List<IClasspathEntry> theTestSourceClasspathEntries) {
+	private void createTestProject(IProject theProject, List<IClasspathEntry> theTestSourceClasspathEntries) {
 		IWorkspace aWorkspace = theProject.getWorkspace();
-		String aTestProjectName = theProject.getName() + "." + theTestType;
+		String aTestProjectName = theProject.getName() + ".test";
 		ProjectWrapper aProjectWrapper = ProjectWrapper
 				.of(aWorkspace, aTestProjectName);
 
@@ -153,14 +151,12 @@ public class RemoveGradleNatureFromPlugins {
 			IPath aProjectLocation = theProject.getLocation();
 			for (IClasspathEntry aTestSourceClasspathEntry : theTestSourceClasspathEntries) {
 				IPath aRelativeProjectLocation = aProjectLocation.makeRelativeTo(aWorkspaceLocation);
-				IPath aSourceLocation = new Path("WORKSPACE_LOC").append(aRelativeProjectLocation).append(aTestSourceClasspathEntry.getPath().removeFirstSegments(1));
+				IPath aSourcePath = aTestSourceClasspathEntry.getPath();
+				IPath aSourceLocation = new Path("WORKSPACE_LOC").append(aRelativeProjectLocation).append(aSourcePath.removeFirstSegments(1));
+				String aSourceType = aSourcePath.lastSegment();
+				String aTestType = aSourcePath.removeLastSegments(1).lastSegment();
 
-				if (aTestSourceClasspathEntry.getPath().lastSegment().equals("java")) {
-					aProjectWrapper.addLinkedSourceFolder("test-java", aSourceLocation);
-				}
-				if (aTestSourceClasspathEntry.getPath().lastSegment().equals("resources")) {
-					aProjectWrapper.addLinkedSourceFolder("test-resources", aSourceLocation);
-				}
+				aProjectWrapper.addLinkedSourceFolder(aTestType + "-" + aSourceType, aSourceLocation);
 			}
 
 			aProjectWrapper

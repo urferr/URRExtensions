@@ -22,23 +22,15 @@
          version="0.0.0"/>
 -->
    <includes
-         id="_com.profidata.xc.one.test.unit.platform.feature"
+         id="_com.profidata.xc.one.test.platform.feature"
          version="0.0.0"/>
 
    <includes
-         id="_com.profidata.xc.one.test.unit.xnife.feature"
+         id="_com.profidata.xc.one.test.xnife.feature"
          version="0.0.0"/>
 
    <includes
-         id="_com.profidata.xc.one.test.integration.xnife.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="_com.profidata.xentis.test.integration.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="_com.profidata.xentis.test.unit.feature"
+         id="_com.profidata.xentis.test.feature"
          version="0.0.0"/>
 
 </feature>

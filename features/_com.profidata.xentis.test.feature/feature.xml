@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="_com.profidata.xc.one.test.unit.platform.feature"
-      label="XC One Unit Test Platform Feature"
+      id="_com.profidata.xentis.test.feature"
+      label="Xentis Test Feature"
       version="0.0.0">
 
    <description url="http://www.example.com/description">
@@ -17,7 +17,7 @@
    </license>
 
    <plugin
-         id="com.compxc.calculationengine.test"
+         id="com.profidata.xentis.bodomain.test"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -25,7 +25,7 @@
          unpack="false"/>
 
    <plugin
-         id="com.compxc.common.domain.test"
+         id="com.profidata.xentis.domain.unified.test"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -33,7 +33,7 @@
          unpack="false"/>
 
    <plugin
-         id="com.compxc.common.persistence.test"
+         id="com.profidata.xentis.env.shared.test"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -41,7 +41,7 @@
          unpack="false"/>
 
    <plugin
-         id="com.compxc.platform.common.test"
+         id="com.profidata.xentis.etl.commons.test"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -49,7 +49,7 @@
          unpack="false"/>
 
    <plugin
-         id="com.profidata.xc.common.logger.test"
+         id="com.profidata.xentis.fix.commons.test"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -57,7 +57,7 @@
          unpack="false"/>
 
    <plugin
-         id="com.profidata.xc.data.service.domain.test"
+         id="com.profidata.xentis.javamis.test"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -65,7 +65,47 @@
          unpack="false"/>
 
    <plugin
-         id="com.profidata.xc.objectquery.test"
+         id="com.profidata.xentis.jms.shared.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.xentis.jni.common.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.xentis.user.shared.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.compxc.frontoffice.common.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.reporting.common.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.risk.commons.test"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="_com.profidata.xc.one.test.unit.xnife.feature"
-      label="XC One Unit Test Xnife Feature"
+      id="_com.profidata.xc.one.test.xnife.feature"
+      label="XC One Test Xnife Feature"
       version="0.0.0">
 
    <description url="http://www.example.com/description">
@@ -223,5 +223,14 @@
          version="0.0.0"
          fragment="true"
          unpack="false"/>
+		 
+   <plugin
+         id="com.xnife.tools.rcp.configurator.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
 
 </feature>

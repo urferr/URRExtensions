@@ -39,20 +39,15 @@ public class URRImportConfiguration implements ImportConfiguration {
 		features.put("_com.profidata.xc.one.client.platform.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.platform.feature", "URRExtensions/features", "xentis/xc_pltf/main"));
 		features.put("_com.profidata.xc.one.client.middleoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.middleoffice.feature", "URRExtensions/features", "xentis/xc_mo/main"));
 
-		// Xentis unit test features
-		features.put("_com.profidata.xentis.test.unit.feature", ImportFeatureProject.of("_com.profidata.xentis.test.unit.feature", "URRExtensions/features", ""));
+		// Xentis test features
+		features.put("_com.profidata.xentis.test.feature", ImportFeatureProject.of("_com.profidata.xentis.test.feature", "URRExtensions/features", ""));
 
-		// Xentis integration test features
-		features.put("_com.profidata.xentis.test.integration.feature", ImportFeatureProject.of("_com.profidata.xentis.test.integration.feature", "URRExtensions/features", ""));
-
-		// XC unit test features
-		features.put("_com.profidata.xc.one.test.unit.xnife.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.unit.xnife.feature", "URRExtensions/features", ""));
-		features.put("_com.profidata.xc.one.test.unit.platform.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.unit.platform.feature", "URRExtensions/features", ""));
+		// XC test features
+		features.put("_com.profidata.xc.one.test.xnife.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.xnife.feature", "URRExtensions/features", ""));
+		features.put("_com.profidata.xc.one.test.platform.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.platform.feature", "URRExtensions/features", ""));
 		features.put("_com.profidata.xc.one.test.unit.middleoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.unit.middleoffice.feature", "URRExtensions/features", "xentis/xc_mo/test"));
 
 		// XC integration test features
-		features.put("_com.profidata.xc.one.test.integration.xnife.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.integration.xnife.feature", "URRExtensions/features", ""));
-		features.put("_com.profidata.xc.one.test.integration.platform.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.integration.platform.feature", "URRExtensions/features", "xentis/xc_pltf/test"));
 		features.put("_com.profidata.xc.one.test.integration.frontoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.integration.frontoffice.feature", "URRExtensions/features", "xentis/xc_fo/test"));
 
 		// XC master test feature
