@@ -74,7 +74,6 @@ platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini
       <feature id="_com.profidata.xc.one.client.middleoffice.feature"/>
       <feature id="_com.profidata.xc.one.client.backoffice.feature"/>
       <feature id="_com.profidata.xc.one.client.risk.feature"/>
-      <feature id="_com.compxc.xentis.rcp.feature"/>
       <feature id="_com.compxc.eclipse.rcp.feature"/>
       <feature id="_com.compxc.eclipse4.spy.feature"/>
    </features>

@@ -30,6 +30,10 @@
          version="0.0.0"/>
 
    <includes
+         id="_com.profidata.xc.one.test.integration.xnife.feature"
+         version="0.0.0"/>
+
+   <includes
          id="_com.profidata.xentis.test.integration.feature"
          version="0.0.0"/>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="_com.profidata.xc.one.test.unit.xnife.feature"
-      label="XC One Unit Test Xnife Feature"
+      id="_com.profidata.xc.one.server.xnife.feature"
+      label="XC One Server Xnife Feature"
       version="0.0.0">
 
    <description url="http://www.example.com/description">
@@ -17,211 +17,271 @@
    </license>
 
    <plugin
-         id="com.xnife.contract.test"
+         id="com.xnife.http.server"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.core.test"
+         id="com.xnife.objectquery.plan.parser"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.domain.test"
+         id="com.xnife.security.remote"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.environment.test"
+         id="com.xnife.security.service"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.localization.test"
+         id="com.xnife.tools.jmx.osgiconsole"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.logging.slf4j.logback.test"
+         id="com.xnife.tools.osgi.command"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.metadata.test"
+         id="com.xnife.logging.slf4j.jboss.dependency"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
+         fragment="true"/>
+
+   <plugin
+         id="com.xnife.logging.slf4j.over.jul"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.objectquery.test"
+         id="com.xnife.logging.slf4j.logback.commandline"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.xnife.aspectj.eclipse.equinox.http.jetty.patch"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.security.test"
+         id="com.xnife.aspectj.org.hibernate.patch"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
+          unpack="false"/>
+
+
+   <plugin
+         id="com.xnife.cache"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.spring.test"
+         id="com.xnife.context"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.testing.junit.test"
+         id="com.xnife.context.persistence"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.testing.test"
+         id="com.xnife.context.remote"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.cache.test"
+         id="com.xnife.context.remoting"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.context.application.test"
+         id="com.xnife.context.service.impl"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.context.persistence.test"
+         id="com.xnife.contract"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.context.service.impl.test"
+         id="com.xnife.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.encryption.service.xentis.test"
+         id="com.xnife.domain"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
+         unpack="false"/>
+   
+      <plugin
+         id="com.xnife.environment"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.exception.test"
+         id="com.xnife.exception"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.finance.test"
+         id="com.xnife.http"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.http.server.test"
+         id="com.xnife.localization"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.microbenchmark.test"
+         id="com.xnife.logging.slf4j.logback"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.objectquery.plan.parser.test"
+         id="com.xnife.metadata"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.presentation.test"
+         id="com.xnife.monitor"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
+         unpack="false"/>
+
+
+   <plugin
+         id="com.xnife.objectquery"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.remoting.osgi.test"
+         id="com.xnife.osgi"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.resource.test"
+         id="com.xnife.persistence"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.xnife.spring.osgi.test"
+         id="com.xnife.persistence.hibernate"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.xnife.remoting.osgi"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.xnife.remoting.server"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+
+   <plugin
+         id="com.xnife.remoting"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.xnife.service"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.xnife.security"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.xnife.spring"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.xnife.spring.osgi"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

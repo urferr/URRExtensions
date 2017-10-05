@@ -35,16 +35,9 @@ public class XCImportConfiguration implements ImportConfiguration {
 		features.put("_com.compxc.eclipse4.spy.feature", ImportFeatureProject.of("_com.compxc.eclipse4.spy.feature", "xc_bld", null));
 		features.put("_com.compxc.eclipse.test.feature", ImportFeatureProject.of("_com.compxc.eclipse.test.feature", "xc_bld", null));
 
-		// XC Xentis features (built and imported by Gradle)
-		features.put("_com.compxc.xentis.feature", ImportFeatureProject.of("_com.compxc.xentis.feature", "xc_bld", null));
-		features.put("_com.compxc.xentis.rcp.feature", ImportFeatureProject.of("_com.compxc.xentis.rcp.feature", "xc_bld", null));
-
 		// XC server features
-		features.put("_com.profidata.xc.one.server.xnife.feature", ImportFeatureProject.of("_com.profidata.xc.one.server.xnife.feature", "xc_pltf/main", "xnife/main"));
-		features.put("_com.profidata.xc.one.server.platform.feature", ImportFeatureProject.of("_com.profidata.xc.one.server.platform.feature", "xc_pltf/main", "xc_pltf/main"));
 		features.put("_com.profidata.xc.one.server.risk.feature", ImportFeatureProject.of("_com.profidata.xc.one.server.risk.feature", "xrs", "xrs"));
 		features.put("_com.profidata.xc.one.server.backoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.server.backoffice.feature", "JavAMIS", "JavAMIS"));
-		features.put("_com.profidata.xc.one.server.middleoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.server.middleoffice.feature", "xc_mo/main", "xc_mo/main"));
 		features.put("_com.profidata.xc.one.server.frontoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.server.frontoffice.feature", "xc_fo/main", "xc_fo/main"));
 		features.put(
 				"_com.profidata.xc.one.server.frontoffice.incubator.securities.feature",
@@ -53,11 +46,8 @@ public class XCImportConfiguration implements ImportConfiguration {
 		features.put("_com.profidata.xc.one.server.feature", ImportFeatureProject.of("_com.profidata.xc.one.server.feature", "xc_one/main", "xc_one/main"));
 
 		// XC client features
-		features.put("_com.profidata.xc.one.client.xnife.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.xnife.feature", "xc_pltf/main", "xnife/main"));
-		features.put("_com.profidata.xc.one.client.platform.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.platform.feature", "xc_pltf/main", "xc_pltf/main"));
 		features.put("_com.profidata.xc.one.client.risk.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.risk.feature", "xrs", "xrs"));
 		features.put("_com.profidata.xc.one.client.backoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.backoffice.feature", "JavAMIS", "JavAMIS"));
-		features.put("_com.profidata.xc.one.client.middleoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.middleoffice.feature", "xc_mo/main", "xc_mo/main"));
 		features.put("_com.profidata.xc.one.client.frontoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.frontoffice.feature", "xc_fo/main", "xc_fo/main"));
 		features.put(
 				"_com.profidata.xc.one.client.frontoffice.incubator.securities.feature",
@@ -68,7 +58,6 @@ public class XCImportConfiguration implements ImportConfiguration {
 		// XC unit test features
 		features.put("_com.profidata.xc.one.test.unit.risk.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.unit.risk.feature", "xrs", "xrs"));
 		features.put("_com.profidata.xc.one.test.unit.backoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.unit.backoffice.feature", "JavAMIS", "JavAMIS"));
-		features.put("_com.profidata.xc.one.test.unit.middleoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.unit.middleoffice.feature", "xc_mo/test", "xc_mo/test"));
 		features.put("_com.profidata.xc.one.test.unit.frontoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.unit.frontoffice.feature", "xc_fo/test", "xc_fo/test"));
 		features.put("_com.profidata.xc.one.test.unit.customizingconsole.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.unit.customizingconsole.feature", "xc_cc/test", "xc_cc/test"));
 

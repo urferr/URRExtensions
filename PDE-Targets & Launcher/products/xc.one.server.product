@@ -79,7 +79,6 @@
       <feature id="_com.profidata.xc.one.server.frontoffice.feature"/>
       <feature id="_com.profidata.xc.one.server.middleoffice.feature"/>
       <feature id="_com.profidata.xc.one.server.risk.feature"/>
-      <feature id="_com.compxc.xentis.feature"/>
       <feature id="_com.compxc.eclipse.feature"/>
    </features>
 
