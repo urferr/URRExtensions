@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="_com.profidata.xc.one.server.middleoffice.feature"
-      label="XC One Server Middleoffice Feature"
+      id="_com.profidata.xc.one.client.risk.feature"
+      label="XC One Client Risk Feature"
       version="0.0.0">
 
    <description url="http://www.example.com/description">
@@ -17,18 +17,18 @@
    </license>
 
    <includes
-         id="_com.profidata.xc.one.server.platform.feature"
+         id="_com.profidata.xc.one.client.platform.feature"
          version="0.0.0"/>
 
    <plugin
-         id="com.compxc.order.domain"
+         id="com.profidata.xc.risk.domain"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="com.profidata.xc.data.service.orderblotter.remote.proxy"
+         id="com.profidata.xc.risk.server.remote.proxy"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -36,19 +36,24 @@
          unpack="false"/>
 
    <plugin
-         id="com.profidata.xc.orderblotter.server.remote"
+         id="com.profidata.xc.risk.presentation"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.profidata.xc.middleoffice.persistence.configuration"
+         id="com.profidata.xc.risk.excel"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.xc.risk.service"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

@@ -22,11 +22,15 @@
          version="0.0.0"/>
 -->
    <includes
+         id="_com.profidata.xc.one.test.xnife.feature"
+         version="0.0.0"/>
+
+   <includes
          id="_com.profidata.xc.one.test.platform.feature"
          version="0.0.0"/>
 
    <includes
-         id="_com.profidata.xc.one.test.xnife.feature"
+         id="_com.profidata.xc.one.test.risk.feature"
          version="0.0.0"/>
 
    <includes

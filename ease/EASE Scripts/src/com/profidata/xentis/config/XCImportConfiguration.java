@@ -36,28 +36,16 @@ public class XCImportConfiguration implements ImportConfiguration {
 		features.put("_com.compxc.eclipse.test.feature", ImportFeatureProject.of("_com.compxc.eclipse.test.feature", "xc_bld", null));
 
 		// XC server features
-		features.put("_com.profidata.xc.one.server.risk.feature", ImportFeatureProject.of("_com.profidata.xc.one.server.risk.feature", "xrs", "xrs"));
-		features.put("_com.profidata.xc.one.server.backoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.server.backoffice.feature", "JavAMIS", "JavAMIS"));
-		features.put("_com.profidata.xc.one.server.frontoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.server.frontoffice.feature", "xc_fo/main", "xc_fo/main"));
 		features.put(
 				"_com.profidata.xc.one.server.frontoffice.incubator.securities.feature",
 				ImportFeatureProject.of("_com.profidata.xc.one.server.frontoffice.incubator.securities.feature", "xc_fo/incubator", "xc_fo/incubator"));
-		features.put("_com.profidata.xc.one.server.customizingconsole.feature", ImportFeatureProject.of("_com.profidata.xc.one.server.customizingconsole.feature", "xc_cc/main", "xc_cc/main"));
-		features.put("_com.profidata.xc.one.server.feature", ImportFeatureProject.of("_com.profidata.xc.one.server.feature", "xc_one/main", "xc_one/main"));
 
 		// XC client features
-		features.put("_com.profidata.xc.one.client.risk.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.risk.feature", "xrs", "xrs"));
-		features.put("_com.profidata.xc.one.client.backoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.backoffice.feature", "JavAMIS", "JavAMIS"));
-		features.put("_com.profidata.xc.one.client.frontoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.frontoffice.feature", "xc_fo/main", "xc_fo/main"));
 		features.put(
 				"_com.profidata.xc.one.client.frontoffice.incubator.securities.feature",
 				ImportFeatureProject.of("_com.profidata.xc.one.client.frontoffice.incubator.securities.feature", "xc_fo/incubator", "xc_fo/incubator"));
-		features.put("_com.profidata.xc.one.client.customizingconsole.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.customizingconsole.feature", "xc_cc/main", "xc_cc/main"));
-		features.put("_com.profidata.xc.one.client.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.feature", "xc_one/main", "xc_one/main"));
 
 		// XC unit test features
-		features.put("_com.profidata.xc.one.test.unit.risk.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.unit.risk.feature", "xrs", "xrs"));
-		features.put("_com.profidata.xc.one.test.unit.backoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.unit.backoffice.feature", "JavAMIS", "JavAMIS"));
 		features.put("_com.profidata.xc.one.test.unit.frontoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.unit.frontoffice.feature", "xc_fo/test", "xc_fo/test"));
 		features.put("_com.profidata.xc.one.test.unit.customizingconsole.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.unit.customizingconsole.feature", "xc_cc/test", "xc_cc/test"));
 

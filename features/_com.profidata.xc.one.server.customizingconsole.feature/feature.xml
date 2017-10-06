@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="_com.profidata.xc.one.server.middleoffice.feature"
-      label="XC One Server Middleoffice Feature"
+      id="_com.profidata.xc.one.server.customizingconsole.feature"
+      label="XC One Server Customizingconsole Feature"
       version="0.0.0">
 
    <description url="http://www.example.com/description">
@@ -21,22 +21,14 @@
          version="0.0.0"/>
 
    <plugin
-         id="com.compxc.order.domain"
+         id="com.profidata.xc.customizingconsole"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="com.profidata.xc.data.service.orderblotter.remote.proxy"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xc.orderblotter.server.remote"
+         id="com.profidata.xc.customizingconsole.persistence.configuration"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -44,7 +36,22 @@
          unpack="false"/>
 
    <plugin
-         id="com.profidata.xc.middleoffice.persistence.configuration"
+         id="com.profidata.xc.customizingconsole.server.remote"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.xc.customizingconsole.service.impl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.xc.data.service.customizingconsole.remote.proxy"
          download-size="0"
          install-size="0"
          version="0.0.0"

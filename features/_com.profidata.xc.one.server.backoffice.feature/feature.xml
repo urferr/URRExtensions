@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="_com.profidata.xc.one.server.middleoffice.feature"
-      label="XC One Server Middleoffice Feature"
+      id="_com.profidata.xc.one.server.backoffice.feature"
+      label="XC One Server Backoffice Feature"
       version="0.0.0">
 
    <description url="http://www.example.com/description">
@@ -21,14 +21,7 @@
          version="0.0.0"/>
 
    <plugin
-         id="com.compxc.order.domain"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xc.data.service.orderblotter.remote.proxy"
+         id="com.profidata.xc.data.service.daemon.remote.proxy"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -36,7 +29,7 @@
          unpack="false"/>
 
    <plugin
-         id="com.profidata.xc.orderblotter.server.remote"
+         id="com.profidata.xc.daemon.server.remote"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -44,7 +37,15 @@
          unpack="false"/>
 
    <plugin
-         id="com.profidata.xc.middleoffice.persistence.configuration"
+         id="com.profidata.xc.audit.server.remote"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.xc.data.service.audit.remote.proxy"
          download-size="0"
          install-size="0"
          version="0.0.0"

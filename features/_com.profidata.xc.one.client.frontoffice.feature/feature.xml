@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="_com.profidata.xc.one.test.platform.feature"
-      label="XC One Test Platform Feature"
+      id="_com.profidata.xc.one.client.frontoffice.feature"
+      label="XC One Client Frontoffice Feature"
       version="0.0.0">
 
    <description url="http://www.example.com/description">
@@ -16,8 +16,47 @@
       [Enter License Description here.]
    </license>
 
+   <includes
+         id="_com.profidata.xc.one.client.platform.feature"
+         version="0.0.0"/>
+
    <plugin
-         id="com.compxc.calculationengine.test"
+         id="com.compxc.frontoffice.application"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.compxc.frontoffice.help"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.compxc.frontoffice.presentation"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.compxc.keyfigure"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.xc.frontoffice"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.xc.frontoffice.server.remote.proxy"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -25,75 +64,25 @@
          unpack="false"/>
 
    <plugin
-         id="com.compxc.common.domain.test"
+         id="com.profidata.xc.order"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.compxc.common.persistence.test"
+         id="com.profidata.xc.optimizer"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.compxc.platform.common.test"
+         id="com.compxc.frontoffice.excel.windows"
+         os="win32"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xc.common.logger.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xc.data.service.domain.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xc.objectquery.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.compxc.workbench.presentation.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xc.calendar.service.impl.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xc.codevalue.service.impl.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
 </feature>

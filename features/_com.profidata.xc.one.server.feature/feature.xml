@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="_com.profidata.xc.one.server.middleoffice.feature"
-      label="XC One Server Middleoffice Feature"
-      version="0.0.0">
+      id="_com.profidata.xc.one.server.feature"
+      label="XC One Server Feature"
+      version="0.0.0"
+      provider-name="PROFIDATA">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]
@@ -21,30 +22,33 @@
          version="0.0.0"/>
 
    <plugin
-         id="com.compxc.order.domain"
+         id="com.profidata.xc.one.server.configuration"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.profidata.xc.one.server.logback.configuration"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"/>
+
+   <plugin
+         id="com.profidata.xc.one.server.monitor"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="com.profidata.xc.data.service.orderblotter.remote.proxy"
+         id="_com.profidata.xc.one.server.build.product"
          download-size="0"
          install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
-         id="com.profidata.xc.orderblotter.server.remote"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xc.middleoffice.persistence.configuration"
+         id="com.profidata.xc.blueprint.extender.configuration"
          download-size="0"
          install-size="0"
          version="0.0.0"
