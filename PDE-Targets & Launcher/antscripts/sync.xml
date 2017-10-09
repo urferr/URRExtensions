@@ -64,6 +64,12 @@
 				<include name="JavAMIS/com.profidata.xentis.env.client/target/com.profidata.xentis.env.client-${maven.build.version}.jar" />
 				<include name="JavAMIS/com.profidatagroup.xentis.ui.base/target/com.profidata.xentis.ui.base-${maven.build.version}.jar" />
 				<include name="JavAMIS/XentisBOClient/target/com.profidata.xentis.client-${maven.build.version}.jar" />
+
+				<include name="JavAMIS/com.profidata.xentis.api/target/com.profidata.xentis.api-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.api.http/target/com.profidata.api.http-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.api/target/com.profidata.api-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.api.auth.permission/target/com.profidata.xentis.api.auth.permission-${maven.build.version}.jar" />
+				<include name="JavAMIS/com.profidata.xentis.app.httpapi/target/com.profidata.xentis.app.httpapi-${maven.build.version}.jar" />
 			</fileset>
 		</copy>
 	</target>

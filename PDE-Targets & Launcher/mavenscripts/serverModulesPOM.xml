@@ -32,6 +32,12 @@
 		<module>../../../JavAMIS/com.profidata.xentis.env.shared</module>
 		<module>../../../JavAMIS/com.profidata.xentis.jms.shared</module>
 		<module>../../../JavAMIS/XentisBODomain</module>
+
+		<module>../../../JavAMIS/com.profidata.xentis.api</module>
+		<module>../../../JavAMIS/com.profidata.api.http</module>
+		<module>../../../JavAMIS/com.profidata.api</module>
+		<module>../../../JavAMIS/com.profidata.xentis.api.auth.permission</module>
+		<module>../../../JavAMIS/com.profidata.xentis.app.httpapi</module>
 		
 		<module>../../../URRExtensions/maven/com.compxc.platform.common.maven</module>
 		<module>../../../URRExtensions/maven/com.compxc.common.domain.maven</module>
