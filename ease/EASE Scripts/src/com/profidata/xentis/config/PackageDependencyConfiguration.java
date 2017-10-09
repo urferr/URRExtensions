@@ -65,6 +65,10 @@ public class PackageDependencyConfiguration {
 		somePackages = new HashSet<>();
 		somePackages.add("org.springframework.expression");
 		additionalTestFragmentPackageDependencies.put("com.xnife.spring.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.springframework.context");
+		additionalBundlePackageDependencies.put("com.profidata.xc.risk.service.impl.test", somePackages);
 	}
 
 	private PackageDependencyConfiguration() {

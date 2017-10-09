@@ -17,14 +17,31 @@
    </license>
 
    <plugin
-         id="com.profidata.xc.risk.service.test"
+         id="com.profidata.xc.risk.presentation.test"
          download-size="0"
          install-size="0"
          version="0.0.0"
+         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="com.profidata.xc.risk.presentation.test"
+         id="com.profidata.risk.commons.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.xc.risk.domain.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.xc.risk.service.impl.test"
          download-size="0"
          install-size="0"
          version="0.0.0"
