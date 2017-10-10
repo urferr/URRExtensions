@@ -69,6 +69,14 @@ public class PackageDependencyConfiguration {
 		somePackages = new HashSet<>();
 		somePackages.add("org.springframework.context");
 		additionalBundlePackageDependencies.put("com.profidata.xc.risk.service.impl.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.powermock.modules.junit4.common.internal.impl");
+		somePackages.add("org.powermock.api.support.membermodification");
+		somePackages.add("org.mockito.stubbing");
+		somePackages.add("net.bytebuddy.dynamic.loading");
+		somePackages.add("org.objenesis");
+		additionalBundlePackageDependencies.put("com.compxc.order.presentation.test", somePackages);
 	}
 
 	private PackageDependencyConfiguration() {
