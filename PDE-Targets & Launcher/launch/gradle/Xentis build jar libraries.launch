@@ -3,6 +3,8 @@
 <listAttribute key="arguments">
 <listEntry value="--build-cache"/>
 <listEntry value="-x"/>
+<listEntry value="generate"/>
+<listEntry value="-x"/>
 <listEntry value="test"/>
 <listEntry value="-x"/>
 <listEntry value="jacocoReport"/>
