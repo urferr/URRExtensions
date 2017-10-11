@@ -16,11 +16,6 @@
       [Enter License Description here.]
    </license>
 
-<!--
-   <includes
-         id="_com.profidata.xc.one.test.integration.platform.feature"
-         version="0.0.0"/>
--->
    <includes
          id="_com.profidata.xc.one.test.xnife.feature"
          version="0.0.0"/>
@@ -38,11 +33,11 @@
          version="0.0.0"/>
 
    <includes
-         id="_com.profidata.xc.one.test.customizingconsole.feature"
+         id="_com.profidata.xc.one.test.frontoffice.feature"
          version="0.0.0"/>
 
    <includes
-         id="_com.profidata.xentis.test.feature"
+         id="_com.profidata.xc.one.test.customizingconsole.feature"
          version="0.0.0"/>
 
 </feature>

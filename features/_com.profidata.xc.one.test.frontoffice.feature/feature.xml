@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="_com.profidata.xentis.test.feature"
-      label="Xentis Test Feature"
+      id="_com.profidata.xc.one.test.frontoffice.feature"
+      label="XC One Test Frontoffice Feature"
       version="0.0.0">
 
    <description url="http://www.example.com/description">
@@ -17,71 +17,7 @@
    </license>
 
    <plugin
-         id="com.profidata.xentis.bodomain.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xentis.domain.unified.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xentis.env.shared.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xentis.etl.commons.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xentis.fix.commons.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xentis.javamis.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xentis.jms.shared.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xentis.jni.common.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="com.profidata.xentis.user.shared.test"
+         id="com.compxc.calculationengine.recalculate.impl.test"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -97,7 +33,7 @@
          unpack="false"/>
 
    <plugin
-         id="com.profidata.reporting.common.test"
+         id="com.compxc.frontoffice.domain.test"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -105,7 +41,47 @@
          unpack="false"/>
 
    <plugin
-         id="com.profidata.risk.commons.test"
+         id="com.compxc.keyfigure.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.xc.frontoffice.service.impl.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.xc.frontoffice.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.compxc.frontoffice.excel.windows.test"
+         os="win32"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.compxc.frontoffice.presentation.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.profidata.xc.rest.common.service.impl.test"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -78,8 +78,8 @@ public class XentisWorkspace {
 			output.println("");
 			output.println("Import missing features/projects");
 			output.println("================================");
-			importProjectsOfFeature(aWorkspace, "/xentis/xc_bld/_com.profidata.xc.one.test.build.feature", XCImportConfiguration.getInstance(), URRImportConfiguration.getInstance());
 			importProjectsOfFeature(aWorkspace, "/URRExtensions/features/_com.profidata.xc.one.test.feature", URRImportConfiguration.getInstance());
+			importProjectsOfFeature(aWorkspace, "/URRExtensions/features/_com.profidata.xc.one.integration.test.feature", URRImportConfiguration.getInstance(), XCImportConfiguration.getInstance());
 
 			output.println("");
 			output.println("Add additional package dependencies for Eclipse IDE");
