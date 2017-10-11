@@ -38,6 +38,10 @@
          version="0.0.0"/>
 
    <includes
+         id="_com.profidata.xc.one.test.customizingconsole.feature"
+         version="0.0.0"/>
+
+   <includes
          id="_com.profidata.xentis.test.feature"
          version="0.0.0"/>
 

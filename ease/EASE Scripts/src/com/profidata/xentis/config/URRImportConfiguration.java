@@ -57,6 +57,7 @@ public class URRImportConfiguration implements ImportConfiguration {
 		features.put("_com.profidata.xc.one.test.platform.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.platform.feature", "URRExtensions/features", ""));
 		features.put("_com.profidata.xc.one.test.risk.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.risk.feature", "URRExtensions/features", ""));
 		features.put("_com.profidata.xc.one.test.middleoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.middleoffice.feature", "URRExtensions/features", ""));
+		features.put("_com.profidata.xc.one.test.customizingconsole.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.customizingconsole.feature", "URRExtensions/features", ""));
 
 		// XC integration test features
 		features.put("_com.profidata.xc.one.test.integration.frontoffice.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.integration.frontoffice.feature", "URRExtensions/features", "xentis/xc_fo/test"));
