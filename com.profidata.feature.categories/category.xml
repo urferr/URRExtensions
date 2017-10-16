@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.xnife.presentation.e4.tools_0.9.0.qualifier.jar" id="com.xnife.presentation.e4.tools" version="0.9.0.qualifier">
+      <category name="com.xnife.presentastion.e4.tools"/>
+   </feature>
+   <feature url="features/com.profidatagroup.util.keymigration.feature_1.0.0.qualifier.jar" id="com.profidatagroup.util.keymigration.feature" version="1.0.0.qualifier">
+      <category name="com.profidatagroup.util.keymigration"/>
+   </feature>
+   <feature url="features/com.profidata.xc.springframework.ide_1.0.0.qualifier.jar" id="com.profidata.xc.springframework.ide" version="1.0.0.qualifier">
+      <category name="com.profidata.xc.springide"/>
+   </feature>
+   <feature url="features/GenerateWorkingSetsFeature.feature.group_1.1.2.jar" id="GenerateWorkingSetsFeature.feature.group" version="1.1.2">
+      <category name="org.plugination.fork"/>
+   </feature>
+   <category-def name="com.xnife.presentastion.e4.tools" label="Xnife E4 Presentation Tools"/>
+   <category-def name="com.profidatagroup.util.keymigration" label="Key Migration Tool"/>
+   <category-def name="com.profidata.xc.springide" label="XC Spring IDE Extensions"/>
+   <category-def name="org.plugination.fork" label="Generate WorkingSets Feature Fork"/>
+</site>
