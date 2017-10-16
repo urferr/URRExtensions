@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.buildship.core.launch.runconfiguration">
+<listAttribute key="arguments">
+<listEntry value="-b"/>
+<listEntry value="sync.gradle"/>
+</listAttribute>
+<booleanAttribute key="build_scans_enabled" value="false"/>
+<stringAttribute key="gradle_distribution" value="GRADLE_DISTRIBUTION(VERSION(4.2.1))"/>
+<stringAttribute key="gradle_user_home" value=""/>
+<listAttribute key="jvm_arguments">
+<listEntry value="-Dworkspace.loc=${workspace_loc}"/>
+<listEntry value="-Dxentis.home=//pdxenlin51/urr/xentisMASTERbranch_xcdemo/xentis"/>
+<listEntry value="-Dgradle.build.version=5.5.0-SNAPSHOT"/>
+</listAttribute>
+<booleanAttribute key="offline_mode" value="false"/>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<booleanAttribute key="override_workspace_settings" value="true"/>
+<booleanAttribute key="show_console_view" value="true"/>
+<booleanAttribute key="show_execution_view" value="false"/>
+<listAttribute key="tasks">
+<listEntry value="sync"/>
+</listAttribute>
+<stringAttribute key="working_dir" value="D:\JavaProjects\xcmaster\workspaceTT049186\URRExtensions\PDE-Targets &amp; Launcher\gradlescripts"/>
+</launchConfiguration>
