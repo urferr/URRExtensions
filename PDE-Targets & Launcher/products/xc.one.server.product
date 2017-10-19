@@ -22,6 +22,7 @@
 -Dorg.aspectj.weaver.showWeaveInfo=true
 
 -Dcom.profidata.xc.monitor.exitonfail=false
+-Dcom.xnife.logging.level.com.profidata.xc.one.server.monitor.application=debug
 
 -Dcom.xnife.logging.level.com.xnife.cache.impl.index=warn
 -Dcom.xnife.logging.level.org.hibernate.tool.hbm2ddl=info

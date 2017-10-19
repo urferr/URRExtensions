@@ -55,9 +55,11 @@ public class PackageDependencyConfiguration {
 
 		somePackages = new HashSet<>();
 		somePackages.add("org.objenesis");
+		somePackages.add("com.profidatagroup.xentis.ui.base.lookandfeel");
 		additionalTestFragmentPackageDependencies.put("com.profidata.xentis.javamis.test", somePackages);
 
 		somePackages = new HashSet<>();
+		somePackages.add("org.springframework.context");
 		somePackages.add("org.objenesis");
 		somePackages.add("javax.management.j2ee.statistics");
 		additionalTestFragmentPackageDependencies.put("com.profidata.xentis.jms.shared.test", somePackages);
@@ -65,6 +67,10 @@ public class PackageDependencyConfiguration {
 		somePackages = new HashSet<>();
 		somePackages.add("org.springframework.expression");
 		additionalTestFragmentPackageDependencies.put("com.xnife.spring.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.springframework.context");
+		additionalTestFragmentPackageDependencies.put("com.profidata.xentis.env.client.test", somePackages);
 
 		somePackages = new HashSet<>();
 		somePackages.add("org.springframework.context");

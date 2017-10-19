@@ -74,6 +74,8 @@ public class XentisWorkspace {
 			output.println("=================================");
 			importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.server.product", XCImportConfiguration.getInstance(), URRImportConfiguration.getInstance());
 			importProjectsOfProduct(aWorkspace, "/URRExtensions/PDE-Targets & Launcher", "products/xc.one.client.product", XCImportConfiguration.getInstance(), URRImportConfiguration.getInstance());
+			importProjectsOfProduct(aWorkspace, "/xentis/xc_one/main/_com.profidata.xc.one.server.build.product", "xc.one.server.product", XCImportConfiguration.getInstance(), URRImportConfiguration.getInstance());
+			importProjectsOfProduct(aWorkspace, "/xentis/xc_one/main/_com.profidata.xc.one.client.build.product", "xc.one.client.product", XCImportConfiguration.getInstance(), URRImportConfiguration.getInstance());
 
 			output.println("");
 			output.println("Import missing features/projects");
@@ -187,13 +189,10 @@ public class XentisWorkspace {
 		IPath aProvidedLibraryPath = aProjectWrapper.getProject().getLocation().append("provided");
 
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("atdl4j.jar"), null, null));
-		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.env.client.jar"), null, null, null, null, true));
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.env.server.jar"), null, null, null, null, true));
-		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.etl.commons.jar"), null, null, null, null, true));
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.jni.jar"), null, null, null, null, true));
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.ratex.jar"), null, null, null, null, true));
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.sn.jar"), null, null, null, null, true));
-		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidata.xentis.ui.base.jar"), null, null, null, null, true));
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("com.profidatagroup.util.keymigration.model.jar"), null, null));
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("foxtrot.jar"), null, null));
 		aProjectWrapper.addClasspathEntry(theProject -> JavaCore.newLibraryEntry(aProvidedLibraryPath.append("hawtbuf.jar"), null, null, null, null, true));

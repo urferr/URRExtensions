@@ -223,7 +223,7 @@
          version="0.0.0"
          fragment="true"
          unpack="false"/>
-		 
+
    <plugin
          id="com.xnife.tools.rcp.configurator.test"
          download-size="0"
@@ -232,5 +232,39 @@
          fragment="true"
          unpack="false"/>
 
+   <plugin
+         id="com.xnife.context.service.mock"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.xnife.domain.junit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.xnife.security.service.mock"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.xnife.testing"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.xnife.testing.junit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

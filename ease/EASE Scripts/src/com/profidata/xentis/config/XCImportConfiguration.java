@@ -35,6 +35,10 @@ public class XCImportConfiguration implements ImportConfiguration {
 		features.put("_com.compxc.eclipse4.spy.feature", ImportFeatureProject.of("_com.compxc.eclipse4.spy.feature", "xc_bld", null));
 		features.put("_com.compxc.eclipse.test.feature", ImportFeatureProject.of("_com.compxc.eclipse.test.feature", "xc_bld", null));
 
+		// XC xentis features
+		features.put("_com.compxc.xentis.feature", ImportFeatureProject.of("_com.compxc.xentis.feature", "xc_bld", null));
+		features.put("_com.compxc.xentis.rcp.feature", ImportFeatureProject.of("_com.compxc.xentis.rcp.feature", "xc_bld", null));
+
 		// XC server features
 		features.put(
 				"_com.profidata.xc.one.server.frontoffice.incubator.securities.feature",
