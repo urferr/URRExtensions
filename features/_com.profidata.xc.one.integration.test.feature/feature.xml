@@ -20,12 +20,19 @@
          id="_com.compxc.eclipse.test.feature"
          version="0.0.0"/>
 
-   <includes
-         id="_com.profidata.xc.one.test.integration.middleoffice.feature"
-         version="0.0.0"/>
+   <plugin
+         id="com.profidata.xc.persistence.service-integration"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <includes
-         id="_com.profidata.xc.one.test.integration.frontoffice.feature"
-         version="0.0.0"/>
+   <plugin
+         id="com.profidata.xc.middleoffice.service-integration"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 
 </feature>

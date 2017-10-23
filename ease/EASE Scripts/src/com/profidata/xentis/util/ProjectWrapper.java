@@ -46,8 +46,11 @@ import org.eclipse.pde.internal.core.ibundle.IBundle;
 import org.eclipse.pde.internal.core.ibundle.IBundleFragment;
 import org.eclipse.pde.internal.core.ibundle.IBundlePlugin;
 import org.eclipse.pde.internal.core.ibundle.IBundlePluginModelBase;
+import org.eclipse.pde.internal.core.ibundle.IManifestHeader;
 import org.eclipse.pde.internal.core.project.PDEProject;
+import org.eclipse.pde.internal.core.text.bundle.BundleSymbolicNameHeader;
 import org.eclipse.pde.internal.core.text.bundle.ExportPackageHeader;
+import org.eclipse.pde.internal.core.text.bundle.FragmentHostHeader;
 import org.eclipse.pde.internal.core.text.bundle.ImportPackageHeader;
 import org.osgi.framework.Constants;
 
@@ -480,6 +483,52 @@ public class ProjectWrapper {
 	}
 
 	@SuppressWarnings("restriction")
+	public ProjectWrapper setSingletonPlugin(boolean theSingleton) {
+		verifyJavaProject();
+
+		if (!hasError()) {
+			IPluginModel aBundlePluginModel = new WorkspaceBundlePluginModel(PDEProject.getManifest(project), PDEProject.getPluginXml(project));
+			IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aBundlePluginModel;
+			IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();
+			IManifestHeader header = aBundle.getManifestHeader(Constants.BUNDLE_SYMBOLICNAME);
+
+			if (header instanceof BundleSymbolicNameHeader) {
+				((BundleSymbolicNameHeader) header).setSingleton(theSingleton);
+				aBundleModelBase.save();
+			}
+
+			else {
+				errorMessage = "bundle symbolic name header of project '" + project.getName() + "' is not of type BundleSymbolicNameHeader";
+			}
+
+		}
+		return this;
+	}
+
+	@SuppressWarnings("restriction")
+	public boolean isFragment() {
+		IPluginModel aBundlePluginModel = new WorkspaceBundlePluginModel(PDEProject.getManifest(project), PDEProject.getPluginXml(project));
+		IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aBundlePluginModel;
+		IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();
+		IManifestHeader aHeader = aBundle.getManifestHeader(Constants.FRAGMENT_HOST);
+
+		return (aHeader instanceof FragmentHostHeader);
+	}
+
+	@SuppressWarnings("restriction")
+	public String getFragmentHostId() {
+		IPluginModel aBundlePluginModel = new WorkspaceBundlePluginModel(PDEProject.getManifest(project), PDEProject.getPluginXml(project));
+		IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aBundlePluginModel;
+		IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();
+		IManifestHeader aHeader = aBundle.getManifestHeader(Constants.FRAGMENT_HOST);
+
+		if (aHeader instanceof FragmentHostHeader) {
+			return ((FragmentHostHeader) aHeader).getHostId();
+		}
+		return null;
+	}
+
+	@SuppressWarnings("restriction")
 	private void addtoImportPackageHeader(IBundle theBundle, List<String> theImportPackages) {
 		ImportPackageHeader aImportPackageHeader = (ImportPackageHeader) theBundle.getManifestHeader(Constants.IMPORT_PACKAGE);
 		List<String> someImportPackages = new ArrayList<>(theImportPackages);
@@ -547,11 +596,10 @@ public class ProjectWrapper {
 	@SuppressWarnings({
 			"restriction",
 			"deprecation" })
-	public ProjectWrapper createTestFragmentManifest(IProject theHostBundleProject, Supplier<Set<String>> theAdditionalPackageDependencies, Supplier<Set<String>> theIgnorePackageDependencies) {
+	public ProjectWrapper createTestFragmentManifest(IProject theHostBundleProject) {
 		verifyJavaProject();
 
 		if (!hasError()) {
-			ProjectWrapper aHostBundleProjectWrapper = ProjectWrapper.of(theHostBundleProject).asJavaProject();
 			IFragmentModel aFragmentModel = new WorkspaceBundleFragmentModel(PDEProject.getManifest(project), PDEProject.getFragmentXml(project));
 			IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aFragmentModel;
 			IBundleFragment aBundleFragment = (IBundleFragment) aFragmentModel.getPluginBase();
@@ -571,39 +619,55 @@ public class ProjectWrapper {
 
 				aBundle.setHeader(Constants.BUNDLE_REQUIREDEXECUTIONENVIRONMENT, "JavaSE-1.8");
 
-				// Determine package dependencies from source code, exclude the ones starting with "java."
-				Set<String> allImportedPackages = getImportedPackages().stream()
-						.filter(thePackage -> !thePackage.startsWith("java."))
-						.collect(Collectors.toSet());
-
-				allImportedPackages.addAll(theAdditionalPackageDependencies.get());
-
-				// remove all the packages defined in the host bundle
-				allImportedPackages.removeAll(aHostBundleProjectWrapper.getSourcePackages());
-
-				// remove all the packages defined in this test fragment
-				allImportedPackages.removeAll(getSourcePackages());
-
-				// remove all the packages defined as to be ignored
-				Set<String> someIgnoredPackages = new HashSet<>();
-				for (String aPackagePrefix : theIgnorePackageDependencies.get()) {
-					someIgnoredPackages.addAll(
-							allImportedPackages.stream()
-									.filter(thePackage -> thePackage.startsWith(aPackagePrefix))
-									.collect(Collectors.toSet()));
-				}
-				allImportedPackages.removeAll(someIgnoredPackages);
-
-				List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
-				Collections.sort(allSortedImportedPackages);
-
-				addtoImportPackageHeader(aBundle, allSortedImportedPackages);
-
 				aBundleModelBase.save();
 			}
 			catch (CoreException theCause) {
 				errorMessage = "Could not manifest for test fragment project '" + project.getName() + "': " + theCause.getMessage();
 			}
+		}
+		return this;
+	}
+
+	@SuppressWarnings({
+			"restriction" })
+	public ProjectWrapper createTestFragmentPackageDependencies(IWorkspace theWorkspace, Supplier<Set<String>> theAdditionalPackageDependencies, Supplier<Set<String>> theIgnorePackageDependencies) {
+		verifyJavaProject();
+
+		if (!hasError()) {
+			IFragmentModel aFragmentModel = new WorkspaceBundleFragmentModel(PDEProject.getManifest(project), PDEProject.getFragmentXml(project));
+			IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aFragmentModel;
+			IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();
+			ProjectWrapper aHostBundleProjectWrapper = ProjectWrapper.of(theWorkspace, getFragmentHostId());
+
+			// Determine package dependencies from source code, exclude the ones starting with "java."
+			Set<String> allImportedPackages = getImportedPackages().stream()
+					.filter(thePackage -> !thePackage.startsWith("java."))
+					.collect(Collectors.toSet());
+
+			allImportedPackages.addAll(theAdditionalPackageDependencies.get());
+
+			// remove all the packages defined in the host bundle
+			allImportedPackages.removeAll(aHostBundleProjectWrapper.getSourcePackages());
+
+			// remove all the packages defined in this test fragment
+			allImportedPackages.removeAll(getSourcePackages());
+
+			// remove all the packages defined as to be ignored
+			Set<String> someIgnoredPackages = new HashSet<>();
+			for (String aPackagePrefix : theIgnorePackageDependencies.get()) {
+				someIgnoredPackages.addAll(
+						allImportedPackages.stream()
+								.filter(thePackage -> thePackage.startsWith(aPackagePrefix))
+								.collect(Collectors.toSet()));
+			}
+			allImportedPackages.removeAll(someIgnoredPackages);
+
+			List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
+			Collections.sort(allSortedImportedPackages);
+
+			addtoImportPackageHeader(aBundle, allSortedImportedPackages);
+
+			aBundleModelBase.save();
 		}
 		return this;
 	}
@@ -631,7 +695,7 @@ public class ProjectWrapper {
 				aBuildModel.getBuild().add(aBuildEntry);
 
 				aBuildEntry = aBuildModelFactory.createEntry(IBuildEntry.BIN_INCLUDES);
-				aBuildEntry.addToken("META-INF");
+				aBuildEntry.addToken("META-INF/");
 				aBuildEntry.addToken(".");
 				aBuildModel.getBuild().add(aBuildEntry);
 

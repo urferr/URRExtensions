@@ -79,16 +79,42 @@ public class RemoveGradleNatureFromPlugins {
 					if (aProjectWrapper.hasError()) {
 						error.println("Fix project '" + theProject.getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
 					}
-					else {
+					else if (!theProject.getName().endsWith("-integration")) {
 						migrateTestSourceFolderToTestFragmentProject(theProject, Arrays.asList("test", "integration", "manual"));
 					}
 				});
 
+		findTestFragmentProjects(aWorkspace).stream()
+				.forEach(theProject -> {
+					output.println("Upgrade package dependencies of test fragment: " + theProject.getName());
+					ProjectWrapper aProjectWrapper = ProjectWrapper.of(theProject)
+							.asJavaProject()
+							.createTestFragmentPackageDependencies(aWorkspace, () -> {
+								Set<String> someAdditionalPackages = new HashSet<>();
+								// package org.hamcrest is opften used to run unit tests
+								someAdditionalPackages.add("org.hamcrest;core=split");
+
+								return someAdditionalPackages;
+							}, () -> Optional.ofNullable(ignoreTestFragmentDependencies.get(theProject.getName())).orElse(Collections.emptySet()))
+							.refresh();
+
+					if (aProjectWrapper.hasError()) {
+						error.println("Upgrade package dependencies of test fragment '" + theProject.getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
+					}
+				});
 	}
 
 	private Collection<IProject> findProjectsWithPluginAndGradleNature(IWorkspace theWorkspace) {
 		return Arrays.stream(theWorkspace.getRoot().getProjects())
 				.filter(theProject -> hasNature(theProject, ProjectConstants.PLUGIN_NATURE_ID) && hasNature(theProject, ProjectConstants.GRADLE_NATURE_ID))
+				.collect(Collectors.toSet());
+	}
+
+	private Collection<IProject> findTestFragmentProjects(IWorkspace theWorkspace) {
+		return Arrays.stream(theWorkspace.getRoot().getProjects())
+				.filter(
+						theProject -> hasNature(theProject, ProjectConstants.PLUGIN_NATURE_ID) && !hasNature(theProject, ProjectConstants.GRADLE_NATURE_ID) && isFragment(theProject)
+								&& theProject.getName().endsWith(".test"))
 				.collect(Collectors.toSet());
 	}
 
@@ -132,6 +158,8 @@ public class RemoveGradleNatureFromPlugins {
 
 		if (!aProjectWrapper.isExisting()) {
 			output.println(" -> Create OSGi Test fragment project: " + aTestProjectName);
+			ProjectWrapper.of(theProject).setSingletonPlugin(true);
+
 			IPath aWorkspaceLocation = theProject.getWorkspace().getRoot().getLocation();
 			aProjectWrapper.createProject()
 					.open()
@@ -160,13 +188,7 @@ public class RemoveGradleNatureFromPlugins {
 			}
 
 			aProjectWrapper
-					.createTestFragmentManifest(theProject, () -> {
-						Set<String> someAdditionalPackages = new HashSet<>();
-						// package org.hamcrest is opften used to run unit tests
-						someAdditionalPackages.add("org.hamcrest;core=split");
-
-						return someAdditionalPackages;
-					}, () -> Optional.ofNullable(ignoreTestFragmentDependencies.get(aTestProjectName)).orElse(Collections.emptySet()))
+					.createTestFragmentManifest(theProject)
 					.createBuildProperties()
 					.refresh();
 
@@ -216,4 +238,9 @@ public class RemoveGradleNatureFromPlugins {
 			error.println("Could not set project description: " + theCause.getMessage());
 		}
 	}
+
+	private boolean isFragment(IProject theProject) {
+		return ProjectWrapper.of(theProject).isFragment();
+	}
+
 }
