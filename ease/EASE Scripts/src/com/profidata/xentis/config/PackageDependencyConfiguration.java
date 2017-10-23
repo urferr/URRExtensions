@@ -74,7 +74,7 @@ public class PackageDependencyConfiguration {
 
 		somePackages = new HashSet<>();
 		somePackages.add("org.springframework.context");
-		additionalBundlePackageDependencies.put("com.profidata.xc.risk.service.impl.test", somePackages);
+		additionalTestFragmentPackageDependencies.put("com.profidata.xc.risk.service.impl.test", somePackages);
 
 		somePackages = new HashSet<>();
 		somePackages.add("org.powermock.modules.junit4.common.internal.impl");
@@ -82,7 +82,27 @@ public class PackageDependencyConfiguration {
 		somePackages.add("org.mockito.stubbing");
 		somePackages.add("net.bytebuddy.dynamic.loading");
 		somePackages.add("org.objenesis");
-		additionalBundlePackageDependencies.put("com.compxc.order.presentation.test", somePackages);
+		additionalTestFragmentPackageDependencies.put("com.compxc.order.presentation.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.powermock.modules.junit4.common.internal.impl");
+		somePackages.add("com.compxc.common.persistence.entity.db");
+		somePackages.add("org.powermock.api.support.membermodification");
+		additionalTestFragmentPackageDependencies.put("com.compxc.frontoffice.excel.windows.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.powermock.modules.junit4.common.internal.impl");
+		somePackages.add("org.powermock.api.support.membermodification");
+		additionalTestFragmentPackageDependencies.put("com.compxc.frontoffice.presentation.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.springframework.remoting.support");
+		somePackages.add("org.mockito.stubbing");
+		additionalTestFragmentPackageDependencies.put("com.profidata.xc.frontoffice.service.impl.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.powermock.api.support.membermodification");
+		additionalTestFragmentPackageDependencies.put("com.profidata.xc.rest.common.service.impl.test", somePackages);
 	}
 
 	private PackageDependencyConfiguration() {
