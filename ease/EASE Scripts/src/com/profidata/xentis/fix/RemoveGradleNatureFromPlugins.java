@@ -163,7 +163,7 @@ public class RemoveGradleNatureFromPlugins {
 					.createTestFragmentManifest(theProject, () -> {
 						Set<String> someAdditionalPackages = new HashSet<>();
 						// package org.hamcrest is opften used to run unit tests
-						someAdditionalPackages.add("org.hamcrest");
+						someAdditionalPackages.add("org.hamcrest;core=split");
 
 						return someAdditionalPackages;
 					}, () -> Optional.ofNullable(ignoreTestFragmentDependencies.get(aTestProjectName)).orElse(Collections.emptySet()))

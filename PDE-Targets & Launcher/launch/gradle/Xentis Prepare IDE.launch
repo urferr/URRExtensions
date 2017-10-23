@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.buildship.core.launch.runconfiguration">
 <listAttribute key="arguments">
-<listEntry value="--build-cache"/>
 <listEntry value="-x"/>
 <listEntry value="test"/>
 <listEntry value="-x"/>
@@ -10,9 +9,7 @@
 <booleanAttribute key="build_scans_enabled" value="false"/>
 <stringAttribute key="gradle_distribution" value="GRADLE_DISTRIBUTION(WRAPPER)"/>
 <stringAttribute key="gradle_user_home" value=""/>
-<listAttribute key="jvm_arguments">
-<listEntry value="-Xmx2048m"/>
-</listAttribute>
+<listAttribute key="jvm_arguments"/>
 <booleanAttribute key="offline_mode" value="false"/>
 <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
 <listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
