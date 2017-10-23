@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -467,11 +466,11 @@ public class ProjectWrapper {
 
 				List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
 				Collections.sort(allSortedImportedPackages);
-				addtoImportPackageHeader(aBundle, allSortedImportedPackages);
+				addToImportPackageHeader(aBundle, allSortedImportedPackages);
 
 				List<String> allSortedSourcePackages = new ArrayList<>(allSourcePackages);
 				Collections.sort(allSortedSourcePackages);
-				addtoExortPackageHeader(aBundle, allSortedSourcePackages);
+				addToExortPackageHeader(aBundle, allSortedSourcePackages);
 
 				aBundleModelBase.save();
 			}
@@ -529,37 +528,57 @@ public class ProjectWrapper {
 	}
 
 	@SuppressWarnings("restriction")
-	private void addtoImportPackageHeader(IBundle theBundle, List<String> theImportPackages) {
+	private boolean addToImportPackageHeader(IBundle theBundle, List<String> theImportPackages) {
 		ImportPackageHeader aImportPackageHeader = (ImportPackageHeader) theBundle.getManifestHeader(Constants.IMPORT_PACKAGE);
 		List<String> someImportPackages = new ArrayList<>(theImportPackages);
+		int somePackagesAdded = 0;
 
 		if (aImportPackageHeader == null) {
 			theBundle.setHeader(Constants.IMPORT_PACKAGE, someImportPackages.get(0));
 
 			someImportPackages.remove(0);
 			aImportPackageHeader = (ImportPackageHeader) theBundle.getManifestHeader(Constants.IMPORT_PACKAGE);
+			somePackagesAdded++;
 		}
 
 		for (String aPackage : someImportPackages) {
-			aImportPackageHeader.addPackage(aPackage);
+			int aFirstDirectiveDelimiterIndex = aPackage.indexOf(";");
+
+			if (aFirstDirectiveDelimiterIndex > 0) {
+				aPackage = aPackage.substring(0, aFirstDirectiveDelimiterIndex);
+			}
+
+			if (!aImportPackageHeader.hasPackage(aPackage)) {
+				aImportPackageHeader.addPackage(aPackage);
+				somePackagesAdded++;
+			}
 		}
+
+		return somePackagesAdded > 0;
 	}
 
 	@SuppressWarnings("restriction")
-	private void addtoExortPackageHeader(IBundle theBundle, List<String> theImportPackages) {
+	private boolean addToExortPackageHeader(IBundle theBundle, List<String> theImportPackages) {
 		ExportPackageHeader aExportPackageHeader = (ExportPackageHeader) theBundle.getManifestHeader(Constants.EXPORT_PACKAGE);
 		List<String> someExportPackages = new ArrayList<>(theImportPackages);
+		int somePackagesAdded = 0;
 
 		if (aExportPackageHeader == null) {
 			theBundle.setHeader(Constants.EXPORT_PACKAGE, someExportPackages.get(0));
 
 			someExportPackages.remove(0);
 			aExportPackageHeader = (ExportPackageHeader) theBundle.getManifestHeader(Constants.EXPORT_PACKAGE);
+			somePackagesAdded++;
 		}
 
 		for (String aPackage : someExportPackages) {
-			aExportPackageHeader.addPackage(aPackage);
+			if (!aExportPackageHeader.hasPackage(aPackage)) {
+				aExportPackageHeader.addPackage(aPackage);
+				somePackagesAdded++;
+			}
 		}
+
+		return somePackagesAdded > 0;
 	}
 
 	public ProjectWrapper addPackageDependenciesToPluginManifest(Supplier<Set<String>> theAdditionalPackageDependencies) {
@@ -572,22 +591,9 @@ public class ProjectWrapper {
 			Set<String> someAdditionalPackageDependencies = Optional.ofNullable(theAdditionalPackageDependencies.get()).orElseGet(() -> Collections.emptySet());
 
 			if (!someAdditionalPackageDependencies.isEmpty()) {
-				ImportPackageHeader aImportPackageHeader = (ImportPackageHeader) aBundle.getManifestHeader(Constants.IMPORT_PACKAGE);
-
-				if (aImportPackageHeader == null) {
-					Iterator<String> aIterator = someAdditionalPackageDependencies.iterator();
-
-					aBundle.setHeader(Constants.IMPORT_PACKAGE, aIterator.next());
-
-					aIterator.remove();
-					aImportPackageHeader = (ImportPackageHeader) aBundle.getManifestHeader(Constants.IMPORT_PACKAGE);
+				if (addToImportPackageHeader(aBundle, new ArrayList<>(someAdditionalPackageDependencies))) {
+					aBundleModelBase.save();
 				}
-
-				for (String aPackage : someAdditionalPackageDependencies) {
-					aImportPackageHeader.addPackage(aPackage);
-				}
-
-				aBundleModelBase.save();
 			}
 		}
 		return this;
@@ -596,7 +602,7 @@ public class ProjectWrapper {
 	@SuppressWarnings({
 			"restriction",
 			"deprecation" })
-	public ProjectWrapper createTestFragmentManifest(IProject theHostBundleProject) {
+	public ProjectWrapper createTestFragmentManifest(IProject theHostBundleProject, Supplier<Set<String>> theAdditionalPackageDependencies, Supplier<Set<String>> theIgnorePackageDependencies) {
 		verifyJavaProject();
 
 		if (!hasError()) {
@@ -606,6 +612,7 @@ public class ProjectWrapper {
 
 			try {
 				IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();
+				ProjectWrapper aHostBundleProjectWrapper = ProjectWrapper.of(theHostBundleProject);
 
 				aBundleFragment.setSchemaVersion("1.0");
 				aBundle.setHeader(Constants.BUNDLE_MANIFESTVERSION, "2");
@@ -619,6 +626,9 @@ public class ProjectWrapper {
 
 				aBundle.setHeader(Constants.BUNDLE_REQUIREDEXECUTIONENVIRONMENT, "JavaSE-1.8");
 
+				List<String> allSortedImportedPackages = determinePackagesToImportPackages(aHostBundleProjectWrapper.getSourcePackages(), theAdditionalPackageDependencies, theIgnorePackageDependencies);
+				addToImportPackageHeader(aBundle, allSortedImportedPackages);
+
 				aBundleModelBase.save();
 			}
 			catch (CoreException theCause) {
@@ -630,7 +640,10 @@ public class ProjectWrapper {
 
 	@SuppressWarnings({
 			"restriction" })
-	public ProjectWrapper createTestFragmentPackageDependencies(IWorkspace theWorkspace, Supplier<Set<String>> theAdditionalPackageDependencies, Supplier<Set<String>> theIgnorePackageDependencies) {
+	public ProjectWrapper createTestFragmentPackageDependencies(
+			IWorkspace theWorkspace,
+			Supplier<Set<String>> theAdditionalPackageDependencies,
+			Supplier<Set<String>> theIgnorePackageDependencies) {
 		verifyJavaProject();
 
 		if (!hasError()) {
@@ -639,37 +652,42 @@ public class ProjectWrapper {
 			IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();
 			ProjectWrapper aHostBundleProjectWrapper = ProjectWrapper.of(theWorkspace, getFragmentHostId());
 
-			// Determine package dependencies from source code, exclude the ones starting with "java."
-			Set<String> allImportedPackages = getImportedPackages().stream()
-					.filter(thePackage -> !thePackage.startsWith("java."))
-					.collect(Collectors.toSet());
-
-			allImportedPackages.addAll(theAdditionalPackageDependencies.get());
-
-			// remove all the packages defined in the host bundle
-			allImportedPackages.removeAll(aHostBundleProjectWrapper.getSourcePackages());
-
-			// remove all the packages defined in this test fragment
-			allImportedPackages.removeAll(getSourcePackages());
-
-			// remove all the packages defined as to be ignored
-			Set<String> someIgnoredPackages = new HashSet<>();
-			for (String aPackagePrefix : theIgnorePackageDependencies.get()) {
-				someIgnoredPackages.addAll(
-						allImportedPackages.stream()
-								.filter(thePackage -> thePackage.startsWith(aPackagePrefix))
-								.collect(Collectors.toSet()));
+			List<String> allSortedImportedPackages = determinePackagesToImportPackages(aHostBundleProjectWrapper.getSourcePackages(), theAdditionalPackageDependencies, theIgnorePackageDependencies);
+			if (addToImportPackageHeader(aBundle, allSortedImportedPackages)) {
+				aBundleModelBase.save();
 			}
-			allImportedPackages.removeAll(someIgnoredPackages);
-
-			List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
-			Collections.sort(allSortedImportedPackages);
-
-			addtoImportPackageHeader(aBundle, allSortedImportedPackages);
-
-			aBundleModelBase.save();
 		}
 		return this;
+	}
+
+	private List<String> determinePackagesToImportPackages(Set<String> theSourcePackages, Supplier<Set<String>> theAdditionalPackageDependencies, Supplier<Set<String>> theIgnorePackageDependencies) {
+		// Determine package dependencies from source code, exclude the ones starting with "java."
+		Set<String> allImportedPackages = getImportedPackages().stream()
+				.filter(thePackage -> !thePackage.startsWith("java."))
+				.collect(Collectors.toSet());
+
+		allImportedPackages.addAll(theAdditionalPackageDependencies.get());
+
+		// remove all the packages defined in the host bundle
+		allImportedPackages.removeAll(theSourcePackages);
+
+		// remove all the packages defined in this test fragment
+		allImportedPackages.removeAll(getSourcePackages());
+
+		// remove all the packages defined as to be ignored
+		Set<String> someIgnoredPackages = new HashSet<>();
+		for (String aPackagePrefix : theIgnorePackageDependencies.get()) {
+			someIgnoredPackages.addAll(
+					allImportedPackages.stream()
+							.filter(thePackage -> thePackage.startsWith(aPackagePrefix))
+							.collect(Collectors.toSet()));
+		}
+		allImportedPackages.removeAll(someIgnoredPackages);
+
+		List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
+		Collections.sort(allSortedImportedPackages);
+
+		return allSortedImportedPackages;
 	}
 
 	@SuppressWarnings("restriction")

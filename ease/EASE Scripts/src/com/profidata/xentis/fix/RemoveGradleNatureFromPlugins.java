@@ -67,23 +67,6 @@ public class RemoveGradleNatureFromPlugins {
 	private void execute() {
 		IWorkspace aWorkspace = ResourcesPlugin.getWorkspace();
 
-		findProjectsWithPluginAndGradleNature(aWorkspace).stream()
-				.forEach(theProject -> {
-					output.println("Fix project with Plugin/Gradle nature: " + theProject.getName());
-					ProjectWrapper aProjectWrapper = ProjectWrapper.of(theProject)
-							.asJavaProject()
-							.removeNature(ProjectConstants.GRADLE_NATURE_ID)
-							.removeClasspathEntry(new Path(ProjectConstants.GRADLE_CLASSPATH_ID))
-							.refresh();
-
-					if (aProjectWrapper.hasError()) {
-						error.println("Fix project '" + theProject.getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
-					}
-					else if (!theProject.getName().endsWith("-integration")) {
-						migrateTestSourceFolderToTestFragmentProject(theProject, Arrays.asList("test", "integration", "manual"));
-					}
-				});
-
 		findTestFragmentProjects(aWorkspace).stream()
 				.forEach(theProject -> {
 					output.println("Upgrade package dependencies of test fragment: " + theProject.getName());
@@ -100,6 +83,23 @@ public class RemoveGradleNatureFromPlugins {
 
 					if (aProjectWrapper.hasError()) {
 						error.println("Upgrade package dependencies of test fragment '" + theProject.getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
+					}
+				});
+
+		findProjectsWithPluginAndGradleNature(aWorkspace).stream()
+				.forEach(theProject -> {
+					output.println("Fix project with Plugin/Gradle nature: " + theProject.getName());
+					ProjectWrapper aProjectWrapper = ProjectWrapper.of(theProject)
+							.asJavaProject()
+							.removeNature(ProjectConstants.GRADLE_NATURE_ID)
+							.removeClasspathEntry(new Path(ProjectConstants.GRADLE_CLASSPATH_ID))
+							.refresh();
+
+					if (aProjectWrapper.hasError()) {
+						error.println("Fix project '" + theProject.getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
+					}
+					else if (!theProject.getName().endsWith("-integration")) {
+						migrateTestSourceFolderToTestFragmentProject(theProject, Arrays.asList("test", "integration", "manual"));
 					}
 				});
 	}
@@ -188,7 +188,13 @@ public class RemoveGradleNatureFromPlugins {
 			}
 
 			aProjectWrapper
-					.createTestFragmentManifest(theProject)
+					.createTestFragmentManifest(theProject, () -> {
+						Set<String> someAdditionalPackages = new HashSet<>();
+						// package org.hamcrest is opften used to run unit tests
+						someAdditionalPackages.add("org.hamcrest;core=split");
+
+						return someAdditionalPackages;
+					}, () -> Optional.ofNullable(ignoreTestFragmentDependencies.get(theProject.getName())).orElse(Collections.emptySet()))
 					.createBuildProperties()
 					.refresh();
 

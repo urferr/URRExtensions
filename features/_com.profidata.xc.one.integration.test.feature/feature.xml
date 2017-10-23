@@ -21,14 +21,14 @@
          version="0.0.0"/>
 
    <plugin
-         id="com.profidata.xc.persistence.service-integration"
+         id="com.profidata.xc.persistence.service.integration.test"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="com.profidata.xc.middleoffice.service-integration"
+         id="com.profidata.xc.middleoffice.service.integration.test"
          download-size="0"
          install-size="0"
          version="0.0.0"
