@@ -31,6 +31,7 @@ import com.profidata.xentis.util.ProjectWrapper;
 
 public class RemoveGradleNatureFromPlugins {
 	private static final Map<String, Set<String>> ignoreTestFragmentDependencies;
+	private static final Map<String, String> replaceSpecialPackageDependencies;
 
 	static {
 		Set<String> somePackages;
@@ -49,6 +50,11 @@ public class RemoveGradleNatureFromPlugins {
 		somePackages = new HashSet<>();
 		somePackages.add("com.profidatagroup.javamis.client.rmi.presentation.snRATEX.definition"); // don't know were it gets from???
 		ignoreTestFragmentDependencies.put("com.profidata.xentis.javamis.integration", somePackages);
+
+		// special dependencies
+		replaceSpecialPackageDependencies = new HashMap<>();
+
+		replaceSpecialPackageDependencies.put("org.hamcrest", "org.hamcrest;core=split");
 	}
 
 	private final PrintStream output;
@@ -75,10 +81,10 @@ public class RemoveGradleNatureFromPlugins {
 							.createTestFragmentPackageDependencies(aWorkspace, () -> {
 								Set<String> someAdditionalPackages = new HashSet<>();
 								// package org.hamcrest is opften used to run unit tests
-								someAdditionalPackages.add("org.hamcrest;core=split");
+								someAdditionalPackages.add("org.hamcrest");
 
 								return someAdditionalPackages;
-							}, () -> Optional.ofNullable(ignoreTestFragmentDependencies.get(theProject.getName())).orElse(Collections.emptySet()))
+							}, () -> Optional.ofNullable(ignoreTestFragmentDependencies.get(theProject.getName())).orElse(Collections.emptySet()), replaceSpecialPackageDependencies)
 							.refresh();
 
 					if (aProjectWrapper.hasError()) {
@@ -194,7 +200,9 @@ public class RemoveGradleNatureFromPlugins {
 						someAdditionalPackages.add("org.hamcrest;core=split");
 
 						return someAdditionalPackages;
-					}, () -> Optional.ofNullable(ignoreTestFragmentDependencies.get(theProject.getName())).orElse(Collections.emptySet()))
+					},
+							() -> Optional.ofNullable(ignoreTestFragmentDependencies.get(theProject.getName())).orElse(Collections.emptySet()),
+							replaceSpecialPackageDependencies)
 					.createBuildProperties()
 					.refresh();
 

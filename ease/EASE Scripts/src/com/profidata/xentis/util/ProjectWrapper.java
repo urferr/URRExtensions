@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
@@ -602,7 +603,11 @@ public class ProjectWrapper {
 	@SuppressWarnings({
 			"restriction",
 			"deprecation" })
-	public ProjectWrapper createTestFragmentManifest(IProject theHostBundleProject, Supplier<Set<String>> theAdditionalPackageDependencies, Supplier<Set<String>> theIgnorePackageDependencies) {
+	public ProjectWrapper createTestFragmentManifest(
+			IProject theHostBundleProject,
+			Supplier<Set<String>> theAdditionalPackageDependencies,
+			Supplier<Set<String>> theIgnorePackageDependencies,
+			Map<String, String> theSpecialPackageDependencies) {
 		verifyJavaProject();
 
 		if (!hasError()) {
@@ -626,7 +631,11 @@ public class ProjectWrapper {
 
 				aBundle.setHeader(Constants.BUNDLE_REQUIREDEXECUTIONENVIRONMENT, "JavaSE-1.8");
 
-				List<String> allSortedImportedPackages = determinePackagesToImportPackages(aHostBundleProjectWrapper.getSourcePackages(), theAdditionalPackageDependencies, theIgnorePackageDependencies);
+				List<String> allSortedImportedPackages = determinePackagesToImportPackages(
+						aHostBundleProjectWrapper.getSourcePackages(),
+						theAdditionalPackageDependencies,
+						theIgnorePackageDependencies,
+						theSpecialPackageDependencies);
 				addToImportPackageHeader(aBundle, allSortedImportedPackages);
 
 				aBundleModelBase.save();
@@ -643,7 +652,8 @@ public class ProjectWrapper {
 	public ProjectWrapper createTestFragmentPackageDependencies(
 			IWorkspace theWorkspace,
 			Supplier<Set<String>> theAdditionalPackageDependencies,
-			Supplier<Set<String>> theIgnorePackageDependencies) {
+			Supplier<Set<String>> theIgnorePackageDependencies,
+			Map<String, String> theSpecialPackageDependencies) {
 		verifyJavaProject();
 
 		if (!hasError()) {
@@ -652,7 +662,11 @@ public class ProjectWrapper {
 			IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();
 			ProjectWrapper aHostBundleProjectWrapper = ProjectWrapper.of(theWorkspace, getFragmentHostId());
 
-			List<String> allSortedImportedPackages = determinePackagesToImportPackages(aHostBundleProjectWrapper.getSourcePackages(), theAdditionalPackageDependencies, theIgnorePackageDependencies);
+			List<String> allSortedImportedPackages = determinePackagesToImportPackages(
+					aHostBundleProjectWrapper.getSourcePackages(),
+					theAdditionalPackageDependencies,
+					theIgnorePackageDependencies,
+					theSpecialPackageDependencies);
 			if (addToImportPackageHeader(aBundle, allSortedImportedPackages)) {
 				aBundleModelBase.save();
 			}
@@ -660,7 +674,11 @@ public class ProjectWrapper {
 		return this;
 	}
 
-	private List<String> determinePackagesToImportPackages(Set<String> theSourcePackages, Supplier<Set<String>> theAdditionalPackageDependencies, Supplier<Set<String>> theIgnorePackageDependencies) {
+	private List<String> determinePackagesToImportPackages(
+			Set<String> theSourcePackages,
+			Supplier<Set<String>> theAdditionalPackageDependencies,
+			Supplier<Set<String>> theIgnorePackageDependencies,
+			Map<String, String> theSpecialDependencies) {
 		// Determine package dependencies from source code, exclude the ones starting with "java."
 		Set<String> allImportedPackages = getImportedPackages().stream()
 				.filter(thePackage -> !thePackage.startsWith("java."))
@@ -684,10 +702,18 @@ public class ProjectWrapper {
 		}
 		allImportedPackages.removeAll(someIgnoredPackages);
 
+		allImportedPackages = replaceSpecialPackageDependencies(allImportedPackages, theSpecialDependencies);
+
 		List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
 		Collections.sort(allSortedImportedPackages);
 
 		return allSortedImportedPackages;
+	}
+
+	private Set<String> replaceSpecialPackageDependencies(Set<String> theImportedPackages, Map<String, String> theSpecialDependencies) {
+		return theImportedPackages.stream()
+				.map(thePackage -> (theSpecialDependencies.containsKey(thePackage)) ? theSpecialDependencies.get(thePackage) : thePackage)
+				.collect(Collectors.toSet());
 	}
 
 	@SuppressWarnings("restriction")

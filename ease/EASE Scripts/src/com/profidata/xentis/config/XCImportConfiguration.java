@@ -30,13 +30,13 @@ public class XCImportConfiguration implements ImportConfiguration {
 
 	private void configureFeatures() {
 		// XC thirdparty features (content does not have to be imported)
-		features.put("_com.compxc.eclipse.feature", ImportFeatureProject.of("_com.compxc.eclipse.feature", "xc_bld", null));
-		features.put("_com.compxc.eclipse.rcp.feature", ImportFeatureProject.of("_com.compxc.eclipse.rcp.feature", "xc_bld", null));
-		features.put("_com.compxc.eclipse4.spy.feature", ImportFeatureProject.of("_com.compxc.eclipse4.spy.feature", "xc_bld", null));
-		features.put("_com.compxc.eclipse.test.feature", ImportFeatureProject.of("_com.compxc.eclipse.test.feature", "xc_bld", null));
+		features.put("_com.compxc.eclipse.feature", ImportFeatureProject.of("_com.compxc.eclipse.feature", "xentisjava/xc-pde", null));
+		features.put("_com.compxc.eclipse.rcp.feature", ImportFeatureProject.of("_com.compxc.eclipse.rcp.feature", "xentisjava/xc-pde", null));
+		features.put("_com.compxc.eclipse4.spy.feature", ImportFeatureProject.of("_com.compxc.eclipse4.spy.feature", "xentisjava/xc-pde", null));
+		features.put("_com.compxc.eclipse.test.feature", ImportFeatureProject.of("_com.compxc.eclipse.test.feature", "xentisjava/xc-pde", null));
 
 		// XC xentis features
-		features.put("_com.compxc.xentis.feature", ImportFeatureProject.of("_com.compxc.xentis.feature", "xc_bld", null));
-		features.put("_com.compxc.xentis.rcp.feature", ImportFeatureProject.of("_com.compxc.xentis.rcp.feature", "xc_bld", null));
+		features.put("_com.compxc.xentis.feature", ImportFeatureProject.of("_com.compxc.xentis.feature", "xentisjava/xc-pde", null));
+		features.put("_com.compxc.xentis.rcp.feature", ImportFeatureProject.of("_com.compxc.xentis.rcp.feature", "xentisjava/xc-pde", null));
 	}
 }
