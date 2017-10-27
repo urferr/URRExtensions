@@ -226,9 +226,6 @@ public class RemoveGradleNatureFromPlugins {
 			if (aProjectWrapper.hasError()) {
 				error.println("Create test project '" + aTestProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
 			}
-			else if (aProjectWrapper.hasProtocol()) {
-				output.println(aProjectWrapper.getProtocolMessage());
-			}
 		}
 	}
 
