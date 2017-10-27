@@ -29,6 +29,10 @@
          version="0.0.0"/>
 
    <includes
+         id="_com.profidata.xc.one.test.backoffice.feature"
+         version="0.0.0"/>
+
+   <includes
          id="_com.profidata.xc.one.test.middleoffice.feature"
          version="0.0.0"/>
 

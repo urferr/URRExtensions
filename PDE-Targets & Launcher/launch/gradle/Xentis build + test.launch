@@ -2,7 +2,7 @@
 <launchConfiguration type="org.eclipse.buildship.core.launch.runconfiguration">
 <listAttribute key="arguments">
 <listEntry value="-x"/>
-<listEntry value=":JavAMIS:com.profidata.xentis.jni:generate"/>
+<listEntry value=":xentis:com.profidata.xentis.jni:generate"/>
 <listEntry value="-x"/>
 <listEntry value="jacocoReport"/>
 </listAttribute>
@@ -20,5 +20,5 @@
 <listAttribute key="tasks">
 <listEntry value="build"/>
 </listAttribute>
-<stringAttribute key="working_dir" value="${workspace_loc:/xentis}"/>
+<stringAttribute key="working_dir" value="${workspace_loc:/xentisjava}"/>
 </launchConfiguration>

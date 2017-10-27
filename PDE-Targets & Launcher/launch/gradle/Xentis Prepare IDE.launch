@@ -18,8 +18,8 @@
 <booleanAttribute key="show_console_view" value="true"/>
 <booleanAttribute key="show_execution_view" value="true"/>
 <listAttribute key="tasks">
-<listEntry value=":JavAMIS:com.profidata.xentis.jni:clean"/>
+<listEntry value=":xentis:com.profidata.xentis.jni:clean"/>
 <listEntry value="build"/>
 </listAttribute>
-<stringAttribute key="working_dir" value="${workspace_loc:/xentis}"/>
+<stringAttribute key="working_dir" value="${workspace_loc:/xentisjava}"/>
 </launchConfiguration>

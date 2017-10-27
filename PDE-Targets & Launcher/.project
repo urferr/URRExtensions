@@ -29,7 +29,7 @@
 		<link>
 			<name>targets/XC.target</name>
 			<type>1</type>
-			<locationURI>WORKSPACE_LOC/xentis/xc_tools/ProfidataEclipsePreferrences/target/XC.target</locationURI>
+			<locationURI>WORKSPACE_LOC/xc_tools/ProfidataEclipsePreferrences/target/XC.target</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
