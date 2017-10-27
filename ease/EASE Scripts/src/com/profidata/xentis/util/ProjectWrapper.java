@@ -59,6 +59,7 @@ public class ProjectWrapper {
 	private IJavaProject javaProject;
 
 	private String errorMessage;
+	private String protocolMessage;
 
 	public static ProjectWrapper of(IWorkspace theWorkspace, String theName) {
 		return new ProjectWrapper(theWorkspace.getRoot().getProject(theName));
@@ -535,23 +536,29 @@ public class ProjectWrapper {
 		int somePackagesAdded = 0;
 
 		if (aImportPackageHeader == null) {
-			theBundle.setHeader(Constants.IMPORT_PACKAGE, someImportPackages.get(0));
+			String aPackage = someImportPackages.get(0);
+			theBundle.setHeader(Constants.IMPORT_PACKAGE, aPackage);
 
 			someImportPackages.remove(0);
 			aImportPackageHeader = (ImportPackageHeader) theBundle.getManifestHeader(Constants.IMPORT_PACKAGE);
 			somePackagesAdded++;
+
+			addProtocolMessage(" - " + aPackage);
 		}
 
 		for (String aPackage : someImportPackages) {
+			String aPackageOnly = aPackage;
 			int aFirstDirectiveDelimiterIndex = aPackage.indexOf(";");
 
 			if (aFirstDirectiveDelimiterIndex > 0) {
-				aPackage = aPackage.substring(0, aFirstDirectiveDelimiterIndex);
+				aPackageOnly = aPackageOnly.substring(0, aFirstDirectiveDelimiterIndex);
 			}
 
-			if (!aImportPackageHeader.hasPackage(aPackage)) {
+			if (!aImportPackageHeader.hasPackage(aPackageOnly)) {
 				aImportPackageHeader.addPackage(aPackage);
 				somePackagesAdded++;
+
+				addProtocolMessage(" - " + aPackage);
 			}
 		}
 
@@ -678,7 +685,7 @@ public class ProjectWrapper {
 			Set<String> theSourcePackages,
 			Supplier<Set<String>> theAdditionalPackageDependencies,
 			Supplier<Set<String>> theIgnorePackageDependencies,
-			Map<String, String> theSpecialDependencies) {
+			Map<String, String> theSpecialPackageDependencies) {
 		// Determine package dependencies from source code, exclude the ones starting with "java."
 		Set<String> allImportedPackages = getImportedPackages().stream()
 				.filter(thePackage -> !thePackage.startsWith("java."))
@@ -702,7 +709,7 @@ public class ProjectWrapper {
 		}
 		allImportedPackages.removeAll(someIgnoredPackages);
 
-		allImportedPackages = replaceSpecialPackageDependencies(allImportedPackages, theSpecialDependencies);
+		allImportedPackages = replaceSpecialPackageDependencies(allImportedPackages, theSpecialPackageDependencies);
 
 		List<String> allSortedImportedPackages = new ArrayList<>(allImportedPackages);
 		Collections.sort(allSortedImportedPackages);
@@ -908,5 +915,22 @@ public class ProjectWrapper {
 
 	public String getErrorMessage() {
 		return errorMessage;
+	}
+
+	private void addProtocolMessage(String theMessage) {
+		if (protocolMessage == null) {
+			protocolMessage = theMessage;
+		}
+		else {
+			protocolMessage += "\n" + theMessage;
+		}
+	}
+
+	public boolean hasProtocol() {
+		return protocolMessage != null;
+	}
+
+	public String getProtocolMessage() {
+		return protocolMessage;
 	}
 }
