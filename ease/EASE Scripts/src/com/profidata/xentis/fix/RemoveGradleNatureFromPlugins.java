@@ -90,6 +90,9 @@ public class RemoveGradleNatureFromPlugins {
 					if (aProjectWrapper.hasError()) {
 						error.println("Upgrade package dependencies of test fragment '" + theProject.getName() + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
 					}
+					else if (aProjectWrapper.hasProtocol()) {
+						output.println(aProjectWrapper.getProtocolMessage());
+					}
 				});
 
 		findProjectsWithPluginAndGradleNature(aWorkspace).stream()
@@ -222,6 +225,9 @@ public class RemoveGradleNatureFromPlugins {
 
 			if (aProjectWrapper.hasError()) {
 				error.println("Create test project '" + aTestProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
+			}
+			else if (aProjectWrapper.hasProtocol()) {
+				output.println(aProjectWrapper.getProtocolMessage());
 			}
 		}
 	}
