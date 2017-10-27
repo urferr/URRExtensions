@@ -491,11 +491,16 @@ public class ProjectWrapper {
 			IPluginModel aBundlePluginModel = new WorkspaceBundlePluginModel(PDEProject.getManifest(project), PDEProject.getPluginXml(project));
 			IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aBundlePluginModel;
 			IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();
-			IManifestHeader header = aBundle.getManifestHeader(Constants.BUNDLE_SYMBOLICNAME);
+			IManifestHeader aHeader = aBundle.getManifestHeader(Constants.BUNDLE_SYMBOLICNAME);
 
-			if (header instanceof BundleSymbolicNameHeader) {
-				((BundleSymbolicNameHeader) header).setSingleton(theSingleton);
-				aBundleModelBase.save();
+			if (aHeader instanceof BundleSymbolicNameHeader) {
+				BundleSymbolicNameHeader aBundleSymbolicNameHeader = (BundleSymbolicNameHeader) aHeader;
+
+				if (aBundleSymbolicNameHeader.isSingleton() != theSingleton) {
+					aBundleSymbolicNameHeader.setSingleton(theSingleton);
+					addProtocolMessage(" - " + project.getName() + " -> singleton = " + theSingleton);
+					aBundleModelBase.save();
+				}
 			}
 
 			else {

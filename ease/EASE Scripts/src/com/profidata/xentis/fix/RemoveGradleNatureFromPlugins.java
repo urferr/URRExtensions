@@ -168,6 +168,9 @@ public class RemoveGradleNatureFromPlugins {
 		if (!aProjectWrapper.isExisting()) {
 			output.println(" -> Create OSGi Test fragment project: " + aTestProjectName);
 			ProjectWrapper.of(theProject).setSingletonPlugin(true);
+			if (aProjectWrapper.hasProtocol()) {
+				output.println(aProjectWrapper.getProtocolMessage());
+			}
 
 			IPath aWorkspaceLocation = theProject.getWorkspace().getRoot().getLocation();
 			aProjectWrapper.createProject()
@@ -225,6 +228,9 @@ public class RemoveGradleNatureFromPlugins {
 
 			if (aProjectWrapper.hasError()) {
 				error.println("Create test project '" + aTestProjectName + "' failed:\n-> " + aProjectWrapper.getErrorMessage());
+			}
+			else if (aProjectWrapper.hasProtocol()) {
+				output.println(aProjectWrapper.getProtocolMessage());
 			}
 		}
 	}
