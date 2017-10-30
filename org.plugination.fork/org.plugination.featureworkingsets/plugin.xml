@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.plugination.featureworkingsets.SyncFeaturesWithWorkingSetsHandler"
+            id="org.plugination.featureworkingsets.synchronize"
+            name="Generate Working Sets based on Features">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:project">
+         <command
+               commandId="org.plugination.featureworkingsets.synchronize"
+               icon="icons/workSets.gif"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+</plugin>

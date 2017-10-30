@@ -1,0 +1,6 @@
+#Thu Apr 03 13:19:38 CEST 2014
+/instance/org.eclipse.ajdt.ui/org.aspectj.ajdt.core.compiler.weaver.XNoInline=true
+/instance/org.eclipse.ajdt.ui/org.eclipse.ajdt.ui.preferences.askPdeAutoImport=false
+/instance/org.eclipse.ajdt.ui/org.aspectj.ajdt.core.compiler.lint.TypeNotExposedToWeaver=ignore
+/instance/org.eclipse.ajdt.ui/promptForAutoOpenCrossReference=false
+/instance/org.eclipse.ajdt.ui/autoOpenCrossReferenceView=false
