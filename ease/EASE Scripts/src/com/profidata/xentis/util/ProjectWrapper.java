@@ -643,7 +643,7 @@ public class ProjectWrapper {
 
 				aBundle.setHeader(Constants.BUNDLE_REQUIREDEXECUTIONENVIRONMENT, "JavaSE-1.8");
 
-				List<String> allSortedImportedPackages = determinePackagesToImportPackages(
+				List<String> allSortedImportedPackages = determinePackagesToImport(
 						aHostBundleProjectWrapper.getSourcePackages(),
 						theAdditionalPackageDependencies,
 						theIgnorePackageDependencies,
@@ -672,9 +672,9 @@ public class ProjectWrapper {
 			IFragmentModel aFragmentModel = new WorkspaceBundleFragmentModel(PDEProject.getManifest(project), PDEProject.getFragmentXml(project));
 			IBundlePluginModelBase aBundleModelBase = (IBundlePluginModelBase) aFragmentModel;
 			IBundle aBundle = aBundleModelBase.getBundleModel().getBundle();
-			ProjectWrapper aHostBundleProjectWrapper = ProjectWrapper.of(theWorkspace, getFragmentHostId());
+			ProjectWrapper aHostBundleProjectWrapper = ProjectWrapper.of(theWorkspace, getFragmentHostId()).asJavaProject();
 
-			List<String> allSortedImportedPackages = determinePackagesToImportPackages(
+			List<String> allSortedImportedPackages = determinePackagesToImport(
 					aHostBundleProjectWrapper.getSourcePackages(),
 					theAdditionalPackageDependencies,
 					theIgnorePackageDependencies,
@@ -686,7 +686,7 @@ public class ProjectWrapper {
 		return this;
 	}
 
-	private List<String> determinePackagesToImportPackages(
+	private List<String> determinePackagesToImport(
 			Set<String> theSourcePackages,
 			Supplier<Set<String>> theAdditionalPackageDependencies,
 			Supplier<Set<String>> theIgnorePackageDependencies,
@@ -813,7 +813,7 @@ public class ProjectWrapper {
 				IPackageFragmentRoot[] allPackageFragmentRoots = javaProject.getAllPackageFragmentRoots();
 
 				for (IPackageFragmentRoot aPackageFragmentRoot : allPackageFragmentRoots) {
-					if (aPackageFragmentRoot.getKind() == IPackageFragmentRoot.K_SOURCE) {
+					if (aPackageFragmentRoot.getKind() == IPackageFragmentRoot.K_SOURCE && aPackageFragmentRoot.getParent().getElementName().equals(project.getName())) {
 						allSourcePackages.addAll(getSourcePackages(aPackageFragmentRoot));
 					}
 				}
@@ -826,22 +826,16 @@ public class ProjectWrapper {
 		return allSourcePackages;
 	}
 
-	private Set<String> getSourcePackages(IJavaElement theJavaElement) throws JavaModelException {
+	private Set<String> getSourcePackages(IPackageFragmentRoot thePackageFragmentRoot) throws JavaModelException {
 		Set<String> allSourcePackages = new HashSet<>();
 
-		if (theJavaElement instanceof IPackageFragment) {
-			IPackageFragment aPackageFragment = (IPackageFragment) theJavaElement;
+		for (IJavaElement aJavaElement : thePackageFragmentRoot.getChildren()) {
+			if (aJavaElement instanceof IPackageFragment) {
+				IPackageFragment aPackageFragment = (IPackageFragment) aJavaElement;
 
-			Arrays.stream(aPackageFragment.getChildren())
-					.filter(theChild -> theChild instanceof ICompilationUnit)
-					.findAny().ifPresent(theCompilationUnit -> allSourcePackages.add(aPackageFragment.getElementName()));
-		}
-
-		if (theJavaElement instanceof IParent) {
-			IParent aContainerElement = (IParent) theJavaElement;
-
-			for (IJavaElement aJavaElement : aContainerElement.getChildren()) {
-				allSourcePackages.addAll(getSourcePackages(aJavaElement));
+				Arrays.stream(aPackageFragment.getChildren())
+						.filter(theChild -> theChild instanceof ICompilationUnit)
+						.findAny().ifPresent(theCompilationUnit -> allSourcePackages.add(aPackageFragment.getElementName()));
 			}
 		}
 
@@ -858,7 +852,7 @@ public class ProjectWrapper {
 				IPackageFragmentRoot[] allPackageFragmentRoots = javaProject.getAllPackageFragmentRoots();
 
 				for (IPackageFragmentRoot aPackageFragmentRoot : allPackageFragmentRoots) {
-					if (aPackageFragmentRoot.getKind() == IPackageFragmentRoot.K_SOURCE) {
+					if (aPackageFragmentRoot.getKind() == IPackageFragmentRoot.K_SOURCE && aPackageFragmentRoot.getParent().getElementName().equals(project.getName())) {
 						allImportedPackages.addAll(getImportedPackages(aPackageFragmentRoot));
 					}
 				}
