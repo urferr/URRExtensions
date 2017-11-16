@@ -27,7 +27,7 @@ platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini
 -Dorg.aspectj.osgi.verbose=true
 -Dorg.aspectj.weaver.showWeaveInfo=true
 
--Deamis.home=platform:/plugin/com.profidata.xentis.javamis/bin
+-Deamis.home=platform:/plugin/com.profidata.xentis.client/src/main/deployment
 
 -Dcom.xnife.runtime.mode=DEVELOPMENT
 -Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective
@@ -74,7 +74,6 @@ platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini
    </features>
 
    <configurations>
-      <plugin id="com.profidata.xentis.client" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.backoffice.application" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.frontoffice.excel.windows" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.server.remote.proxy" autoStart="true" startLevel="0" />
@@ -82,6 +81,7 @@ platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini
       <plugin id="com.profidata.xc.customizingconsole.application" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.messaging.application" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.one.client.configuration" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xentis.client" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.application" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.logging.slf4j.logback.commandline" autoStart="true" startLevel="2" />
