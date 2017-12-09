@@ -80,6 +80,8 @@ public class XentisWorkspace {
 			output.println("");
 			output.println("Import missing features/projects");
 			output.println("================================");
+			importProjectsOfFeature(aWorkspace, "/URRExtensions/features/_com.profidata.xc.one.server.ide.feature", URRImportConfiguration.getInstance());
+			importProjectsOfFeature(aWorkspace, "/URRExtensions/features/_com.profidata.xc.one.client.ide.feature", URRImportConfiguration.getInstance());
 			importProjectsOfFeature(aWorkspace, "/URRExtensions/features/_com.profidata.xc.one.test.feature", URRImportConfiguration.getInstance());
 
 			output.println("");

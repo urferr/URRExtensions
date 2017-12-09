@@ -63,5 +63,9 @@ public class URRImportConfiguration implements ImportConfiguration {
 
 		// XC master test feature
 		features.put("_com.profidata.xc.one.test.feature", ImportFeatureProject.of("_com.profidata.xc.one.test.feature", "URRExtensions/features", "URRExtensions/features"));
+
+		// XC master ide features
+		features.put("_com.profidata.xc.one.server.ide.feature", ImportFeatureProject.of("_com.profidata.xc.one.server.ide.feature", "URRExtensions/features", "URRExtensions/features"));
+		features.put("_com.profidata.xc.one.client.ide.feature", ImportFeatureProject.of("_com.profidata.xc.one.client.ide.feature", "URRExtensions/features", "URRExtensions/features"));
 	}
 }
