@@ -4,9 +4,9 @@ task syncToServer(description: 'Sync to Server') {
 		ant.echo('workspace.loc: ${workspace.loc}')
 		ant.echo('xentis.home: ${xentis.home}')
 		ant.echo('gradle.build.version: ${gradle.build.version}')
-		ant.echo('target directory: ${xentis.home}/packages/XENTIS/lib')
+		ant.echo('target directory: ${xentis.home}/packages/XENTIS/jar')
  
- 		ant.copy(todir: '${xentis.home}/packages/XENTIS/lib', overwrite: 'true', verbose: 'true', flatten: 'true') {
+ 		ant.copy(todir: '${xentis.home}/packages/XENTIS/jar', overwrite: 'true', verbose: 'true', flatten: 'true') {
 			fileset(dir: '${workspace.loc}') {
 				include(name: 'xentisjava/xnife/com.xnife.context/target/libs/com.xnife.context-${gradle.build.version}.jar')
 				include(name: 'xentisjava/xnife/com.xnife.contract/target/libs/com.xnife.contract-${gradle.build.version}.jar')
