@@ -178,13 +178,6 @@
          unpack="false"/>
 
    <plugin
-         id="com.compxc.calculationengine"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="com.compxc.platform.domain"
          download-size="0"
          install-size="0"
@@ -320,13 +313,6 @@
 
    <plugin
          id="com.compxc.common.persistence"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="com.compxc.common.metadata"
          download-size="0"
          install-size="0"
          version="0.0.0"

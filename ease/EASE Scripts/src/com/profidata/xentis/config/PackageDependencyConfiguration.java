@@ -108,6 +108,10 @@ public class PackageDependencyConfiguration {
 		somePackages.add("org.powermock.modules.junit4.common.internal.impl");
 		somePackages.add("org.powermock.api.support.membermodification");
 		additionalTestFragmentPackageDependencies.put("com.profidata.xc.rest.analysis.service.impl.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.springframework.remoting.support");
+		additionalTestFragmentPackageDependencies.put("com.profidata.xc.frontoffice.server.metadata.test", somePackages);
 	}
 
 	private PackageDependencyConfiguration() {

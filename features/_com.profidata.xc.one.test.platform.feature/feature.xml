@@ -17,14 +17,6 @@
    </license>
 
    <plugin
-         id="com.compxc.calculationengine.test"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
          id="com.compxc.common.domain.test"
          download-size="0"
          install-size="0"
