@@ -31,6 +31,7 @@ task syncToServer(description: 'Sync to Server') {
 
 				include(name: 'xentisjava/xc-platform/com.compxc.platform.common/target/libs/com.compxc.platform.common-${gradle.build.version}.jar')
 				include(name: 'xentisjava/xc-platform/com.compxc.common.domain/target/libs/com.compxc.common.domain-${gradle.build.version}.jar')
+				include(name: 'xentisjava/xc-platform/com.compxc.common.metadata/target/libs/com.compxc.common.metadata-${gradle.build.version}.jar')
 				include(name: 'xentisjava/xc-platform/com.compxc.common.persistence/target/libs/com.compxc.common.persistence-${gradle.build.version}.jar')
 				include(name: 'xentisjava/xc-platform/com.profidata.xc.data.service.domain/target/libs/com.profidata.xc.data.service.domain-${gradle.build.version}.jar')
 				include(name: 'xentisjava/xc-platform/com.profidata.xc.data.service/target/libs/com.profidata.xc.data.service-${gradle.build.version}.jar')
@@ -63,6 +64,7 @@ task syncToServer(description: 'Sync to Server') {
 				include(name: 'xentisjava/xentis/com.profidata.xentis.app.boserver/target/libs/com.profidata.xentis.app.boserver-${gradle.build.version}.jar')
 				include(name: 'xentisjava/xentis/com.profidata.xentis.app.httpapi/target/libs/com.profidata.xentis.app.httpapi-${gradle.build.version}.jar')
 
+				include(name: 'xentisjava/io/com.profidata.io/target/libs/com.profidata.io-${gradle.build.version}.jar')
 				include(name: 'xentisjava/io/com.profidata.io.crypto/target/libs/com.profidata.io.crypto-${gradle.build.version}.jar')
 				include(name: 'xentisjava/io/com.profidata.io.rpc/target/libs/com.profidata.io.rpc-${gradle.build.version}.jar')
 
