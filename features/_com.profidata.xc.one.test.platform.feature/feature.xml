@@ -88,4 +88,12 @@
          fragment="true"
          unpack="false"/>
 
+   <plugin
+         id="com.profidata.xc.metadata.service.impl.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
 </feature>
