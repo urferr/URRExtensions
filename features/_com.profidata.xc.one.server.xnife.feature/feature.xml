@@ -24,13 +24,6 @@
          unpack="false"/>
 
    <plugin
-         id="com.xnife.objectquery.plan.parser"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="com.xnife.security.remote"
          download-size="0"
          install-size="0"
@@ -83,8 +76,7 @@
          download-size="0"
          install-size="0"
          version="0.0.0"
-          unpack="false"/>
-
+         unpack="false"/>
 
    <plugin
          id="com.xnife.cache"
@@ -148,8 +140,8 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-   
-      <plugin
+
+   <plugin
          id="com.xnife.environment"
          download-size="0"
          install-size="0"
@@ -198,7 +190,6 @@
          version="0.0.0"
          unpack="false"/>
 
-
    <plugin
          id="com.xnife.objectquery"
          download-size="0"
@@ -240,7 +231,6 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
 
    <plugin
          id="com.xnife.remoting"
