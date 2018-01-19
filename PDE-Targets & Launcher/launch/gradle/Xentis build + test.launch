@@ -2,7 +2,7 @@
 <launchConfiguration type="org.eclipse.buildship.core.launch.runconfiguration">
 <listAttribute key="arguments">
 <listEntry value="-x"/>
-<listEntry value=":xentis:com.profidata.xentis.jni:generate"/>
+<listEntry value="generate"/>
 <listEntry value="-x"/>
 <listEntry value="jacocoReport"/>
 </listAttribute>
