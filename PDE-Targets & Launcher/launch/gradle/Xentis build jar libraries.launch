@@ -2,11 +2,7 @@
 <launchConfiguration type="org.eclipse.buildship.core.launch.runconfiguration">
 <listAttribute key="arguments">
 <listEntry value="-x"/>
-<listEntry value=":xentis:com.profidata.xentis.jni:generate"/>
-<listEntry value="-x"/>
-<listEntry value=":xentis:com.profidata.xentis.sn:generate"/>
-<listEntry value="-x"/>
-<listEntry value=":xc-platform:com.compxc.workbench.presentation:generate"/>
+<listEntry value="generate"/>
 <listEntry value="-x"/>
 <listEntry value="test"/>
 <listEntry value="-x"/>
