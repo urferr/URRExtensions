@@ -9,7 +9,7 @@
 <stringAttribute key="gradle_user_home" value=""/>
 <listAttribute key="jvm_arguments">
 <listEntry value="-Dworkspace.loc=${workspace_loc}"/>
-<listEntry value="-Dxentis.home=//pdxenlin51.profidatagroup.com/urr/xentis550branch_xcdemo/xentis"/>
+<listEntry value="-Dxentis.home=//pdxenlin51.profidatagroup.com/urr/xentis552branch_xcdemo/xentis"/>
 <listEntry value="-Dgradle.build.version=5.4.9900"/>
 </listAttribute>
 <booleanAttribute key="offline_mode" value="false"/>
