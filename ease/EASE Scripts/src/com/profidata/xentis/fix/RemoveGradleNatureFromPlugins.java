@@ -65,7 +65,6 @@ public class RemoveGradleNatureFromPlugins {
 	}
 
 	private RemoveGradleNatureFromPlugins(PrintStream theOutput, PrintStream theError) {
-		super();
 		output = theOutput;
 		error = theError;
 	}
