@@ -32,6 +32,7 @@ import com.profidata.xentis.config.ImportFeatureProject;
 import com.profidata.xentis.config.PackageDependencyConfiguration;
 import com.profidata.xentis.config.URRImportConfiguration;
 import com.profidata.xentis.config.XCImportConfiguration;
+import com.profidata.xentis.fix.IgnoreProjectFolder;
 import com.profidata.xentis.fix.RemoveGradleNatureFromPlugins;
 import com.profidata.xentis.util.ProjectConstants;
 import com.profidata.xentis.util.ProjectWrapper;
@@ -80,15 +81,16 @@ public class XentisWorkspace {
 			output.println("");
 			output.println("Import missing features/projects");
 			output.println("================================");
-			importProjectsOfFeature(aWorkspace, "/URRExtensions/features/_com.profidata.xc.one.server.ide.feature", URRImportConfiguration.getInstance());
-			importProjectsOfFeature(aWorkspace, "/URRExtensions/features/_com.profidata.xc.one.client.ide.feature", URRImportConfiguration.getInstance());
-			importProjectsOfFeature(aWorkspace, "/URRExtensions/features/_com.profidata.xc.one.test.feature", URRImportConfiguration.getInstance());
 
 			output.println("");
 			output.println("Add additional package dependencies for Eclipse IDE");
 			output.println("===================================================");
 			addAdditionalPackageDependencies(aWorkspace);
 
+			output.println("");
+			output.println("Ignore 'target' folders for every project in Eclipse IDE");
+			output.println("========================================================");
+			IgnoreProjectFolder.run("target", output, error);
 		}
 		finally {
 			if (aAutoBuildWasEnabled) {
