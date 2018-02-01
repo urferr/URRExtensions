@@ -32,6 +32,7 @@ import com.profidata.xentis.config.ImportFeatureProject;
 import com.profidata.xentis.config.PackageDependencyConfiguration;
 import com.profidata.xentis.config.URRImportConfiguration;
 import com.profidata.xentis.config.XCImportConfiguration;
+import com.profidata.xentis.fix.IgnoreProjectFolder;
 import com.profidata.xentis.fix.RemoveGradleNatureFromPlugins;
 import com.profidata.xentis.util.ProjectConstants;
 import com.profidata.xentis.util.ProjectWrapper;
@@ -89,6 +90,11 @@ public class XentisWorkspace {
 			output.println("===================================================");
 			addAdditionalPackageDependencies(aWorkspace);
 
+			output.println("");
+			output.println("Ignore 'target' and '.git' folder for every project in Eclipse IDE");
+			output.println("==================================================================");
+			IgnoreProjectFolder.run("target", output, error);
+			IgnoreProjectFolder.run(".git", output, error);
 		}
 		finally {
 			if (aAutoBuildWasEnabled) {
