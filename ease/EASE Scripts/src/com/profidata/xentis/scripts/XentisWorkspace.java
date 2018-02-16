@@ -91,7 +91,6 @@ public class XentisWorkspace {
 			output.println("Ignore 'target' and '.git' folder for every project in Eclipse IDE");
 			output.println("==================================================================");
 			IgnoreProjectFolder.run("target", output, error);
-			IgnoreProjectFolder.run(".git", output, error);
 		}
 		finally {
 			if (aAutoBuildWasEnabled) {
