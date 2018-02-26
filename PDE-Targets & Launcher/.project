@@ -26,10 +26,5 @@
 			<type>2</type>
 			<locationURI>WORKSPACE_LOC/xentisjava/xentis/com.profidata.xentis.client/src/main/deployment/Resources/config</locationURI>
 		</link>
-		<link>
-			<name>targets/XC.target</name>
-			<type>1</type>
-			<locationURI>WORKSPACE_LOC/Oomph%20Generated%20Artefacts/xc.target</locationURI>
-		</link>
 	</linkedResources>
 </projectDescription>
