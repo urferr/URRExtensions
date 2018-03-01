@@ -88,8 +88,8 @@ public class XentisWorkspace {
 			addAdditionalPackageDependencies(aWorkspace);
 
 			output.println("");
-			output.println("Ignore 'target' and '.git' folder for every project in Eclipse IDE");
-			output.println("==================================================================");
+			output.println("Ignore 'target' folder for every project in Eclipse IDE");
+			output.println("=======================================================");
 			IgnoreProjectFolder.run("target", output, error);
 		}
 		finally {
