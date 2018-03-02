@@ -58,7 +58,6 @@
    <windowImages/>
 
    <launcher name="xcServer">
-      <solaris/>
       <win useIco="false">
          <bmp/>
       </win>
