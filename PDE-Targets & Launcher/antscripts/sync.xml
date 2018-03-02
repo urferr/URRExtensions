@@ -85,7 +85,7 @@
 		</delete>
 
 		<copy todir="${workspace.loc}/JavAMIS/com.profidatagroup.xentis.jni/target" overwrite="true" verbose="true">
-			<fileset dir="${xentis.home}">
+			<fileset dir="${xentis.home}/xentis/eamis/builddir/java/XENTIS/shared/com.profidata.xentis.jni">
 				<include name="com.profidata.xentis.jni-${maven.build.version}-sources.jar" />
 			</fileset>
 		</copy>
