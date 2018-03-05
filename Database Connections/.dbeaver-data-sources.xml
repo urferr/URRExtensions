@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data-sources>
-	<data-source id="oracle_thin-161e76df3b2-535c228f8b7100d0" provider="oracle" driver="oracle_thin" name="X_MOBIDEV_MASTER_XC - XNT051" save-password="true" show-system-objects="true" read-only="false">
-		<connection host="pdxendb05" port="1521" server="" database="XNT051" url="jdbc:oracle:thin:@//pdxendb05:1521/XNT051" user="X_MOBIDEV_MASTER_XC" password="EAgcLEBBS0dl8w==" type="dev">
+	<data-source id="oracle_thin-161e76df3b2-535c228f8b7100d0" provider="oracle" driver="oracle_thin" name="X_DEV_542_XC - XNT121" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="pdxendb12" port="1521" server="" database="XNT121" url="jdbc:oracle:thin:@//pdxendb12:1521/XNT121" user="X_DEV_542_XC" password="EAgcLEBBS0dl8w==" type="dev">
 			<provider-property name="@dbeaver-sid-service@" value="SERVICE"/>
 			<provider-property name="@dbeaver-use-rule-hint@" value="false"/>
 			<provider-property name="@dbeaver-connection-type@" value="BASIC"/>
