@@ -104,6 +104,7 @@ public class PackageDependencyConfiguration {
 		additionalTestFragmentPackageDependencies.put("com.profidata.xc.frontoffice.service.impl.test", somePackages);
 
 		somePackages = new HashSet<>();
+		somePackages.add("com.profidata.xc.rest.common.service");
 		somePackages.add("org.powermock.api.support.membermodification");
 		additionalTestFragmentPackageDependencies.put("com.profidata.xc.rest.common.service.impl.test", somePackages);
 
