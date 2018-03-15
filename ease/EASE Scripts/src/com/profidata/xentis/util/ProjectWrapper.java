@@ -24,6 +24,8 @@ import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.jdt.core.Flags;
+import org.eclipse.jdt.core.IAccessRule;
+import org.eclipse.jdt.core.IClasspathAttribute;
 import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.ICompilationUnit;
 import org.eclipse.jdt.core.IImportDeclaration;
@@ -594,6 +596,7 @@ public class ProjectWrapper {
 		return somePackagesAdded > 0;
 	}
 
+	@SuppressWarnings("restriction")
 	public ProjectWrapper addPackageDependenciesToPluginManifest(Supplier<Set<String>> theAdditionalPackageDependencies) {
 		verifyJavaProject();
 
@@ -608,6 +611,24 @@ public class ProjectWrapper {
 					aBundleModelBase.save();
 				}
 			}
+		}
+		return this;
+	}
+
+	public ProjectWrapper addProjectDependenciesToProject(Supplier<Set<String>> theAdditionalProjectDependencies) {
+		final IAccessRule[] NO_ACCESS_RULES = {};
+		final IClasspathAttribute[] NO_EXTRA_ATTRIBUTES = {};
+		Set<String> someAdditionalProjectDependencies = Optional.ofNullable(theAdditionalProjectDependencies.get()).orElseGet(() -> Collections.emptySet());
+
+		if (!someAdditionalProjectDependencies.isEmpty()) {
+			someAdditionalProjectDependencies.forEach(
+					theProjectDependency -> addClasspathEntry(
+							theProject -> JavaCore.newProjectEntry(
+									org.eclipse.core.runtime.Path.fromPortableString("/" + theProjectDependency),
+									NO_ACCESS_RULES,
+									false,
+									NO_EXTRA_ATTRIBUTES,
+									false)));
 		}
 		return this;
 	}
