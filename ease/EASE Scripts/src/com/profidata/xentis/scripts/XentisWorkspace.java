@@ -30,6 +30,7 @@ import org.eclipse.pde.internal.core.project.PDEProject;
 import com.profidata.xentis.config.ImportConfiguration;
 import com.profidata.xentis.config.ImportFeatureProject;
 import com.profidata.xentis.config.PackageDependencyConfiguration;
+import com.profidata.xentis.config.ProjectDependencyConfiguration;
 import com.profidata.xentis.config.URRImportConfiguration;
 import com.profidata.xentis.config.XCImportConfiguration;
 import com.profidata.xentis.fix.IgnoreProjectFolder;
@@ -88,6 +89,11 @@ public class XentisWorkspace {
 			addAdditionalPackageDependencies(aWorkspace);
 
 			output.println("");
+			output.println("Add additional project source dependencies for Eclipse IDE");
+			output.println("==========================================================");
+			addAdditionalProjectDependencies(aWorkspace);
+
+			output.println("");
 			output.println("Ignore 'target' folder for every project in Eclipse IDE");
 			output.println("=======================================================");
 			IgnoreProjectFolder.run("target", output, error);
@@ -122,6 +128,17 @@ public class XentisWorkspace {
 					ProjectWrapper.of(theWorkspace, theProjectName)
 							.asJavaProject()
 							.addPackageDependenciesToPluginManifest(() -> PackageDependencyConfiguration.additionalTestFragmentPackageDependencies.get(theProjectName))
+							.refresh();
+				});
+	}
+
+	private void addAdditionalProjectDependencies(IWorkspace theWorkspace) {
+		ProjectDependencyConfiguration.additionalProjectDependencies.keySet().stream()
+				.forEach(theProjectName -> {
+					output.println("Verify additional project source dependencies of project '" + theProjectName + "'");
+					ProjectWrapper.of(theWorkspace, theProjectName)
+							.asJavaProject()
+							.addProjectDependenciesToProject(() -> ProjectDependencyConfiguration.additionalProjectDependencies.get(theProjectName))
 							.refresh();
 				});
 	}
