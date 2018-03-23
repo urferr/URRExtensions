@@ -32,12 +32,12 @@
 
 -Dcom.xnife.logging.level.oracle.ucp.common=trace
 
--Dorg.osgi.service.http.port=4266
--Dorg.eclipse.equinox.http.jetty.http.port=4266
+-Dorg.osgi.service.http.port=7516
+-Dorg.eclipse.equinox.http.jetty.http.port=7516
 
 -Doracle.net.tns_admin=${env_var:TNS_ADMIN}
 
--Dcom.sun.management.jmxremote.port=4279
+-Dcom.sun.management.jmxremote.port=7519
 -Dcom.sun.management.jmxremote.ssl=false
 -Dcom.sun.management.jmxremote.authenticate=false
 
