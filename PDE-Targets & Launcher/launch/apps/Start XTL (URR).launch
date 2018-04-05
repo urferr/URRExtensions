@@ -8,6 +8,7 @@
 <setAttribute key="name.schedenig.eclipse.grepconsole.NotificationsEnabledIds"/>
 <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
 <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+<stringAttribute key="org.eclipse.buildship.core.originalclasspathprovider" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/com.profidata.xentis.etl/src/main/java/com/profidata/etl/ETLStarter.java"/>
 </listAttribute>
@@ -15,34 +16,37 @@
 <listEntry value="1"/>
 </listAttribute>
 <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-<mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_DEV_20150602_S520_XC/clzlabo1@pdxendb08.profidatagroup.com:1521/XNT081"/>
+<mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_MASTER_XC/clzlabo1@pdxendb05.profidatagroup.com:1521/ XNT051"/>
+<mapEntry key="EAMIS_APP_PRGINFO" value="Eclipse"/>
 <mapEntry key="EAMIS_APP_VAR" value="target"/>
-<mapEntry key="EAMIS_BLOOMBERG_FTP_ENCRYPTION_KEY" value="nPwB7vV9"/>
-<mapEntry key="EAMIS_BLOOMBERG_FTP_HOST" value="bfmrr.bloomberg.com"/>
-<mapEntry key="EAMIS_BLOOMBERG_FTP_PASSWORD" value="DxbdjVdl"/>
-<mapEntry key="EAMIS_BLOOMBERG_FTP_PORT" value="21"/>
-<mapEntry key="EAMIS_BLOOMBERG_FTP_SUBDIR" value=""/>
-<mapEntry key="EAMIS_BLOOMBERG_FTP_TYPE" value="i"/>
-<mapEntry key="EAMIS_BLOOMBERG_FTP_USER" value="dl848"/>
 <mapEntry key="EAMIS_CLUSTER_VAR" value="target"/>
-<mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://pdxenlin51:7385)"/>
+<mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://pdvmdev15:7005?wireFormat.maxInactivityDuration=0)"/>
 <mapEntry key="EAMIS_PACKAGES" value="target"/>
 <mapEntry key="EAMIS_VDB_ALIAS" value="XNT041"/>
+<mapEntry key="EAMIS_VDB_BB_FTP_MAX_POLL_TIME" value="60"/>
+<mapEntry key="EAMIS_VDB_BB_FTP_SUBDIR" value=""/>
+<mapEntry key="EAMIS_VDB_BB_FTP_TYPE" value="i"/>
+<mapEntry key="EAMIS_VDB_BB_KEY" value="nPwB7vV9"/>
+<mapEntry key="EAMIS_VDB_BB_PASSWD" value="DxbdjVdl"/>
+<mapEntry key="EAMIS_VDB_BB_PORT" value="21"/>
+<mapEntry key="EAMIS_VDB_BB_PROTOCOL" value="ftp"/>
+<mapEntry key="EAMIS_VDB_BB_SERVER" value="bfmrr.bloomberg.com"/>
+<mapEntry key="EAMIS_VDB_BB_USER" value="dl848"/>
 <mapEntry key="EAMIS_VDB_PASSWD" value="clzlabo1"/>
 <mapEntry key="EAMIS_VDB_PORT" value="1521"/>
 <mapEntry key="EAMIS_VDB_SCHEMA" value="VDB_HI_P_ENTW"/>
 <mapEntry key="EAMIS_VDB_SERVER" value="pdxendb04.profidatagroup.com"/>
 </mapAttribute>
-<booleanAttribute key="org.eclipse.jdt.debug.ui.CONSIDER_INHERITED_MAIN" value="true"/>
-<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <listAttribute key="org.eclipse.jdt.launching.CLASSPATH">
-<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry containerPath=&quot;org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8&quot; path=&quot;1&quot; type=&quot;4&quot;/&gt;&#13;&#10;"/>
-<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry containerPath=&quot;org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER&quot; path=&quot;3&quot; type=&quot;4&quot;/&gt;&#13;&#10;"/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry containerPath=&quot;org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/&quot; javaProject=&quot;com.profidata.xentis.etl&quot; path=&quot;1&quot; type=&quot;4&quot;/&gt;&#13;&#10;"/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;&lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.xentis.etl&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;&lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.bloomberg.basicdata&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;&lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.bloomberg.mobiliar&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;&lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.ftp&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;&lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.reorg&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
 <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.etl.ETLStarter"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="XTLSetupConfig.xml"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xentis.etl.appstarter"/>
-<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xentis.etl"/>
 </launchConfiguration>

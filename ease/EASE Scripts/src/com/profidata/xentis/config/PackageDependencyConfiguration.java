@@ -54,6 +54,7 @@ public class PackageDependencyConfiguration {
 		additionalTestFragmentPackageDependencies.put("com.profidata.xentis.etl.commons.test", somePackages);
 
 		somePackages = new HashSet<>();
+		somePackages.add("org.hamcrest;library=split");
 		somePackages.add("org.objenesis");
 		somePackages.add("com.profidatagroup.xentis.ui.base.lookandfeel");
 		somePackages.add("org.powermock.modules.junit4.common.internal.impl");
@@ -92,6 +93,10 @@ public class PackageDependencyConfiguration {
 		somePackages.add("com.compxc.common.persistence.entity.db");
 		somePackages.add("org.powermock.api.support.membermodification");
 		additionalTestFragmentPackageDependencies.put("com.compxc.frontoffice.excel.windows.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("javax.annotation");
+		additionalTestFragmentPackageDependencies.put("com.compxc.frontoffice.common.test", somePackages);
 
 		somePackages = new HashSet<>();
 		somePackages.add("org.powermock.modules.junit4.common.internal.impl");
