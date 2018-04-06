@@ -54,6 +54,7 @@ public class PackageDependencyConfiguration {
 		additionalTestFragmentPackageDependencies.put("com.profidata.xentis.etl.commons.test", somePackages);
 
 		somePackages = new HashSet<>();
+		somePackages.add("org.hamcrest;library=split");
 		somePackages.add("org.objenesis");
 		somePackages.add("com.profidatagroup.xentis.ui.base.lookandfeel");
 		somePackages.add("org.powermock.modules.junit4.common.internal.impl");
@@ -94,6 +95,10 @@ public class PackageDependencyConfiguration {
 		additionalTestFragmentPackageDependencies.put("com.compxc.frontoffice.excel.windows.test", somePackages);
 
 		somePackages = new HashSet<>();
+		somePackages.add("javax.annotation");
+		additionalTestFragmentPackageDependencies.put("com.compxc.frontoffice.common.test", somePackages);
+
+		somePackages = new HashSet<>();
 		somePackages.add("org.powermock.modules.junit4.common.internal.impl");
 		somePackages.add("org.powermock.api.support.membermodification");
 		additionalTestFragmentPackageDependencies.put("com.compxc.frontoffice.presentation.test", somePackages);
@@ -109,9 +114,15 @@ public class PackageDependencyConfiguration {
 		additionalTestFragmentPackageDependencies.put("com.profidata.xc.rest.common.service.impl.test", somePackages);
 
 		somePackages = new HashSet<>();
+		somePackages.add("org.powermock.reflect");
 		somePackages.add("org.powermock.modules.junit4.common.internal.impl");
 		somePackages.add("org.powermock.api.support.membermodification");
+		somePackages.add("org.objenesis");
 		additionalTestFragmentPackageDependencies.put("com.profidata.xc.rest.analysis.service.impl.test", somePackages);
+
+		somePackages = new HashSet<>();
+		somePackages.add("org.springframework.remoting.support");
+		additionalTestFragmentPackageDependencies.put("com.profidata.xc.frontoffice.server.metadata.test", somePackages);
 	}
 
 	private PackageDependencyConfiguration() {
