@@ -1,7 +1,6 @@
 package com.profidata.xentis.config;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -12,10 +11,6 @@ public class ProjectDependencyConfiguration {
 		Set<String> someSourceProjects;
 
 		additionalProjectDependencies = new HashMap<>();
-
-		someSourceProjects = new HashSet<>();
-		someSourceProjects.add("com.profidata.xentis.session");
-		additionalProjectDependencies.put("com.profidata.xentis.javamis", someSourceProjects);
 	}
 
 }
