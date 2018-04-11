@@ -83,6 +83,7 @@
       <plugin id="com.compxc.platform.server" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.security.backoffice.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.server.remote" autoStart="true" startLevel="0" />
+      <plugin id="com.compxc.transaction" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.translation.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.compxc.translation.service.sql" autoStart="true" startLevel="0" />
       <plugin id="com.eclipsesource.jaxrs.provider.gson" autoStart="true" startLevel="3" />
@@ -90,15 +91,20 @@
       <plugin id="com.profidata.xc.admin.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.authentication.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.calendar.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.cashflow.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.codevalue.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.corporation.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.customizingconsole.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.data.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.data.service.messaging.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.data.service.remote.proxy" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.flexibleentity.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.frontoffice.businessintelligence.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.frontoffice.server.metadata" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.frontoffice.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.frontoffice.servicefacade.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.fund.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.instrument.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.localization.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.messaging.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.metadata.service.impl" autoStart="true" startLevel="0" />
@@ -106,8 +112,11 @@
       <plugin id="com.profidata.xc.one.server.configuration" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.one.server.monitor" autoStart="true" startLevel="2" />
       <plugin id="com.profidata.xc.optimizer.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.order.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.order.servicefacade.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.persistence.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.portfolio.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.position.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.requestcache.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.admin.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.analysis.service.impl" autoStart="true" startLevel="0" />
@@ -117,7 +126,9 @@
       <plugin id="com.profidata.xc.rest.order.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.risk.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rule.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.trx.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.unified.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.valutaposition.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.persistence" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.remote" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.service.impl" autoStart="true" startLevel="0" />
