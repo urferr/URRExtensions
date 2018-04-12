@@ -35,6 +35,7 @@ public class PackageDependencyConfiguration {
 
 		somePackages = new HashSet<>();
 		somePackages.add("com.profidata.xentis.domain.unified");
+		somePackages.add("com.profidata.xentis.domain.unified.impl.instrument");
 		somePackages.add("com.xnife.domain");
 		additionalTestFragmentPackageDependencies.put("com.profidata.risk.commons.test", somePackages);
 
