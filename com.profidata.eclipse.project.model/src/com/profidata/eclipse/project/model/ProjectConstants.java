@@ -11,6 +11,7 @@ public class ProjectConstants {
 	public static final String GRADLE_CLASSPATH_ID = "org.eclipse.buildship.core.gradleclasspathcontainer";
 
 	public static final IPath PLUGIN_CLASSPATH = new Path(ProjectConstants.PLUGIN_CLASSPATH_ID);
+    public static final IPath GRADLE_CLASSPATH = new Path(ProjectConstants.GRADLE_CLASSPATH_ID);
 
 	private ProjectConstants() {
 		// prevent from being instantiated

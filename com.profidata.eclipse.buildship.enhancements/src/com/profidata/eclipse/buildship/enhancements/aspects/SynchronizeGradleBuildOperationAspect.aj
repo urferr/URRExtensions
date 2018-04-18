@@ -13,6 +13,7 @@ import org.aspectj.lang.annotation.SuppressAjWarnings;
 import com.gradleware.tooling.toolingmodel.OmniEclipseProject;
 
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.jdt.core.JavaCore;
 
@@ -44,6 +45,9 @@ public aspect SynchronizeGradleBuildOperationAspect {
 		}
 
 		else {
+			// if for any reason the gradle classpath container has already been added it will no be removed again.
+			aProjectWrapper.removeClasspathEntry(ProjectConstants.GRADLE_CLASSPATH);
+			
 			// check if there are folders containing test classes generate corresponding fragment for it.
 			if (!theProject.getName().endsWith("-integration")) {
 				TestFragmentCreator.run(theWorkspaceProject, Arrays.asList("test", "integration", "manual"));
