@@ -12,8 +12,12 @@
    <feature url="features/GenerateWorkingSetsFeature.feature.group_1.1.2.jar" id="GenerateWorkingSetsFeature.feature.group" version="1.1.2">
       <category name="org.plugination.fork"/>
    </feature>
+   <feature url="features/com.profidata.eclipse.enhancements.feature_0.1.0.qualifier.jar" id="com.profidata.eclipse.enhancements.feature" version="0.1.0.qualifier">
+      <category name="com.profidata.eclipse.enhancements"/>
+   </feature>
    <category-def name="com.xnife.presentastion.e4.tools" label="Xnife E4 Presentation Tools"/>
    <category-def name="com.profidatagroup.util.keymigration" label="Key Migration Tool"/>
    <category-def name="com.profidata.xc.springide" label="XC Spring IDE Extensions"/>
    <category-def name="org.plugination.fork" label="Generate WorkingSets Feature Fork"/>
+   <category-def name="com.profidata.eclipse.enhancements" label="Eclipse IDE Enhancements"/>
 </site>
