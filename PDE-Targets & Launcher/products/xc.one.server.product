@@ -102,6 +102,7 @@
       <plugin id="com.profidata.xc.localization.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.messaging.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.metadata.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.migration.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.objectquery.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.one.server.configuration" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.one.server.monitor" autoStart="true" startLevel="2" />
