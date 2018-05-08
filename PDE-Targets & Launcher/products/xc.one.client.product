@@ -44,6 +44,15 @@ platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini
 -XX:MaxGCPauseMillis=50
 -XX:GCPauseIntervalMillis=1000
 -XX:+UseStringDeduplication
+
+--add-opens java.base/java.lang=ALL-UNNAMED
+--add-opens java.xml/com.sun.org.apache.xerces.internal.parsers=ALL-UNNAMED
+--add-opens java.desktop/sun.awt.shell=ALL-UNNAMED
+--add-opens java.desktop/sun.awt.windows=ALL-UNNAMED
+--add-opens java.desktop/java.awt=ALL-UNNAMED
+--add-opens java.desktop/javax.swing=ALL-UNNAMED
+--add-opens java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED
+--illegal-access=warn
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>

@@ -226,21 +226,6 @@
           "accessRules": []
         },
         {
-          "type": "Container",
-          "path": "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8",
-          "exported": false,
-          "accessRules": [
-            {
-              "pattern": "sun/awt/shell/*",
-              "kind": 0
-            },
-            {
-              "pattern": "com/sun/java/swing/plaf/windows/*",
-              "kind": 0
-            }
-          ]
-        },
-        {
           "type": "Library",
           "path": "provided/ratex.jar",
           "exported": false,
