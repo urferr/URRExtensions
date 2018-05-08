@@ -97,4 +97,12 @@ platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini
       <plugin id="org.eclipse.gemini.blueprint.extender" autoStart="true" startLevel="0" />
    </configurations>
 
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+      <file path="/com.compxc.workbench.lookandfeel/css/xc_one.css"/>
+   </cssInfo>
+
 </product>
