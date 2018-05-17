@@ -26,8 +26,8 @@ import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 
-import com.profidata.xentis.util.ProjectConstants;
-import com.profidata.xentis.util.ProjectWrapper;
+import com.profidata.eclipse.project.model.ProjectConstants;
+import com.profidata.eclipse.project.model.ProjectWrapper;
 
 public class RemoveGradleNatureFromPlugins {
 	private static final Map<String, Set<String>> ignoreTestFragmentDependencies;
@@ -199,7 +199,7 @@ public class RemoveGradleNatureFromPlugins {
 			}
 
 			aProjectWrapper
-					.createTestFragmentManifest(theProject, () -> {
+					.createTestFragmentManifest(theProject, "JavaSE-1.8", () -> {
 						Set<String> someAdditionalPackages = new HashSet<>();
 						// package org.hamcrest is opften used to run unit tests
 						someAdditionalPackages.add("org.hamcrest;core=split");

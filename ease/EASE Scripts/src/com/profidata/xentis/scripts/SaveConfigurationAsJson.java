@@ -17,11 +17,11 @@ import org.eclipse.jdt.core.IAccessRule;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
-import com.profidata.xentis.config.AdditionalProjectConfigurationDefinitions;
-import com.profidata.xentis.config.AdditionalProjectConfigurationDefinitions.AccessRule;
-import com.profidata.xentis.config.AdditionalProjectConfigurationDefinitions.ClasspathEntry;
-import com.profidata.xentis.config.AdditionalProjectConfigurationDefinitions.ClasspathEntry.ClasspathEntryType;
-import com.profidata.xentis.config.AdditionalProjectConfigurationDefinitions.ProjectConfiguration;
+import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions;
+import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions.AccessRule;
+import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions.ClasspathEntry;
+import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions.ClasspathEntry.ClasspathEntryType;
+import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions.ProjectConfiguration;
 
 public class SaveConfigurationAsJson {
 	private static PrintStream output;
@@ -37,7 +37,7 @@ public class SaveConfigurationAsJson {
 	}
 
 	private void execute() {
-		AdditionalProjectConfigurationDefinitions aConfiguration = createConfig();
+		AdditionalProjectConfigurationDefinitions aConfiguration = createConfig("JavaSE-1.8");
 		IPath aAdditionalProjectConfigurationPath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append("URRExtensions/ease/EASE Scripts").append("AdditionProjectConfiguration.json");
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
@@ -63,8 +63,8 @@ public class SaveConfigurationAsJson {
 		output.println(jsonInString);
 	}
 
-	private AdditionalProjectConfigurationDefinitions createConfig() {
-		AdditionalProjectConfigurationDefinitions aProjectConfiguration = new AdditionalProjectConfigurationDefinitions();
+	private AdditionalProjectConfigurationDefinitions createConfig(String theExecutionEnvironment) {
+		AdditionalProjectConfigurationDefinitions aProjectConfiguration = new AdditionalProjectConfigurationDefinitions(theExecutionEnvironment);
 
 		aProjectConfiguration.projectConfigurations.putAll(getAdditionalBundleConfigurations());
 		aProjectConfiguration.projectConfigurations.putAll(getAdditionalTestFragmentConfigurations());
