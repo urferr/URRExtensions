@@ -27,6 +27,8 @@ import org.eclipse.pde.internal.core.iproduct.IProductModel;
 import org.eclipse.pde.internal.core.product.WorkspaceProductModel;
 import org.eclipse.pde.internal.core.project.PDEProject;
 
+import com.profidata.eclipse.project.model.ProjectConstants;
+import com.profidata.eclipse.project.model.ProjectWrapper;
 import com.profidata.xentis.config.ImportConfiguration;
 import com.profidata.xentis.config.ImportFeatureProject;
 import com.profidata.xentis.config.PackageDependencyConfiguration;
@@ -35,8 +37,6 @@ import com.profidata.xentis.config.URRImportConfiguration;
 import com.profidata.xentis.config.XCImportConfiguration;
 import com.profidata.xentis.fix.IgnoreProjectFolder;
 import com.profidata.xentis.fix.RemoveGradleNatureFromPlugins;
-import com.profidata.xentis.util.ProjectConstants;
-import com.profidata.xentis.util.ProjectWrapper;
 
 public class XentisWorkspace {
 	private static PrintStream output;
@@ -164,7 +164,7 @@ public class XentisWorkspace {
 			aProjectWrapper
 					.addNature(ProjectConstants.PLUGIN_NATURE_ID)
 					.addClasspathEntry(theProject -> JavaCore.newContainerEntry(new Path(ProjectConstants.PLUGIN_CLASSPATH_ID)))
-					.createPluginManifest(() -> Collections.emptySet())
+					.createPluginManifest("JavaSE-1.8", () -> Collections.emptySet())
 					.refresh();
 		}
 
