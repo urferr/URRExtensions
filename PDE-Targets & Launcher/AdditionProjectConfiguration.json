@@ -1,4 +1,5 @@
 {
+  "executionEnvironment": "JavaSE-1.8",
   "projectConfigurations": {
     "com.profidata.xc.data.service.domain.test": {
       "additionalPackageDependencies": [
@@ -209,20 +210,26 @@
       "additionalClasspathEntries": [
         {
           "type": "Library",
-          "path": "provided/com.profidata.xentis.sn.jar",
-          "exported": true,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
           "path": "provided/com.profidata.xentis.env.server.jar",
           "exported": true,
           "accessRules": []
         },
         {
           "type": "Library",
-          "path": "provided/foxtrot.jar",
+          "path": "provided/hawtbuf.jar",
           "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/jaxrpc.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.xentis.ratex.jar",
+          "exported": true,
           "accessRules": []
         },
         {
@@ -231,11 +238,11 @@
           "exported": false,
           "accessRules": [
             {
-              "pattern": "sun/awt/shell/*",
+              "pattern": "com/sun/java/swing/plaf/windows/*",
               "kind": 0
             },
             {
-              "pattern": "com/sun/java/swing/plaf/windows/*",
+              "pattern": "sun/awt/shell/*",
               "kind": 0
             }
           ]
@@ -253,8 +260,20 @@
           "accessRules": []
         },
         {
+          "type": "Project",
+          "path": "com.profidata.xentis.session",
+          "exported": false,
+          "accessRules": []
+        },
+        {
           "type": "Library",
-          "path": "provided/hawtbuf.jar",
+          "path": "provided/com.profidata.xentis.sn.jar",
+          "exported": true,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/foxtrot.jar",
           "exported": false,
           "accessRules": []
         },
@@ -265,15 +284,9 @@
           "accessRules": []
         },
         {
-          "type": "Project",
-          "path": "com.profidata.xentis.session",
-          "exported": false,
-          "accessRules": []
-        },
-        {
           "type": "Library",
-          "path": "provided/com.profidata.xentis.ratex.jar",
-          "exported": true,
+          "path": "provided/atdl4j.jar",
+          "exported": false,
           "accessRules": []
         },
         {
@@ -284,13 +297,7 @@
         },
         {
           "type": "Library",
-          "path": "provided/jaxrpc.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/atdl4j.jar",
+          "path": "provided/jxbrowser.jar",
           "exported": false,
           "accessRules": []
         }

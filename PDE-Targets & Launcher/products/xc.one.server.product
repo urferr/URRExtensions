@@ -88,7 +88,6 @@
       <plugin id="com.eclipsesource.jaxrs.provider.gson" autoStart="true" startLevel="3" />
       <plugin id="com.eclipsesource.jaxrs.publisher" autoStart="true" startLevel="3" />
       <plugin id="com.profidata.xc.admin.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.authentication.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.calendar.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.codevalue.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.customizingconsole.service.impl" autoStart="true" startLevel="0" />

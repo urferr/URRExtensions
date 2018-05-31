@@ -11,4 +11,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.jdt.core,
  org.eclipse.pde.core,
  org.eclipse.pde.runtime
-Import-Package: com.google.gson
+Import-Package: com.google.gson,
+ com.profidata.eclipse.project.model,
+ com.profidata.eclipse.project.model.fix

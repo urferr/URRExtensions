@@ -471,7 +471,7 @@ public class ProjectWrapper {
 
 	@SuppressWarnings({
 			"deprecation" })
-	public ProjectWrapper createPluginManifest(Supplier<Set<String>> theAdditionalPackageDependencies) {
+	public ProjectWrapper createPluginManifest(String theExecutionEnvironment, Supplier<Set<String>> theAdditionalPackageDependencies) {
 		verifyJavaProject();
 
 		if (!hasError()) {
@@ -489,7 +489,7 @@ public class ProjectWrapper {
 				aBundlePlugin.setVersion("0.0.0");
 				aBundlePlugin.setProviderName("Reto Urfer (Profidata AG)");
 
-				aBundle.setHeader(Constants.BUNDLE_REQUIREDEXECUTIONENVIRONMENT, "JavaSE-1.8");
+				aBundle.setHeader(Constants.BUNDLE_REQUIREDEXECUTIONENVIRONMENT, theExecutionEnvironment);
 
 				// Determine package dependencies from source code, exclude the ones starting with "java."
 				Set<String> allSourcePackages = getSourcePackages();
@@ -663,6 +663,7 @@ public class ProjectWrapper {
 			"deprecation" })
 	public ProjectWrapper createTestFragmentManifest(
 			IProject theHostBundleProject,
+			String theExecutionEnvironment,
 			Supplier<Set<String>> theAdditionalPackageDependencies,
 			Supplier<Set<String>> theIgnorePackageDependencies,
 			Map<String, String> theSpecialPackageDependencies) {
@@ -687,7 +688,7 @@ public class ProjectWrapper {
 
 				aBundleFragment.setPluginId(theHostBundleProject.getName());
 
-				aBundle.setHeader(Constants.BUNDLE_REQUIREDEXECUTIONENVIRONMENT, "JavaSE-1.8");
+				aBundle.setHeader(Constants.BUNDLE_REQUIREDEXECUTIONENVIRONMENT, theExecutionEnvironment);
 
 				List<String> allSortedImportedPackages = determinePackagesToImport(
 						aHostBundleProjectWrapper.getSourcePackages(),

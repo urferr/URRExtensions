@@ -39,7 +39,7 @@ import org.eclipse.pde.internal.core.iproduct.IProductPlugin;
 import org.eclipse.pde.internal.core.product.WorkspaceProductModel;
 import org.eclipse.pde.internal.core.project.PDEProject;
 
-import com.profidata.xentis.util.ProjectConstants;
+import com.profidata.eclipse.project.model.ProjectConstants;
 
 public class ShowProjectProperties {
 	private static final String INDENT = "   ";

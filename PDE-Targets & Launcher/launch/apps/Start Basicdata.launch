@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/com.profidata.basicdata.shell/src/main/java/com/profidata/basicdata/shell/BasicdataShell.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="EAMIS_BASICDATA_PORT" value="7321"/>
+<mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="localhost"/>
+<mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7320"/>
+<mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis/packages"/>
+</mapAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.basicdata.shell.BasicdataShell"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.basicdata.shell"/>
+</launchConfiguration>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/com.profidata.xentis.servicebus/src/main/java/com/profidata/xsb/XBusStarter.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="EAMIS_APP_JMS_USEDB" value="0"/>
+<mapEntry key="EAMIS_APP_LOGDIR" value="${tmp}/xentis/var/log/MASTER"/>
+<mapEntry key="EAMIS_CLUSTER_INSTANCE_NODE" value="localhost"/>
+<mapEntry key="EAMIS_CLUSTER_MODE" value="0"/>
+<mapEntry key="EAMIS_JMS_PORT" value="7305"/>
+<mapEntry key="EAMIS_JMS_SSL_PORT" value="7303"/>
+<mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://localhost:7305?wireFormat.maxInactivityDuration=0)"/>
+<mapEntry key="EAMIS_XSB_REGISTRY_PORT" value="7307"/>
+<mapEntry key="EAMIS_XSB_SERVICE_PORT" value="7314"/>
+</mapAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.xsb.XBusStarter"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xentis.servicebus"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dactivemq.data=./target/activemq.data"/>
+</launchConfiguration>
