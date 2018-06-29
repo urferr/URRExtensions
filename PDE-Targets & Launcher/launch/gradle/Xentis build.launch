@@ -3,7 +3,8 @@
 <listAttribute key="arguments">
 <listEntry value="-x"/>
 <listEntry value="generate"/>
-<listEntry value="-PuseTransitive=false"/>
+<listEntry value="-x"/>
+<listEntry value="provide"/>
 </listAttribute>
 <booleanAttribute key="build_scans_enabled" value="false"/>
 <stringAttribute key="gradle_distribution" value="GRADLE_DISTRIBUTION(WRAPPER)"/>

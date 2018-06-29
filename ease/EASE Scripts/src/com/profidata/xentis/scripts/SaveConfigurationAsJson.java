@@ -170,6 +170,8 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.xnife.spring.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		aConfiguration.additionalPackageDependencies.add("org.apache.commons.logging");
 		aConfiguration.additionalPackageDependencies.add("org.springframework.context");
 		allBundles.put("com.profidata.xentis.env.client.test", aConfiguration);
 
