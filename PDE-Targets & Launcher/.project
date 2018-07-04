@@ -21,5 +21,15 @@
 			<type>2</type>
 			<locationURI>WORKSPACE_LOC/xentisjava/xentis/com.profidata.xentis.client/src/main/deployment/Resources/config</locationURI>
 		</link>
+		<link>
+			<name>xentisjava-buildsrc</name>
+			<type>2</type>
+			<locationURI>WORKSPACE_LOC/xentisjava/buildSrc</locationURI>
+		</link>
+		<link>
+			<name>xentisjava-gradle</name>
+			<type>2</type>
+			<locationURI>WORKSPACE_LOC/xentisjava/gradle</locationURI>
+		</link>
 	</linkedResources>
 </projectDescription>

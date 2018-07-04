@@ -21,6 +21,7 @@ platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini
 -clearPersistedState
       </programArgs>
       <vmArgs>-Dosgi.clean=true
+-Dorg.eclipse.update.reconcile=false
 
 -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook
 -Daj.weaving.verbose=true

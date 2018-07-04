@@ -8,6 +8,7 @@
 <setAttribute key="name.schedenig.eclipse.grepconsole.NotificationsEnabledIds"/>
 <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
 <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+<stringAttribute key="org.eclipse.buildship.core.originalclasspathprovider" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/com.profidata.xentis.etl/src/main/java/com/profidata/etl/ETLStarter.java"/>
 </listAttribute>
@@ -15,11 +16,11 @@
 <listEntry value="1"/>
 </listAttribute>
 <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-<mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_MASTER_XC/clzlabo1@pdxendb05.profidatagroup.com:1521/ XNT051"/>
+<mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBI_P_20180221_S552_DEV/clzlabo1@XNT041"/>
 <mapEntry key="EAMIS_APP_PRGINFO" value="Eclipse"/>
 <mapEntry key="EAMIS_APP_VAR" value="target"/>
 <mapEntry key="EAMIS_CLUSTER_VAR" value="target"/>
-<mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://pdvmdev15:7005?wireFormat.maxInactivityDuration=0)"/>
+<mapEntry key="EAMIS_JMS_URL" value="tcp://pdvmdev15:7305?wireFormat.maxInactivityDuration=0"/>
 <mapEntry key="EAMIS_PACKAGES" value="target"/>
 <mapEntry key="EAMIS_VDB_ALIAS" value="XNT041"/>
 <mapEntry key="EAMIS_VDB_BB_FTP_MAX_POLL_TIME" value="60"/>
@@ -44,8 +45,9 @@
 <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;&lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.ftp&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
 <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;&lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.reorg&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
 <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.etl.ETLStarter"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xentis.etl"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Doracle.net.tns_admin=${env_var:TNS_ADMIN}"/>
 </launchConfiguration>

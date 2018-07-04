@@ -13,16 +13,25 @@
 <listEntry value="1"/>
 </listAttribute>
 <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_552_XC/clzlabo1@XNT121"/>
 <mapEntry key="EAMIS_BASICDATA_PORT" value="7321"/>
-<mapEntry key="EAMIS_CLUSTER_INSTANCE_NODE" value="pdvmdev15"/>
+<mapEntry key="EAMIS_CLUSTER_INSTANCE_NODE" value="localhost"/>
 <mapEntry key="EAMIS_CLUSTER_ROOT" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis"/>
+<mapEntry key="EAMIS_DB_PASSWORD" value="clzlabo1"/>
+<mapEntry key="EAMIS_DB_SERVER" value="XNT121"/>
+<mapEntry key="EAMIS_DB_USER" value="X_MOBIDEV_552_XC"/>
 <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7320"/>
 <mapEntry key="EAMIS_INSTANCE_HOME" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis/instances/xentis"/>
 <mapEntry key="EAMIS_JMSCONSOLE_ADMIN_PORT" value="7322"/>
 <mapEntry key="EAMIS_JMSCONSOLE_PORT" value="7323"/>
-<mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://pdvmdev15:7305?wireFormat.maxInactivityDuration=0)"/>
+<mapEntry key="EAMIS_JMS_URL" value="tcp://pdvmdev15:7305?wireFormat.maxInactivityDuration=0"/>
 <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis/packages"/>
-<mapEntry key="EAMIS_RISKSTORE_PORT" value="7324"/>
+<mapEntry key="EAMIS_RISKSTORE_API_PORT" value="7324"/>
+<mapEntry key="EAMIS_RISKSTORE_DB_PASSWORD" value="admin"/>
+<mapEntry key="EAMIS_RISKSTORE_DB_PORT" value="7325"/>
+<mapEntry key="EAMIS_RISKSTORE_DB_ROOT_PASSWORD" value="root"/>
+<mapEntry key="EAMIS_RISKSTORE_STUDIO_PORT" value="7326"/>
+<mapEntry key="EAMIS_XCAS_SERVICES_PORT" value="7316"/>
 <mapEntry key="EAMIS_XENTIS_API_PORT" value="7306"/>
 <mapEntry key="EAMIS_XSB_REGISTRY_PORT" value="7307"/>
 <mapEntry key="EAMIS_XSB_SERVICE_PORT" value="7314"/>

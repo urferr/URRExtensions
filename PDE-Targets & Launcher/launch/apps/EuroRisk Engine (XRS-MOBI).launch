@@ -6,6 +6,7 @@
 <setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
 <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
 <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+<stringAttribute key="org.eclipse.buildship.core.originalclasspathprovider" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/com.profidata.risk/src/main/java/com/profidata/risk/RiskEngineStarter.java"/>
 </listAttribute>
@@ -16,7 +17,7 @@
 <mapEntry key="EAMIS_CLUSTER_VAR" value="target"/>
 <mapEntry key="EAMIS_JMS_URL" value="tcp://pdxenlin61:47405"/>
 </mapAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.risk.RiskEngineStarter"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="--standalone"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.risk"/>
