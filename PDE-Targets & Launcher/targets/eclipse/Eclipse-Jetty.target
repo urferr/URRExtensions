@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="Eclipse-Jetty" sequenceNumber="12">
+<?pde version="3.8"?><target name="Eclipse-Jetty" sequenceNumber="13">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.jetty.bundles.f.feature.group" version="9.4.7.201709211338"/>
-<unit id="org.eclipse.jetty.bundles.f.source.feature.group" version="9.4.7.201709211338"/>
+<unit id="org.eclipse.jetty.bundles.f.feature.group" version="9.4.10.201805070144"/>
+<unit id="org.eclipse.jetty.bundles.f.source.feature.group" version="9.4.10.201805070144"/>
 <repository location="http://download.eclipse.org/jetty/updates/jetty-bundles-9.x/"/>
 </location>
 </locations>
