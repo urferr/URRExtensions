@@ -16,6 +16,8 @@
 -Dosgi.clean=true
 -Dosgi.parentClassloader=ext
 
+-Dapplication.reporting.location=/working/xentis/var/report
+
 -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook
 -Daj.weaving.verbose=true
 -Dorg.aspectj.osgi.verbose=true

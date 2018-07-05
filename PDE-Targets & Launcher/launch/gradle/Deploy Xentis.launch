@@ -6,6 +6,8 @@
 <listEntry value="-x"/>
 <listEntry value="provide"/>
 <listEntry value="-x"/>
+<listEntry value="test"/>
+<listEntry value="-x"/>
 <listEntry value="jacocoReport"/>
 </listAttribute>
 <booleanAttribute key="build_scans_enabled" value="false"/>
@@ -20,7 +22,7 @@
 <booleanAttribute key="show_console_view" value="true"/>
 <booleanAttribute key="show_execution_view" value="true"/>
 <listAttribute key="tasks">
-<listEntry value="build"/>
+<listEntry value=":xentis:com.profidata.xentis.app.boserver:deploy-libs"/>
 </listAttribute>
 <stringAttribute key="working_dir" value="${workspace_loc:/xentisjava}"/>
 </launchConfiguration>

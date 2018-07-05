@@ -78,15 +78,16 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration("UTF-8");
 		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.session");
-		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/atdl4j.jar"));
+		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/atdl4j-swing-with-dependencies.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.env.server.jar", true));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.jni.jar", true));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.ratex.jar", true));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.sn.jar", true));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidatagroup.util.keymigration.model.jar"));
-		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/foxtrot.jar"));
+		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/foxtrot-core.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/hawtbuf.jar"));
-		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/jaxrpc.jar"));
+		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/jaxrpc-spi.jar"));
+		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/jaxrpc-impl.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/org.jzy3d.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/ratex.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/jxbrowser.jar"));
@@ -161,6 +162,7 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		aConfiguration.additionalPackageDependencies.add("javax.annotation");
 		allBundles.put("com.profidata.xentis.domain.unified.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -168,6 +170,8 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.xnife.spring.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		aConfiguration.additionalPackageDependencies.add("org.apache.commons.logging");
 		aConfiguration.additionalPackageDependencies.add("org.springframework.context");
 		allBundles.put("com.profidata.xentis.env.client.test", aConfiguration);
 
