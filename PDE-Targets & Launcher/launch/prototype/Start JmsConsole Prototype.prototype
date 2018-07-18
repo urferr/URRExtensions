@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration prototype="Start JmsConsole Prototype" type="org.eclipse.jdt.launching.localJavaApplication">
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication" visibleAttributes="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES, org.eclipse.jdt.launching.CLASSPATH_PROVIDER, org.eclipse.jdt.launching.VM_ARGUMENTS, org.eclipse.jdt.launching.PROJECT_ATTR, org.eclipse.jdt.launching.MAIN_TYPE, org.eclipse.debug.core.MAPPED_RESOURCE_PATHS, org.eclipse.debug.core.environmentVariables, org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD">
     <setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
-    <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/PDE-Targets &amp;amp; Launcher/launch/prototype/Start JmsConsole Prototype.prototype&quot;/&gt;&#13;&#10;"/>
-    <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
         <listEntry value="/com.profidata.jmsconsole.shell/src/main/java/com/profidata/jmsconsole/shell/JmsConsoleShell.java"/>
     </listAttribute>
@@ -15,9 +13,9 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="localhost"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7320"/>
-        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis/packages"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="HTTPGATEWAY-NODENAME"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="..20"/>
+        <mapEntry key="EAMIS_PACKAGES" value="PATH/TO/XENTIS/packages"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
     <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>

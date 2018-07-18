@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication" visibleAttributes="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES, org.eclipse.jdt.launching.CLASSPATH_PROVIDER, org.eclipse.jdt.launching.VM_ARGUMENTS, org.eclipse.jdt.launching.PROJECT_ATTR, org.eclipse.jdt.launching.MAIN_TYPE, org.eclipse.debug.core.MAPPED_RESOURCE_PATHS, org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD">
+    <setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/com.profidata.xentis.kommserver/src/main/java/com/profidata/xentis/kommserver/StandaloneKommServer.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.xentis.kommserver.StandaloneKommServer"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xentis.kommserver"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Deamis.home=../com.profidata.xentis.client/src/main/deployment&#13;&#10;&#13;&#10;--add-opens java.base/java.lang=ALL-UNNAMED&#13;&#10;--add-opens java.desktop/javaawt=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
+</launchConfiguration>

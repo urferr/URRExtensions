@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration prototype="Start ERSK Prototype" type="org.eclipse.jdt.launching.localJavaApplication">
+    <setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+    <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/PDE-Targets &amp;amp; Launcher/launch/prototype/Start ERSK Prototype.prototype&quot;/&gt;&#13;&#10;"/>
+    <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/re-service-point-ers/lib/re-service-point-2018.1.1.jar"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+        <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+        <listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.ers.re.service.point.Start"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="re-service-point-ers"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="--add-opens java.base/java.lang=ALL-UNNAMED&#13;&#10;--add-opens java.xml/com.sun.org.apache.xerces.internal.parsers=ALL-UNNAMED&#13;&#10;--add-modules java.activation&#13;&#10;--add-modules java.xml.bind&#13;&#10;--add-modules java.xml.ws&#13;&#10;--illegal-access=warn"/>
+</launchConfiguration>

@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
-<setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
-<setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
-<setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
-<setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
-<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
-<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
-<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/com.profidata.httpgateway.shell/src/main/java/com/profidata/httpgateway/shell/HttpGatewayShell.java"/>
-</listAttribute>
-<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
-<listEntry value="1"/>
-</listAttribute>
-<mapAttribute key="org.eclipse.debug.core.environmentVariables">
-<mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_552_XC/clzlabo1@XNT121"/>
-<mapEntry key="EAMIS_BASICDATA_PORT" value="7321"/>
-<mapEntry key="EAMIS_CLUSTER_INSTANCE_NODE" value="localhost"/>
-<mapEntry key="EAMIS_CLUSTER_ROOT" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis"/>
-<mapEntry key="EAMIS_DB_PASSWORD" value="clzlabo1"/>
-<mapEntry key="EAMIS_DB_SERVER" value="XNT121"/>
-<mapEntry key="EAMIS_DB_USER" value="X_MOBIDEV_552_XC"/>
-<mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7320"/>
-<mapEntry key="EAMIS_INSTANCE_HOME" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis/instances/xentis"/>
-<mapEntry key="EAMIS_JMSCONSOLE_ADMIN_PORT" value="7322"/>
-<mapEntry key="EAMIS_JMSCONSOLE_PORT" value="7323"/>
-<mapEntry key="EAMIS_JMS_URL" value="tcp://pdvmdev15:7305?wireFormat.maxInactivityDuration=0"/>
-<mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis/packages"/>
-<mapEntry key="EAMIS_RISKSTORE_API_PORT" value="7324"/>
-<mapEntry key="EAMIS_RISKSTORE_DB_PASSWORD" value="admin"/>
-<mapEntry key="EAMIS_RISKSTORE_DB_PORT" value="7325"/>
-<mapEntry key="EAMIS_RISKSTORE_DB_ROOT_PASSWORD" value="root"/>
-<mapEntry key="EAMIS_RISKSTORE_STUDIO_PORT" value="7326"/>
-<mapEntry key="EAMIS_XCAS_SERVICES_PORT" value="7316"/>
-<mapEntry key="EAMIS_XENTIS_API_PORT" value="7306"/>
-<mapEntry key="EAMIS_XSB_REGISTRY_PORT" value="7307"/>
-<mapEntry key="EAMIS_XSB_SERVICE_PORT" value="7314"/>
-</mapAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.httpgateway.shell.HttpGatewayShell"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis/packages/httpgateway/etc/httpgateway.json&quot;"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.httpgateway.shell"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+    <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/PDE-Targets &amp;amp; Launcher/launch/prototype/Start HttpGateway Prototype.prototype&quot;/&gt;&#13;&#10;"/>
+    <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/com.profidata.httpgateway.shell/src/main/java/com/profidata/httpgateway/shell/HttpGatewayShell.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_552_XC/clzlabo1@XNT121"/>
+        <mapEntry key="EAMIS_BASICDATA_PORT" value="7321"/>
+        <mapEntry key="EAMIS_CLUSTER_INSTANCE_NODE" value="localhost"/>
+        <mapEntry key="EAMIS_CLUSTER_ROOT" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7320"/>
+        <mapEntry key="EAMIS_INSTANCE_HOME" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis"/>
+        <mapEntry key="EAMIS_JMSCONSOLE_ADMIN_PORT" value="7322"/>
+        <mapEntry key="EAMIS_JMSCONSOLE_PORT" value="7323"/>
+        <mapEntry key="EAMIS_JMS_URL" value="tcp://pdvmdev15:7305?wireFormat.maxInactivityDuration=0"/>
+        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis/packages"/>
+        <mapEntry key="EAMIS_RISKSTORE_API_PORT" value="7324"/>
+        <mapEntry key="EAMIS_RISKSTORE_DB_PASSWORD" value="admin"/>
+        <mapEntry key="EAMIS_RISKSTORE_DB_PORT" value="7325"/>
+        <mapEntry key="EAMIS_RISKSTORE_DB_ROOT_PASSWORD" value="root"/>
+        <mapEntry key="EAMIS_RISKSTORE_STUDIO_PORT" value="7326"/>
+        <mapEntry key="EAMIS_XCAS_SERVICES_PORT" value="7316"/>
+        <mapEntry key="EAMIS_XENTIS_API_PORT" value="7306"/>
+        <mapEntry key="EAMIS_XSB_REGISTRY_PORT" value="7307"/>
+        <mapEntry key="EAMIS_XSB_SERVICE_PORT" value="7314"/>
+    </mapAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.httpgateway.shell.HttpGatewayShell"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis/packages/httpgateway/etc/httpgateway.json"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.httpgateway.shell"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="--add-opens java.base/sun.net.dns=ALL-UNNAMED&#13;&#10;--add-opens java.base/java.util=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
 </launchConfiguration>
