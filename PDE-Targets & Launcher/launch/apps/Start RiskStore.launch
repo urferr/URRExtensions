@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration prototype="Start RiskStore Prototype" type="org.eclipse.jdt.launching.localJavaApplication">
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
     <setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
@@ -7,7 +7,7 @@
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
     <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/PDE-Targets &amp;amp; Launcher/launch/prototype/Start RiskStore Prototype.prototype&quot;/&gt;&#13;&#10;"/>
-     <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
+    <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
         <listEntry value="/com.profidata.risk.store.shell/src/main/java/com/profidata/risk/store/shell/RiskStoreShell.java"/>
     </listAttribute>

@@ -1,5 +1,5 @@
 {
-  "executionEnvironment": "JavaSE-10",
+  "executionEnvironment": "JavaSE-11",
   "projectConfigurations": {
     "com.profidata.xc.data.service.domain.test": {
       "additionalPackageDependencies": [
