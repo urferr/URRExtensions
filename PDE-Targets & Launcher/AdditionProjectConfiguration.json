@@ -166,6 +166,7 @@
     },
     "com.profidata.xentis.env.client.test": {
       "additionalPackageDependencies": [
+        "org.apache.commons.logging",
         "org.hamcrest;core\u003dsplit",
         "org.springframework.context"
       ],
@@ -207,9 +208,16 @@
       "encoding": "UTF-8",
       "additionalPackageDependencies": [],
       "additionalProjectDependencies": [
-        "com.profidata.xentis.session"
+        "com.profidata.xentis.session",
+        "com.profidata.xentis.trx"
       ],
       "additionalClasspathEntries": [
+        {
+          "type": "Library",
+          "path": "provided/ratex.jar",
+          "exported": false,
+          "accessRules": []
+        },
         {
           "type": "Library",
           "path": "provided/atdl4j-swing-with-dependencies.jar",
@@ -217,71 +225,8 @@
           "accessRules": []
         },
         {
-          "type": "Container",
-          "path": "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8",
-          "exported": false,
-          "accessRules": [
-            {
-              "pattern": "sun/awt/shell/*",
-              "kind": 0
-            },
-            {
-              "pattern": "com/sun/java/swing/plaf/windows/*",
-              "kind": 0
-            }
-          ]
-        },
-        {
-          "type": "Library",
-          "path": "provided/jxbrowser.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidatagroup.util.keymigration.model.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Project",
-          "path": "com.profidata.xentis.session",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.sn.jar",
-          "exported": true,
-          "accessRules": []
-        },
-        {
           "type": "Library",
           "path": "provided/org.jzy3d.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/jaxrpc-impl.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.ratex.jar",
-          "exported": true,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/hawtbuf.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/jaxrpc-spi.jar",
           "exported": false,
           "accessRules": []
         },
@@ -293,19 +238,76 @@
         },
         {
           "type": "Library",
-          "path": "provided/ratex.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
           "path": "provided/foxtrot-core.jar",
           "exported": false,
           "accessRules": []
         },
         {
           "type": "Library",
+          "path": "provided/com.profidata.xentis.sn.jar",
+          "exported": true,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
           "path": "provided/com.profidata.xentis.jni.jar",
+          "exported": true,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidatagroup.util.keymigration.model.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/hawtbuf.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/jxbrowser.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/jaxrpc-spi.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/jaxrpc-impl.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Container",
+          "path": "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8",
+          "exported": false,
+          "accessRules": [
+            {
+              "pattern": "com/sun/java/swing/plaf/windows/*",
+              "kind": 0
+            },
+            {
+              "pattern": "sun/awt/shell/*",
+              "kind": 0
+            }
+          ]
+        },
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.session",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.xentis.ratex.jar",
           "exported": true,
           "accessRules": []
         }
