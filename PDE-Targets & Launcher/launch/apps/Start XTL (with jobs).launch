@@ -18,12 +18,12 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_552_XC/clzlabo1@XNT121"/>
+        <mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_553_XC/clzlabo1@XNT121"/>
         <mapEntry key="EAMIS_APP_PRGINFO" value="Eclipse@localhost"/>
-        <mapEntry key="EAMIS_APP_VAR" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis/var"/>
+        <mapEntry key="EAMIS_APP_VAR" value="//pdvmdev15/urr/urr/xentis553j11branch_run/xentis/var"/>
         <mapEntry key="EAMIS_APP_VDB_JDBC_URL" value="jdbc:oracle:thin:VDB_HI_P_ENTW/clzlabo1@XNT041"/>
-        <mapEntry key="EAMIS_JMS_URL" value="tcp://pdvmdev15:7305?wireFormat.maxInactivityDuration=0"/>
-        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentis552branch_run/xentis/packages"/>
+        <mapEntry key="EAMIS_JMS_URL" value="tcp://pdvmdev15:7805?wireFormat.maxInactivityDuration=0"/>
+        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentis553j11branch_run/xentis/packages"/>
         <mapEntry key="EAMIS_VDB_ALIAS" value="XNT041"/>
         <mapEntry key="EAMIS_VDB_BB_FTP_MAX_POLL_TIME" value="60"/>
         <mapEntry key="EAMIS_VDB_BB_FTP_SUBDIR" value=""/>
@@ -39,6 +39,7 @@
         <mapEntry key="EAMIS_VDB_SCHEMA" value="VDB_HI_P_ENTW"/>
         <mapEntry key="EAMIS_VDB_SERVER" value="pdxendb04.profidatagroup.com"/>
     </mapAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
     <listAttribute key="org.eclipse.jdt.launching.CLASSPATH">
         <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry containerPath=&quot;org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/&quot; javaProject=&quot;com.profidata.xentis.etl&quot; path=&quot;1&quot; type=&quot;4&quot;/&gt;&#13;&#10;"/>
