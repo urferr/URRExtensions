@@ -6,10 +6,10 @@
     <setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
-    <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/PDE-Targets &amp;amp; Launcher/launch/prototype/Start RiskStore Prototype.prototype&quot;/&gt;&#13;&#10;"/>
+    <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/PDE-Targets &amp;amp; Launcher/launch/prototype/Start JmsConsole Prototype.prototype&quot;/&gt;&#13;&#10;"/>
     <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/com.profidata.risk.store.shell/src/main/java/com/profidata/risk/store/shell/RiskStoreShell.java"/>
+        <listEntry value="/com.profidata.jmsconsole.shell/src/main/java/com/profidata/jmsconsole/shell/JmsConsoleShell.java"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="1"/>
@@ -17,13 +17,12 @@
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="localhost"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7820"/>
-        <mapEntry key="EAMIS_JMS_URL" value="tcp://pdvmdev15:7805?wireFormat.maxInactivityDuration=0"/>
-        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentis553j11branch_run/xentis/packages"/>
+        <mapEntry key="EAMIS_PACKAGES" value="D:/Projekte/xc2018-09/xentisserver/xentis/packages"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
     <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.risk.store.shell.RiskStoreShell"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.risk.store.shell"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="--add-opens java.base/java.lang=ALL-UNNAMED&#13;&#10;--add-opens java.base/jdk.internal.misc=ALL-UNNAMED&#13;&#10;--add-opens java.base/sun.net.dns=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.jmsconsole.shell.JmsConsoleShell"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.jmsconsole.shell"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="--add-opens java.base/sun.net.dns=ALL-UNNAMED&#13;&#10;--add-opens java.base/jdk.internal.misc=ALL-UNNAMED&#13;&#10;--add-opens java.base/java.lang=ALL-UNNAMED&#13;&#10;--add-opens java.rmi/sun.rmi.transport=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
 </launchConfiguration>
