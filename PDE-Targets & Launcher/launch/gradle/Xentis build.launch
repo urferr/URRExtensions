@@ -6,6 +6,7 @@
         <listEntry value="generate"/>
         <listEntry value="-x"/>
         <listEntry value="provide"/>
+        <listEntry value="--stacktrace"/>
         <listEntry value="--warning-mode"/>
         <listEntry value="all"/>
     </listAttribute>

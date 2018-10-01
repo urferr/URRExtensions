@@ -8,6 +8,8 @@
         <listEntry value="provide"/>
         <listEntry value="-x"/>
         <listEntry value="jacocoReport"/>
+        <listEntry value="--warning-mode"/>
+        <listEntry value="all"/>
     </listAttribute>
     <booleanAttribute key="build_scans_enabled" value="false"/>
     <stringAttribute key="gradle_distribution" value="GRADLE_DISTRIBUTION(WRAPPER)"/>
