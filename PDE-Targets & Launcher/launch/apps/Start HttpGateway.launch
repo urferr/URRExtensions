@@ -41,5 +41,5 @@
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.httpgateway.shell.HttpGatewayShell"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="//pdvmdev15/urr/urr/xentis553j11branch_run/xentis/packages/httpgateway/etc/httpgateway.json"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.httpgateway.shell"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="--add-opens java.base/sun.net.dns=ALL-UNNAMED&#13;&#10;--add-opens java.base/java.util=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dvertx.logger-delegate-factory-class-name=io.vertx.core.logging.SLF4JLogDelegateFactory&#13;&#10;&#13;&#10;--add-opens java.base/sun.net.dns=ALL-UNNAMED&#13;&#10;--add-opens java.base/java.util=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
 </launchConfiguration>

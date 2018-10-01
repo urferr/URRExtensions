@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication" visibleAttributes="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES, org.eclipse.jdt.launching.CLASSPATH_PROVIDER, org.eclipse.jdt.launching.VM_ARGUMENTS, org.eclipse.jdt.launching.PROJECT_ATTR, org.eclipse.jdt.launching.MAIN_TYPE, org.eclipse.debug.core.MAPPED_RESOURCE_PATHS, org.eclipse.debug.core.environmentVariables, org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD">
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication" visibleAttributes="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES, org.eclipse.jdt.launching.CLASSPATH_PROVIDER, org.eclipse.jdt.launching.VM_ARGUMENTS, org.eclipse.jdt.launching.PROJECT_ATTR, org.eclipse.jdt.launching.MAIN_TYPE, org.eclipse.debug.core.MAPPED_RESOURCE_PATHS, org.eclipse.debug.core.environmentVariables, org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR, org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD">
     <setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
@@ -19,9 +19,10 @@
         <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="..20"/>
         <mapEntry key="EAMIS_PACKAGES" value="PATH/TO/XENTIS/packages"/>
     </mapAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
     <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.basicdata.shell.BasicdataShell"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.basicdata.shell"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;--add-opens java.base/sun.net.dns=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dvertx.logger-delegate-factory-class-name=io.vertx.core.logging.SLF4JLogDelegateFactory&#13;&#10;-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;&#13;&#10;--add-opens java.base/sun.net.dns=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
 </launchConfiguration>
