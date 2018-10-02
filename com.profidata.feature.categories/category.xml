@@ -15,6 +15,9 @@
    <feature url="features/com.profidata.eclipse.enhancements.feature_0.1.0.qualifier.jar" id="com.profidata.eclipse.enhancements.feature" version="0.1.0.qualifier">
       <category name="com.profidata.eclipse.enhancements"/>
    </feature>
+   <feature url="features/com.profidata.eclipse.enhancements.feature_3.0.0.qualifier.jar" id="com.profidata.eclipse.enhancements.feature" version="3.0.0.qualifier">
+      <category name="com.profidata.eclipse.enhancements"/>
+   </feature>
    <category-def name="com.xnife.presentastion.e4.tools" label="Xnife E4 Presentation Tools"/>
    <category-def name="com.profidatagroup.util.keymigration" label="Key Migration Tool"/>
    <category-def name="com.profidata.xc.springide" label="XC Spring IDE Extensions"/>
