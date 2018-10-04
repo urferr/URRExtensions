@@ -15,6 +15,7 @@
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="HTTPGATEWAY-NODENAME"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="..20"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_PROTOCOL" value="http/https"/>
         <mapEntry key="EAMIS_JMS_URL" value="tcp://XSB-NODENAME:..05?wireFormat.maxInactivityDuration=0"/>
         <mapEntry key="EAMIS_PACKAGES" value="PATH/TO/XENTIS/packages"/>
     </mapAttribute>

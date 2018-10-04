@@ -17,6 +17,7 @@
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="localhost"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7820"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_PROTOCOL" value="http"/>
         <mapEntry key="EAMIS_JMS_URL" value="tcp://localhost:7805?wireFormat.maxInactivityDuration=0"/>
         <mapEntry key="EAMIS_PACKAGES" value="D:/Projekte/xc2018-09/xentisserver/xentis/packages"/>
     </mapAttribute>

@@ -16,6 +16,7 @@
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_553_XC/clzlabo1@XNT041"/>
+        <mapEntry key="EAMIS_APP_JAVA_SSL" value="0"/>
         <mapEntry key="EAMIS_BASICDATA_PORT" value="7821"/>
         <mapEntry key="EAMIS_CLUSTER_INSTANCE_NODE" value="localhost"/>
         <mapEntry key="EAMIS_CLUSTER_ROOT" value="D:/Projekte/xc2018-09/xentisserver/xentis"/>
