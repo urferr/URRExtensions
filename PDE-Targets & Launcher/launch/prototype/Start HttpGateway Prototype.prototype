@@ -14,11 +14,11 @@
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:DB-NAME/clzlabo1@DB-SID"/>
-        <mapEntry key="EAMIS_APP_JAVA_SSL" value="0(=false), 1(=true)"/>
         <mapEntry key="EAMIS_BASICDATA_PORT" value="..21"/>
         <mapEntry key="EAMIS_CLUSTER_INSTANCE_NODE" value="XENTIS NODENAME"/>
         <mapEntry key="EAMIS_CLUSTER_ROOT" value="PATH/TO/XENTIS"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="..20"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false/true"/>
         <mapEntry key="EAMIS_INSTANCE_HOME" value="PATH/TO/XENTIS"/>
         <mapEntry key="EAMIS_JMSCONSOLE_ADMIN_PORT" value="..22"/>
         <mapEntry key="EAMIS_JMSCONSOLE_PORT" value="..23"/>

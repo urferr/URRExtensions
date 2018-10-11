@@ -15,7 +15,7 @@
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="HTTPGATEWAY-NODENAME"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="..20"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_PROTOCOL" value="http/https"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false/true"/>
         <mapEntry key="EAMIS_PACKAGES" value="PATH/TO/XENTIS/packages"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
