@@ -37,7 +37,7 @@ public class SaveConfigurationAsJson {
 	}
 
 	private void execute() {
-		AdditionalProjectConfigurationDefinitions aConfiguration = createConfig("JavaSE-1.8");
+		AdditionalProjectConfigurationDefinitions aConfiguration = createConfig("JavaSE-11");
 		IPath aAdditionalProjectConfigurationPath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append("URRExtensions/ease/EASE Scripts").append("AdditionProjectConfiguration.json");
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
@@ -93,7 +93,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/jxbrowser.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Project, "com.profidata.xentis.session"));
 
-		ClasspathEntry aClasspathEntry = new ClasspathEntry(ClasspathEntryType.Container, "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8");
+		ClasspathEntry aClasspathEntry = new ClasspathEntry(ClasspathEntryType.Container, "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11");
 		aClasspathEntry.accessRules.add(new AccessRule("com/sun/java/swing/plaf/windows/*", IAccessRule.K_ACCESSIBLE));
 		aClasspathEntry.accessRules.add(new AccessRule("sun/awt/shell/*", IAccessRule.K_ACCESSIBLE));
 		aConfiguration.additionalClasspathEntries.add(aClasspathEntry);
