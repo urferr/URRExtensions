@@ -119,6 +119,7 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.profidata.xentis.bodomain.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
 		aConfiguration.additionalPackageDependencies.add("org.objenesis");
 		aConfiguration.additionalPackageDependencies.add("org.apache.commons.logging");
 		aConfiguration.additionalPackageDependencies.add("org.springframework.aop");
@@ -168,6 +169,8 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
 		aConfiguration.additionalPackageDependencies.add("org.apache.commons.logging");
 		aConfiguration.additionalPackageDependencies.add("org.springframework.context");
+		aConfiguration.additionalPackageDependencies.add("org.springframework.aop");
+		aConfiguration.additionalPackageDependencies.add("org.springframework.expression");
 		allBundles.put("com.profidata.xentis.env.client.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -218,7 +221,9 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("com.profidata.xc.rest.common.service");
+		aConfiguration.additionalPackageDependencies.add("org.objenesis");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
+		aConfiguration.additionalPackageDependencies.add("org.powermock.core.spi");
 		allBundles.put("com.profidata.xc.rest.common.service.impl.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -236,6 +241,66 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.springframework.context");
 		aConfiguration.additionalPackageDependencies.add("org.objenesis");
 		allBundles.put("com.profidata.xc.risk.service.impl.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		allBundles.put("com.profidata.reporting.common.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		allBundles.put("com.profidata.xentis.jni.common.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		aConfiguration.additionalPackageDependencies.add("org.objenesis");
+		allBundles.put("com.profidata.xentis.ui.base.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		aConfiguration.additionalPackageDependencies.add("org.objenesis");
+		allBundles.put("com.profidata.xentis.user.shared.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		allBundles.put("com.xnife.encryption.service.xentis.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		allBundles.put("com.xnife.finance.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.apache.commons.logging");
+		aConfiguration.additionalPackageDependencies.add("org.springframework.util");
+		allBundles.put("com.xnife.http.server.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		allBundles.put("com.xnife.logging.slf4j.logback.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		allBundles.put("com.xnife.microbenchmark.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.objenesis");
+		allBundles.put("com.xnife.presentation.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.apache.commons.logging");
+		allBundles.put("com.xnife.remoting.osgi.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		allBundles.put("com.xnife.spring.osgi.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		aConfiguration.additionalPackageDependencies.add("org.osgi.service.prefs");
+		allBundles.put("com.xnife.testing.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		allBundles.put("com.xnife.tools.rcp.configurator.test", aConfiguration);
 
 		return allBundles;
 	}

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sprongframework web OSGi extensions
+Bundle-SymbolicName: test.urr.spring.web.osgi
+Bundle-Version: 0.0.0
+Fragment-Host: org.springframework.web
+Automatic-Module-Name: test.urr.sprich.web.osgi
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.springframework.http.server.reactive

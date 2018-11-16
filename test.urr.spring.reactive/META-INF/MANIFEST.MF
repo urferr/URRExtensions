@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Spring Reactive
+Bundle-SymbolicName: test.urr.spring.reactive
+Bundle-Version: 0.0.0
+Automatic-Module-Name: test.urr.spring_reactive
+Spring-Context: *;timeout:=120
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.fasterxml.jackson.annotation,
+ com.xnife.http.service,
+ javax.servlet,
+ org.reactivestreams,
+ org.springframework.beans.factory,
+ org.springframework.http,
+ org.springframework.http.server.reactive,
+ org.springframework.util,
+ org.springframework.web.reactive.function,
+ org.springframework.web.reactive.function.server,
+ reactor.core.publisher
+Export-Package: test.urr.spring.reactive
