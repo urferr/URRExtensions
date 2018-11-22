@@ -16,8 +16,6 @@
 
    <launcherArgs>
       <programArgs>-console 
--plugincustomization 
-platform:/plugin/com.compxc.workbench.branding/plugin_customization.ini
 -clearPersistedState
       </programArgs>
       <vmArgs>-Dosgi.clean=true
