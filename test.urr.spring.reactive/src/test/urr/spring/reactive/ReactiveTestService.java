@@ -1,6 +1,7 @@
 package test.urr.spring.reactive;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON;
+import static org.springframework.http.MediaType.TEXT_EVENT_STREAM;
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RequestPredicates.POST;
 import static org.springframework.web.reactive.function.server.RequestPredicates.accept;
@@ -61,7 +62,7 @@ public class ReactiveTestService implements InitializingBean, DisposableBean {
 		return nest(
 				path(BASE_SERVLET_PATH + "/person"),
 				nest(
-						accept(APPLICATION_JSON),
+						accept(APPLICATION_JSON, TEXT_EVENT_STREAM),
 						route(GET("/{id}"), handler::getPerson)
 								.andRoute(method(HttpMethod.GET), handler::listPeople)).andRoute(POST("/").and(contentType(APPLICATION_JSON)), handler::createPerson));
 	}

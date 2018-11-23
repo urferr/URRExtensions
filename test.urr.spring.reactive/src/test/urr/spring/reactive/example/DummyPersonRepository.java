@@ -16,6 +16,7 @@
 
 package test.urr.spring.reactive.example;
 
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,7 +43,10 @@ public class DummyPersonRepository implements PersonRepository {
 
 	@Override
 	public Flux<Person> allPeople() {
-		return Flux.fromIterable(this.people.values());
+		// return Flux.fromIterable(this.people.values());
+
+		return Flux.interval(Duration.ofSeconds(1))
+				.map(t -> this.people.get(1));
 	}
 
 	@Override

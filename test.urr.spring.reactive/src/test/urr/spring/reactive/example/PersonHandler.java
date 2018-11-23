@@ -16,15 +16,16 @@
 
 package test.urr.spring.reactive.example;
 
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
-import test.urr.spring.reactive.PersonRepository;
+import static org.springframework.http.MediaType.APPLICATION_JSON;
+import static org.springframework.http.MediaType.TEXT_EVENT_STREAM;
+import static org.springframework.web.reactive.function.BodyInserters.fromObject;
 
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
-import static org.springframework.http.MediaType.APPLICATION_JSON;
-import static org.springframework.web.reactive.function.BodyInserters.fromObject;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import test.urr.spring.reactive.PersonRepository;
 
 public class PersonHandler {
 
@@ -43,7 +44,6 @@ public class PersonHandler {
 				.switchIfEmpty(notFound);
 	}
 
-
 	public Mono<ServerResponse> createPerson(ServerRequest request) {
 		Mono<Person> person = request.bodyToMono(Person.class);
 		return ServerResponse.ok().build(this.repository.savePerson(person));
@@ -51,7 +51,7 @@ public class PersonHandler {
 
 	public Mono<ServerResponse> listPeople(ServerRequest request) {
 		Flux<Person> people = this.repository.allPeople();
-		return ServerResponse.ok().contentType(APPLICATION_JSON).body(people, Person.class);
+		return ServerResponse.ok().contentType(TEXT_EVENT_STREAM).body(people, Person.class);
 	}
 
 }
