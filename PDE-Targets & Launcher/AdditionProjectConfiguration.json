@@ -30,11 +30,15 @@
         "org.objenesis",
         "com.profidatagroup.xentis.ui.base.lookandfeel",
         "org.powermock.api.support.membermodification",
+        "org.mockito",
         "org.powermock.reflect",
         "org.hamcrest;library\u003dsplit",
+        "org.mockito.stubbing",
         "org.powermock.modules.junit4.common.internal.impl"
       ],
-      "additionalProjectDependencies": [],
+      "additionalProjectDependencies": [
+        "com.profidata.xentis.session"
+      ],
       "additionalClasspathEntries": []
     },
     "com.compxc.frontoffice.common.test": {
@@ -214,7 +218,7 @@
       "additionalClasspathEntries": [
         {
           "type": "Library",
-          "path": "provided/ratex.jar",
+          "path": "provided/jxbrowser.jar",
           "exported": false,
           "accessRules": []
         },
@@ -226,14 +230,38 @@
         },
         {
           "type": "Library",
-          "path": "provided/org.jzy3d.jar",
+          "path": "provided/com.profidata.xentis.jni.jar",
+          "exported": true,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/hawtbuf.jar",
           "exported": false,
           "accessRules": []
         },
         {
           "type": "Library",
-          "path": "provided/com.profidata.xentis.env.server.jar",
-          "exported": true,
+          "path": "provided/jaxrpc-spi.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/ratex.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/jaxrpc-impl.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidatagroup.util.keymigration.model.jar",
+          "exported": false,
           "accessRules": []
         },
         {
@@ -250,37 +278,25 @@
         },
         {
           "type": "Library",
-          "path": "provided/com.profidata.xentis.jni.jar",
+          "path": "provided/com.profidata.xentis.env.server.jar",
           "exported": true,
           "accessRules": []
         },
         {
           "type": "Library",
-          "path": "provided/com.profidatagroup.util.keymigration.model.jar",
-          "exported": false,
+          "path": "provided/com.profidata.xentis.ratex.jar",
+          "exported": true,
           "accessRules": []
         },
         {
           "type": "Library",
-          "path": "provided/hawtbuf.jar",
+          "path": "provided/org.jzy3d.jar",
           "exported": false,
           "accessRules": []
         },
         {
-          "type": "Library",
-          "path": "provided/jxbrowser.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/jaxrpc-spi.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/jaxrpc-impl.jar",
+          "type": "Project",
+          "path": "com.profidata.xentis.session",
           "exported": false,
           "accessRules": []
         },
@@ -298,18 +314,6 @@
               "kind": 0
             }
           ]
-        },
-        {
-          "type": "Project",
-          "path": "com.profidata.xentis.session",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.ratex.jar",
-          "exported": true,
-          "accessRules": []
         }
       ]
     },

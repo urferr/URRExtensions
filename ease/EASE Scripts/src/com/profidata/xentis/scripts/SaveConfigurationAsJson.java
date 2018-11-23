@@ -141,12 +141,15 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.profidata.xentis.fix.commons.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.session");
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;library=split");
 		aConfiguration.additionalPackageDependencies.add("org.objenesis");
 		aConfiguration.additionalPackageDependencies.add("com.profidatagroup.xentis.ui.base.lookandfeel");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.modules.junit4.common.internal.impl");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.reflect");
+		aConfiguration.additionalPackageDependencies.add("org.mockito");
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		allBundles.put("com.profidata.xentis.javamis.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
