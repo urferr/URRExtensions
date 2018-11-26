@@ -76,6 +76,7 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration("UTF-8");
 		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.session");
+		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.trx");
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/atdl4j-swing-with-dependencies.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.env.server.jar", true));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.jni.jar", true));
@@ -83,12 +84,10 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.sn.jar", true));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidatagroup.util.keymigration.model.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/foxtrot-core.jar"));
-		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/hawtbuf.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/jaxrpc-spi.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/jaxrpc-impl.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/ratex.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/jxbrowser.jar"));
-		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Project, "com.profidata.xentis.session"));
 
 		ClasspathEntry aClasspathEntry = new ClasspathEntry(ClasspathEntryType.Container, "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11");
 		aConfiguration.additionalClasspathEntries.add(aClasspathEntry);
@@ -136,12 +135,15 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.profidata.xentis.fix.commons.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.session");
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;library=split");
 		aConfiguration.additionalPackageDependencies.add("org.objenesis");
 		aConfiguration.additionalPackageDependencies.add("com.profidatagroup.xentis.ui.base.lookandfeel");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.modules.junit4.common.internal.impl");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.reflect");
+		aConfiguration.additionalPackageDependencies.add("org.mockito");
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		allBundles.put("com.profidata.xentis.javamis.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
