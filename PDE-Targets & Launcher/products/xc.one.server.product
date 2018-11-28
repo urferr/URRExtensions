@@ -41,6 +41,9 @@
 -Dcom.sun.management.jmxremote.ssl=false
 -Dcom.sun.management.jmxremote.authenticate=false
 
+-DXENTIS_MONSTAR_LOGSTASH_HOST=
+-DXENTIS_MONSTAR_LOGSTASH_PORT=9999
+
 -ea
 -Xms256m
 -Xmx2048m
