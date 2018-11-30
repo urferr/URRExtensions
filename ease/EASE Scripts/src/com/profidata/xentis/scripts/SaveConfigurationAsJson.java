@@ -12,13 +12,11 @@ import java.util.Map;
 
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
-import org.eclipse.jdt.core.IAccessRule;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions;
-import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions.AccessRule;
 import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions.ClasspathEntry;
 import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions.ClasspathEntry.ClasspathEntryType;
 import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions.ProjectConfiguration;
@@ -79,6 +77,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration = new ProjectConfiguration("UTF-8");
 		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.session");
 		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.trx");
+		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.event.server");
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/atdl4j-swing-with-dependencies.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.env.server.jar", true));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.jni.jar", true));
@@ -86,7 +85,6 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.sn.jar", true));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidatagroup.util.keymigration.model.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/foxtrot-core.jar"));
-		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/hawtbuf.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/jaxrpc-spi.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/jaxrpc-impl.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/org.jzy3d.jar"));
@@ -94,10 +92,6 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/jxbrowser.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Project, "com.profidata.xentis.session"));
 
-		ClasspathEntry aClasspathEntry = new ClasspathEntry(ClasspathEntryType.Container, "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8");
-		aClasspathEntry.accessRules.add(new AccessRule("com/sun/java/swing/plaf/windows/*", IAccessRule.K_ACCESSIBLE));
-		aClasspathEntry.accessRules.add(new AccessRule("sun/awt/shell/*", IAccessRule.K_ACCESSIBLE));
-		aConfiguration.additionalClasspathEntries.add(aClasspathEntry);
 		allBundles.put("com.profidata.xentis.javamis", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration("UTF-8");
