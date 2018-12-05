@@ -77,6 +77,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration = new ProjectConfiguration("UTF-8");
 		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.session");
 		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.trx");
+		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.event.server");
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/atdl4j-swing-with-dependencies.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.env.server.jar", true));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.jni.jar", true));
