@@ -17,5 +17,61 @@
 			</network-handler>
 		</connection>
 	</data-source>
+	<data-source id="oracle_thin-16483957ea1-4d2736e40a75b0cc" provider="oracle" driver="oracle_thin" name="X_UI_P_20180630_S560_DEV - XNT091" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="pdxendb09" port="1521" server="" database="XNT091" url="jdbc:oracle:thin:@//pdxendb09:1521/XNT091" user="X_UI_P_20180630_S560_DEV" password="EAgcLEBBS0dl8w==" type="dev">
+			<property name="useFetchSizeWithLongColumn" value="true"/>
+			<property name="loginTimeout" value="20"/>
+			<provider-property name="@dbeaver-sid-service@" value="SERVICE"/>
+			<provider-property name="@dbeaver-use-rule-hint@" value="false"/>
+			<provider-property name="@dbeaver-connection-type@" value="BASIC"/>
+			<provider-property name="@dbeaver-check-schema-content@" value="true"/>
+			<provider-property name="@dbeaver-always-show-dba@" value="false"/>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="false">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="false">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="implementation" value="jsch"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+		</connection>
+	</data-source>
+	<data-source id="oracle_thin-164d6df0c44-1df868337409d3f0" provider="oracle" driver="oracle_thin" name="X_UI_P_20170327_DEV - XNT111" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="pdxendb11" port="1521" server="" database="XNT111" url="jdbc:oracle:thin:@//pdxendb11:1521/XNT111" user="X_UI_P_20170327_DEV" password="EAgcLEBBS0dl8w==" type="dev">
+			<provider-property name="@dbeaver-sid-service@" value="SERVICE"/>
+			<provider-property name="@dbeaver-use-rule-hint@" value="false"/>
+			<provider-property name="@dbeaver-connection-type@" value="BASIC"/>
+			<provider-property name="@dbeaver-check-schema-content@" value="true"/>
+			<provider-property name="@dbeaver-always-show-dba@" value="false"/>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="false">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="implementation" value="jsch"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="false">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+		</connection>
+	</data-source>
+	<data-source id="oracle_thin-16513930a6f-4254e301dfcea71b" provider="oracle" driver="oracle_thin" name="X_DEV_MASTER_XC - XNT051" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="pdxendb05" port="1521" server="" database="XNT051" url="jdbc:oracle:thin:@//pdxendb05:1521/XNT051" user="X_DEV_MASTER_XC" password="EAgcLEBBS0dl8w==" type="dev">
+			<provider-property name="@dbeaver-sid-service@" value="SERVICE"/>
+			<provider-property name="@dbeaver-use-rule-hint@" value="false"/>
+			<provider-property name="@dbeaver-connection-type@" value="BASIC"/>
+			<provider-property name="@dbeaver-check-schema-content@" value="true"/>
+			<provider-property name="@dbeaver-always-show-dba@" value="false"/>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="false">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="false">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="implementation" value="jsch"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+		</connection>
+	</data-source>
 	<filters/>
 </data-sources>

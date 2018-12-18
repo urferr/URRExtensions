@@ -12,9 +12,6 @@
 			</arguments>
 		</buildCommand>
 	</buildSpec>
-	<natures>
-		<nature>com.dell.toadext.ToadextNature</nature>
-	</natures>
 	<linkedResources>
 		<link>
 			<name>javamis-config</name>

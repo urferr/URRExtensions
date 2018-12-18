@@ -15,6 +15,7 @@ public class ProjectDependencyConfiguration {
 
 		someSourceProjects = new HashSet<>();
 		someSourceProjects.add("com.profidata.xentis.session");
+		someSourceProjects.add("com.profidata.xentis.trx");
 		additionalProjectDependencies.put("com.profidata.xentis.javamis", someSourceProjects);
 	}
 
