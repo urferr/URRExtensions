@@ -41,6 +41,7 @@
       "additionalPackageDependencies": [
         "org.powermock.api.support.membermodification",
         "org.objenesis",
+        "com.compxc.platform.common.metadata",
         "org.powermock.reflect",
         "org.powermock.modules.junit4.common.internal.impl"
       ],
@@ -58,9 +59,7 @@
         "org.mockito.stubbing",
         "org.powermock.modules.junit4.common.internal.impl"
       ],
-      "additionalProjectDependencies": [
-        "com.profidata.xentis.session"
-      ],
+      "additionalProjectDependencies": [],
       "additionalClasspathEntries": []
     },
     "com.compxc.frontoffice.common.test": {
@@ -89,6 +88,13 @@
     "com.xnife.encryption.service.xentis.test": {
       "additionalPackageDependencies": [
         "org.hamcrest;core\u003dsplit"
+      ],
+      "additionalProjectDependencies": [],
+      "additionalClasspathEntries": []
+    },
+    "com.profidata.xc.risk.excel.test": {
+      "additionalPackageDependencies": [
+        "org.apache.poi.ooxml"
       ],
       "additionalProjectDependencies": [],
       "additionalClasspathEntries": []
@@ -176,6 +182,7 @@
         "org.powermock.api.support.membermodification",
         "org.objenesis",
         "org.mockito.stubbing",
+        "com.xnife.core.beanutil",
         "org.powermock.modules.junit4.common.internal.impl"
       ],
       "additionalProjectDependencies": [],
@@ -318,39 +325,11 @@
     "com.profidata.xentis.javamis": {
       "encoding": "UTF-8",
       "additionalPackageDependencies": [],
-      "additionalProjectDependencies": [
-        "com.profidata.xentis.session",
-        "com.profidata.xentis.event.server",
-        "com.profidata.xentis.trx"
-      ],
+      "additionalProjectDependencies": [],
       "additionalClasspathEntries": [
         {
           "type": "Library",
-          "path": "provided/com.profidatagroup.util.keymigration.model.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/ratex.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.env.server.jar",
-          "exported": true,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/foxtrot-core.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.jni.jar",
+          "path": "provided/com.profidata.xentis.ratex.jar",
           "exported": true,
           "accessRules": []
         },
@@ -362,19 +341,7 @@
         },
         {
           "type": "Library",
-          "path": "provided/com.profidata.xentis.sn.jar",
-          "exported": true,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/atdl4j-swing-with-dependencies.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/jxbrowser.jar",
+          "path": "provided/jaxrpc-impl.jar",
           "exported": false,
           "accessRules": []
         },
@@ -385,14 +352,68 @@
           "accessRules": []
         },
         {
+          "type": "Project",
+          "path": "com.profidata.xentis.trx",
+          "exported": false,
+          "accessRules": []
+        },
+        {
           "type": "Library",
-          "path": "provided/com.profidata.xentis.ratex.jar",
+          "path": "provided/ratex.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.xentis.jni.jar",
           "exported": true,
           "accessRules": []
         },
         {
           "type": "Library",
-          "path": "provided/jaxrpc-impl.jar",
+          "path": "provided/com.profidata.xentis.sn.jar",
+          "exported": true,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/jxbrowser.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.event.server",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/atdl4j-swing-with-dependencies.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidatagroup.util.keymigration.model.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.session",
+          "exported": true,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.xentis.env.server.jar",
+          "exported": true,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/foxtrot-core.jar",
           "exported": false,
           "accessRules": []
         }

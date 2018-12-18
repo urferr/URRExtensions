@@ -75,9 +75,9 @@ public class SaveConfigurationAsJson {
 		ProjectConfiguration aConfiguration;
 
 		aConfiguration = new ProjectConfiguration("UTF-8");
-		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.session");
-		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.trx");
-		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.event.server");
+		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Project, "com.profidata.xentis.session", true));
+		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Project, "com.profidata.xentis.trx"));
+		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Project, "com.profidata.xentis.event.server"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/atdl4j-swing-with-dependencies.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.env.server.jar", true));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.jni.jar", true));
@@ -136,7 +136,6 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.profidata.xentis.fix.commons.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
-		aConfiguration.additionalProjectDependencies.add("com.profidata.xentis.session");
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;library=split");
 		aConfiguration.additionalPackageDependencies.add("org.objenesis");
 		aConfiguration.additionalPackageDependencies.add("com.profidatagroup.xentis.ui.base.lookandfeel");
@@ -194,6 +193,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalPackageDependencies.add("net.bytebuddy.dynamic.loading");
 		aConfiguration.additionalPackageDependencies.add("org.objenesis");
+		aConfiguration.additionalPackageDependencies.add("com.xnife.core.beanutil");
 		allBundles.put("com.compxc.order.presentation.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -234,6 +234,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.powermock.modules.junit4.common.internal.impl");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
 		aConfiguration.additionalPackageDependencies.add("org.objenesis");
+		aConfiguration.additionalPackageDependencies.add("com.compxc.platform.common.metadata");
 		allBundles.put("com.profidata.xc.rest.analysis.service.impl.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -244,6 +245,10 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.springframework.context");
 		aConfiguration.additionalPackageDependencies.add("org.objenesis");
 		allBundles.put("com.profidata.xc.risk.service.impl.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.apache.poi.ooxml");
+		allBundles.put("com.profidata.xc.risk.excel.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
