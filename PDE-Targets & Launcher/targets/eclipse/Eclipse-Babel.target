@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><?pde version="3.8"?><target name="Eclipse-Babel">
+	<locations>
+		<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+			<unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="4.8.0.v20180815020001"/>
+			<unit id="org.eclipse.babel.nls_modeling.emf_de.feature.group" version="4.8.0.v20180815020001"/>
+			<repository location="http://download.eclipse.org/technology/babel/update-site/R0.16.0/photon/"/>
+		</location>
+	</locations>
+</target>

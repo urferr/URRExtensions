@@ -445,7 +445,7 @@
 		<unit id="osgi.enterprise.source" version="4.2.0.v201108120515"/>
 		<unit id="scannotation" version="1.0.2.v201205170710"/>
 		<unit id="scannotation.source" version="1.0.2.v201205170710"/>
-		<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20180905201904/repository"/>
+		<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20181128170323/repository"/>
 	</location>
 </locations>
 </target>
