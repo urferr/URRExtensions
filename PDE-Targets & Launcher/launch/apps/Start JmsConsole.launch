@@ -16,9 +16,9 @@
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="localhost"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7820"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
-        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentis553j11branch_run/xentis/packages"/>
+        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>

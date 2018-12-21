@@ -18,12 +18,12 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_553_XC/clzlabo1@XNT121"/>
+        <mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_MASTER_XC/clzlabo1@XNT051"/>
         <mapEntry key="EAMIS_APP_PRGINFO" value="Eclipse@localhost"/>
-        <mapEntry key="EAMIS_APP_VAR" value="//pdvmdev15/urr/urr/xentis553j11branch_run/xentis/var"/>
+        <mapEntry key="EAMIS_APP_VAR" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/var"/>
         <mapEntry key="EAMIS_APP_VDB_JDBC_URL" value="jdbc:oracle:thin:VDB_HI_P_ENTW/clzlabo1@XNT041"/>
-        <mapEntry key="EAMIS_JMS_URL" value="tcp://pdvmdev15:7805?wireFormat.maxInactivityDuration=0"/>
-        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentis553j11branch_run/xentis/packages"/>
+        <mapEntry key="EAMIS_JMS_URL" value="tcp://pdvmdev15:7005?wireFormat.maxInactivityDuration=0"/>
+        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>
         <mapEntry key="EAMIS_VDB_ALIAS" value="XNT041"/>
         <mapEntry key="EAMIS_VDB_BB_FTP_MAX_POLL_TIME" value="60"/>
         <mapEntry key="EAMIS_VDB_BB_FTP_SUBDIR" value=""/>

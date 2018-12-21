@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
-    <setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
-    <setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
-    <setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
-    <setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
-    <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
-    <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
-    <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/PDE-Targets &amp;amp; Launcher/launch/prototype/Start Basicdata Prototype.prototype&quot;/&gt;&#13;&#10;"/>
-    <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
-    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/com.profidata.basicdata.shell/src/main/java/com/profidata/basicdata/shell/BasicdataShell.java"/>
-    </listAttribute>
-    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
-        <listEntry value="1"/>
-    </listAttribute>
-    <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_553_XC/clzlabo1@XNT121"/>
-        <mapEntry key="EAMIS_BASICDATA_PORT" value="7821"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="localhost"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7820"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
-        <mapEntry key="EAMIS_PACKAGES" value="D:/Projekte/xc2018-09/xentisserver/xentis/packages"/>
-    </mapAttribute>
-    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
-    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.basicdata.shell.BasicdataShell"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.basicdata.shell"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dvertx.logger-delegate-factory-class-name=io.vertx.core.logging.SLF4JLogDelegateFactory&#13;&#10;-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_HOST=&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_PORT=9999&#13;&#10;&#13;&#10;--add-opens java.base/sun.net.dns=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
+<setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+<stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/PDE-Targets &amp;amp; Launcher/launch/prototype/Start Basicdata Prototype.prototype&quot;/&gt;&#13;&#10;"/>
+<booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/com.profidata.basicdata.shell/src/main/java/com/profidata/basicdata/shell/BasicdataShell.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_553_XC/clzlabo1@XNT121"/>
+<mapEntry key="EAMIS_BASICDATA_PORT" value="7821"/>
+<mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="localhost"/>
+<mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7820"/>
+<mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
+<mapEntry key="EAMIS_PACKAGES" value="D:/Projekte/xc2018-09/xentisserver/xentis/packages"/>
+</mapAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.basicdata.shell.BasicdataShell"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.basicdata.shell"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dvertx.logger-delegate-factory-class-name=io.vertx.core.logging.SLF4JLogDelegateFactory&#13;&#10;-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_HOST=&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_PORT=9999&#13;&#10;&#13;&#10;--add-opens java.base/sun.net.dns=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
 </launchConfiguration>

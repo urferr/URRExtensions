@@ -39,19 +39,12 @@
 -Xms512m
 -Xmx1024m
 
--XX:+UseG1GC
--XX:MaxGCPauseMillis=50
--XX:GCPauseIntervalMillis=1000
 -XX:+UseStringDeduplication
 
 --add-opens java.base/java.lang=ALL-UNNAMED
-
 --add-opens java.desktop/java.awt=ALL-UNNAMED
-
 --add-opens java.desktop/sun.awt.windows=ALL-UNNAMED
-
 --add-opens java.desktop/javax.swing=ALL-UNNAMED
-
 --illegal-access=warn
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
