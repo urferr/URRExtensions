@@ -57,7 +57,7 @@
                 
 		<!-- URL of the broker used by the JMS client in all profiles but the BROKER -->
 		<!-- <clientUri>failover://(tcp://pdvmdev15:7805)</clientUri> -->
-		<clientUri>tcp://pdvmdev15:7805</clientUri>
+		<clientUri>tcp://pdvmdev15:7005</clientUri>
 		<!-- 
 		<clientUri>vm://localhost:9003</clientUri>
 		<clientUri><![CDATA[discovery:(multicast://default)?reconnectDelay=1000&maxReconnectAttempts=30&useExponentialBackOff=false]]></clientUri>
@@ -116,7 +116,7 @@
 				<!-- HSQL connection -->
                 <hibernateDialect>org.hibernate.dialect.HSQLDialect</hibernateDialect>
                 <jdbcDriver>org.hsqldb.jdbcDriver</jdbcDriver>
-                <jdbcUrl>jdbc:hsqldb:file:D:\JavaProjects\xcj11\ws\re-service-point-ers\hsqldb/myersdb;DB_CLOSE_DELAY=-1</jdbcUrl>
+                <jdbcUrl>jdbc:hsqldb:file:D:\JavaProjects\xcmst\ws\re-service-point-ers\hsqldb/myersdb;DB_CLOSE_DELAY=-1</jdbcUrl>
                 <userName>RE_TEST</userName>
                 <password>RE_TEST</password>
 
