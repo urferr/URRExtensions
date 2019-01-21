@@ -73,5 +73,10 @@
 			</network-handler>
 		</connection>
 	</data-source>
+	<data-source id="hsqldb_embedded-1685bc09027-72e93f0a50be82f" provider="generic" driver="hsqldb_embedded" name="ERSK MOBI MAST - HSQLDB" save-password="true" show-system-objects="true" read-only="false">
+		<connection server="" database="\\pdvmdev15\urr\urr\xentisMSTbranch_run\re-service-point-ers\hsqldb\myersdb" url="jdbc:hsqldb:file:\\pdvmdev15\urr\urr\xentisMSTbranch_run\re-service-point-ers\hsqldb\myersdb" type="dev">
+			<property name="shutdown" value="true"/>
+		</connection>
+	</data-source>
 	<filters/>
 </data-sources>
