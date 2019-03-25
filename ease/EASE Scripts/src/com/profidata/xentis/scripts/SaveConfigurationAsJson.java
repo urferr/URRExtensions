@@ -92,6 +92,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.jni.jar", true));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.ratex.jar", true));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.xentis.sn.jar", true));
+		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidata.web.browser"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/com.profidatagroup.util.keymigration.model.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/foxtrot-core.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/jaxrpc-spi.jar"));
