@@ -84,7 +84,32 @@
         "org.mockito.stubbing",
         "org.powermock.modules.junit4.common.internal.impl"
       ],
-      "additionalClasspathEntries": [],
+      "additionalClasspathEntries": [
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.session",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.sn",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.ratex",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.env.server",
+          "exported": false,
+          "accessRules": []
+        }
+      ],
       "additionalBundles": [
         "org.junit.jupiter.engine",
         "org.junit.platform.commons",
@@ -647,6 +672,40 @@
         "ch.qos.logback.core"
       ]
     },
+    "com.profidata.xentis.javamis.api.test": {
+      "additionalPackageDependencies": [
+        "org.springframework.beans.factory.annotation",
+        "org.mockito.stubbing"
+      ],
+      "additionalClasspathEntries": [],
+      "additionalBundles": [
+        "org.junit.jupiter.engine",
+        "org.junit.platform.commons",
+        "org.junit.platform.engine",
+        "org.opentest4j",
+        "ch.qos.logback.classic",
+        "ch.qos.logback.core"
+      ]
+    },
+    "com.profidata.xentis.javamis.api": {
+      "encoding": "UTF-8",
+      "additionalPackageDependencies": [],
+      "additionalClasspathEntries": [
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.session",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Container",
+          "path": "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11",
+          "exported": false,
+          "accessRules": []
+        }
+      ],
+      "additionalBundles": []
+    },
     "com.xnife.presentation.test": {
       "additionalPackageDependencies": [],
       "additionalClasspathEntries": [],
@@ -885,37 +944,13 @@
       "additionalClasspathEntries": [
         {
           "type": "Library",
-          "path": "provided/com.profidata.xentis.jni.jar",
-          "exported": true,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/jaxrpc-impl.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.ratex.jar",
-          "exported": true,
-          "accessRules": []
-        },
-        {
-          "type": "Project",
-          "path": "com.profidata.xentis.event.server",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
           "path": "provided/jaxrpc-spi.jar",
           "exported": false,
           "accessRules": []
         },
         {
           "type": "Library",
-          "path": "provided/atdl4j-swing-with-dependencies.jar",
+          "path": "provided/jxbrowser.jar",
           "exported": false,
           "accessRules": []
         },
@@ -927,26 +962,8 @@
         },
         {
           "type": "Project",
-          "path": "com.profidata.xentis.trx",
+          "path": "com.profidata.xentis.event.server",
           "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Project",
-          "path": "com.profidata.xentis.session",
-          "exported": true,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.web.browser.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.env.server.jar",
-          "exported": true,
           "accessRules": []
         },
         {
@@ -957,13 +974,37 @@
         },
         {
           "type": "Library",
-          "path": "provided/com.profidata.xentis.sn.jar",
-          "exported": true,
+          "path": "provided/com.profidata.xentis.env.server.jar",
+          "exported": false,
           "accessRules": []
         },
         {
           "type": "Container",
           "path": "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.trx",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/jaxrpc-impl.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.web.browser.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.xentis.ratex.jar",
           "exported": false,
           "accessRules": []
         },
@@ -975,7 +1016,19 @@
         },
         {
           "type": "Library",
-          "path": "provided/jxbrowser.jar",
+          "path": "provided/atdl4j-swing-with-dependencies.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.xentis.sn.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.session",
           "exported": false,
           "accessRules": []
         }
