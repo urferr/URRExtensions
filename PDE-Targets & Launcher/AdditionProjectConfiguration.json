@@ -5,15 +5,16 @@
       "additionalPackageDependencies": [
         "org.hamcrest;core\u003dsplit"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.compxc.workbench.presentation.test": {
       "additionalPackageDependencies": [
-        "org.hamcrest;core\u003dsplit"
+        "org.hamcrest;core\u003dsplit",
+        "org.eclipse.ui.testing"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xc.rest.analysis.service.impl.test": {
       "additionalPackageDependencies": [
@@ -22,8 +23,8 @@
         "org.powermock.reflect",
         "org.powermock.modules.junit4.common.internal.impl"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xentis.javamis.test": {
       "additionalPackageDependencies": [
@@ -34,22 +35,22 @@
         "org.hamcrest;library\u003dsplit",
         "org.powermock.modules.junit4.common.internal.impl"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.compxc.frontoffice.common.test": {
       "additionalPackageDependencies": [
         "javax.annotation"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xentis.fix.commons.test": {
       "additionalPackageDependencies": [
         "org.hamcrest;core\u003dsplit"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.compxc.frontoffice.presentation.test": {
       "additionalPackageDependencies": [
@@ -57,23 +58,23 @@
         "org.hamcrest;core\u003dsplit",
         "org.powermock.modules.junit4.common.internal.impl"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xentis.domain.unified.test": {
       "additionalPackageDependencies": [
         "javax.annotation",
         "org.hamcrest;core\u003dsplit"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.xnife.spring.test": {
       "additionalPackageDependencies": [
         "org.springframework.expression"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.risk.commons.test": {
       "additionalPackageDependencies": [
@@ -81,15 +82,15 @@
         "com.profidata.xentis.domain.unified",
         "com.profidata.xentis.domain.unified.impl.instrument"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xc.frontoffice.server.metadata.test": {
       "additionalPackageDependencies": [
         "org.springframework.remoting.support"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.compxc.frontoffice.excel.windows.test": {
       "additionalPackageDependencies": [
@@ -97,8 +98,8 @@
         "org.powermock.api.support.membermodification",
         "org.powermock.modules.junit4.common.internal.impl"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.compxc.order.presentation.test": {
       "additionalPackageDependencies": [
@@ -108,21 +109,21 @@
         "org.mockito.stubbing",
         "org.powermock.modules.junit4.common.internal.impl"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xentis.javamisxc": {
       "encoding": "UTF-8",
       "additionalPackageDependencies": [],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xc.metadata.service.impl.test": {
       "additionalPackageDependencies": [
         "org.hamcrest;core\u003dsplit"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xc.frontoffice.service.impl.test": {
       "additionalPackageDependencies": [
@@ -130,8 +131,8 @@
         "org.hamcrest;core\u003dsplit",
         "org.mockito.stubbing"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xentis.env.shared.test": {
       "additionalPackageDependencies": [
@@ -140,8 +141,8 @@
         "org.springframework.aop",
         "org.springframework.expression"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xentis.jms.shared.test": {
       "additionalPackageDependencies": [
@@ -149,12 +150,11 @@
         "javax.management.j2ee.statistics",
         "org.springframework.context"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.xnife.objectquery.plan.parser": {
       "additionalPackageDependencies": [],
-      "additionalProjectDependencies": [],
       "additionalClasspathEntries": [
         {
           "type": "Library",
@@ -162,57 +162,146 @@
           "exported": false,
           "accessRules": []
         }
-      ]
+      ],
+      "additionalBundles": []
     },
     "com.profidata.xentis.env.client.test": {
       "additionalPackageDependencies": [
+        "org.apache.commons.logging",
         "org.hamcrest;core\u003dsplit",
         "org.springframework.context"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xc.rest.common.service.impl.test": {
       "additionalPackageDependencies": [
         "org.powermock.api.support.membermodification",
         "com.profidata.xc.rest.common.service"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xc.risk.service.impl.test": {
       "additionalPackageDependencies": [
         "org.objenesis",
         "org.springframework.context"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xentis.bodomain.test": {
       "additionalPackageDependencies": [
         "org.objenesis"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xentis.etl.commons.test": {
       "additionalPackageDependencies": [
         "org.objenesis",
         "org.hamcrest;core\u003dsplit"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     },
     "com.profidata.xentis.javamis": {
       "encoding": "UTF-8",
       "additionalPackageDependencies": [],
-      "additionalProjectDependencies": [
-        "com.profidata.xentis.session"
-      ],
       "additionalClasspathEntries": [
         {
           "type": "Library",
           "path": "provided/atdl4j-swing-with-dependencies.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/jxbrowser.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.web.browser.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidatagroup.util.keymigration.model.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/jaxrpc-spi.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/foxtrot-core.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.xentis.jni.jar",
+          "exported": true,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/hawtbuf.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.session",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/org.jzy3d.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.xentis.sn.jar",
+          "exported": true,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.xentis.ratex.jar",
+          "exported": true,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.xentis.env.server.jar",
+          "exported": true,
+          "accessRules": []
+        },
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.session",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/jaxrpc-impl.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/ratex.jar",
           "exported": false,
           "accessRules": []
         },
@@ -230,93 +319,16 @@
               "kind": 0
             }
           ]
-        },
-        {
-          "type": "Library",
-          "path": "provided/jxbrowser.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidatagroup.util.keymigration.model.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Project",
-          "path": "com.profidata.xentis.session",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.sn.jar",
-          "exported": true,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/org.jzy3d.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/jaxrpc-impl.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.ratex.jar",
-          "exported": true,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/hawtbuf.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/jaxrpc-spi.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.env.server.jar",
-          "exported": true,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/ratex.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/foxtrot-core.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.jni.jar",
-          "exported": true,
-          "accessRules": []
         }
-      ]
+      ],
+      "additionalBundles": []
     },
     "com.profidata.xc.frontoffice.test": {
       "additionalPackageDependencies": [
         "org.hamcrest;core\u003dsplit"
       ],
-      "additionalProjectDependencies": [],
-      "additionalClasspathEntries": []
+      "additionalClasspathEntries": [],
+      "additionalBundles": []
     }
   }
 }

@@ -208,7 +208,7 @@ public class RemoveGradleNatureFromPlugins {
 					},
 							() -> Optional.ofNullable(ignoreTestFragmentDependencies.get(theProject.getName())).orElse(Collections.emptySet()),
 							replaceSpecialPackageDependencies)
-					.createBuildProperties()
+					.createBuildProperties(Collections.emptyList())
 					.refresh();
 
 			// Some of the Xentis projects have now set the encoding UTF-8 which is not the default.
