@@ -885,48 +885,6 @@
       "additionalClasspathEntries": [
         {
           "type": "Library",
-          "path": "provided/foxtrot-core.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Project",
-          "path": "com.profidata.xentis.session",
-          "exported": true,
-          "accessRules": []
-        },
-        {
-          "type": "Container",
-          "path": "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Project",
-          "path": "com.profidata.xentis.event.server",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidatagroup.util.keymigration.model.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.jni.jar",
-          "exported": true,
-          "accessRules": []
-        },
-        {
-          "type": "Project",
-          "path": "com.profidata.xentis.trx",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
           "path": "provided/com.profidata.xentis.env.server.jar",
           "exported": true,
           "accessRules": []
@@ -939,13 +897,37 @@
         },
         {
           "type": "Library",
-          "path": "provided/com.profidata.xentis.sn.jar",
+          "path": "provided/com.profidata.web.browser.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/foxtrot-core.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.session",
           "exported": true,
           "accessRules": []
         },
         {
           "type": "Library",
-          "path": "provided/jaxrpc-spi.jar",
+          "path": "provided/jaxrpc-impl.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Container",
+          "path": "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidatagroup.util.keymigration.model.jar",
           "exported": false,
           "accessRules": []
         },
@@ -957,19 +939,43 @@
         },
         {
           "type": "Library",
-          "path": "provided/atdl4j-swing-with-dependencies.jar",
-          "exported": false,
+          "path": "provided/com.profidata.xentis.sn.jar",
+          "exported": true,
           "accessRules": []
         },
         {
-          "type": "Library",
-          "path": "provided/jaxrpc-impl.jar",
+          "type": "Project",
+          "path": "com.profidata.xentis.event.server",
           "exported": false,
           "accessRules": []
         },
         {
           "type": "Library",
           "path": "provided/ratex.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.xentis.jni.jar",
+          "exported": true,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/atdl4j-swing-with-dependencies.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.trx",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/jaxrpc-spi.jar",
           "exported": false,
           "accessRules": []
         }
