@@ -177,6 +177,7 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		aConfiguration.additionalPackageDependencies.add("org.eclipse.ui.testing");
 		allBundles.put("com.compxc.workbench.presentation.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
