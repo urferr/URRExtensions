@@ -3,7 +3,7 @@
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 		<unit id="org.eclipse.graphiti.export.feature.feature.group" version="0.15.0.201806050830"/>
 		<unit id="org.eclipse.graphiti.sdk.feature.feature.group" version="0.15.0.201806050830"/>
-		<repository location="http://download.eclipse.org/releases/2018-12"/>
+		<repository location="http://download.eclipse.org/releases/2019-03"/>
 	</location>
 </locations>
 </target>

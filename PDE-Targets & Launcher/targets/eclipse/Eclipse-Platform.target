@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><?pde version="3.8"?><target name="Eclipse-Platform" sequenceNumber="36">
 <locations>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<unit id="org.eclipse.platform.sdk" version="4.10.0.I20181206-0815"/>
-		<repository location="http://download.eclipse.org/eclipse/updates/4.10"/>
+		<unit id="org.eclipse.platform.sdk" version="4.11.0.I20190307-0500"/>
+		<repository location="http://download.eclipse.org/eclipse/updates/4.11"/>
 	</location>
 </locations>
 <environment>

@@ -87,25 +87,25 @@
       "additionalClasspathEntries": [
         {
           "type": "Project",
-          "path": "com.profidata.xentis.session",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Project",
           "path": "com.profidata.xentis.sn",
           "exported": false,
           "accessRules": []
         },
         {
           "type": "Project",
-          "path": "com.profidata.xentis.ratex",
+          "path": "com.profidata.xentis.env.server",
           "exported": false,
           "accessRules": []
         },
         {
           "type": "Project",
-          "path": "com.profidata.xentis.env.server",
+          "path": "com.profidata.xentis.session",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Project",
+          "path": "com.profidata.xentis.ratex",
           "exported": false,
           "accessRules": []
         }
@@ -943,14 +943,20 @@
       "additionalPackageDependencies": [],
       "additionalClasspathEntries": [
         {
-          "type": "Library",
-          "path": "provided/jaxrpc-spi.jar",
+          "type": "Project",
+          "path": "com.profidata.xentis.session",
           "exported": false,
           "accessRules": []
         },
         {
           "type": "Library",
-          "path": "provided/jxbrowser.jar",
+          "path": "provided/com.profidata.xentis.ratex.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/jaxrpc-impl.jar",
           "exported": false,
           "accessRules": []
         },
@@ -961,8 +967,26 @@
           "accessRules": []
         },
         {
-          "type": "Project",
-          "path": "com.profidata.xentis.event.server",
+          "type": "Library",
+          "path": "provided/com.profidata.xentis.sn.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/jaxrpc-spi.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/com.profidata.xentis.env.server.jar",
+          "exported": false,
+          "accessRules": []
+        },
+        {
+          "type": "Library",
+          "path": "provided/atdl4j-swing-with-dependencies.jar",
           "exported": false,
           "accessRules": []
         },
@@ -973,8 +997,8 @@
           "accessRules": []
         },
         {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.env.server.jar",
+          "type": "Project",
+          "path": "com.profidata.xentis.event.server",
           "exported": false,
           "accessRules": []
         },
@@ -987,48 +1011,6 @@
         {
           "type": "Project",
           "path": "com.profidata.xentis.trx",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/jaxrpc-impl.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.web.browser.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.ratex.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidatagroup.util.keymigration.model.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/atdl4j-swing-with-dependencies.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Library",
-          "path": "provided/com.profidata.xentis.sn.jar",
-          "exported": false,
-          "accessRules": []
-        },
-        {
-          "type": "Project",
-          "path": "com.profidata.xentis.session",
           "exported": false,
           "accessRules": []
         }

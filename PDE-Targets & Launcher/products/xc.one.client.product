@@ -45,6 +45,8 @@
 --add-opens java.desktop/java.awt=ALL-UNNAMED
 --add-opens java.desktop/sun.awt.windows=ALL-UNNAMED
 --add-opens java.desktop/javax.swing=ALL-UNNAMED
+--add-opens java.desktop/sun.java2d.opengl=ALL-UNNAMED
+--add-opens java.desktop/sun.awt=ALL-UNNAMED
 --illegal-access=warn
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts

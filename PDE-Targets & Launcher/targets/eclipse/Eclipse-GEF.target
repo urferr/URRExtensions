@@ -3,12 +3,7 @@
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 		<unit id="org.eclipse.gef.sdk.feature.group" version="3.11.0.201606061308"/>
 		<unit id="org.eclipse.zest.sdk.feature.group" version="1.7.0.201606061308"/>
-		<repository location="http://download.eclipse.org/releases/2018-09"/>
-	</location>
-	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<unit id="org.eclipse.gef.sdk.feature.group" version="3.11.0.201606061308"/>
-		<unit id="org.eclipse.zest.sdk.feature.group" version="1.7.0.201606061308"/>
-		<repository location="http://download.eclipse.org/releases/2018-12"/>
+		<repository location="http://download.eclipse.org/releases/2019-03"/>
 	</location>
 </locations>
 </target>

@@ -5,7 +5,7 @@ Bundle-SymbolicName: test.urr.spring.reactive
 Bundle-Version: 0.0.0
 Automatic-Module-Name: test.urr.spring_reactive
 Spring-Context: *;timeout:=120
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Import-Package: com.fasterxml.jackson.annotation,
  com.xnife.http.service,
  javax.servlet,
