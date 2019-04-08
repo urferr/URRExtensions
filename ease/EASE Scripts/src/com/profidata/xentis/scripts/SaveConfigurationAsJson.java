@@ -17,10 +17,10 @@ import org.eclipse.core.runtime.IPath;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
-import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions;
-import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions.ClasspathEntry;
-import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions.ClasspathEntry.ClasspathEntryType;
-import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurationDefinitions.ProjectConfiguration;
+import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurations;
+import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurations.ClasspathEntry;
+import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurations.ClasspathEntry.ClasspathEntryType;
+import com.profidata.eclipse.project.model.fix.AdditionalProjectConfigurations.ProjectConfiguration;
 
 public class SaveConfigurationAsJson {
 	private static PrintStream output;
@@ -44,8 +44,8 @@ public class SaveConfigurationAsJson {
 	}
 
 	private void execute() {
-		AdditionalProjectConfigurationDefinitions aConfiguration = createConfig("JavaSE-11");
-		IPath aAdditionalProjectConfigurationPath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append("URRExtensions/ease/EASE Scripts").append("AdditionProjectConfiguration.json");
+		AdditionalProjectConfigurations aConfiguration = createConfig("JavaSE-11");
+		IPath aAdditionalProjectConfigurationPath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append("URRExtensions/ease/EASE Scripts").append("AdditionalProjectConfiguration.json");
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
 		// 1. Java object to JSON, and save into a file
@@ -58,7 +58,7 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = null;
 		try (Reader aReader = new FileReader(aAdditionalProjectConfigurationPath.toOSString())) {
-			aConfiguration = gson.fromJson(aReader, AdditionalProjectConfigurationDefinitions.class);
+			aConfiguration = gson.fromJson(aReader, AdditionalProjectConfigurations.class);
 		}
 		catch (JsonIOException | IOException cause) {
 			output.println("could not read json file: " + aAdditionalProjectConfigurationPath.toOSString());
@@ -70,8 +70,8 @@ public class SaveConfigurationAsJson {
 		output.println(jsonInString);
 	}
 
-	private AdditionalProjectConfigurationDefinitions createConfig(String theExecutionEnvironment) {
-		AdditionalProjectConfigurationDefinitions aProjectConfiguration = new AdditionalProjectConfigurationDefinitions(theExecutionEnvironment);
+	private AdditionalProjectConfigurations createConfig(String theExecutionEnvironment) {
+		AdditionalProjectConfigurations aProjectConfiguration = new AdditionalProjectConfigurations(theExecutionEnvironment);
 
 		aProjectConfiguration.projectConfigurations.putAll(getAdditionalBundleConfigurations());
 		aProjectConfiguration.projectConfigurations.putAll(getAdditionalTestFragmentConfigurations());
