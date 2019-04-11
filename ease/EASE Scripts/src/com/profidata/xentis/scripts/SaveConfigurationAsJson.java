@@ -30,6 +30,8 @@ public class SaveConfigurationAsJson {
 			"org.junit.jupiter.engine",
 			"org.junit.platform.commons",
 			"org.junit.platform.engine",
+			"net.bytebuddy.byte-buddy",
+			"org.objenesis",
 			"org.opentest4j",
 			"ch.qos.logback.classic",
 			"ch.qos.logback.core");
@@ -128,6 +130,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		aConfiguration.additionalBundles.add("jcl.over.slf4j");
+		aConfiguration.additionalBundles.add("org.springframework.expression");
 		allBundles.put("com.xnife.cache.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -195,7 +198,6 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
 		allBundles.put("com.xnife.presentation.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -297,24 +299,22 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
 		allBundles.put("com.profidata.xc.risk.domain.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.apache.poi.ooxml");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		aConfiguration.additionalBundles.add("org.apache.commons.collections4");
+		aConfiguration.additionalBundles.add("org.apache.commons.compress");
 		allBundles.put("com.profidata.xc.risk.excel.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
 		allBundles.put("com.profidata.xc.risk.presentation.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.springframework.context");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
 		aConfiguration.additionalBundles.add("com.sun.istack.commons-runtime");
 		allBundles.put("com.profidata.xc.risk.service.impl.test", aConfiguration);
 
@@ -337,7 +337,6 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("net.bytebuddy.dynamic.loading");
 		aConfiguration.additionalPackageDependencies.add("com.xnife.core.beanutil");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
 		allBundles.put("com.compxc.order.presentation.test", aConfiguration);
 
 		return allBundles;
@@ -357,7 +356,6 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("com.compxc.common.persistence.entity.db");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
 		allBundles.put("com.compxc.frontoffice.excel.windows.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -365,7 +363,8 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.powermock.modules.junit4.common.internal.impl");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
+		aConfiguration.additionalBundles.add("org.powermock.core");
+		aConfiguration.additionalBundles.add("org.apache.commons.collections4");
 		allBundles.put("com.compxc.frontoffice.presentation.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -391,7 +390,6 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
 		aConfiguration.additionalPackageDependencies.add("com.compxc.platform.common.metadata");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
 		aConfiguration.additionalBundles.add("org.glassfish.hk2");
 		allBundles.put("com.profidata.xc.rest.analysis.service.impl.test", aConfiguration);
 
@@ -400,7 +398,11 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.core.spi");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
+		aConfiguration.additionalBundles.add("com.google.guava");
+		aConfiguration.additionalBundles.add("com.google.guava.failureaccess");
+		aConfiguration.additionalBundles.add("org.glassfish.jersey");
+		aConfiguration.additionalBundles.add("org.glassfish.hk2");
+		aConfiguration.additionalBundles.add("javax.inject");
 		allBundles.put("com.profidata.xc.rest.common.service.impl.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -432,8 +434,8 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.profidata.reporting.common.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
-		aConfiguration.additionalPackageDependencies.add("org.objenesis");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
+		aConfiguration.additionalBundles.add("com.sun.istack.commons-runtime");
 		allBundles.put("com.profidata.xentis.bodomain.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -457,14 +459,12 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.springframework.aop");
 		aConfiguration.additionalPackageDependencies.add("org.springframework.expression");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
 		aConfiguration.additionalBundles.add("jcl.over.slf4j");
 		allBundles.put("com.profidata.xentis.env.shared.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
 		aConfiguration.additionalBundles.add("net.lingala.zip4j");
 		allBundles.put("com.profidata.xentis.etl.commons.test", aConfiguration);
 
@@ -485,20 +485,19 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.mockito");
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
 		allBundles.put("com.profidata.xentis.javamis.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.springframework.beans.factory.annotation");
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
+		aConfiguration.additionalBundles.add("com.google.guava");
 		allBundles.put("com.profidata.xentis.javamis.api.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.springframework.context");
 		aConfiguration.additionalPackageDependencies.add("javax.management.j2ee.statistics");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
 		allBundles.put("com.profidata.xentis.jms.shared.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -513,13 +512,11 @@ public class SaveConfigurationAsJson {
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
 		allBundles.put("com.profidata.xentis.ui.base.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.objenesis");
 		allBundles.put("com.profidata.xentis.user.shared.test", aConfiguration);
 
 		return allBundles;
