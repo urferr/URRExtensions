@@ -87,11 +87,8 @@
       <plugin id="com.profidata.xc.one.client.configuration" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xentis.client" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.application" autoStart="true" startLevel="0" />
-      <plugin id="com.xnife.context.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.logging.slf4j.logback.commandline" autoStart="true" startLevel="2" />
       <plugin id="com.xnife.remoting.client" autoStart="true" startLevel="0" />
-      <plugin id="com.xnife.security.application" autoStart="true" startLevel="0" />
-      <plugin id="com.xnife.security.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="0" />
