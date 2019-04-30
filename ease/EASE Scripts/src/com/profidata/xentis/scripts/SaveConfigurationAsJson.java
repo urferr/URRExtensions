@@ -96,7 +96,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration = new ProjectConfiguration("UTF-8");
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Project, "com.profidata.xentis.session"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Container, "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11"));
-		allBundles.put("com.profidata.xentis.javamis.api", aConfiguration);
+		allBundles.put("com.profidata.xentis.javamis.shared", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration("UTF-8");
 		allBundles.put("com.profidata.xentis.javamisxc", aConfiguration);
@@ -491,7 +491,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		aConfiguration.additionalBundles.add("com.google.guava");
-		allBundles.put("com.profidata.xentis.javamis.api.test", aConfiguration);
+		allBundles.put("com.profidata.xentis.javamis.shared.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.springframework.context");
