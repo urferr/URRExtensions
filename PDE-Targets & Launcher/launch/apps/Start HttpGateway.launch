@@ -15,26 +15,9 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_MASTER_XC/clzlabo1@XNT051"/>
-        <mapEntry key="EAMIS_BASICDATA_PORT" value="7021"/>
-        <mapEntry key="EAMIS_CLUSTER_INSTANCE_NODE" value="localhost"/>
-        <mapEntry key="EAMIS_CLUSTER_ROOT" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
-        <mapEntry key="EAMIS_INSTANCE_HOME" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis"/>
-        <mapEntry key="EAMIS_JMSCONSOLE_ADMIN_PORT" value="7022"/>
-        <mapEntry key="EAMIS_JMSCONSOLE_PORT" value="7023"/>
-        <mapEntry key="EAMIS_JMS_URL" value="tcp://pdvmdev15:7005?wireFormat.maxInactivityDuration=0"/>
+        <mapEntry key="EAMIS_CLUSTER_INSTANCE_NODE" value="pdvmdev15"/>
+        <mapEntry key="EAMIS_CONFIG_API_PORT" value="7027"/>
         <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>
-        <mapEntry key="EAMIS_RISKSTORE_API_PORT" value="7024"/>
-        <mapEntry key="EAMIS_RISKSTORE_DB_PASSWORD" value="admin"/>
-        <mapEntry key="EAMIS_RISKSTORE_DB_PORT" value="7025"/>
-        <mapEntry key="EAMIS_RISKSTORE_DB_ROOT_PASSWORD" value="root"/>
-        <mapEntry key="EAMIS_RISKSTORE_STUDIO_PORT" value="7026"/>
-        <mapEntry key="EAMIS_XCAS_SERVICES_PORT" value="7016"/>
-        <mapEntry key="EAMIS_XENTIS_API_PORT" value="7006"/>
-        <mapEntry key="EAMIS_XSB_REGISTRY_PORT" value="7007"/>
-        <mapEntry key="EAMIS_XSB_SERVICE_PORT" value="7014"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
