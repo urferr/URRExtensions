@@ -482,6 +482,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.powermock.reflect");
 		aConfiguration.additionalPackageDependencies.add("org.mockito");
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
+		aConfiguration.additionalPackageDependencies.add("org.apache.commons.text.lookup");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		allBundles.put("com.profidata.xentis.javamis.test", aConfiguration);
 
