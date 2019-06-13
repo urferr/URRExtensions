@@ -1,0 +1,37 @@
+Xentis Development System Base Port
+==========================
+<table style="width:30%">
+	<tr>
+		<td>Version</td><td>Port</td>
+	</tr>
+	<tr>
+		<td>5.4.1</td><td>7500</td>
+	</tr>
+	<tr>
+		<td>5.4.2</td><td>7400</td>
+	</tr>
+	<tr>
+		<td>5.5.1</td><td>7100</td>
+	</tr>
+	<tr>
+		<td>5.5.2</td><td>7200</td>
+	</tr>
+	<tr>
+		<td>5.5.3</td><td>7300</td>
+	</tr>
+	<tr>
+		<td>5.6.0</td><td>7600</td>
+	</tr>
+	<tr>
+		<td>5.6.1</td><td>7600</td>
+	</tr>
+	<tr>
+		<td>5.6.2</td><td>7600</td>
+	</tr>
+	<tr>
+		<td>5.6.3</td><td>7700</td>
+	</tr>
+	<tr>
+		<td>master</td><td>7000</td>
+	</tr>
+</table>
