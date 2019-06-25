@@ -86,11 +86,10 @@ public class SaveConfigurationAsJson {
 		ProjectConfiguration aConfiguration;
 
 		aConfiguration = new ProjectConfiguration("UTF-8");
-		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Project, "com.profidata.xentis.session"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/atdl4j-swing-with-dependencies.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Library, "provided/foxtrot-core.jar"));
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Container, "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11"));
-		allBundles.put("com.profidata.xentis.javamis", aConfiguration);
+		allBundles.put("com.profidata.xentis.javamis.client", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration("UTF-8");
 		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Project, "com.profidata.xentis.session"));
@@ -472,7 +471,6 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.profidata.xentis.fix.commons.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
-		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Project, "com.profidata.xentis.session"));
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;library=split");
 		aConfiguration.additionalPackageDependencies.add("com.profidatagroup.xentis.ui.base.lookandfeel");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.modules.junit4.common.internal.impl");
@@ -482,7 +480,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalPackageDependencies.add("org.apache.commons.text.lookup");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		allBundles.put("com.profidata.xentis.javamis.test", aConfiguration);
+		allBundles.put("com.profidata.xentis.javamis.client.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.springframework.beans.factory.annotation");
