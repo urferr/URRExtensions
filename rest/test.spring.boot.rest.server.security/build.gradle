@@ -1,0 +1,41 @@
+plugins {
+	id 'java'
+}
+
+group = 'com.urr.spring'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+configurations.all {
+	transitive = false
+}
+
+ext {
+	springVersion = "5.1.8.RELEASE"
+	springBootVersion = "2.1.6.RELEASE"
+	springCloudVersion = '2.1.2.RELEASE'
+	springSecurityVersion = "5.1.5.RELEASE"
+	nettyVersion = "4.1.36.Final"
+	jacksonVersion = "2.9.9"
+	braveVersion = '5.6.5'
+	aspectjVersion = '1.9.2'
+	jjwtVersion = '0.10.7'
+}
+
+dependencies {
+	implementation "org.springframework:spring-beans:$springVersion"
+	implementation "org.springframework:spring-context:$springVersion"
+	implementation "org.springframework:spring-core:$springVersion"
+	implementation "org.springframework:spring-web:$springVersion"
+	implementation "org.springframework.security:spring-security-core:$springSecurityVersion"
+	implementation "org.springframework.security:spring-security-config:$springSecurityVersion"
+	implementation "org.springframework.security:spring-security-web:$springSecurityVersion"
+
+	implementation "org.slf4j:slf4j-api:1.7.26"
+    implementation "io.jsonwebtoken:jjwt-api:$jjwtVersion"
+	implementation "javax.servlet:javax.servlet-api:4.0.1"
+}

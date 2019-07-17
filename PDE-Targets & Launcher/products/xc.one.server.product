@@ -107,6 +107,7 @@
       <plugin id="com.profidata.xc.optimizer.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.order.servicefacade.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.persistence.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.platform.request.tracing" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.requestcache.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.admin.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.analysis.service.impl" autoStart="true" startLevel="0" />

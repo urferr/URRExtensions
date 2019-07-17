@@ -15,9 +15,7 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_MASTER_XC/clzlabo1@XNT051"/>
-        <mapEntry key="EAMIS_BASICDATA_PORT" value="7021"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev15"/>
+        <mapEntry key="EAMIS_CLUSTER_INSTANCE_NODE" value="pdvmdev15"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
         <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>

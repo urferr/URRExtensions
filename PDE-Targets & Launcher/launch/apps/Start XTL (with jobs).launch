@@ -18,26 +18,13 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="EAMIS_APP_JAVA_JDBC_URL" value="jdbc:oracle:thin:X_MOBIDEV_MASTER_XC/clzlabo1@XNT051"/>
-        <mapEntry key="EAMIS_APP_PRGINFO" value="Eclipse@localhost"/>
-        <mapEntry key="EAMIS_APP_VAR" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/var"/>
-        <mapEntry key="EAMIS_APP_VDB_JDBC_URL" value="jdbc:oracle:thin:VDB_HI_P_ENTW/clzlabo1@XNT041"/>
-        <mapEntry key="EAMIS_JMS_URL" value="tcp://pdvmdev15:7005?wireFormat.maxInactivityDuration=0"/>
+        <mapEntry key="EAMIS_CLUSTER_INSTANCE_NODE" value="pdvmdev15"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
         <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>
-        <mapEntry key="EAMIS_VDB_ALIAS" value="XNT041"/>
-        <mapEntry key="EAMIS_VDB_BB_FTP_MAX_POLL_TIME" value="60"/>
-        <mapEntry key="EAMIS_VDB_BB_FTP_SUBDIR" value=""/>
-        <mapEntry key="EAMIS_VDB_BB_FTP_TYPE" value="i"/>
-        <mapEntry key="EAMIS_VDB_BB_KEY" value="nPwB7vV9"/>
-        <mapEntry key="EAMIS_VDB_BB_PASSWD" value="DxbdjVdl"/>
         <mapEntry key="EAMIS_VDB_BB_PORT" value="21"/>
+        <mapEntry key="EAMIS_VDB_BB_FTP_MAX_POLL_TIME" value="60"/>
         <mapEntry key="EAMIS_VDB_BB_PROTOCOL" value="ftp"/>
-        <mapEntry key="EAMIS_VDB_BB_SERVER" value="bfmrr.bloomberg.com"/>
-        <mapEntry key="EAMIS_VDB_BB_USER" value="dl848"/>
-        <mapEntry key="EAMIS_VDB_PASSWD" value="clzlabo1"/>
-        <mapEntry key="EAMIS_VDB_PORT" value="1521"/>
-        <mapEntry key="EAMIS_VDB_SCHEMA" value="VDB_HI_P_ENTW"/>
-        <mapEntry key="EAMIS_VDB_SERVER" value="pdxendb04.profidatagroup.com"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
@@ -52,6 +39,7 @@
     <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
     <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.etl.ETLStarter"/>
+    <listAttribute key="org.eclipse.jdt.launching.MODULEPATH"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xentis.etl"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_HOST=&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_PORT=9999&#13;&#10;&#13;&#10;--add-opens java.base/java.lang=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;-Dspring.profiles.active=prod&#13;&#10;&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_HOST=&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_PORT=9999&#13;&#10;&#13;&#10;--add-opens java.base/java.lang=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
 </launchConfiguration>

@@ -1,0 +1,10 @@
+pluginManagement {
+	repositories {
+		gradlePluginPortal()
+	}
+}
+rootProject.name = 'test.spring.boot.rest.server'
+
+include ":security:test.spring.boot.rest.server.security"
+include ":security:test.spring.boot.rest.server.security.mvc"
+include ":security:test.spring.boot.rest.server.security.flux"
