@@ -38,6 +38,7 @@ public class WebSecurityConfig {
 				.authenticationManager(authenticationManager)
 				.securityContextRepository(securityContextRepository)
 				.authorizeExchange()
+				.pathMatchers("/login").permitAll()
 				.anyExchange().authenticated();
 
 		return theHttpSecurity.build();

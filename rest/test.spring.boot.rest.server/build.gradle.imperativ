@@ -24,10 +24,12 @@ ext {
 	braveVersion = '5.6.5'
 	aspectjVersion = '1.9.2'
 	jjwtVersion = '0.10.7'
+	slf4jVersion = '1.7.26'
+	logbackVersion = '1.2.3'
 }
 
 dependencies {
-	runtimeOnly (project(":security:test.spring.boot.rest.server.security"))
+	implementation (project(":security:test.spring.boot.rest.server.security"))
 	runtimeOnly (project(":security:test.spring.boot.rest.server.security.mvc"))
 
 // Required for Spring Boot Rest Server Mvc
@@ -38,20 +40,22 @@ dependencies {
 	implementation "org.springframework.boot:spring-boot-autoconfigure:$springBootVersion"
 	implementation "org.springframework:spring-context:$springVersion"
 	implementation "org.springframework:spring-web:$springVersion"
-	implementation "org.slf4j:slf4j-api:1.7.26"
+	implementation "org.slf4j:slf4j-api:$slf4jVersion"
 	
 	runtimeOnly "javax.annotation:javax.annotation-api:1.3.2"
 	runtimeOnly "org.springframework:spring-aop:$springVersion"
 	runtimeOnly "org.springframework:spring-beans:$springVersion"
 	runtimeOnly "org.springframework:spring-core:$springVersion"
 	runtimeOnly "org.springframework:spring-expression:$springVersion"
-	runtimeOnly "org.springframework:spring-jcl:$springVersion"
 	runtimeOnly "org.springframework:spring-webmvc:$springVersion"
-	runtimeOnly "org.slf4j:jul-to-slf4j:1.7.26"
-	runtimeOnly "ch.qos.logback:logback-classic:1.2.3"
-	runtimeOnly "ch.qos.logback:logback-core:1.2.3"
-	runtimeOnly "org.apache.logging.log4j:log4j-to-slf4j:2.11.2"
-	runtimeOnly "org.yaml:snakeyaml:1.24"									// required for yaml configuration files
+	runtimeOnly "org.yaml:snakeyaml:1.24"									// required for boot yaml configuration files
+	
+	runtimeOnly "org.slf4j:jul-to-slf4j:$slf4jVersion"						// required for java.util logging
+	runtimeOnly "org.slf4j:jcl-over-slf4j:$slf4jVersion"					// required for commons logging
+	runtimeOnly "org.slf4j:log4j-over-slf4j:$slf4jVersion"				// required for log4j
+	runtimeOnly "org.apache.logging.log4j:log4j-to-slf4j:2.11.2"		// required for log4j 2
+	runtimeOnly "ch.qos.logback:logback-classic:$logbackVersion"
+	runtimeOnly "ch.qos.logback:logback-core:$logbackVersion"
 
 
 // Required to use embedded Jetty server
@@ -92,10 +96,10 @@ dependencies {
 	
 // Required to use Spring Security with JWT
 //	implementation "org.springframework.boot:spring-boot-starter-security:$springBootVersion"
-    runtimeOnly "io.jsonwebtoken:jjwt-impl:$jjwtVersion"
 	runtimeOnly "org.springframework.security:spring-security-core:$springSecurityVersion"
 	runtimeOnly "org.springframework.security:spring-security-config:$springSecurityVersion"
 	runtimeOnly "org.springframework.security:spring-security-web:$springSecurityVersion"
     runtimeOnly "io.jsonwebtoken:jjwt-api:$jjwtVersion"
+    runtimeOnly "io.jsonwebtoken:jjwt-impl:$jjwtVersion"
     runtimeOnly "io.jsonwebtoken:jjwt-jackson:$jjwtVersion"
 }
