@@ -70,8 +70,6 @@ dependencies {
 	runtimeOnly "io.netty:netty-handler-proxy:$nettyVersion"
 	runtimeOnly "io.netty:netty-resolver:$nettyVersion"
 	runtimeOnly "io.netty:netty-transport:$nettyVersion"
-	runtimeOnly "io.netty:netty-transport-native-epoll:$nettyVersion:linux-x86_64"
-	runtimeOnly "io.netty:netty-transport-native-unix-common:$nettyVersion"
 	
 	
 // Required to use Jackson Json converter

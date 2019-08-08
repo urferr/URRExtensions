@@ -312,6 +312,8 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.springframework.context");
+		aConfiguration.additionalPackageDependencies.add("org.reactivestreams");
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		aConfiguration.additionalBundles.add("com.sun.istack.commons-runtime");
 		allBundles.put("com.profidata.xc.risk.service.impl.test", aConfiguration);

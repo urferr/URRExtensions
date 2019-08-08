@@ -19,7 +19,7 @@ ext {
 	springBootVersion = "2.1.6.RELEASE"
 	springCloudVersion = '2.1.2.RELEASE'
 	springSecurityVersion = "5.1.5.RELEASE"
-	nettyVersion = "4.1.36.Final"
+	jettyVersion = "9.4.19.v20190610"
 	jacksonVersion = "2.9.9"
 	braveVersion = '5.6.5'
 	aspectjVersion = '1.9.2'
@@ -30,10 +30,12 @@ ext {
 
 dependencies {
 	implementation (project(":security:test.spring.boot.rest.server.security"))
-	runtimeOnly (project(":security:test.spring.boot.rest.server.security.flux"))
+	runtimeOnly (project(":security:test.spring.boot.rest.server.security.mvc"))
 
-// Required for Spring Boot Rest Server flux
-//	implementation "org.springframework.boot:spring-boot-starter-webflux:$springBootVersion"
+// Required for Spring Boot Rest Server Mvc
+//	implementation ('org.springframework.boot:spring-boot-starter-web') {
+//		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+//	}
 	implementation "org.springframework.boot:spring-boot:$springBootVersion"
 	implementation "org.springframework.boot:spring-boot-autoconfigure:$springBootVersion"
 	implementation "org.springframework:spring-context:$springVersion"
@@ -45,8 +47,8 @@ dependencies {
 	runtimeOnly "org.springframework:spring-beans:$springVersion"
 	runtimeOnly "org.springframework:spring-core:$springVersion"
 	runtimeOnly "org.springframework:spring-expression:$springVersion"
-	runtimeOnly "org.springframework:spring-webflux:$springVersion"
-	runtimeOnly "org.yaml:snakeyaml:1.24"									// required for yaml configuration files
+	runtimeOnly "org.springframework:spring-webmvc:$springVersion"
+	runtimeOnly "org.yaml:snakeyaml:1.24"									// required for boot yaml configuration files
 	
 	runtimeOnly "org.slf4j:jul-to-slf4j:$slf4jVersion"						// required for java.util logging
 	runtimeOnly "org.slf4j:jcl-over-slf4j:$slf4jVersion"					// required for commons logging
@@ -56,41 +58,37 @@ dependencies {
 	runtimeOnly "ch.qos.logback:logback-core:$logbackVersion"
 
 
-// Required to use embedded Netty server
-//	implementation "org.springframework.boot:spring-boot-starter-reactor-netty:$springBootVersion"
-	runtimeOnly "org.reactivestreams:reactive-streams:1.0.2"
-	runtimeOnly "io.projectreactor.netty:reactor-netty:0.8.9.RELEASE"
-	runtimeOnly "io.projectreactor:reactor-core:3.2.10.RELEASE"
-	runtimeOnly "io.netty:netty-buffer:$nettyVersion"
-	runtimeOnly "io.netty:netty-codec:$nettyVersion"
-	runtimeOnly "io.netty:netty-codec-http:$nettyVersion"
-	runtimeOnly "io.netty:netty-codec-http2:$nettyVersion"
-	runtimeOnly "io.netty:netty-common:$nettyVersion"
-	runtimeOnly "io.netty:netty-handler:$nettyVersion"
-	runtimeOnly "io.netty:netty-handler-proxy:$nettyVersion"
-	runtimeOnly "io.netty:netty-resolver:$nettyVersion"
-	runtimeOnly "io.netty:netty-transport:$nettyVersion"
-	runtimeOnly "io.netty:netty-transport-native-epoll:$nettyVersion:linux-x86_64"
-	runtimeOnly "io.netty:netty-transport-native-unix-common:$nettyVersion"
+// Required to use embedded Jetty server
+//	implementation 'org.springframework.boot:spring-boot-starter-jetty'
+	runtimeOnly "javax.servlet:javax.servlet-api:4.0.1"
+	runtimeOnly "org.eclipse.jetty:jetty-http:$jettyVersion"
+	runtimeOnly "org.eclipse.jetty:jetty-io:$jettyVersion"
+	runtimeOnly "org.eclipse.jetty:jetty-security:$jettyVersion"
+	runtimeOnly "org.eclipse.jetty:jetty-server:$jettyVersion"
+	runtimeOnly "org.eclipse.jetty:jetty-servlet:$jettyVersion"
+	runtimeOnly "org.eclipse.jetty:jetty-util:$jettyVersion"
+	runtimeOnly "org.eclipse.jetty:jetty-webapp:$jettyVersion"
 	
 	
-// Required to use Jackson Json converter
-//	implementation "org.springframework.boot:spring-boot-starter-json:$springBootVersion"
+// Required to use embedded Jackson Json converter
+//	implementation 'org.springframework.boot:spring-boot-starter-json'
 	runtimeOnly "com.fasterxml.jackson.core:jackson-core:$jacksonVersion"
 	runtimeOnly "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
 	runtimeOnly "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"	
 	runtimeOnly "com.fasterxml.jackson.module:jackson-module-parameter-names:$jacksonVersion"	
 	runtimeOnly "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:$jacksonVersion"	
-	runtimeOnly "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion"
+	runtimeOnly "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion"	
 	
 	
-// Required to use Spring Sleuth tracing
+// Required to use Spring Seuth tracing
 //	implementation "org.springframework.cloud:spring-cloud-starter-sleuth:$springCloudVersion"
     runtimeOnly "org.aspectj:aspectjrt:$aspectjVersion"
     runtimeOnly "org.aspectj:aspectjweaver:$aspectjVersion"
     runtimeOnly "io.zipkin.brave:brave:$braveVersion"
     runtimeOnly "io.zipkin.brave:brave-instrumentation-http:$braveVersion"
     runtimeOnly "io.zipkin.brave:brave-instrumentation-spring-web:$braveVersion"
+    runtimeOnly "io.zipkin.brave:brave-instrumentation-spring-webmvc:$braveVersion"
+    runtimeOnly "io.zipkin.brave:brave-instrumentation-servlet:$braveVersion"
     runtimeOnly "io.zipkin.zipkin2:zipkin:2.14.2"
     runtimeOnly "io.zipkin.reporter2:zipkin-reporter:2.8.4"
     runtimeOnly "org.springframework.cloud:spring-cloud-sleuth-core:$springCloudVersion"
