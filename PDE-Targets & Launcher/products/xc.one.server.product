@@ -35,6 +35,7 @@
 -Dorg.eclipse.equinox.http.jetty.http.port=7016
 
 -Doracle.net.tns_admin=${env_var:TNS_ADMIN}
+-Dfile.encoding=&quot;UTF-8&quot;
 
 -Dcom.sun.management.jmxremote.port=7072
 -Dcom.sun.management.jmxremote.ssl=false

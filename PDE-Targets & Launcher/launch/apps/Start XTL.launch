@@ -18,6 +18,7 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="EAMIS_APP_VAR" value="/working/xentis/instances/xentis/var"/>
         <mapEntry key="EAMIS_CLUSTER_INSTANCE_NODE" value="pdvmdev15"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
