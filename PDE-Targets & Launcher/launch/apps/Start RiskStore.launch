@@ -22,7 +22,6 @@
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.risk.store.shell.RiskStoreShell"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.risk.store.shell"/>
     <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dvertx.logger-delegate-factory-class-name=io.vertx.core.logging.SLF4JLogDelegateFactory&#13;&#10;&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_HOST=&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_PORT=9999&#13;&#10;&#13;&#10;--add-opens java.base/java.lang=ALL-UNNAMED&#13;&#10;--add-opens=java.base/java.util=ALL-UNNAMED&#13;&#10;--add-opens java.base/jdk.internal.misc=ALL-UNNAMED&#13;&#10;--add-opens java.base/sun.net.dns=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
