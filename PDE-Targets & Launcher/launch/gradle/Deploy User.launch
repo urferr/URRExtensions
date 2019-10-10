@@ -22,7 +22,7 @@
     <booleanAttribute key="show_console_view" value="true"/>
     <booleanAttribute key="show_execution_view" value="true"/>
     <listAttribute key="tasks">
-        <listEntry value=":config-service:com.profidata.configservice.shell:deploy-libs"/>
+        <listEntry value=":user:com.profidata.user.shell:deploy-libs"/>
     </listAttribute>
     <stringAttribute key="working_dir" value="${workspace_loc:/xentisjava}"/>
 </launchConfiguration>
