@@ -67,6 +67,7 @@
       </win>
    </launcher>
 
+
    <vm>
    </vm>
 
@@ -105,7 +106,7 @@
    </preferencesInfo>
 
    <cssInfo>
-      <file path="/com.compxc.workbench.lookandfeel/css/xc_one.css"/>
+      <file path="/com.compxc.workbench.lookandfeel/css/profidata.css"/>
    </cssInfo>
 
 </product>
