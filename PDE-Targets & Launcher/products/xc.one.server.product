@@ -37,12 +37,12 @@
 -Doracle.net.tns_admin=${env_var:TNS_ADMIN}
 -Dfile.encoding=&quot;UTF-8&quot;
 
+ -Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages/httpgateway/etc/https/XENTISTrustStore.jks
+ -Djavax.net.ssl.trustStorePassword=changeit
+
 -Dcom.sun.management.jmxremote.port=7072
 -Dcom.sun.management.jmxremote.ssl=false
 -Dcom.sun.management.jmxremote.authenticate=false
-
--DXENTIS_MONSTAR_LOGSTASH_HOST=
--DXENTIS_MONSTAR_LOGSTASH_PORT=9999
 
 -ea
 -Xms256m
