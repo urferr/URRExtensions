@@ -17,7 +17,7 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev15"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev15.profidatagroup.com"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
         <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>
@@ -30,5 +30,5 @@
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidatagroup.fix.XentisFIX"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="${workspace_loc}\xentisjava\fix\com.profidata.xentis.fix.engine\src\test\resources\XentisFIX.cfg"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xentis.fix.engine"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dspring.profiles.active=prod&#13;&#10;-Dlog.dir=&quot;store/log&quot;&#13;&#10;&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_HOST=&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_PORT=9999&#13;&#10;&#13;&#10;--add-opens java.base/java.lang=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dspring.profiles.active=prod&#13;&#10;-Dlog.dir=&quot;store/log&quot;&#13;&#10;&#13;&#10;-DXENTIS_MONSTAR_HOST= &#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_PORT=9999&#13;&#10;&#13;&#10;-Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/instances/xentis/var/https/XENTISTrustStore.jks&#13;&#10;-Djavax.net.ssl.trustStorePassword=changeit&#13;&#10;&#13;&#10;--add-opens java.base/java.lang=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
 </launchConfiguration>

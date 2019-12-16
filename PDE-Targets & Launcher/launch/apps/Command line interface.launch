@@ -17,5 +17,5 @@
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.xentis.cli.XentisCommandLineInterface"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-d -status -u CLI -j 105400000074C8C9"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xentis.cli"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-DXENTIS_MONSTAR_LOGSTASH_HOST=&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_PORT=9999&#13;&#10;&#13;&#10;-Deamis.home=\\pdvmdev15\urr\urr\xentisMSTbranch_run\xentis\var\client"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-DXENTIS_MONSTAR_HOST=&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_PORT=9999&#13;&#10;&#13;&#10;-Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/instances/xentis/var/https/XENTISTrustStore.jks&#13;&#10;-Djavax.net.ssl.trustStorePassword=changeit&#13;&#10;&#13;&#10;-Deamis.home=\\pdvmdev15\urr\urr\xentisMSTbranch_run\xentis\var\client"/>
 </launchConfiguration>
