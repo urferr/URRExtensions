@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
+    <setAttribute key="additional_plugins">
+        <setEntry value="com.compxc.persistence:0.0.0:default:true:default:true"/>
+        <setEntry value="com.compxc.platform.server:0.0.0:default:true:default:true"/>
+        <setEntry value="com.compxc.server.remote:0.0.0:default:true:default:true"/>
+        <setEntry value="com.compxc.translation.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.compxc.translation.service.sql:0.0.0:default:true:default:true"/>
+        <setEntry value="com.eclipsesource.jaxrs.provider.gson:2.3.0.201602281253:default:true:3:true"/>
+        <setEntry value="com.eclipsesource.jaxrs.publisher:5.3.1.201602281253:default:true:3:true"/>
+        <setEntry value="com.profidata.xc.admin.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.calendar.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.codevalue.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.customizingconsole.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.data.service.messaging.remote.proxy:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.data.service.remote.http:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.data.service.remote.proxy:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.frontoffice.businessintelligence.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.frontoffice.server.metadata:5.5.9900:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.frontoffice.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.frontoffice.servicefacade.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.localization.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.messaging.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.metadata.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.migration.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.objectquery.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.one.server.configuration:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.one.server.monitor:0.0.0:default:true:2:true"/>
+        <setEntry value="com.profidata.xc.optimizer.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.order.servicefacade.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.persistence.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.platform.request.tracing:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.requestcache.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.rest.admin.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.rest.analysis.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.rest.common.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.rest.data.service.impl:1.0.0.qualifier:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.rest.investmentcompliance.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.rest.order.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.risk.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.rule.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.profidata.xc.unified.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.xnife.context.persistence:0.0.0:default:true:default:true"/>
+        <setEntry value="com.xnife.context.service.impl:0.0.0:default:true:default:true"/>
+        <setEntry value="com.xnife.environment:0.0.0:default:true:default:true"/>
+        <setEntry value="com.xnife.http.server:0.0.0:default:true:default:true"/>
+        <setEntry value="com.xnife.logging.slf4j.logback.commandline:0.0.0:default:true:2:true"/>
+        <setEntry value="com.xnife.logging.slf4j.over.jul:0.0.0:default:true:2:true"/>
+        <setEntry value="com.xnife.remoting.server:0.0.0:default:true:default:true"/>
+        <setEntry value="com.xnife.tools.jmx.osgiconsole:0.0.0:default:true:default:true"/>
+        <setEntry value="org.eclipse.core.runtime:3.17.0.v20191122-2104:default:true:default:true"/>
+        <setEntry value="org.eclipse.equinox.cm:1.4.200.v20191001-1333:default:true:3:true"/>
+        <setEntry value="org.eclipse.equinox.common:3.10.600.v20191004-1420:default:true:2:true"/>
+        <setEntry value="org.eclipse.equinox.http.jetty:3.7.300.v20191015-2006:default:true:default:true"/>
+        <setEntry value="org.eclipse.equinox.http.servlet:1.6.300.v20191011-1612:default:true:default:true"/>
+        <setEntry value="org.eclipse.equinox.simpleconfigurator:1.3.400.v20191015-1836:default:true:1:true"/>
+        <setEntry value="org.eclipse.equinox.weaving.aspectj:1.0.400.201908131520:default:true:2:true"/>
+        <setEntry value="org.eclipse.gemini.blueprint.extender:3.0.0.M01:default:true:3:true"/>
+    </setAttribute>
+    <booleanAttribute key="append.args" value="true"/>
+    <booleanAttribute key="askclear" value="true"/>
+    <booleanAttribute key="automaticAdd" value="false"/>
+    <booleanAttribute key="automaticValidate" value="false"/>
+    <stringAttribute key="bootstrap" value=""/>
+    <stringAttribute key="checked" value="[NONE]"/>
+    <booleanAttribute key="clearConfig" value="true"/>
+    <booleanAttribute key="clearws" value="true"/>
+    <booleanAttribute key="clearwslog" value="false"/>
+    <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/xc.one.server.urr.product"/>
+    <booleanAttribute key="default" value="false"/>
+    <setAttribute key="deselected_workspace_bundles"/>
+    <booleanAttribute key="includeOptional" value="true"/>
+    <stringAttribute key="location" value="${workspace_loc}/../runtime-xc.one.server.urr.daily.product"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.NotificationsDisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.NotificationsEnabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+    <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="EAMIS_CONFIG_SECURE" value="false"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev15.profidatagroup.com"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7220"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
+        <mapEntry key="HOSTNAME" value="ws-2678"/>
+    </mapAttribute>
+    <stringAttribute key="org.eclipse.debug.core.source_locator_id" value="org.eclipse.pde.ui.launcher.PDESourceLookupDirector"/>
+    <stringAttribute key="org.eclipse.debug.core.source_locator_memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;sourceLookupDirector&gt;&#13;&#10;&lt;sourceContainers duplicates=&quot;false&quot;&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;archive detectRoot=&amp;quot;true&amp;quot; path=&amp;quot;D:\JavaEnvironment\8.0\src.zip&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.externalArchive&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;archive detectRoot=&amp;quot;true&amp;quot; path=&amp;quot;D:\JavaTargets\xc-target.platform-e45-2.2.x_BLUEPRINT20\plugins\gemini-blueprint-extender-2.0.0.RELEASE-sources.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.externalArchive&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;default/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.default&quot;/&gt;&#13;&#10;&lt;/sourceContainers&gt;&#13;&#10;&lt;/sourceLookupDirector&gt;&#13;&#10;"/>
+    <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-13"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
+    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dosgi.clean=true -Dapplication.reporting.location=/working/xentis/var/report -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dcom.profidata.xc.monitor.exitonfail=false -Dcom.xnife.logging.level.com.profidata.xc.one.server.monitor.application=debug -Dcom.xnife.logging.level.com.xnife.cache.impl.index=warn -Dcom.xnife.logging.level.org.hibernate.tool.hbm2ddl=info -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -Dcom.xnife.logging.level.com.profidata.xc.codevalue.service.impl.CodeValueServiceImpl=debug -Dorg.osgi.service.http.port=7016 -Dorg.eclipse.equinox.http.jetty.http.port=7016 -Doracle.net.tns_admin=${env_var:TNS_ADMIN} -Dfile.encoding=&quot;UTF-8&quot; -Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/instances/xentis/var/https/XENTISTrustStore.jks -Djavax.net.ssl.trustStorePassword=changeit -Dcom.sun.management.jmxremote.port=7072 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -ea -Xms256m -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication --add-opens java.base/java.lang=ALL-UNNAMED --illegal-access=warn"/>
+    <stringAttribute key="pde.version" value="3.3"/>
+    <stringAttribute key="product" value="_com.profidata.xc.one.server.build.product.xcServer"/>
+    <stringAttribute key="productFile" value="\PDE-Targets &amp; Launcher\products\xc.one.server.product"/>
+    <setAttribute key="selected_features">
+        <setEntry value="_com.compxc.eclipse.feature:default"/>
+        <setEntry value="_com.compxc.xentis.feature:default"/>
+    </setAttribute>
+    <setAttribute key="selected_target_bundles">
+        <setEntry value="antlr@default:default"/>
+        <setEntry value="bcprov@default:default"/>
+        <setEntry value="ch.qos.logback.classic@default:default"/>
+        <setEntry value="ch.qos.logback.core@default:default"/>
+        <setEntry value="com.eclipsesource.jaxrs.provider.gson@3:true"/>
+        <setEntry value="com.eclipsesource.jaxrs.publisher@3:true"/>
+        <setEntry value="com.fasterxml.classmate@default:default"/>
+        <setEntry value="com.fasterxml.jackson.core.jackson-annotations@default:default"/>
+        <setEntry value="com.fasterxml.jackson.core.jackson-core@default:default"/>
+        <setEntry value="com.fasterxml.jackson.core.jackson-databind@default:default"/>
+        <setEntry value="com.fasterxml.jackson.dataformat.jackson-dataformat-properties@default:default"/>
+        <setEntry value="com.fasterxml.uuid@default:default"/>
+        <setEntry value="com.google.gson@default:default"/>
+        <setEntry value="com.google.guava.failureaccess@default:default"/>
+        <setEntry value="com.google.guava@default:default"/>
+        <setEntry value="com.sun.istack.commons-runtime@default:default"/>
+        <setEntry value="com.sun.xml.bind@default:default"/>
+        <setEntry value="io.projectreactor.core@default:default"/>
+        <setEntry value="io.zipkin.brave.instrumentation-http@default:default"/>
+        <setEntry value="io.zipkin.brave.instrumentation-messaging@default:default"/>
+        <setEntry value="io.zipkin.brave.instrumentation-rpc@default:default"/>
+        <setEntry value="io.zipkin.brave.instrumentation-servlet@default:default"/>
+        <setEntry value="io.zipkin.brave.instrumentation-spring-web@default:default"/>
+        <setEntry value="io.zipkin.brave@default:default"/>
+        <setEntry value="io.zipkin.reporter2.zipkin-reporter@default:default"/>
+        <setEntry value="io.zipkin.zipkin2.zipkin@default:default"/>
+        <setEntry value="javassist@default:default"/>
+        <setEntry value="javax.activation@default:default"/>
+        <setEntry value="javax.annotation@default:default"/>
+        <setEntry value="javax.ejb-api@default:default"/>
+        <setEntry value="javax.inject@default:default"/>
+        <setEntry value="javax.jms.api@default:default"/>
+        <setEntry value="javax.jws.jsr181-api@default:default"/>
+        <setEntry value="javax.management.j2ee-api@default:default"/>
+        <setEntry value="javax.persistence-api@default:default"/>
+        <setEntry value="javax.servlet@default:default"/>
+        <setEntry value="javax.transaction-api@default:default"/>
+        <setEntry value="javax.validation@default:default"/>
+        <setEntry value="javax.ws.rs@default:default"/>
+        <setEntry value="javax.xml.bind.api@default:default"/>
+        <setEntry value="javax.xml.rpc-api@default:default"/>
+        <setEntry value="javax.xml.soap.api@default:default"/>
+        <setEntry value="javax.xml.ws@default:default"/>
+        <setEntry value="jcl.over.slf4j@default:default"/>
+        <setEntry value="jul.to.slf4j@default:default"/>
+        <setEntry value="net.bytebuddy.byte-buddy@default:default"/>
+        <setEntry value="net.logstash.logback.logstash-logback-encoder@default:false"/>
+        <setEntry value="oracle.jdbc@default:default"/>
+        <setEntry value="org.apache.activemq.client@default:default"/>
+        <setEntry value="org.apache.aries.spifly.dynamic.bundle@default:default"/>
+        <setEntry value="org.apache.aries.util@default:default"/>
+        <setEntry value="org.apache.commons.beanutils@default:default"/>
+        <setEntry value="org.apache.commons.codec@default:default"/>
+        <setEntry value="org.apache.commons.collections@default:default"/>
+        <setEntry value="org.apache.commons.dbcp2@default:default"/>
+        <setEntry value="org.apache.commons.fileupload@default:default"/>
+        <setEntry value="org.apache.commons.io@default:default"/>
+        <setEntry value="org.apache.commons.lang3@default:default"/>
+        <setEntry value="org.apache.commons.lang@default:default"/>
+        <setEntry value="org.apache.commons.logging@default:default"/>
+        <setEntry value="org.apache.commons.pool2@default:default"/>
+        <setEntry value="org.apache.felix.gogo.command@default:default"/>
+        <setEntry value="org.apache.felix.gogo.runtime@default:default"/>
+        <setEntry value="org.apache.felix.gogo.shell@default:default"/>
+        <setEntry value="org.apache.httpcomponents.httpclient@default:default"/>
+        <setEntry value="org.apache.httpcomponents.httpcore@default:default"/>
+        <setEntry value="org.aspectj.runtime@default:default"/>
+        <setEntry value="org.aspectj.weaver@default:default"/>
+        <setEntry value="org.codehaus.janino.commons-compiler@default:default"/>
+        <setEntry value="org.codehaus.janino.janino@default:default"/>
+        <setEntry value="org.codehaus.jettison.jettison@default:default"/>
+        <setEntry value="org.dom4j@default:default"/>
+        <setEntry value="org.eclipse.core.contenttype@default:default"/>
+        <setEntry value="org.eclipse.core.jobs@default:default"/>
+        <setEntry value="org.eclipse.core.runtime@default:true"/>
+        <setEntry value="org.eclipse.emf.common@default:default"/>
+        <setEntry value="org.eclipse.emf.ecore.xmi@default:default"/>
+        <setEntry value="org.eclipse.emf.ecore@default:default"/>
+        <setEntry value="org.eclipse.emf@default:default"/>
+        <setEntry value="org.eclipse.equinox.app@default:default"/>
+        <setEntry value="org.eclipse.equinox.cm@3:true"/>
+        <setEntry value="org.eclipse.equinox.common@2:true"/>
+        <setEntry value="org.eclipse.equinox.console@default:default"/>
+        <setEntry value="org.eclipse.equinox.http.jetty@default:true"/>
+        <setEntry value="org.eclipse.equinox.http.servlet@default:true"/>
+        <setEntry value="org.eclipse.equinox.preferences@default:default"/>
+        <setEntry value="org.eclipse.equinox.registry@default:default"/>
+        <setEntry value="org.eclipse.equinox.simpleconfigurator@1:true"/>
+        <setEntry value="org.eclipse.equinox.weaving.aspectj@2:true"/>
+        <setEntry value="org.eclipse.equinox.weaving.caching@default:default"/>
+        <setEntry value="org.eclipse.equinox.weaving.hook@default:false"/>
+        <setEntry value="org.eclipse.gemini.blueprint.core@default:default"/>
+        <setEntry value="org.eclipse.gemini.blueprint.extender@3:true"/>
+        <setEntry value="org.eclipse.gemini.blueprint.io@default:default"/>
+        <setEntry value="org.eclipse.jetty.client@default:default"/>
+        <setEntry value="org.eclipse.jetty.continuation@default:default"/>
+        <setEntry value="org.eclipse.jetty.http@default:default"/>
+        <setEntry value="org.eclipse.jetty.io@default:default"/>
+        <setEntry value="org.eclipse.jetty.reactive.client@default:default"/>
+        <setEntry value="org.eclipse.jetty.security@default:default"/>
+        <setEntry value="org.eclipse.jetty.server@default:default"/>
+        <setEntry value="org.eclipse.jetty.servlet@default:default"/>
+        <setEntry value="org.eclipse.jetty.util@default:default"/>
+        <setEntry value="org.eclipse.osgi.services@default:default"/>
+        <setEntry value="org.eclipse.osgi.util@default:default"/>
+        <setEntry value="org.eclipse.osgi@-1:true"/>
+        <setEntry value="org.fusesource.hawtbuf.hawtbuf@default:default"/>
+        <setEntry value="org.glassfish.hk2@default:default"/>
+        <setEntry value="org.glassfish.jersey@default:default"/>
+        <setEntry value="org.hibernate.common.hibernate-commons-annotations@default:default"/>
+        <setEntry value="org.hibernate.orm.core@default:default"/>
+        <setEntry value="org.jboss.jandex@default:default"/>
+        <setEntry value="org.jboss.logging.jboss-logging@default:default"/>
+        <setEntry value="org.json@default:default"/>
+        <setEntry value="org.jvnet.mimepull@default:default"/>
+        <setEntry value="org.objectweb.asm.commons@default:default"/>
+        <setEntry value="org.objectweb.asm.tree@default:default"/>
+        <setEntry value="org.objectweb.asm@default:default"/>
+        <setEntry value="org.postgresql.jdbc42@default:default"/>
+        <setEntry value="org.reactivestreams.reactive.streams@default:default"/>
+        <setEntry value="org.springframework.aop@default:default"/>
+        <setEntry value="org.springframework.aspects@default:default"/>
+        <setEntry value="org.springframework.beans@default:default"/>
+        <setEntry value="org.springframework.boot@default:default"/>
+        <setEntry value="org.springframework.cloud.commons@default:default"/>
+        <setEntry value="org.springframework.cloud.sleuth.core@default:default"/>
+        <setEntry value="org.springframework.context.support@default:default"/>
+        <setEntry value="org.springframework.context@default:default"/>
+        <setEntry value="org.springframework.core@default:default"/>
+        <setEntry value="org.springframework.expression@default:default"/>
+        <setEntry value="org.springframework.jdbc@default:default"/>
+        <setEntry value="org.springframework.jms@default:default"/>
+        <setEntry value="org.springframework.messaging@default:default"/>
+        <setEntry value="org.springframework.orm@default:default"/>
+        <setEntry value="org.springframework.oxm@default:default"/>
+        <setEntry value="org.springframework.transaction@default:default"/>
+        <setEntry value="org.springframework.web@default:default"/>
+        <setEntry value="org.springframework.webflux@default:default"/>
+        <setEntry value="org.springframework.webmvc@default:default"/>
+        <setEntry value="slf4j.api@default:default"/>
+    </setAttribute>
+    <setAttribute key="selected_workspace_bundles">
+        <setEntry value="_com.profidata.xc.one.server.build.product@default:default"/>
+        <setEntry value="com.compxc.common.domain@default:default"/>
+        <setEntry value="com.compxc.common.persistence@default:default"/>
+        <setEntry value="com.compxc.console.osgi@default:default"/>
+        <setEntry value="com.compxc.frontoffice.common@default:default"/>
+        <setEntry value="com.compxc.order.domain@default:default"/>
+        <setEntry value="com.compxc.persistence.datasource@default:false"/>
+        <setEntry value="com.compxc.persistence@default:true"/>
+        <setEntry value="com.compxc.platform.common@default:default"/>
+        <setEntry value="com.compxc.platform.domain@default:default"/>
+        <setEntry value="com.compxc.platform.server@default:true"/>
+        <setEntry value="com.compxc.server.remote@default:true"/>
+        <setEntry value="com.compxc.translation.service.impl@default:true"/>
+        <setEntry value="com.compxc.translation.service.sql@default:true"/>
+        <setEntry value="com.compxc.translation.service@default:default"/>
+        <setEntry value="com.compxc.version@default:default"/>
+        <setEntry value="com.profidata.reporting.common@default:default"/>
+        <setEntry value="com.profidata.risk.commons@default:default"/>
+        <setEntry value="com.profidata.xc.activemq.client.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.admin.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.admin.service.remote@default:false"/>
+        <setEntry value="com.profidata.xc.admin.service@default:default"/>
+        <setEntry value="com.profidata.xc.alerter.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.audit.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.blueprint.extender.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.calendar.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.calendar@default:default"/>
+        <setEntry value="com.profidata.xc.codevalue.osgi@default:default"/>
+        <setEntry value="com.profidata.xc.codevalue.persistence@default:default"/>
+        <setEntry value="com.profidata.xc.codevalue.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.codevalue.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.codevalue@default:default"/>
+        <setEntry value="com.profidata.xc.common.logger@default:default"/>
+        <setEntry value="com.profidata.xc.customizingconsole.persistence.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.customizingconsole.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.customizingconsole.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.customizingconsole@default:default"/>
+        <setEntry value="com.profidata.xc.daemon.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.audit.remote.proxy.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.audit.remote.proxy@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.customizingconsole.remote.proxy.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.customizingconsole.remote.proxy@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.daemon.remote.proxy.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.daemon.remote.proxy@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.domain@default:default"/>
+        <setEntry value="com.profidata.xc.data.service.frontoffice.remote.proxy.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.frontoffice.remote.proxy@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.messaging.remote.proxy.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.messaging.remote.proxy@default:true"/>
+        <setEntry value="com.profidata.xc.data.service.orderblotter.remote.proxy.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.orderblotter.remote.proxy@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.remote.http@default:true"/>
+        <setEntry value="com.profidata.xc.data.service.remote.proxy.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.remote.proxy@default:true"/>
+        <setEntry value="com.profidata.xc.data.service.risk.remote.proxy.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.risk.remote.proxy@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.unified.remote.proxy.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.data.service.unified.remote.proxy@default:false"/>
+        <setEntry value="com.profidata.xc.data.service@default:default"/>
+        <setEntry value="com.profidata.xc.decisiontree.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.file.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.frontoffice.businessintelligence.impl@default:true"/>
+        <setEntry value="com.profidata.xc.frontoffice.persistence.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.frontoffice.server.metadata@default:true"/>
+        <setEntry value="com.profidata.xc.frontoffice.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.frontoffice.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.frontoffice.servicefacade.impl@default:true"/>
+        <setEntry value="com.profidata.xc.frontoffice@default:default"/>
+        <setEntry value="com.profidata.xc.localization.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.localization.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.localization@default:default"/>
+        <setEntry value="com.profidata.xc.messaging.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.metadata.osgi@default:default"/>
+        <setEntry value="com.profidata.xc.metadata.resource@default:default"/>
+        <setEntry value="com.profidata.xc.metadata.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.metadata.service.data.service@default:false"/>
+        <setEntry value="com.profidata.xc.metadata.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.metadata@default:default"/>
+        <setEntry value="com.profidata.xc.middleoffice.persistence.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.migration.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.migration.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.migration.service@default:default"/>
+        <setEntry value="com.profidata.xc.namespace@default:default"/>
+        <setEntry value="com.profidata.xc.objectquery.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.objectquery.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.objectquery@default:default"/>
+        <setEntry value="com.profidata.xc.one.server.configuration@default:true"/>
+        <setEntry value="com.profidata.xc.one.server.logback.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.one.server.monitor@2:true"/>
+        <setEntry value="com.profidata.xc.optimizer.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.optimizer@default:default"/>
+        <setEntry value="com.profidata.xc.order.servicefacade.impl@default:true"/>
+        <setEntry value="com.profidata.xc.order@default:default"/>
+        <setEntry value="com.profidata.xc.orderblotter.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.persistence.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.persistence.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.persistence.service.referencestructure@default:false"/>
+        <setEntry value="com.profidata.xc.persistence.service.transactiontype@default:false"/>
+        <setEntry value="com.profidata.xc.persistence@default:default"/>
+        <setEntry value="com.profidata.xc.platform.jaxb.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.platform.persistence.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.platform.request.tracing@default:true"/>
+        <setEntry value="com.profidata.xc.requestcache.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.requestcache.service@default:default"/>
+        <setEntry value="com.profidata.xc.rest.admin.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.rest.admin.service@default:default"/>
+        <setEntry value="com.profidata.xc.rest.analysis.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.rest.analysis.service@default:default"/>
+        <setEntry value="com.profidata.xc.rest.common.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.rest.common.service@default:default"/>
+        <setEntry value="com.profidata.xc.rest.data.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.rest.data.service@default:default"/>
+        <setEntry value="com.profidata.xc.rest.investmentcompliance.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.rest.investmentcompliance.service@default:default"/>
+        <setEntry value="com.profidata.xc.rest.order.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.rest.order.service@default:default"/>
+        <setEntry value="com.profidata.xc.risk.domain@default:default"/>
+        <setEntry value="com.profidata.xc.risk.persistence.configuration@default:false"/>
+        <setEntry value="com.profidata.xc.risk.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.risk.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.risk.service@default:default"/>
+        <setEntry value="com.profidata.xc.rule.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.rule.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.rule@default:default"/>
+        <setEntry value="com.profidata.xc.spring.sleuth.core.extension@default:false"/>
+        <setEntry value="com.profidata.xc.unified.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.unified.service.impl@default:true"/>
+        <setEntry value="com.profidata.xc.unified.service@default:default"/>
+        <setEntry value="com.profidata.xc.userprofile.server.remote@default:false"/>
+        <setEntry value="com.profidata.xc.userprofile@default:default"/>
+        <setEntry value="com.profidata.xentis.bodomain@default:default"/>
+        <setEntry value="com.profidata.xentis.domain.unified@default:default"/>
+        <setEntry value="com.profidata.xentis.fix.commons@default:default"/>
+        <setEntry value="com.profidata.xentis.syscode@default:default"/>
+        <setEntry value="com.xnife.aspectj.org.hibernate.patch@default:default"/>
+        <setEntry value="com.xnife.cache@default:default"/>
+        <setEntry value="com.xnife.context.persistence@default:true"/>
+        <setEntry value="com.xnife.context.remoting@default:default"/>
+        <setEntry value="com.xnife.context.service.impl@default:true"/>
+        <setEntry value="com.xnife.context@default:default"/>
+        <setEntry value="com.xnife.contract@default:default"/>
+        <setEntry value="com.xnife.core@default:default"/>
+        <setEntry value="com.xnife.domain@default:default"/>
+        <setEntry value="com.xnife.environment@default:true"/>
+        <setEntry value="com.xnife.exception@default:default"/>
+        <setEntry value="com.xnife.http.server@default:true"/>
+        <setEntry value="com.xnife.http@default:default"/>
+        <setEntry value="com.xnife.jmx@default:default"/>
+        <setEntry value="com.xnife.localization@default:default"/>
+        <setEntry value="com.xnife.logging.slf4j.jboss.dependency@default:false"/>
+        <setEntry value="com.xnife.logging.slf4j.logback.commandline@2:true"/>
+        <setEntry value="com.xnife.logging.slf4j.logback@default:default"/>
+        <setEntry value="com.xnife.logging.slf4j.over.jul@2:true"/>
+        <setEntry value="com.xnife.metadata@default:default"/>
+        <setEntry value="com.xnife.monitor@default:default"/>
+        <setEntry value="com.xnife.osgi@default:default"/>
+        <setEntry value="com.xnife.persistence.hibernate@default:default"/>
+        <setEntry value="com.xnife.persistence@default:default"/>
+        <setEntry value="com.xnife.remoting.client@default:default"/>
+        <setEntry value="com.xnife.remoting.osgi@default:default"/>
+        <setEntry value="com.xnife.remoting.server@default:true"/>
+        <setEntry value="com.xnife.remoting@default:default"/>
+        <setEntry value="com.xnife.security.service@default:default"/>
+        <setEntry value="com.xnife.security@default:default"/>
+        <setEntry value="com.xnife.service@default:default"/>
+        <setEntry value="com.xnife.spring.osgi@default:default"/>
+        <setEntry value="com.xnife.spring@default:default"/>
+        <setEntry value="com.xnife.tools.jmx.osgiconsole@default:true"/>
+        <setEntry value="com.xnife.tools.osgi.command@default:default"/>
+    </setAttribute>
+    <booleanAttribute key="show_selected_only" value="false"/>
+    <stringAttribute key="timestamp" value="1546948182356"/>
+    <booleanAttribute key="tracing" value="false"/>
+    <booleanAttribute key="useCustomFeatures" value="false"/>
+    <booleanAttribute key="useDefaultConfig" value="true"/>
+    <booleanAttribute key="useDefaultConfigArea" value="true"/>
+    <booleanAttribute key="useProduct" value="true"/>
+    <booleanAttribute key="usefeatures" value="false"/>
+</launchConfiguration>
