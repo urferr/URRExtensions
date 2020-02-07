@@ -16,17 +16,18 @@
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="EAMIS_APP_NAME" value="CONFIG"/>
-        <mapEntry key="EAMIS_APP_ROOT" value="/working/xentis/packages/Config"/>
+        <mapEntry key="EAMIS_APP_ROOT" value="//pdvmdev15/urr/urr/xentis570branch_run/xentis/packages/Config"/>
         <mapEntry key="EAMIS_APP_VAR" value="bin"/>
         <mapEntry key="EAMIS_CLUSTER_INSTANCE_NAME" value="Xentis"/>
         <mapEntry key="EAMIS_CLUSTER_NAME" value="local"/>
         <mapEntry key="EAMIS_CONFIG_API_PORT" value="7227"/>
-        <mapEntry key="EAMIS_CONFIG_CLEAN_RESOURCES" value="false"/>
+        <mapEntry key="EAMIS_CONFIG_CLEAN_RESOURCES" value="true"/>
         <mapEntry key="EAMIS_CONFIG_CLUSTERMODE" value="false"/>
         <mapEntry key="EAMIS_CONFIG_GIT_HOME" value="bin"/>
+        <mapEntry key="EAMIS_CONFIG_SECURE" value="false"/>
         <mapEntry key="EAMIS_CONFIG_WORKMODE" value="ADMIN"/>
         <mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://pdvmdev15.profidatagroup.com:7205?wireFormat.maxInactivityDuration=600000)"/>
-        <mapEntry key="EAMIS_PACKAGES" value="/working/xentis/packages"/>
+        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentis570branch_run/xentis/packages"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
