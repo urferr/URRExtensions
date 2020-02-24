@@ -17,6 +17,7 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="EAMIS_CLUSTER_INSTANCE_NAME" value="xentis"/>
         <mapEntry key="EAMIS_CONFIG_SECURE" value="false"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev15.profidatagroup.com"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7220"/>
