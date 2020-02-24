@@ -24,6 +24,7 @@
         <mapEntry key="EAMIS_CONFIG_CLEAN_RESOURCES" value="false"/>
         <mapEntry key="EAMIS_CONFIG_CLUSTERMODE" value="false"/>
         <mapEntry key="EAMIS_CONFIG_GIT_HOME" value="bin"/>
+        <mapEntry key="EAMIS_CONFIG_SECURE" value="false"/>
         <mapEntry key="EAMIS_CONFIG_WORKMODE" value="ADMIN"/>
         <mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://pdvmdev15.profidatagroup.com:7105?wireFormat.maxInactivityDuration=600000)"/>
         <mapEntry key="EAMIS_PACKAGES" value="/working/xentis/packages"/>
