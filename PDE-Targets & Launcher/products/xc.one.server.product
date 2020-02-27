@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="XC One Server Product" uid="xc.one.server" id="org.eclipse.platform.ide" version="0.0.0" useFeatures="true" includeLaunchers="true">
+<product name="XC One Server Product" uid="xc.one.server" id="_com.profidata.xc.one.server.build.product.xcServer" application="org.eclipse.ui.ide.workbench" version="0.0.0" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
