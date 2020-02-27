@@ -3,9 +3,9 @@
 <target name="Eclipse-Graphiti" sequenceNumber="7">
 <locations>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+		<repository location="http://download.eclipse.org/releases/2020-03"/>
 		<unit id="org.eclipse.graphiti.export.feature.feature.group" version="0.16.1.201909061426"/>
 		<unit id="org.eclipse.graphiti.sdk.feature.feature.group" version="0.16.1.201909061426"/>
-		<repository location="http://download.eclipse.org/releases/2019-12"/>
 	</location>
 </locations>
 </target>

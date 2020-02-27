@@ -3,8 +3,8 @@
 <target name="Eclipse-Platform" sequenceNumber="36">
 <locations>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<unit id="org.eclipse.platform.sdk" version="4.14.0.I20191210-0610"/>
-		<repository location="http://download.eclipse.org/eclipse/updates/4.14"/>
+		<repository location="http://download.eclipse.org/eclipse/updates/4.15"/>
+		<unit id="org.eclipse.platform.sdk" version="4.15.0.I20200305-0155"/>
 	</location>
 </locations>
 <environment>

@@ -3,9 +3,9 @@
 <target name="Eclipse-JDT" sequenceNumber="23">
 <locations>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<unit id="org.eclipse.jdt.feature.group" version="3.18.200.v20191210-0610"/>
-		<unit id="org.eclipse.jdt.source.feature.group" version="3.18.200.v20191210-0610"/>
-		<repository location="http://download.eclipse.org/eclipse/updates/4.14"/>
+		<repository location="http://download.eclipse.org/eclipse/updates/4.15"/>
+		<unit id="org.eclipse.jdt.feature.group" version="3.18.300.v20200305-0155"/>
+		<unit id="org.eclipse.jdt.source.feature.group" version="3.18.300.v20200305-0155"/>
 	</location>
 </locations>
 <environment>

@@ -3,8 +3,8 @@
 <target name="Eclipse-Jetty" sequenceNumber="12">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.jetty.bundles.f.feature.group" version="9.4.24.v20191120"/>
-<unit id="org.eclipse.jetty.bundles.f.source.feature.group" version="9.4.24.v20191120"/>
+<unit id="org.eclipse.jetty.bundles.f.feature.group" version="9.4.27.v20200227"/>
+<unit id="org.eclipse.jetty.bundles.f.source.feature.group" version="9.4.27.v20200227"/>
 <repository location="http://download.eclipse.org/jetty/updates/jetty-bundles-9.x/"/>
 </location>
 </locations>

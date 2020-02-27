@@ -3,12 +3,12 @@
 <target name="Eclipse-Nebula" sequenceNumber="3">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.nebula.widgets.formattedtext.feature.feature.group" version="1.0.0.201806070735"/>
-<unit id="org.eclipse.nebula.widgets.radiogroup.feature.feature.group" version="0.1.0.201806070735"/>
+<unit id="org.eclipse.nebula.widgets.formattedtext.feature.feature.group" version="1.0.0.202003151135"/>
+<unit id="org.eclipse.nebula.widgets.radiogroup.feature.feature.group" version="0.1.0.202003151135"/>
 <repository location="http://download.eclipse.org/nebula/incubation/snapshot"/>
 </location>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<unit id="org.eclipse.nebula.feature.feature.group" version="2.1.0.201907151344"/>
+		<unit id="org.eclipse.nebula.feature.feature.group" version="2.3.0.201912241810"/>
 		<repository location="http://download.eclipse.org/nebula/releases/latest"/>
 	</location>
 </locations>
