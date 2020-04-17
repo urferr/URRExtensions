@@ -360,6 +360,8 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
+		aConfiguration.additionalPackageDependencies.add("org.mockito.invocation");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.modules.junit4.common.internal.impl");
 		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
