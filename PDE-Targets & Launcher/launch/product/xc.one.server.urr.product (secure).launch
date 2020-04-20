@@ -65,7 +65,7 @@
     <booleanAttribute key="clearConfig" value="true"/>
     <booleanAttribute key="clearws" value="true"/>
     <booleanAttribute key="clearwslog" value="false"/>
-    <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/xc.one.server.urr.product"/>
+    <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/xc.one.server.urr.product (secure)"/>
     <booleanAttribute key="default" value="false"/>
     <setAttribute key="deselected_workspace_bundles"/>
     <booleanAttribute key="includeOptional" value="true"/>
@@ -79,11 +79,13 @@
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="EAMIS_CONFIG_SECURE" value="false"/>
+        <mapEntry key="EAMIS_AUTHSERVICE_LOCATION" value="http://pdvmdev15.profidatagroup.com:8080"/>
+        <mapEntry key="EAMIS_CLUSTER_INSTANCE_NAME" value="xentis"/>
+        <mapEntry key="EAMIS_CONFIG_PROVIDER_PASSWORD" value="3776201f-5280-4f80-8bba-a233f7a22e67"/>
+        <mapEntry key="EAMIS_CONFIG_SECURE" value="true"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev15.profidatagroup.com"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
-        <mapEntry key="EAMIS_IDMANAGER_LOCATION" value="http://pdvmdev15.profidatagroup.com:8080"/>
         <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>
         <mapEntry key="HOSTNAME" value="ws-2678"/>
     </mapAttribute>

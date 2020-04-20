@@ -30,6 +30,7 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.xsb.XBusStarter"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="com.profidata.xentis.servicebus"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xentis.servicebus"/>
     <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dactivemq.data=activemq/data&#13;&#10;-Dspring.profiles.active=prod&#13;&#10;&#13;&#10;-DXENTIS_MONSTAR_HOST=&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_PORT=9999&#13;&#10;&#13;&#10;-Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentis570branch_run/xentis/instances/xentis/var/https/XENTISTrustStore.jks&#13;&#10;-Djavax.net.ssl.trustStorePassword=changeit&#13;&#10;&#13;&#10;--add-opens java.base/java.lang=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
 </launchConfiguration>
