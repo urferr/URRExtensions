@@ -78,12 +78,14 @@
     <setAttribute key="name.schedenig.eclipse.grepconsole.NotificationsEnabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+    <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/xentisjava/infrastructure/eclipse/prototype/Start One Server Prototype.prototype&quot;/&gt;&#13;&#10;"/>
+    <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="EAMIS_CLUSTER_INSTANCE_NAME" value="xentis"/>
         <mapEntry key="EAMIS_CONFIG_SECURE" value="false"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev15.profidatagroup.com"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
-        <mapEntry key="EAMIS_IDMANAGER_LOCATION" value="http://pdvmdev15.profidatagroup.com:8080"/>
         <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>
         <mapEntry key="HOSTNAME" value="ws-2678"/>
     </mapAttribute>
@@ -233,9 +235,12 @@
         <setEntry value="org.springframework.aop@default:default"/>
         <setEntry value="org.springframework.aspects@default:default"/>
         <setEntry value="org.springframework.beans@default:default"/>
+        <setEntry value="org.springframework.boot.autoconfigure@default:default"/>
         <setEntry value="org.springframework.boot@default:default"/>
         <setEntry value="org.springframework.cloud.commons@default:default"/>
+        <setEntry value="org.springframework.cloud.context@default:default"/>
         <setEntry value="org.springframework.cloud.sleuth.core@default:default"/>
+        <setEntry value="org.springframework.cloud.sleuth.zipkin@default:default"/>
         <setEntry value="org.springframework.context.support@default:default"/>
         <setEntry value="org.springframework.context@default:default"/>
         <setEntry value="org.springframework.core@default:default"/>
@@ -386,6 +391,7 @@
         <setEntry value="com.profidata.xc.rule.service.impl@default:true"/>
         <setEntry value="com.profidata.xc.rule@default:default"/>
         <setEntry value="com.profidata.xc.spring.sleuth.core.extension@default:default"/>
+        <setEntry value="com.profidata.xc.spring.sleuth.zipkin.extension@default:default"/>
         <setEntry value="com.profidata.xc.spring.webflux.configuration@default:default"/>
         <setEntry value="com.profidata.xc.unified.server.remote@default:default"/>
         <setEntry value="com.profidata.xc.unified.service.impl@default:true"/>
@@ -396,16 +402,17 @@
         <setEntry value="com.profidata.xentis.domain.unified@default:default"/>
         <setEntry value="com.profidata.xentis.fix.commons@default:default"/>
         <setEntry value="com.profidata.xentis.syscode@default:default"/>
+        <setEntry value="com.xnife.aspectj.equinox.http.servlet.patch@default:default"/>
         <setEntry value="com.xnife.aspectj.org.hibernate.patch@default:default"/>
         <setEntry value="com.xnife.cache@default:default"/>
         <setEntry value="com.xnife.context.persistence@default:true"/>
-        <setEntry value="com.xnife.context.remoting@default:default"/>
         <setEntry value="com.xnife.context.service.impl@default:true"/>
         <setEntry value="com.xnife.context@default:default"/>
         <setEntry value="com.xnife.contract@default:default"/>
         <setEntry value="com.xnife.core@default:default"/>
         <setEntry value="com.xnife.domain@default:default"/>
         <setEntry value="com.xnife.environment@default:default"/>
+        <setEntry value="com.xnife.equinox.http.servlet.extension@default:default"/>
         <setEntry value="com.xnife.exception@default:default"/>
         <setEntry value="com.xnife.http.server@default:true"/>
         <setEntry value="com.xnife.http@default:default"/>
