@@ -46,7 +46,7 @@ public class SaveConfigurationAsJson {
 	}
 
 	private void execute() {
-		AdditionalProjectConfigurations aConfiguration = createConfig("JavaSE-11");
+		AdditionalProjectConfigurations aConfiguration = createConfig("JavaSE-11", "org.eclipse.jdt.junit.JUNIT_CONTAINER/5");
 		IPath aAdditionalProjectConfigurationPath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append("URRExtensions/ease/EASE Scripts").append("AdditionalProjectConfiguration.json");
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
@@ -72,8 +72,8 @@ public class SaveConfigurationAsJson {
 		output.println(jsonInString);
 	}
 
-	private AdditionalProjectConfigurations createConfig(String theExecutionEnvironment) {
-		AdditionalProjectConfigurations aProjectConfiguration = new AdditionalProjectConfigurations(theExecutionEnvironment);
+	private AdditionalProjectConfigurations createConfig(String theExecutionEnvironment, String theJUnitLibraryPath) {
+		AdditionalProjectConfigurations aProjectConfiguration = new AdditionalProjectConfigurations(theExecutionEnvironment, theJUnitLibraryPath);
 
 		aProjectConfiguration.projectConfigurations.putAll(getAdditionalBundleConfigurations());
 		aProjectConfiguration.projectConfigurations.putAll(getAdditionalTestFragmentConfigurations());
