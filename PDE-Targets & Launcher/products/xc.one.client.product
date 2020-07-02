@@ -18,29 +18,19 @@
       <programArgs>-console 
 -clearPersistedState
       </programArgs>
-      <vmArgs>-Dosgi.clean=true
--Dorg.eclipse.update.reconcile=false
-
--Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook
--Daj.weaving.verbose=true
--Dorg.aspectj.osgi.verbose=true
--Dorg.aspectj.weaver.showWeaveInfo=true
-
--Dfile.encoding=UTF-8
-
+      <vmArgs>-Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook
 -Deamis.home=platform:/plugin/com.profidata.xentis.client/src/main/deployment
+-Dcom.sun.management.jmxremote
+-Dsun.locale.formatasdefault=true
+-Dsun.awt.nopixfmt=true
+-Dsun.java2d.uiScale=1.0
+-Dfile.encoding=UTF-8
+-Djxbrowser.chromium.dir=/tmp/browser
+-Dspring.security.strategy=MODE_GLOBAL
 
--Dcom.xnife.runtime.mode=DEVELOPMENT
--Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective
+-Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/instances/xentis/var/https/XENTISTrustStore.jks
+-Djavax.net.ssl.trustStorePassword=changeit
 
--Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
-
--Dcom.xnife.logging.level.ksLogger=warn
-
- -Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/instances/xentis/var/https/XENTISTrustStore.jks
- -Djavax.net.ssl.trustStorePassword=changeit
-
--ea
 -Xms512m
 -Xmx1024m
 
@@ -53,6 +43,18 @@
 --add-opens java.desktop/sun.java2d.opengl=ALL-UNNAMED
 --add-opens java.desktop/sun.awt=ALL-UNNAMED
 --illegal-access=warn
+
+-Dosgi.clean=true
+-Dorg.eclipse.update.reconcile=false
+
+-Daj.weaving.verbose=true
+-Dorg.aspectj.osgi.verbose=true
+-Dorg.aspectj.weaver.showWeaveInfo=true
+
+-Dcom.xnife.runtime.mode=DEVELOPMENT
+-Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective
+-Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
+-Dcom.xnife.logging.level.ksLogger=warn
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
@@ -62,10 +64,12 @@
 
    <splash
       location="com.compxc.workbench.branding"
-      startupProgressRect="30,305,260,10" />
-   <launcher name="xcClient">
+      startupProgressRect="30,305,260,10"
+      startupMessageRect="30,282,0,0"
+      startupForegroundColor="FFFFFF" />
+   <launcher name="xentis">
       <win useIco="true">
-         <ico path="/com.compxc.workbench.branding/images/DesktopAndLauncherIcon.ico"/>
+         <ico path="/_com.profidata.xc.one.client.build.product/images/DesktopAndLauncherIcon.ico"/>
          <bmp/>
       </win>
    </launcher>
