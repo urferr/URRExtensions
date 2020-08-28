@@ -17,16 +17,15 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="EAMIS_AUTHSERVICE_LOCATION" value="http://pdvmdev15.profidatagroup.com:8080"/>
         <mapEntry key="EAMIS_CLUSTER_INSTANCE_NAME" value="xentis"/>
-        <mapEntry key="EAMIS_CONFIG_SECURE" value="false"/>
+        <mapEntry key="EAMIS_CONFIG_PROVIDER_PASSWORD" value="3776201f-5280-4f80-8bba-a233f7a22e67"/>
+        <mapEntry key="EAMIS_CONFIG_SECURE" value="true"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev15.profidatagroup.com"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7920"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
-        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>
+        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisOIDCbranch_run/xentis/packages"/>
     </mapAttribute>
-    <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
-        <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
-    </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
@@ -34,14 +33,6 @@
         <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry containerPath=&quot;org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11/&quot; javaProject=&quot;com.profidata.xentis.etl&quot; path=&quot;5&quot; type=&quot;4&quot;/&gt;&#13;&#10;"/>
         <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;    &lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.xentis.etl&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
         <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;    &lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.reorg&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
-        <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;    &lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.ftp&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
-        <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;    &lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.bloomberg.basicdata&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
-        <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;    &lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.bloomberg.mobiliar&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
-        <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;    &lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.wm.searchemittent&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
-        <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;    &lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.wm.searchvalor&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
-        <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;    &lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.wm.import&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
-        <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;    &lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.wm.update&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
-        <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#13;&#10;    &lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;com.profidata.etl.job.talendexecutor&quot;/&gt;&#13;&#10;&lt;/runtimeClasspathEntry&gt;&#13;&#10;"/>
     </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.etl.ETLStarter"/>

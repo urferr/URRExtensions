@@ -22,7 +22,7 @@
         <mapEntry key="EAMIS_CONFIG_PROVIDER_PASSWORD" value="3776201f-5280-4f80-8bba-a233f7a22e67"/>
         <mapEntry key="EAMIS_CONFIG_SECURE" value="true"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev15.profidatagroup.com"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7920"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
         <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>
     </mapAttribute>

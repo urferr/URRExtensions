@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.buildship.core.launch.runconfiguration">
-   <listAttribute key="arguments">
+    <listAttribute key="arguments">
         <listEntry value="-x"/>
         <listEntry value="generate"/>
         <listEntry value="-x"/>
@@ -23,6 +23,7 @@
     <booleanAttribute key="show_execution_view" value="true"/>
     <listAttribute key="tasks">
         <listEntry value=":httpgateway:com.profidata.httpgateway.shell:deploy-libs"/>
+        <listEntry value=":authservice:com.profidata.authservice.login.web.integration:deploy-package"/>
     </listAttribute>
     <stringAttribute key="working_dir" value="${workspace_loc:/xentisjava}"/>
 </launchConfiguration>

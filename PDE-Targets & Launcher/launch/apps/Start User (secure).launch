@@ -20,9 +20,9 @@
         <mapEntry key="EAMIS_CONFIG_PROVIDER_PASSWORD" value="3776201f-5280-4f80-8bba-a233f7a22e67"/>
         <mapEntry key="EAMIS_CONFIG_SECURE" value="true"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev15.profidatagroup.com"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7920"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
-        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>
+        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisOIDCbranch_run/xentis/packages"/>
     </mapAttribute>
     <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
         <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
@@ -33,5 +33,5 @@
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.user.shell.UserShell"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="com.profidata.user.shell"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.user.shell"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;&#13;&#10;-Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentis570branch_run/xentis/instances/xentis/var/https/XENTISTrustStore.jks&#13;&#10;-Djavax.net.ssl.trustStorePassword=changeit&#13;&#10;&#13;&#10;--add-opens java.base/jdk.internal.misc=ALL-UNNAMED&#13;&#10;--illegal-access=warn&#13;&#10;&#13;&#10;-Dspring.jpa.properties.hibernate.dialect=org.hibernate.dialect.Oracle12cDialect"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dspring.debug=true&#13;&#10;-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;&#13;&#10;-Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentis570branch_run/xentis/instances/xentis/var/https/XENTISTrustStore.jks&#13;&#10;-Djavax.net.ssl.trustStorePassword=changeit&#13;&#10;&#13;&#10;--add-opens java.base/jdk.internal.misc=ALL-UNNAMED&#13;&#10;--illegal-access=warn&#13;&#10;&#13;&#10;-Dspring.jpa.properties.hibernate.dialect=org.hibernate.dialect.Oracle12cDialect"/>
 </launchConfiguration>
