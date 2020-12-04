@@ -28,13 +28,12 @@
 
 -Dfile.encoding=UTF-8
 
--Deamis.home=platform:/plugin/com.profidata.xentis.client/src/main/deployment
+-Deamis.home=${workspace_loc}/xentisjava/xentis/com.profidata.xentis.client/src/main/deployment
 
 -Dcom.xnife.runtime.mode=DEVELOPMENT
 -Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective
 
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
-
 -Dcom.xnife.logging.level.ksLogger=warn
 
  -Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/instances/xentis/var/https/XENTISTrustStore.jks
@@ -45,6 +44,7 @@
 -Xmx1024m
 
 -XX:+UseStringDeduplication
+-XX:+ShowCodeDetailsInExceptionMessages
 
 --add-opens java.base/java.lang=ALL-UNNAMED
 --add-opens java.desktop/java.awt=ALL-UNNAMED
@@ -90,13 +90,12 @@
       <plugin id="com.profidata.xc.customizingconsole.application" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.messaging.application" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.one.client.configuration" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xentis.client" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.application" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.logging.slf4j.logback.commandline" autoStart="true" startLevel="2" />
       <plugin id="com.xnife.remoting.client" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="2" />
