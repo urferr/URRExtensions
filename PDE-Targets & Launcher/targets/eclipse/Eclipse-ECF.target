@@ -2,72 +2,21 @@
 <?pde version="3.8"?>
 <target name="Eclipse-ECF" sequenceNumber="10">
 <locations>
-	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/rt/ecf/3.14.7/site.p2"/>
-		<unit id="org.apache.httpcomponents.httpclient" version="4.5.10.v20200114-1512"/>
+	<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+		<repository location="http://download.eclipse.org/rt/ecf/3.14.18/site.p2"/>
 		<unit id="org.apache.httpcomponents.httpcore" version="4.4.12.v20200108-1212"/>
-		<unit id="org.eclipse.ecf.console.feature.feature.group" version="1.2.1.v20191023-2007"/>
-		<unit id="org.eclipse.ecf.console.feature.source.feature.group" version="1.2.1.v20191023-2007"/>
-		<unit id="org.eclipse.ecf.core.feature.feature.group" version="1.5.500.v20200217-1548"/>
-		<unit id="org.eclipse.ecf.core.feature.group" version="3.14.7.v20191214-0450"/>
-		<unit id="org.eclipse.ecf.core.feature.source.feature.group" version="1.5.500.v20200217-1548"/>
-		<unit id="org.eclipse.ecf.core.source.feature.group" version="3.14.7.v20191214-0450"/>
-		<unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="1.1.300.v20191023-2007"/>
-		<unit id="org.eclipse.ecf.core.ssl.feature.source.feature.group" version="1.1.300.v20191023-2007"/>
-		<unit id="org.eclipse.ecf.datashare.feature.feature.group" version="1.0.101.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.datashare.feature.source.feature.group" version="1.0.101.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.discovery.dnssd.feature.feature.group" version="1.0.1.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.discovery.dnssd.feature.source.feature.group" version="1.0.1.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.discovery.feature.feature.group" version="1.0.101.v20191023-2007"/>
-		<unit id="org.eclipse.ecf.discovery.feature.source.feature.group" version="1.0.101.v20191023-2007"/>
-		<unit id="org.eclipse.ecf.discovery.jmdns.feature.feature.group" version="1.0.1.v20191023-2007"/>
-		<unit id="org.eclipse.ecf.discovery.jmdns.feature.source.feature.group" version="1.0.1.v20191023-2007"/>
-		<unit id="org.eclipse.ecf.discovery.slp.feature.feature.group" version="1.0.1.v20191026-1103"/>
-		<unit id="org.eclipse.ecf.discovery.slp.feature.source.feature.group" version="1.0.1.v20191026-1103"/>
-		<unit id="org.eclipse.ecf.discovery.zookeeper.feature.feature.group" version="1.0.100.v20191024-1546"/>
-		<unit id="org.eclipse.ecf.discovery.zookeeper.feature.source.feature.group" version="1.0.100.v20191024-1546"/>
-		<unit id="org.eclipse.ecf.docshare.feature.feature.group" version="1.0.101.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.docshare.feature.source.feature.group" version="1.0.101.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.eventadmin.feature.feature.group" version="2.0.101.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.eventadmin.feature.source.feature.group" version="2.0.101.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.filetransfer.feature.feature.group" version="3.14.700.v20200217-0016"/>
-		<unit id="org.eclipse.ecf.filetransfer.feature.source.feature.group" version="3.14.700.v20200217-0016"/>
-		<unit id="org.eclipse.ecf.filetransfer.httpclient4.feature.feature.group" version="3.14.7.v20200114-1512"/>
-		<unit id="org.eclipse.ecf.filetransfer.httpclient4.feature.source.feature.group" version="3.14.7.v20200114-1512"/>
-		<unit id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group" version="1.1.200.v20191024-1546"/>
-		<unit id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.source.feature.group" version="1.1.200.v20191024-1546"/>
-		<unit id="org.eclipse.ecf.filetransfer.httpclient45.feature.feature.group" version="1.0.300.v20200217-0016"/>
-		<unit id="org.eclipse.ecf.filetransfer.httpclient45.feature.source.feature.group" version="1.0.300.v20200217-0016"/>
-		<unit id="org.eclipse.ecf.filetransfer.ssl.feature.feature.group" version="1.1.200.v20191024-1546"/>
-		<unit id="org.eclipse.ecf.filetransfer.ssl.feature.source.feature.group" version="1.1.200.v20191024-1546"/>
-		<unit id="org.eclipse.ecf.osgi.services.feature.feature.group" version="2.5.1.v20200217-0120"/>
-		<unit id="org.eclipse.ecf.osgi.services.feature.source.feature.group" version="2.5.1.v20200217-0120"/>
-		<unit id="org.eclipse.ecf.presence.feature.feature.group" version="1.0.101.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.presence.feature.source.feature.group" version="1.0.101.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.provider.generic.datashare.feature.feature.group" version="1.0.101.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.provider.generic.datashare.feature.source.feature.group" version="1.0.101.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.provider.generic.feature.feature.group" version="1.0.300.v20191024-1546"/>
-		<unit id="org.eclipse.ecf.provider.generic.feature.source.feature.group" version="1.0.300.v20191024-1546"/>
-		<unit id="org.eclipse.ecf.provider.generic.remoteservice.feature.feature.group" version="1.1.101.v20191023-2007"/>
-		<unit id="org.eclipse.ecf.provider.generic.remoteservice.feature.source.feature.group" version="1.1.101.v20191023-2007"/>
-		<unit id="org.eclipse.ecf.remoteservice.feature.feature.group" version="2.5.102.v20191031-1454"/>
-		<unit id="org.eclipse.ecf.remoteservice.feature.source.feature.group" version="2.5.102.v20191031-1454"/>
-		<unit id="org.eclipse.ecf.remoteservice.rest.feature.feature.group" version="1.0.200.v20191024-1546"/>
-		<unit id="org.eclipse.ecf.remoteservice.rest.feature.source.feature.group" version="1.0.200.v20191024-1546"/>
-		<unit id="org.eclipse.ecf.remoteservice.rest.synd.feature.feature.group" version="1.0.101.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.remoteservice.rest.synd.feature.source.feature.group" version="1.0.101.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.remoteservice.rosgi.feature.feature.group" version="1.1.2.v20200217-0038"/>
-		<unit id="org.eclipse.ecf.remoteservice.rosgi.feature.source.feature.group" version="1.1.2.v20200217-0038"/>
-		<unit id="org.eclipse.ecf.remoteservice.sdk.feature.feature.group" version="3.14.7.v20200217-0120"/>
-		<unit id="org.eclipse.ecf.remoteservice.sdk.feature.source.feature.group" version="3.14.7.v20200217-0120"/>
-		<unit id="org.eclipse.ecf.remoteservice.servlet.feature.feature.group" version="1.0.102.v20200213-1600"/>
-		<unit id="org.eclipse.ecf.remoteservice.servlet.feature.source.feature.group" version="1.0.102.v20200213-1600"/>
-		<unit id="org.eclipse.ecf.server.generic.feature.feature.group" version="1.2.0.v20191225-0007"/>
-		<unit id="org.eclipse.ecf.server.generic.feature.source.feature.group" version="1.2.0.v20191225-0007"/>
-		<unit id="org.eclipse.ecf.sharedobject.feature.feature.group" version="1.0.101.v20191023-2007"/>
-		<unit id="org.eclipse.ecf.sharedobject.feature.source.feature.group" version="1.0.101.v20191023-2007"/>
-		<unit id="org.eclipse.ecf.xmpp.feature.feature.group" version="1.0.101.v20191012-1926"/>
-		<unit id="org.eclipse.ecf.xmpp.feature.source.feature.group" version="1.0.101.v20191012-1926"/>
+		<unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="1.1.500.v20200812-2314"/>
+		<unit id="org.eclipse.ecf.core.ssl.feature.source.feature.group" version="1.1.500.v20200812-2314"/>
+		<unit id="org.eclipse.ecf.datashare.feature.feature.group" version="1.0.200.v20200611-2220"/>
+		<unit id="org.eclipse.ecf.datashare.feature.source.feature.group" version="1.0.200.v20200611-2220"/>
+		<unit id="org.eclipse.ecf.discovery.zookeeper.feature.feature.group" version="1.0.200.v20200611-1836"/>
+		<unit id="org.eclipse.ecf.discovery.zookeeper.feature.source.feature.group" version="1.0.200.v20200611-1836"/>
+		<unit id="org.eclipse.ecf.filetransfer.ssl.feature.feature.group" version="1.1.400.v20200812-2314"/>
+		<unit id="org.eclipse.ecf.filetransfer.ssl.feature.source.feature.group" version="1.1.400.v20200812-2314"/>
+		<unit id="org.eclipse.ecf.presence.feature.feature.group" version="1.0.200.v20200611-2220"/>
+		<unit id="org.eclipse.ecf.presence.feature.source.feature.group" version="1.0.200.v20200611-2220"/>
+		<unit id="org.eclipse.ecf.remoteservice.rest.synd.feature.feature.group" version="1.0.200.v20200611-2220"/>
+		<unit id="org.eclipse.ecf.remoteservice.rest.synd.feature.source.feature.group" version="1.0.200.v20200611-2220"/>
 	</location>
 </locations>
 </target>

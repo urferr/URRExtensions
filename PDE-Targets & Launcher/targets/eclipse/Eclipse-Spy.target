@@ -3,13 +3,13 @@
 <target name="Eclipse-Spy" sequenceNumber="5">
 <locations>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<unit id="org.eclipse.e4.tools.spies.feature.feature.group" version="0.18.0.v20200203-1625"/>
+		<unit id="org.eclipse.e4.tools.spies.feature.feature.group" version="0.18.0.v20200923-1237"/>
 		<repository location="http://download.eclipse.org/e4/snapshots/org.eclipse.e4.tools/latest/"/>
 	</location>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/eclipse/updates/4.15"/>
-		<unit id="org.eclipse.e4.core.tools.feature.source.feature.group" version="4.15.0.v20200217-1230"/>
-		<unit id="org.eclipse.swt.tools.feature.feature.group" version="3.107.700.v20200110-2124"/>
+		<repository location="http://download.eclipse.org/eclipse/updates/4.18"/>
+		<unit id="org.eclipse.e4.core.tools.feature.source.feature.group" version="4.18.0.v20201026-0947"/>
+		<unit id="org.eclipse.swt.tools.feature.feature.group" version="3.107.900.v20200817-1644"/>
 	</location>
 </locations>
 </target>

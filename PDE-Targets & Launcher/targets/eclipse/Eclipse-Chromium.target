@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?>
+<target name="Eclipse-Chromium">
+	<locations>
+		<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+			<repository location="https://equo-chromium-cef.ams3.digitaloceanspaces.com/rls/repository"/>
+			<unit id="com.make.chromium.cef.feature.feature.group" version="0.4.0.202005172227"/>
+		</location>
+	</locations>
+</target>

@@ -2,8 +2,8 @@
 <?pde version="3.8"?>
 <target name="Eclipse-ORBIT" sequenceNumber="7">
 <locations>
-	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20200224183213/repository"/>
+	<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+		<repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20201130205003/repository"/>
 		<unit id="ca.odell.glazedlists" version="1.9.0.v201303080712"/>
 		<unit id="ca.odell.glazedlists.source" version="1.9.0.v201303080712"/>
 		<unit id="cdi.api" version="1.0.0.v201105160744"/>
@@ -52,8 +52,6 @@
 		<unit id="com.sun.jersey.source" version="1.17.0.v201503170330"/>
 		<unit id="com.sun.syndication" version="0.9.0.v200803061811"/>
 		<unit id="com.sun.syndication.source" version="0.9.0.v200803061811"/>
-		<unit id="com.sun.xml.bind" version="2.2.0.v201505121915"/>
-		<unit id="com.sun.xml.bind.source" version="2.2.0.v201505121915"/>
 		<unit id="com.thoughtworks.qdox" version="1.6.3.v20081201-1400"/>
 		<unit id="com.thoughtworks.qdox.source" version="1.6.3.v20081201-1400"/>
 		<unit id="com.thoughtworks.xstream" version="1.3.1.v201111240924"/>
@@ -111,14 +109,12 @@
 		<unit id="javax.websocket" version="1.0.0.v20140310-1603"/>
 		<unit id="javax.websocket.source" version="1.0.0.v20140310-1603"/>
 		<unit id="javax.ws.rs" version="2.0.1.v201504171603"/>
-		<unit id="javax.wsdl" version="1.5.1.v201012040544"/>
 		<unit id="javax.wsdl" version="1.6.2.v201012040545"/>
 		<unit id="javax.wsdl.source" version="1.6.2.v201012040545"/>
 		<unit id="javax.xml" version="1.3.4.v201005080400"/>
 		<unit id="javax.xml.bind" version="2.2.0.v201105210648"/>
 		<unit id="javax.xml.bind.source" version="2.2.0.v201105210648"/>
 		<unit id="javax.xml.rpc" version="1.1.0.v201209140446"/>
-		<unit id="javax.xml.soap" version="1.2.0.v201005080501"/>
 		<unit id="javax.xml.soap" version="1.3.0.v201105210645"/>
 		<unit id="javax.xml.stream" version="1.0.1.v201004272200"/>
 		<unit id="javax.xml.ws" version="2.1.0.v200902101523"/>
@@ -139,9 +135,7 @@
 		<unit id="net.sourceforge.mx4j.remote" version="3.0.1.v20100427-1100"/>
 		<unit id="net.sourceforge.nattable.core" version="2.1.0.v201102231538"/>
 		<unit id="net.sourceforge.nattable.core.source" version="2.1.0.v201102070845"/>
-		<unit id="org.antlr.runtime" version="3.2.0.v201101311130"/>
 		<unit id="org.antlr.runtime" version="4.3.0.v201502022030"/>
-		<unit id="org.antlr.runtime.source" version="3.2.0.v201101311130"/>
 		<unit id="org.antlr.runtime.source" version="4.3.0.v201502022030"/>
 		<unit id="org.aopalliance" version="1.0.0.v201105210816"/>
 		<unit id="org.apache.ant" version="1.9.6.v201510161327"/>
@@ -182,9 +176,7 @@
 		<unit id="org.apache.commons.fileupload.source" version="1.2.2.v20111214-1400"/>
 		<unit id="org.apache.commons.httpclient" version="3.1.0.v201012070820"/>
 		<unit id="org.apache.commons.httpclient.source" version="3.1.0.v201012070820"/>
-		<unit id="org.apache.commons.io" version="2.0.1.v201105210651"/>
 		<unit id="org.apache.commons.io" version="2.2.0.v201405211200"/>
-		<unit id="org.apache.commons.io.source" version="2.0.1.v201105210651"/>
 		<unit id="org.apache.commons.io.source" version="2.2.0.v201405211200"/>
 		<unit id="org.apache.commons.jxpath" version="1.3.0.v200911051830"/>
 		<unit id="org.apache.commons.jxpath.source" version="1.3.0.v200911051830"/>
@@ -192,9 +184,7 @@
 		<unit id="org.apache.commons.lang.source" version="2.6.0.v201404270220"/>
 		<unit id="org.apache.commons.lang3" version="3.1.0.v201403281430"/>
 		<unit id="org.apache.commons.lang3.source" version="3.1.0.v201403281430"/>
-		<unit id="org.apache.commons.logging" version="1.0.4.v201101211617"/>
 		<unit id="org.apache.commons.logging" version="1.1.1.v201101211721"/>
-		<unit id="org.apache.commons.logging.source" version="1.0.4.v201101211617"/>
 		<unit id="org.apache.commons.logging.source" version="1.1.1.v201101211721"/>
 		<unit id="org.apache.commons.math" version="2.1.0.v201105210652"/>
 		<unit id="org.apache.commons.math.source" version="2.1.0.v201105210652"/>
@@ -204,9 +194,7 @@
 		<unit id="org.apache.commons.pool.source" version="1.6.0.v201204271246"/>
 		<unit id="org.apache.coyote" version="7.0.56.v201412180755"/>
 		<unit id="org.apache.coyote.source" version="7.0.56.v201412180755"/>
-		<unit id="org.apache.derby" version="10.8.2.2_v201605172130"/>
 		<unit id="org.apache.derby" version="10.11.1.1_v201605202053"/>
-		<unit id="org.apache.derby.source" version="10.8.2.2_v201605172130"/>
 		<unit id="org.apache.derby.source" version="10.11.1.1_v201605202053"/>
 		<unit id="org.apache.el" version="7.0.56.v201412180755"/>
 		<unit id="org.apache.el.source" version="7.0.56.v201412180755"/>
@@ -222,17 +210,11 @@
 		<unit id="org.apache.geronimo.specs.osgi.registry.source" version="1.1.0.v201205170710"/>
 		<unit id="org.apache.hadoop.zookeeper" version="3.4.5.v20121214-1350"/>
 		<unit id="org.apache.hadoop.zookeeper.source" version="3.4.5.v20121214-1350"/>
-		<unit id="org.apache.httpcomponents.httpclient" version="4.2.6.v201311072007"/>
 		<unit id="org.apache.httpcomponents.httpclient" version="4.3.6.v201511171540"/>
-		<unit id="org.apache.httpcomponents.httpclient.source" version="4.2.6.v201311072007"/>
 		<unit id="org.apache.httpcomponents.httpclient.source" version="4.3.6.v201511171540"/>
-		<unit id="org.apache.httpcomponents.httpcore" version="4.2.5.v201311072007"/>
 		<unit id="org.apache.httpcomponents.httpcore" version="4.3.3.v201411290715"/>
-		<unit id="org.apache.httpcomponents.httpcore.nio" version="4.0.0.v200905121600"/>
 		<unit id="org.apache.httpcomponents.httpcore.nio" version="4.1.0.v201101201700"/>
-		<unit id="org.apache.httpcomponents.httpcore.nio.source" version="4.0.0.v200905121600"/>
 		<unit id="org.apache.httpcomponents.httpcore.nio.source" version="4.1.0.v201101201700"/>
-		<unit id="org.apache.httpcomponents.httpcore.source" version="4.2.5.v201311072007"/>
 		<unit id="org.apache.httpcomponents.httpcore.source" version="4.3.3.v201411290715"/>
 		<unit id="org.apache.jasper" version="7.0.56.v201412180755"/>
 		<unit id="org.apache.jasper.glassfish" version="2.2.2.v201501141630"/>
@@ -369,13 +351,9 @@
 		<unit id="org.hamcrest" version="1.1.0.v20090501071000"/>
 		<unit id="org.hamcrest.core" version="1.1.0.v20090501071000"/>
 		<unit id="org.hamcrest.core.source" version="1.1.0.v20090501071000"/>
-		<unit id="org.hamcrest.generator" version="1.1.0.v20090501071000"/>
 		<unit id="org.hamcrest.generator" version="1.3.0.v201305210900"/>
-		<unit id="org.hamcrest.generator.source" version="1.1.0.v20090501071000"/>
 		<unit id="org.hamcrest.generator.source" version="1.3.0.v201305210900"/>
-		<unit id="org.hamcrest.integration" version="1.1.0.v201303031500"/>
 		<unit id="org.hamcrest.integration" version="1.3.0.v201305210900"/>
-		<unit id="org.hamcrest.integration.source" version="1.1.0.v201303031500"/>
 		<unit id="org.hamcrest.integration.source" version="1.3.0.v201305210900"/>
 		<unit id="org.hamcrest.library" version="1.1.0.v20090501071000"/>
 		<unit id="org.hamcrest.library.source" version="1.1.0.v20090501071000"/>
@@ -391,21 +369,15 @@
 		<unit id="org.junit.source" version="4.12.0.v201504281640"/>
 		<unit id="org.kohsuke.args4j" version="2.0.21.v201301150030"/>
 		<unit id="org.kohsuke.args4j.source" version="2.0.21.v201301150030"/>
-		<unit id="org.mockito" version="1.8.4.v201303031500"/>
 		<unit id="org.mockito" version="1.9.5.v201605172210"/>
-		<unit id="org.mockito.source" version="1.8.4.v201303031500"/>
 		<unit id="org.mockito.source" version="1.9.5.v201605172210"/>
 		<unit id="org.mozilla.javascript" version="1.7.5.v201504281450"/>
 		<unit id="org.mozilla.javascript.source" version="1.7.5.v201504281450"/>
-		<unit id="org.objectweb.asm" version="3.3.1.v201105211655"/>
-		<unit id="org.objectweb.asm" version="4.0.0.v201302062210"/>
 		<unit id="org.objectweb.asm" version="5.0.1.v201404251740"/>
 		<unit id="org.objectweb.asm.analysis" version="5.0.1.v201505121915"/>
 		<unit id="org.objectweb.asm.analysis.source" version="5.0.1.v201505121915"/>
 		<unit id="org.objectweb.asm.commons" version="5.0.1.v201404251740"/>
 		<unit id="org.objectweb.asm.commons.source" version="5.0.1.v201404251740"/>
-		<unit id="org.objectweb.asm.source" version="3.3.1.v201105211655"/>
-		<unit id="org.objectweb.asm.source" version="4.0.0.v201302062210"/>
 		<unit id="org.objectweb.asm.source" version="5.0.1.v201404251740"/>
 		<unit id="org.objectweb.asm.tree" version="5.0.1.v201404251740"/>
 		<unit id="org.objectweb.asm.tree.source" version="5.0.1.v201404251740"/>
@@ -445,7 +417,6 @@
 		<unit id="org.slf4j.log4j.source" version="1.7.2.v20130115-1340"/>
 		<unit id="org.slf4j.nop" version="1.7.2.v201212060727"/>
 		<unit id="org.slf4j.nop.source" version="1.7.2.v201212060727"/>
-		<unit id="org.swtchart" version="0.7.0.v201201201914"/>
 		<unit id="org.swtchart" version="0.10.0.v201605200358"/>
 		<unit id="org.swtchart.source" version="0.10.0.v201605200358"/>
 		<unit id="org.uddi4j" version="2.0.5.v200805270300"/>
@@ -453,16 +424,13 @@
 		<unit id="org.w3c.css.sac.source" version="1.3.1.v200903091627"/>
 		<unit id="org.w3c.dom.events" version="3.0.0.draft20060413_v201105210656"/>
 		<unit id="org.w3c.dom.events.source" version="3.0.0.draft20060413_v201105210656"/>
-		<unit id="org.w3c.dom.smil" version="1.0.0.v200806040011"/>
 		<unit id="org.w3c.dom.smil" version="1.0.1.v200903091627"/>
-		<unit id="org.w3c.dom.smil.source" version="1.0.0.v200806040011"/>
 		<unit id="org.w3c.dom.smil.source" version="1.0.1.v200903091627"/>
 		<unit id="org.w3c.dom.svg" version="1.1.0.v201011041433"/>
 		<unit id="org.w3c.dom.svg.source" version="1.1.0.v201011041433"/>
 		<unit id="org.xbill.dns" version="2.0.8.v201112050911"/>
 		<unit id="org.xbill.dns.source" version="2.0.8.v201112050911"/>
 		<unit id="org.xmlpull" version="1.1.3.4_v201201052148"/>
-		<unit id="org.yaml.snakeyaml" version="1.14.0.v201604211500"/>
 		<unit id="osgi.enterprise" version="4.2.0.v201108120515"/>
 		<unit id="osgi.enterprise.source" version="4.2.0.v201108120515"/>
 		<unit id="scannotation" version="1.0.2.v201205170710"/>

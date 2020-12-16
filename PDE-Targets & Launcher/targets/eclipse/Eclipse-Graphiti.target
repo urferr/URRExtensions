@@ -2,10 +2,10 @@
 <?pde version="3.8"?>
 <target name="Eclipse-Graphiti" sequenceNumber="7">
 <locations>
-	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/releases/2020-03"/>
-		<unit id="org.eclipse.graphiti.export.feature.feature.group" version="0.16.1.201909061426"/>
-		<unit id="org.eclipse.graphiti.sdk.feature.feature.group" version="0.16.1.201909061426"/>
+	<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+		<repository location="http://download.eclipse.org/releases/2020-12"/>
+		<unit id="org.eclipse.graphiti.export.feature.feature.group" version="0.17.0.202005151449"/>
+		<unit id="org.eclipse.graphiti.sdk.feature.feature.group" version="0.17.0.202005151449"/>
 	</location>
 </locations>
 </target>
