@@ -40,7 +40,7 @@
  -Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentisCLDbranch_run/xentis/instances/xentis/var/https/XENTISTrustStore.jks
  -Djavax.net.ssl.trustStorePassword=changeit
 
--Dcom.sun.management.jmxremote.port=7072
+-Dcom.sun.management.jmxremote.port=7872
 -Dcom.sun.management.jmxremote.ssl=false
 -Dcom.sun.management.jmxremote.authenticate=false
 
@@ -89,11 +89,11 @@
       <plugin id="com.compxc.translation.service.sql" autoStart="true" startLevel="0" />
       <plugin id="com.eclipsesource.jaxrs.provider.gson" autoStart="true" startLevel="3" />
       <plugin id="com.eclipsesource.jaxrs.publisher" autoStart="true" startLevel="3" />
+      <plugin id="com.profidata.platform.server.service" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.admin.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.calendar.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.codevalue.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.customizingconsole.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.data.service.messaging.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.data.service.remote.http" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.data.service.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.frontoffice.businessintelligence.impl" autoStart="true" startLevel="0" />
@@ -121,7 +121,6 @@
       <plugin id="com.profidata.xc.risk.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rule.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.unified.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.xnife.context.persistence" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.http.server" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.logging.slf4j.logback.commandline" autoStart="true" startLevel="2" />
