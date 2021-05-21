@@ -22,6 +22,7 @@
 -Dorg.aspectj.osgi.verbose=true
 -Dorg.aspectj.weaver.showWeaveInfo=true
 
+-Dlogback.configurationFile=logback-startup.xml
 -Dcom.profidata.xc.monitor.exitonfail=false
 -Dcom.xnife.logging.level.com.profidata.xc.one.server.monitor.application=debug
 
@@ -33,19 +34,15 @@
 
 -Dorg.osgi.service.http.port=7816
 -Dorg.eclipse.equinox.http.jetty.http.port=7816
+-Dorg.eclipse.equinox.http.jetty.context.path=/xcas
 
 -Doracle.net.tns_admin=${env_var:TNS_ADMIN}
 -Dfile.encoding=&quot;UTF-8&quot;
 
- -Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentisCLDbranch_run/xentis/instances/xentis/var/https/XENTISTrustStore.jks
- -Djavax.net.ssl.trustStorePassword=changeit
-
--Dcom.sun.management.jmxremote.port=7872
--Dcom.sun.management.jmxremote.ssl=false
--Dcom.sun.management.jmxremote.authenticate=false
-
 -Dxentis.logger.monstar.host=pdvmdev15
--Dspring.profiles.active=oracle,idbinary,config
+-Dspring.profiles.active=config,secret,oracle,idbinary,urr,ide
+-Dspring.boot.admin.client.url=http://pdvmdev15:7802
+-Dspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7816
 
 -ea
 -Xms256m
@@ -56,7 +53,6 @@
 
 
 --add-opens java.base/java.lang=ALL-UNNAMED
---illegal-access=warn
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
@@ -94,7 +90,6 @@
       <plugin id="com.profidata.xc.calendar.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.codevalue.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.customizingconsole.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.data.service.remote.http" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.data.service.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.frontoffice.businessintelligence.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.frontoffice.server.metadata" autoStart="true" startLevel="0" />
@@ -105,11 +100,12 @@
       <plugin id="com.profidata.xc.metadata.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.migration.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.objectquery.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.one.server.configuration" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.one.server.configuration" autoStart="true" startLevel="2" />
       <plugin id="com.profidata.xc.one.server.monitor" autoStart="true" startLevel="2" />
       <plugin id="com.profidata.xc.optimizer.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.order.servicefacade.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.persistence.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.platform.request.http" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.platform.request.tracing" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.requestcache.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rest.admin.service.impl" autoStart="true" startLevel="0" />
