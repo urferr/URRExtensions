@@ -9,27 +9,27 @@
     <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/xentisjava/infrastructure/eclipse/prototype/Start User Prototype.prototype&quot;/&gt;&#13;&#10;"/>
     <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/com.profidata.user.shell/src/main/java/com/profidata/user/shell/UserShell.java"/>
+        <listEntry value="/com.profidata.user.app/src/main/java/com/profidata/user/app/UserStarter.java"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="EAMIS_CLUSTER_INSTANCE_NAME" value="xentis"/>
-        <mapEntry key="EAMIS_CONFIG_SECURE" value="false"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev15.profidatagroup.com"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_SECURE" value="false"/>
-        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>
+        <mapEntry key="SERVER_PORT" value="7829"/>
+        <mapEntry key="SPRING_CLOUD_CONFIG_LABEL" value="reduced-config"/>
+        <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev15.profidatagroup.com:10010"/>
     </mapAttribute>
     <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
         <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
     </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.user.shell.UserShell"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="com.profidata.user.shell"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.user.shell"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;&#13;&#10;-Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentis570branch_run/xentis/instances/xentis/var/https/XENTISTrustStore.jks&#13;&#10;-Djavax.net.ssl.trustStorePassword=changeit&#13;&#10;&#13;&#10;--add-opens java.base/jdk.internal.misc=ALL-UNNAMED&#13;&#10;--illegal-access=warn&#13;&#10;&#13;&#10;-Dspring.jpa.properties.hibernate.dialect=org.hibernate.dialect.Oracle12cDialect"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.user.app.UserStarter"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="com.profidata.user.app"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="localhost"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.user.app"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dspring.profiles.active=oracle,idbinary,urr,ide&#13;&#10;-Dspring.boot.admin.client.url=http://pdvmdev15:7802&#13;&#10;-Dspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7829&#13;&#10;-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;-Dfile.encoding=UTF-8&#13;&#10;&#13;&#10;--add-opens java.base/jdk.internal.misc=ALL-UNNAMED"/>
 </launchConfiguration>
