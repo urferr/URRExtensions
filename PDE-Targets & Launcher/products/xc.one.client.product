@@ -93,7 +93,6 @@
       <plugin id="com.profidata.xc.one.client.configuration" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xentis.javamis.client" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.application" autoStart="true" startLevel="0" />
-      <plugin id="com.xnife.logging.slf4j.logback.commandline" autoStart="true" startLevel="2" />
       <plugin id="com.xnife.remoting.client" autoStart="true" startLevel="0" />
       <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="2" />

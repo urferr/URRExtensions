@@ -86,7 +86,6 @@
       <plugin id="com.eclipsesource.jaxrs.provider.gson" autoStart="true" startLevel="3" />
       <plugin id="com.eclipsesource.jaxrs.publisher" autoStart="true" startLevel="3" />
       <plugin id="com.profidata.platform.server.service" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.admin.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.calendar.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.codevalue.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.customizingconsole.service.impl" autoStart="true" startLevel="0" />
@@ -100,7 +99,7 @@
       <plugin id="com.profidata.xc.metadata.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.migration.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.objectquery.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.one.server.configuration" autoStart="true" startLevel="2" />
+      <plugin id="com.profidata.xc.one.server.configuration" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.one.server.monitor" autoStart="true" startLevel="2" />
       <plugin id="com.profidata.xc.optimizer.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.order.servicefacade.impl" autoStart="true" startLevel="0" />
@@ -108,27 +107,20 @@
       <plugin id="com.profidata.xc.platform.request.http" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.platform.request.tracing" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.requestcache.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.rest.admin.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.rest.analysis.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.rest.common.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.rest.data.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.rest.investmentcompliance.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.rest.order.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.risk.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rule.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.unified.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.http.server" autoStart="true" startLevel="0" />
-      <plugin id="com.xnife.logging.slf4j.logback.commandline" autoStart="true" startLevel="2" />
       <plugin id="com.xnife.logging.slf4j.over.jul" autoStart="true" startLevel="2" />
       <plugin id="com.xnife.tools.jmx.osgiconsole" autoStart="true" startLevel="0" />
-      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.cm" autoStart="true" startLevel="3" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.http.jetty" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.http.servlet" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
-      <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.gemini.blueprint.extender" autoStart="true" startLevel="3" />
    </configurations>
 
