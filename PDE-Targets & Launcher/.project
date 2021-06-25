@@ -12,11 +12,13 @@
 			</arguments>
 		</buildCommand>
 	</buildSpec>
+	<natures>
+	</natures>
 	<linkedResources>
 		<link>
-			<name>javamis-config</name>
+			<name>jamavis_config</name>
 			<type>2</type>
-			<locationURI>WORKSPACE_LOC/xentisjava/xentis/com.profidata.xentis.client/src/main/deployment/Resources/config</locationURI>
+			<locationURI>WORKSPACE_LOC/xentisjava/target/platform/Resources/config</locationURI>
 		</link>
 		<link>
 			<name>xentisjava-buildsrc</name>

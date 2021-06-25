@@ -33,6 +33,7 @@
 
 -Dorg.osgi.service.http.port=7016
 -Dorg.eclipse.equinox.http.jetty.http.port=7016
+-Dorg.eclipse.equinox.http.jetty.context.path=/xcas
 
 -Doracle.net.tns_admin=${env_var:TNS_ADMIN}
 -Dfile.encoding=&quot;UTF-8&quot;
@@ -45,16 +46,17 @@
 -Dcom.sun.management.jmxremote.authenticate=false
 
 -Dxentis.logger.monstar.host=pdvmdev15
+-Dspring.zipkin.enabled=false
 
 -ea
 -Xms256m
 -Xmx2048m
 -XX:+HeapDumpOnOutOfMemoryError
-
 -XX:+UseStringDeduplication
+-XX:+ShowCodeDetailsInExceptionMessages
 
---add-opens java.base/java.lang=ALL-UNNAMED
---illegal-access=warn
+
+--add-opens=java.base/java.lang=ALL-UNNAMED
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
@@ -125,14 +127,14 @@
       <plugin id="com.xnife.logging.slf4j.logback.commandline" autoStart="true" startLevel="2" />
       <plugin id="com.xnife.logging.slf4j.over.jul" autoStart="true" startLevel="2" />
       <plugin id="com.xnife.tools.jmx.osgiconsole" autoStart="true" startLevel="0" />
-      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.cm" autoStart="true" startLevel="3" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.http.jetty" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.http.servlet" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
-      <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.gemini.blueprint.extender" autoStart="true" startLevel="3" />
+      <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.gemini.blueprint.extender" autoStart="true" startLevel="0" />
    </configurations>
 
 </product>

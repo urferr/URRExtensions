@@ -29,11 +29,13 @@
         <mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://pdvmdev15.profidatagroup.com:7005?wireFormat.maxInactivityDuration=600000)"/>
         <mapEntry key="EAMIS_PACKAGES" value="/working/xentis/packages"/>
     </mapAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.configservice.shell.ConfigServiceShell"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="com.profidata.configservice.shell"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.configservice.shell"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dvertx.logger-delegate-factory-class-name=io.vertx.core.logging.SLF4JLogDelegateFactory&#13;&#10;&#13;&#10;-DXENTIS_MONSTAR_HOST=&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_PORT=9999&#13;&#10;&#13;&#10;--add-opens java.base/sun.net.dns=ALL-UNNAMED&#13;&#10;--illegal-access=warn"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dvertx.logger-delegate-factory-class-name=io.vertx.core.logging.SLF4JLogDelegateFactory&#13;&#10;&#13;&#10;-DXENTIS_MONSTAR_HOST=&#13;&#10;-DXENTIS_MONSTAR_LOGSTASH_PORT=9999&#13;&#10;&#13;&#10;--add-opens java.base/sun.net.dns=ALL-UNNAMED"/>
 </launchConfiguration>

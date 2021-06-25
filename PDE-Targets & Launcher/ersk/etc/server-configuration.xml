@@ -89,7 +89,7 @@
 	<maxPfResultChunkSize>5</maxPfResultChunkSize>
         
 	<!-- Specify the prefix for all JMS queues, topics and timers started by re-service-point. If not specified the default 're-' will be used -->
-	<messagingPrefix>ersk.</messagingPrefix>
+	<messagingPrefix>re-</messagingPrefix>
    
 	<!-- 
 	Configuration of the users. At least one user is required to run the server in a profile other than BROKER.
