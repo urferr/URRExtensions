@@ -26,6 +26,8 @@
 -Dorg.aspectj.osgi.verbose=true
 -Dorg.aspectj.weaver.showWeaveInfo=true
 
+-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=false
+
 -Dfile.encoding=UTF-8
 
 -Dxentis.remote.base-url=http://pdvmdev15.profidatagroup.com:7820
@@ -47,12 +49,13 @@
 -XX:+UseStringDeduplication
 -XX:+ShowCodeDetailsInExceptionMessages
 
---add-opens java.base/java.lang=ALL-UNNAMED
---add-opens java.desktop/java.awt=ALL-UNNAMED
---add-opens java.desktop/sun.awt.windows=ALL-UNNAMED
---add-opens java.desktop/javax.swing=ALL-UNNAMED
---add-opens java.desktop/sun.java2d.opengl=ALL-UNNAMED
---add-opens java.desktop/sun.awt=ALL-UNNAMED
+--add-opens=java.base/java.lang=ALL-UNNAMED
+--add-opens=java.base/java.util=ALL-UNNAMED
+--add-opens=java.desktop/java.awt=ALL-UNNAMED
+--add-opens=java.desktop/sun.awt.windows=ALL-UNNAMED
+--add-opens=java.desktop/javax.swing=ALL-UNNAMED
+--add-opens=java.desktop/sun.java2d.opengl=ALL-UNNAMED
+--add-opens=java.desktop/sun.awt=ALL-UNNAMED
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>

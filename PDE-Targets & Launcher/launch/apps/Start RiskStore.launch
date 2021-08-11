@@ -17,7 +17,7 @@
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="SERVER_PORT" value="7818"/>
         <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev15.profidatagroup.com:10010"/>
-        <mapEntry key="SPRING_PROFILE_ACTIVE" value="config,secret,urr,ide"/>
+        <mapEntry key="SPRING_PROFILES_ACTIVE" value="config,secret,urr,ide"/>
         <mapEntry key="XENTIS_APPLICATION_DATABASE_ORIENT-DB-DIRECTORY" value="${workspace_loc}\xentisjava\xrs\com.profidata.risk.store.app\target\orientdb-data"/>
         <mapEntry key="XENTIS_APPLICATION_DATABASE_ORIENT-DB-HOME" value="${workspace_loc}\xentisjava\xrs\com.profidata.risk.store.app\target\orientdb"/>
     </mapAttribute>

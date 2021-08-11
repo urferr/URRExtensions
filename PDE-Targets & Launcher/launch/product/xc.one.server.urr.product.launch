@@ -35,13 +35,13 @@
         <setEntry value="com.xnife.http.server:0.0.0:default:true:default:true"/>
         <setEntry value="com.xnife.logging.slf4j.over.jul:0.0.0:default:true:2:true"/>
         <setEntry value="com.xnife.tools.jmx.osgiconsole:0.0.0:default:true:default:true"/>
-        <setEntry value="org.eclipse.core.runtime:3.20.0.v20201027-1526:default:true:2:true"/>
-        <setEntry value="org.eclipse.equinox.cm:1.4.400.v20200422-1833:default:true:3:true"/>
-        <setEntry value="org.eclipse.equinox.common:3.14.0.v20201102-2053:default:true:2:true"/>
-        <setEntry value="org.eclipse.equinox.http.jetty:3.7.500.v20200915-1207:default:true:default:true"/>
-        <setEntry value="org.eclipse.equinox.http.servlet:1.6.700.v20201109-1600:default:true:default:true"/>
-        <setEntry value="org.eclipse.equinox.simpleconfigurator:1.3.600.v20200721-1308:default:true:1:true"/>
-        <setEntry value="org.eclipse.equinox.weaving.aspectj:1.0.400.202012111622:default:true:1:true"/>
+        <setEntry value="org.eclipse.core.runtime:3.22.0.v20210506-1025:default:true:2:true"/>
+        <setEntry value="org.eclipse.equinox.cm:1.5.0.v20210202-1256:default:true:3:true"/>
+        <setEntry value="org.eclipse.equinox.common:3.15.0.v20210518-0604:default:true:2:true"/>
+        <setEntry value="org.eclipse.equinox.http.jetty:3.8.0.v20210414-1616:default:true:default:true"/>
+        <setEntry value="org.eclipse.equinox.http.servlet:1.7.100.v20210311-1631:default:true:default:true"/>
+        <setEntry value="org.eclipse.equinox.simpleconfigurator:1.4.0.v20210315-2228:default:true:1:true"/>
+        <setEntry value="org.eclipse.equinox.weaving.aspectj:1.0.400.202103162301:default:true:1:true"/>
         <setEntry value="org.eclipse.gemini.blueprint.extender:3.0.0.M01:default:true:3:true"/>
     </setAttribute>
     <booleanAttribute key="append.args" value="true"/>
@@ -79,7 +79,7 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
     <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dosgi.clean=true -Dapplication.reporting.location=/working/xentis/var/report -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dlogback.configurationFile=logback-startup.xml -Dcom.profidata.xc.monitor.exitonfail=false -Dcom.xnife.logging.level.com.profidata.xc.one.server.monitor.application=debug -Dcom.xnife.logging.level.com.xnife.cache.impl.index=warn -Dcom.xnife.logging.level.org.hibernate.tool.hbm2ddl=info -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -Dcom.xnife.logging.level.com.profidata.xc.codevalue.service.impl.CodeValueServiceImpl=debug -Dorg.osgi.service.http.port=7816 -Dorg.eclipse.equinox.http.jetty.http.port=7816 -Dorg.eclipse.equinox.http.jetty.context.path=/xcas -Doracle.net.tns_admin=${env_var:TNS_ADMIN} -Dfile.encoding=&quot;UTF-8&quot; -Dxentis.logger.monstar.host=pdvmdev15 -Dspring.profiles.active=config,secret,oracle,idbinary,urr,ide -Dspring.boot.admin.client.url=http://pdvmdev15:7802 -Dspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7816 -ea -Xms256m -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication -XX:+ShowCodeDetailsInExceptionMessages --add-opens java.base/java.lang=ALL-UNNAMED"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dosgi.clean=true -Dapplication.reporting.location=/working/xentis/var/report -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dlogback.configurationFile=logback-startup.xml -Dcom.profidata.xc.monitor.exitonfail=false -Dcom.xnife.logging.level.com.profidata.xc.one.server.monitor.application=debug -Dcom.xnife.logging.level.com.xnife.cache.impl.index=warn -Dcom.xnife.logging.level.org.hibernate.tool.hbm2ddl=info -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -Dcom.xnife.logging.level.com.profidata.xc.codevalue.service.impl.CodeValueServiceImpl=debug -Dorg.osgi.service.http.port=7816 -Dorg.eclipse.equinox.http.jetty.http.port=7816 -Dorg.eclipse.equinox.http.jetty.context.path=/xcas -Doracle.net.tns_admin=${env_var:TNS_ADMIN} -Dfile.encoding=&quot;UTF-8&quot; -Dxentis.logger.monstar.host=pdvmdev15 -Dspring.profiles.active=config,secret,oracle,idbinary,urr,ide -Dspring.boot.admin.client.url=http://pdvmdev15:7802 -Dspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7816 -ea -Xms256m -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication -XX:+ShowCodeDetailsInExceptionMessages --add-opens=java.base/java.lang=ALL-UNNAMED"/>
     <stringAttribute key="pde.version" value="3.3"/>
     <stringAttribute key="product" value="_com.profidata.xc.one.server.build.product.xcServer"/>
     <stringAttribute key="productFile" value="\PDE-Targets &amp; Launcher\products\xc.one.server.product"/>
@@ -129,6 +129,7 @@
         <setEntry value="io.zipkin.reporter2.zipkin-reporter-brave@default:default"/>
         <setEntry value="io.zipkin.reporter2.zipkin-reporter@default:default"/>
         <setEntry value="io.zipkin.zipkin2.zipkin@default:default"/>
+        <setEntry value="jakarta.servlet-api@default:default"/>
         <setEntry value="javassist@default:default"/>
         <setEntry value="javax.activation@default:default"/>
         <setEntry value="javax.annotation.jsr305@default:default"/>
@@ -139,7 +140,6 @@
         <setEntry value="javax.jws.jsr181-api@default:default"/>
         <setEntry value="javax.management.j2ee-api@default:default"/>
         <setEntry value="javax.persistence-api@default:default"/>
-        <setEntry value="javax.servlet@default:default"/>
         <setEntry value="javax.transaction-api@default:default"/>
         <setEntry value="javax.validation@default:default"/>
         <setEntry value="javax.ws.rs@default:default"/>
@@ -161,7 +161,7 @@
         <setEntry value="org.apache.commons.collections@default:default"/>
         <setEntry value="org.apache.commons.dbcp2@default:default"/>
         <setEntry value="org.apache.commons.fileupload@default:default"/>
-        <setEntry value="org.apache.commons.io*2.9.0@default:default"/>
+        <setEntry value="org.apache.commons.io@default:default"/>
         <setEntry value="org.apache.commons.lang3@default:default"/>
         <setEntry value="org.apache.commons.lang@default:default"/>
         <setEntry value="org.apache.commons.logging@default:default"/>
@@ -200,7 +200,6 @@
         <setEntry value="org.eclipse.gemini.blueprint.extender@3:true"/>
         <setEntry value="org.eclipse.gemini.blueprint.io@default:default"/>
         <setEntry value="org.eclipse.jetty.client@default:default"/>
-        <setEntry value="org.eclipse.jetty.continuation@default:default"/>
         <setEntry value="org.eclipse.jetty.http@default:default"/>
         <setEntry value="org.eclipse.jetty.io@default:default"/>
         <setEntry value="org.eclipse.jetty.reactive.client@default:default"/>
@@ -255,6 +254,7 @@
         <setEntry value="org.springframework.oxm@default:default"/>
         <setEntry value="org.springframework.security.config@default:default"/>
         <setEntry value="org.springframework.security.core@default:default"/>
+        <setEntry value="org.springframework.security.crypto@default:default"/>
         <setEntry value="org.springframework.security.oauth2.client@default:default"/>
         <setEntry value="org.springframework.security.oauth2.core@default:default"/>
         <setEntry value="org.springframework.security.oauth2.jose.source@default:default"/>

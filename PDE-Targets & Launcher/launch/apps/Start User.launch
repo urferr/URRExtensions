@@ -17,7 +17,7 @@
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="SERVER_PORT" value="7829"/>
         <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev15.profidatagroup.com:10010"/>
-        <mapEntry key="SPRING_PROFILE_ACTIVE" value="config,secret,oracle,idbinary,urr,ide"/>
+        <mapEntry key="SPRING_PROFILES_ACTIVE" value="config,secret,oracle,idbinary,urr,ide"/>
     </mapAttribute>
     <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
         <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
@@ -29,7 +29,6 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.user.app.UserStarter"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="com.profidata.user.app"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="localhost"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.user.app"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dspring.profiles.active=config,secret,oracle,idbinary,urr,ide&#13;&#10;-Dspring.boot.admin.client.url=http://pdvmdev15:7802&#13;&#10;-Dspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7829&#13;&#10;-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;-Dfile.encoding=UTF-8&#13;&#10;&#13;&#10;-Dlogging.level.org.springframework.web=DEBUG&#13;&#10;&#13;&#10;--add-opens java.base/jdk.internal.misc=ALL-UNNAMED"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dspring.boot.admin.client.url=http://pdvmdev15:7802&#13;&#10;-Dspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7829&#13;&#10;-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;-Dfile.encoding=UTF-8&#13;&#10;&#13;&#10;-Dlogging.level.org.springframework.web=DEBUG&#13;&#10;&#13;&#10;--add-opens java.base/jdk.internal.misc=ALL-UNNAMED"/>
 </launchConfiguration>

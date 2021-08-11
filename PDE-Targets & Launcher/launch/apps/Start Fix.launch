@@ -17,7 +17,7 @@
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="SERVER_PORT" value="7812"/>
         <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev15.profidatagroup.com:10010"/>
-        <mapEntry key="SPRING_PROFILE_ACTIVE" value="config,secret,urr,ide"/>
+        <mapEntry key="SPRING_PROFILES_ACTIVE" value="config,secret,urr,ide"/>
         <mapEntry key="XENTIS_RUNTIME_DIR" value="/working/xentis/var"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
@@ -26,7 +26,6 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidatagroup.fix.FixStarter"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="com.profidata.xentis.fix.engine"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="D:\JavaProjects\fixengine\fixengine-mobi.cfg"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xentis.fix.engine"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dlog.dir=&quot;store/log&quot;&#13;&#10;-Dfile.encoding=UTF-8&#13;&#10;&#13;&#10;--add-opens java.base/java.lang=ALL-UNNAMED"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dfile.encoding=UTF-8&#13;&#10;&#13;&#10;--add-opens java.base/java.lang=ALL-UNNAMED"/>
 </launchConfiguration>

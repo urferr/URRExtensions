@@ -3,12 +3,12 @@
 <target name="Eclipse-Equinox" sequenceNumber="25">
 <locations>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<unit id="org.eclipse.equinox.weaving.sdk.feature.group" version="1.2.0.201908131520"/>
-		<repository location="http://download.eclipse.org/tools/ajdt/48/dev/update"/>
+		<repository location="http://download.eclipse.org/tools/ajdt/410/dev/update"/>
+		<unit id="org.eclipse.contribution.weaving.feature.group" version="2.2.4.202103162301"/>
 	</location>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/eclipse/updates/4.15"/>
-		<unit id="org.eclipse.equinox.sdk.feature.group" version="3.20.100.v20200303-1901"/>
+		<repository location="http://download.eclipse.org/eclipse/updates/4.20"/>
+		<unit id="org.eclipse.equinox.sdk.feature.group" version="3.23.0.v20210611-1654"/>
 	</location>
 </locations>
 </target>
