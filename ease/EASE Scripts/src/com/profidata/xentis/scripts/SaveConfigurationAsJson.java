@@ -474,6 +474,7 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		aConfiguration.additionalBundles.add("net.lingala.zip4j");
 		allBundles.put("com.profidata.xentis.etl.commons.test", aConfiguration);
