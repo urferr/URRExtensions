@@ -3,6 +3,14 @@
 	"enabled": true,
 	"editUsernameAllowed": true,
 	"loginTheme": "xentis",
+	"internationalizationEnabled": true,
+	"supportedLocales": [
+		"de",
+		"en",
+		"it",
+		"fr"
+	],
+	"defaultLocale": "en",
 	"roles": {
 		"realm": [
 			{
@@ -44,9 +52,16 @@
 			"publicClient": true,
 			"rootUrl": "$(env:XENTIS_BASE_URL)/",
 			"redirectUris": [
-				"http://*"
+				"$(env:XENTIS_EXTERNAL_URL)/*"
 			],
-			"webOrigins": []
+			"webOrigins": [],
+			"defaultClientScopes": [
+				"web-origins",
+				"xentis",
+				"roles",
+				"profile",
+				"email"
+			]
 		},
 		{
 			"clientId": "xentisServer",
@@ -69,7 +84,7 @@
 			"publicClient": true,
 			"rootUrl": "",
 			"redirectUris": [
-				"http://*"
+				"$(env:XENTIS_EXTERNAL_URL)/*"
 			],
 			"webOrigins": [],
       		"authenticationFlowBindingOverrides": {
