@@ -3,9 +3,9 @@
 <target name="Eclipse-Babel">
 	<locations>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-			<repository location="https://download.eclipse.org/technology/babel/update-site/R0.18.3/2021-03/"/>
-			<unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="4.19.0.v20210327020002"/>
-			<unit id="org.eclipse.babel.nls_modeling.emf_de.feature.group" version="4.19.0.v20210327020002"/>
+			<repository location="https://download.eclipse.org/technology/babel/update-site/R0.19.0/2021-06/"/>
+			<unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="4.20.0.v20210630020001"/>
+			<unit id="org.eclipse.babel.nls_modeling.emf_de.feature.group" version="4.20.0.v20210630020001"/>
 		</location>
 	</locations>
 </target>

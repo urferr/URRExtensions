@@ -2,12 +2,12 @@
 <?pde version="3.8"?>
 <target name="Eclipse-WST" sequenceNumber="8">
 <locations>
-	<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/releases/2021-06"/>
-		<unit id="org.eclipse.jst.web_ui.feature.feature.group" version="3.22.0.v202103200058"/>
+	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+		<repository location="http://download.eclipse.org/releases/2021-09"/>
+		<unit id="org.eclipse.jst.web_ui.feature.feature.group" version="3.23.0.v202107101916"/>
 		<unit id="org.eclipse.wst.common.fproj.feature.group" version="3.7.3.v202007142017"/>
-		<unit id="org.eclipse.wst.common_core.feature.feature.group" version="3.22.0.v202103232321"/>
-		<unit id="org.eclipse.wst.web_core.feature.feature.group" version="3.22.0.v202103232331"/>
+		<unit id="org.eclipse.wst.common_core.feature.feature.group" version="3.23.0.v202108200212"/>
+		<unit id="org.eclipse.wst.web_core.feature.feature.group" version="3.23.0.v202107272335"/>
 	</location>
 </locations>
 </target>

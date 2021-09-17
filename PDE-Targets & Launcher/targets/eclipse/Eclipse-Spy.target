@@ -6,10 +6,10 @@
 		<unit id="org.eclipse.e4.tools.spies.feature.feature.group" version="0.18.0.v20200923-1237"/>
 		<repository location="http://download.eclipse.org/e4/snapshots/org.eclipse.e4.tools/latest/"/>
 	</location>
-	<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/eclipse/updates/4.20"/>
-		<unit id="org.eclipse.e4.core.tools.feature.source.feature.group" version="4.20.0.v20210427-1802"/>
-		<unit id="org.eclipse.swt.tools.feature.feature.group" version="3.108.100.v20210526-1313"/>
+	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+		<repository location="http://download.eclipse.org/eclipse/updates/4.21"/>
+		<unit id="org.eclipse.e4.core.tools.feature.source.feature.group" version="4.21.0.v20210604-0630"/>
+		<unit id="org.eclipse.swt.tools.feature.feature.group" version="3.108.200.v20210830-2107"/>
 	</location>
 </locations>
 </target>

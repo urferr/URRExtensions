@@ -2,10 +2,10 @@
 <?pde version="3.8"?>
 <target name="Eclipse-PDE" sequenceNumber="23">
 <locations>
-	<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/eclipse/updates/4.20"/>
-		<unit id="org.eclipse.pde.feature.group" version="3.14.800.v20210611-1636"/>
-		<unit id="org.eclipse.pde.source.feature.group" version="3.14.800.v20210611-1636"/>
+	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+		<repository location="http://download.eclipse.org/eclipse/updates/4.21"/>
+		<unit id="org.eclipse.pde.feature.group" version="3.14.900.v20210906-0500"/>
+		<unit id="org.eclipse.pde.source.feature.group" version="3.14.900.v20210906-0500"/>
 	</location>
 </locations>
 <environment>

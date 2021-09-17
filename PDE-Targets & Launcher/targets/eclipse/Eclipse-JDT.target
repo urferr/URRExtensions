@@ -2,10 +2,10 @@
 <?pde version="3.8"?>
 <target name="Eclipse-JDT" sequenceNumber="23">
 <locations>
-	<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/eclipse/updates/4.20"/>
-		<unit id="org.eclipse.jdt.feature.group" version="3.18.800.v20210611-1600"/>
-		<unit id="org.eclipse.jdt.source.feature.group" version="3.18.800.v20210611-1600"/>
+	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+		<repository location="http://download.eclipse.org/eclipse/updates/4.21"/>
+		<unit id="org.eclipse.jdt.feature.group" version="3.18.900.v20210906-0500"/>
+		<unit id="org.eclipse.jdt.source.feature.group" version="3.18.900.v20210906-0500"/>
 	</location>
 </locations>
 <environment>
