@@ -13,7 +13,7 @@
         <setEntry value="com.xnife.context.application:0.0.0:default:true:default:true"/>
         <setEntry value="com.xnife.remoting.client:0.0.0:default:true:default:true"/>
         <setEntry value="org.apache.felix.scr:2.1.24.v20200924-1939:default:true:2:true"/>
-        <setEntry value="org.eclipse.core.runtime:3.22.0.v20210506-1025:default:true:2:true"/>
+        <setEntry value="org.eclipse.core.runtime:3.23.0.v20210730-2035:default:true:2:true"/>
         <setEntry value="org.eclipse.equinox.common:3.15.0.v20210518-0604:default:true:2:true"/>
         <setEntry value="org.eclipse.equinox.event:1.6.0.v20210212-1143:default:true:default:true"/>
         <setEntry value="org.eclipse.equinox.simpleconfigurator:1.4.0.v20210315-2228:default:true:1:true"/>
@@ -398,7 +398,7 @@
         <setEntry value="org.springframework.web@default:default"/>
         <setEntry value="org.springframework.webflux@default:default"/>
         <setEntry value="org.springframework.webmvc@default:default"/>
-        <setEntry value="org.tukaani.xz@default:default"/>
+        <setEntry value="org.tukaani.xz*1.9.0.v20210624-1259@default:default"/>
         <setEntry value="org.w3c.css.sac@default:default"/>
         <setEntry value="org.w3c.dom.events@default:default"/>
         <setEntry value="org.w3c.dom.smil@default:default"/>

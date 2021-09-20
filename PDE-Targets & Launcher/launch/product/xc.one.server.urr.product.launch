@@ -35,7 +35,7 @@
         <setEntry value="com.xnife.http.server:0.0.0:default:true:default:true"/>
         <setEntry value="com.xnife.logging.slf4j.over.jul:0.0.0:default:true:2:true"/>
         <setEntry value="com.xnife.tools.jmx.osgiconsole:0.0.0:default:true:default:true"/>
-        <setEntry value="org.eclipse.core.runtime:3.22.0.v20210506-1025:default:true:2:true"/>
+        <setEntry value="org.eclipse.core.runtime:3.23.0.v20210730-2035:default:true:2:true"/>
         <setEntry value="org.eclipse.equinox.cm:1.5.0.v20210202-1256:default:true:3:true"/>
         <setEntry value="org.eclipse.equinox.common:3.15.0.v20210518-0604:default:true:2:true"/>
         <setEntry value="org.eclipse.equinox.http.jetty:3.8.0.v20210414-1616:default:true:default:true"/>
@@ -218,7 +218,6 @@
         <setEntry value="org.jboss.logging.jboss-logging@default:default"/>
         <setEntry value="org.jolokia.core@default:default"/>
         <setEntry value="org.json@default:default"/>
-        <setEntry value="org.jvnet.mimepull@default:default"/>
         <setEntry value="org.latencyutils@default:default"/>
         <setEntry value="org.mozilla.javascript@default:default"/>
         <setEntry value="org.objectweb.asm.commons@default:default"/>
