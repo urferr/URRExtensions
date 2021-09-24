@@ -69,10 +69,21 @@
 			"description": "",
 			"protocol": "openid-connect",
 			"publicClient": false,
+            "standardFlowEnabled": false,
+            "directAccessGrantsEnabled": false,
 			"serviceAccountsEnabled": true,
+            "backchannel.logout.session.required": "false",
 			"rootUrl": "$(env:XENTIS_BASE_URL)/",
 			"redirectUris": [],
 			"webOrigins": [],
+            "adminUrl": "",
+			"defaultClientScopes": [
+				"web-origins",
+				"xentis",
+				"roles",
+				"profile",
+				"email"
+			],
 			"clientAuthenticatorType": "client-secret",
 			"secret": "aeb87a87-7e0c-4cbe-af08-14301f3cead7"
 		},
@@ -82,6 +93,7 @@
 			"description": "",
 			"protocol": "openid-connect",
 			"publicClient": true,
+            "directAccessGrantsEnabled": false,
 			"rootUrl": "",
 			"redirectUris": [
 				"$(env:XENTIS_EXTERNAL_URL)/*"
