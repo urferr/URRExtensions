@@ -671,7 +671,7 @@
 					"priority": 40
 				},
 				{
-					"authenticator": "license-check-authenticator",
+					"authenticator": "licence-check-authenticator",
 					"requirement": "REQUIRED",
 					"priority": 50
 				},

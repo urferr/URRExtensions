@@ -31,11 +31,12 @@
 -Dfile.encoding=UTF-8
 
 -Dxentis.remote.base-url=http://pdvmdev15.profidatagroup.com:7820
+-DXXXxentis.remote.base-url=http://ws-2724.profidata.com:8080
+-Dspring.profiles.active=config,urr,ide
 
 -Dcom.xnife.runtime.mode=DEVELOPMENT
 -Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective
 
--Dspring.profiles.active=config,urr,ide
 -Dspring.security.strategy=MODE_GLOBAL
 
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
