@@ -72,11 +72,13 @@
             "standardFlowEnabled": false,
             "directAccessGrantsEnabled": false,
 			"serviceAccountsEnabled": true,
-            "backchannel.logout.session.required": "false",
 			"rootUrl": "$(env:XENTIS_BASE_URL)/",
 			"redirectUris": [],
 			"webOrigins": [],
             "adminUrl": "",
+            "attributes": {
+				"backchannel.logout.session.required": "false"
+            },
 			"defaultClientScopes": [
 				"web-origins",
 				"xentis",
