@@ -32,8 +32,8 @@
 
 -Dcom.xnife.logging.level.com.profidata.xc.codevalue.service.impl.CodeValueServiceImpl=debug
 
--Dorg.osgi.service.http.port=7816
--Dorg.eclipse.equinox.http.jetty.http.port=7816
+-Dorg.osgi.service.http.port=7830
+-Dorg.eclipse.equinox.http.jetty.http.port=7830
 -Dorg.eclipse.equinox.http.jetty.context.path=/xcas
 
 -Doracle.net.tns_admin=${env_var:TNS_ADMIN}
@@ -41,8 +41,8 @@
 
 -Dxentis.logger.monstar.host=pdvmdev15
 -Dspring.profiles.active=config,secret,oracle,idbinary,urr,ide
--Dspring.boot.admin.client.url=http://pdvmdev15:7802
--Dspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7816
+-Dspring.boot.admin.client.url=http://pdvmdev15:7810
+-Dspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7830
 
 -ea
 -Xms256m
