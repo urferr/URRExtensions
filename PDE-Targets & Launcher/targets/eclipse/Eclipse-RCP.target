@@ -3,11 +3,11 @@
 <target name="Eclipse-RCP" sequenceNumber="37">
 <locations>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/eclipse/updates/4.21"/>
-		<unit id="org.eclipse.e4.core.tools.feature.source.feature.group" version="4.21.0.v20210604-0630"/>
-		<unit id="org.eclipse.rcp.feature.group" version="4.21.0.v20210906-0842"/>
-		<unit id="org.eclipse.rcp.source.feature.group" version="4.21.0.v20210906-0842"/>
-		<unit id="org.eclipse.swt.tools.feature.feature.group" version="3.108.200.v20210830-2107"/>
+		<repository location="http://download.eclipse.org/eclipse/updates/4.22"/>
+		<unit id="org.eclipse.e4.core.tools.feature.source.feature.group" version="4.22.0.v20211020-1255"/>
+		<unit id="org.eclipse.rcp.feature.group" version="4.22.0.v20211124-1800"/>
+		<unit id="org.eclipse.rcp.source.feature.group" version="4.22.0.v20211124-1800"/>
+		<unit id="org.eclipse.swt.tools.feature.feature.group" version="3.108.300.v20211104-1108"/>
 	</location>
 </locations>
 <environment>
