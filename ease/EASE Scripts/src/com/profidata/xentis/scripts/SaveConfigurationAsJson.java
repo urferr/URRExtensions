@@ -112,6 +112,7 @@ public class SaveConfigurationAsJson {
 		allBundles.putAll(getAdditionalXnifeTestFragmentConfigurations());
 		allBundles.putAll(getAdditionalPlatformTestFragmentConfigurations());
 		allBundles.putAll(getAdditionalRiskTestFragmentConfigurations());
+		allBundles.putAll(getAdditionalBackOfficeTestFragmentConfigurations());
 		allBundles.putAll(getAdditionalMiddleOfficeTestFragmentConfigurations());
 		allBundles.putAll(getAdditionalFrontOfficeTestFragmentConfigurations());
 		allBundles.putAll(getAdditionalCustomizingConsoleTestFragmentConfigurations());
@@ -262,6 +263,7 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		allBundles.put("com.profidata.xc.codevalue.service.impl.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -299,6 +301,7 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		allBundles.put("com.profidata.xc.risk.domain.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -310,6 +313,9 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
+		aConfiguration.additionalBundles.add("net.bytebuddy.byte-buddy-agent");
+		aConfiguration.additionalBundles.add("org.mockito.inline");
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		allBundles.put("com.profidata.xc.risk.presentation.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -319,6 +325,18 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		aConfiguration.additionalBundles.add("com.sun.istack.commons-runtime");
 		allBundles.put("com.profidata.xc.risk.service.impl.test", aConfiguration);
+
+		return allBundles;
+	}
+
+	private Map<? extends String, ? extends ProjectConfiguration> getAdditionalBackOfficeTestFragmentConfigurations() {
+		Map<String, ProjectConfiguration> allBundles = new HashMap<>();
+		ProjectConfiguration aConfiguration;
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
+		allBundles.put("com.profidata.laf.swing.test", aConfiguration);
 
 		return allBundles;
 	}
@@ -333,8 +351,6 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.compxc.order.domain.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
-		aConfiguration.additionalPackageDependencies.add("org.powermock.modules.junit4.common.internal.impl");
-		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalPackageDependencies.add("net.bytebuddy.dynamic.loading");
 		aConfiguration.additionalPackageDependencies.add("com.xnife.core.beanutil");
@@ -356,9 +372,7 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.compxc.frontoffice.common.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
-		aConfiguration.additionalPackageDependencies.add("org.powermock.modules.junit4.common.internal.impl");
 		aConfiguration.additionalPackageDependencies.add("com.compxc.common.persistence.entity.db");
-		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		allBundles.put("com.compxc.frontoffice.excel.windows.test", aConfiguration);
 
@@ -366,10 +380,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalPackageDependencies.add("org.mockito.invocation");
-		aConfiguration.additionalPackageDependencies.add("org.powermock.modules.junit4.common.internal.impl");
-		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		aConfiguration.additionalBundles.add("org.powermock.core");
 		aConfiguration.additionalBundles.add("org.apache.commons.collections4");
 		aConfiguration.additionalBundles.add("com.zaxxer.sparsebitset");
 		allBundles.put("com.compxc.frontoffice.presentation.test", aConfiguration);
@@ -391,12 +402,10 @@ public class SaveConfigurationAsJson {
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		allBundles.put("com.profidata.xc.frontoffice.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
-		aConfiguration.additionalPackageDependencies.add("org.powermock.reflect");
-		aConfiguration.additionalPackageDependencies.add("org.powermock.modules.junit4.common.internal.impl");
-		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
 		aConfiguration.additionalPackageDependencies.add("com.compxc.platform.common.metadata");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		aConfiguration.additionalBundles.add("org.glassfish.hk2");
@@ -404,8 +413,6 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("com.profidata.xc.rest.common.service");
-		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
-		aConfiguration.additionalPackageDependencies.add("org.powermock.core.spi");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		aConfiguration.additionalBundles.add("com.google.guava");
 		aConfiguration.additionalBundles.add("com.google.guava.failureaccess");
@@ -464,6 +471,8 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.profidata.xentis.env.client.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalBundles.add("net.bytebuddy.byte-buddy-agent");
+		aConfiguration.additionalBundles.add("org.mockito.inline");
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
 		aConfiguration.additionalPackageDependencies.add("org.springframework.aop");
 		aConfiguration.additionalPackageDependencies.add("org.springframework.expression");
@@ -487,9 +496,6 @@ public class SaveConfigurationAsJson {
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;library=split");
 		aConfiguration.additionalPackageDependencies.add("com.profidatagroup.xentis.ui.base.lookandfeel");
-		aConfiguration.additionalPackageDependencies.add("org.powermock.modules.junit4.common.internal.impl");
-		aConfiguration.additionalPackageDependencies.add("org.powermock.api.support.membermodification");
-		aConfiguration.additionalPackageDependencies.add("org.powermock.reflect");
 		aConfiguration.additionalPackageDependencies.add("org.mockito");
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalPackageDependencies.add("org.apache.commons.text.lookup");
@@ -503,6 +509,9 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		aConfiguration.additionalBundles.add("com.google.guava");
+		aConfiguration.additionalBundles.add("net.bytebuddy.byte-buddy-agent");
+		aConfiguration.additionalBundles.add("org.mockito.inline");
+		aConfiguration.additionalBundles.add("org.springframework.expression");
 		allBundles.put("com.profidata.xentis.javamis.shared.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
