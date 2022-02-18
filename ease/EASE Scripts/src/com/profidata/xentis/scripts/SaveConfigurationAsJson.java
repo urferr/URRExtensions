@@ -128,6 +128,7 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		allBundles.put("com.xnife.context.application.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -193,11 +194,13 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		allBundles.put("com.xnife.presentation.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		aConfiguration.additionalBundles.add("jcl.over.slf4j");
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		allBundles.put("com.xnife.remoting.osgi.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
@@ -206,6 +209,7 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		allBundles.put("com.xnife.security.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
