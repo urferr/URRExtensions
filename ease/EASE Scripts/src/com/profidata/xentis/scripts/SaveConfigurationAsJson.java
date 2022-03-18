@@ -531,6 +531,7 @@ public class SaveConfigurationAsJson {
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		allBundles.put("com.profidata.xentis.ui.base.test", aConfiguration);
 

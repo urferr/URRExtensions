@@ -29,6 +29,14 @@
         		{
           			"name": "XENTIS_CRYPT"
         		}
+      		],
+      		"artemisBroker": [
+        		{
+          			"name": "artemis_admin"
+        		},
+        		{
+          			"name": "artemis_jms"
+        		}
       		]
 		}
 	},
@@ -71,15 +79,10 @@
 			"redirectUris": [
 				"$(env:XENTIS_EXTERNAL_URL)/*"
 			],
-			"webOrigins": [],
-            "adminUrl": "",
-			"defaultClientScopes": [
-				"web-origins",
-				"xentis",
-				"roles",
-				"profile",
-				"email"
-			]
+			"webOrigins": [
+                "*"
+            ],
+            "adminUrl": ""
 		},
 		{
 			"clientId": "xentisServer",
@@ -97,13 +100,6 @@
             "attributes": {
 				"backchannel.logout.session.required": "false"
             },
-			"defaultClientScopes": [
-				"web-origins",
-				"xentis",
-				"roles",
-				"profile",
-				"email"
-			],
 			"clientAuthenticatorType": "client-secret",
 			"secret": "aeb87a87-7e0c-4cbe-af08-14301f3cead7"
 		},
@@ -119,6 +115,12 @@
 				"$(env:XENTIS_EXTERNAL_URL)/*"
 			],
 			"webOrigins": [],
+			"defaultClientScopes": [
+				"web-origins",
+				"roles",
+				"profile",
+				"email"
+			],
       		"authenticationFlowBindingOverrides": {
         		"browser": "browser"
       		}
@@ -135,11 +137,38 @@
 			"rootUrl": "",
 			"redirectUris": [],
 			"webOrigins": [],
+			"defaultClientScopes": [
+				"web-origins",
+				"roles",
+				"profile",
+				"email"
+			],
       		"authenticationFlowBindingOverrides": {
         		"browser": "browser"
       		},
       		"clientAuthenticatorType": "client-secret",
 			"secret": "6196197d-5f0d-49b4-aa6c-e7d6e7a4a443"      		
+		},
+		{
+			"clientId": "artemisBroker",
+			"name": "artemisBroker",
+			"description": "",
+			"protocol": "openid-connect",
+			"publicClient": true,
+            "standardFlowEnabled": false,
+            "directAccessGrantsEnabled": true,
+			"rootUrl": "",
+			"redirectUris": [],
+			"webOrigins": [],
+			"defaultClientScopes": [
+				"web-origins",
+				"roles",
+				"profile",
+				"email"
+			],
+      		"authenticationFlowBindingOverrides": {
+        		"browser": "browser"
+      		}
 		}
 	],
 	"clientScopes": [
