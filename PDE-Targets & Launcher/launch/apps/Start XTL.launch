@@ -19,7 +19,7 @@
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="SERVER_PORT" value="7842"/>
         <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev15.profidatagroup.com:10010"/>
-        <mapEntry key="SPRING_PROFILES_ACTIVE" value="config,secret,oracle,idbinary,urr,ide,talend"/>
+        <mapEntry key="SPRING_PROFILES_ACTIVE" value="secret,oracle,idbinary,urr,ide,talend"/>
         <mapEntry key="XENTIS_RUNTIME_DIR" value="/working/xentis/var"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>

@@ -66,6 +66,12 @@
 			"redirectUris": [],
 			"webOrigins": [],
             "adminUrl": "",
+			"defaultClientScopes": [
+				"web-origins",
+				"roles",
+				"profile",
+				"email"
+			],
 			"clientAuthenticatorType": "client-secret",
 			"secret": "30c42496-c22e-4797-a35b-4f4a004506ba"
 		},
