@@ -3,7 +3,7 @@
 <target name="Eclipse-ORBIT" sequenceNumber="7">
 <locations>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20211122181901/repository"/>
+		<repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
 		<unit id="ca.odell.glazedlists" version="1.11.0.v20190926-1838"/>
 		<unit id="ca.odell.glazedlists.source" version="1.11.0.v20190926-1838"/>
 		<unit id="ch.qos.logback.classic" version="1.2.3.v20200428-2012"/>
@@ -92,8 +92,8 @@
 		<unit id="com.google.flogger.testing.source" version="0.1.0.v20180506-0038"/>
 		<unit id="com.google.gdata" version="1.47.1.v20200819-2030"/>
 		<unit id="com.google.gdata.source" version="1.47.1.v20200819-2030"/>
-		<unit id="com.google.gson" version="2.8.8.v20211029-0838"/>
-		<unit id="com.google.gson.source" version="2.8.8.v20211029-0838"/>
+		<unit id="com.google.gson" version="2.8.9.v20220111-1409"/>
+		<unit id="com.google.gson.source" version="2.8.9.v20220111-1409"/>
 		<unit id="com.google.guava" version="30.1.0.v20210127-2300"/>
 		<unit id="com.google.guava.source" version="30.1.0.v20210127-2300"/>
 		<unit id="com.google.http-client.google-http-client" version="1.34.2.v20200515-2048"/>
@@ -131,8 +131,8 @@
 		<unit id="com.sun.jna.source" version="5.8.0.v20210503-0343"/>
 		<unit id="com.sun.xml.bind" version="2.3.3.v20201118-1818"/>
 		<unit id="com.sun.xml.bind.source" version="2.3.3.v20201118-1818"/>
-		<unit id="io.github.classgraph" version="4.8.117.v20210930-0420"/>
-		<unit id="io.github.classgraph.source" version="4.8.117.v20210930-0420"/>
+		<unit id="io.github.classgraph" version="4.8.138.v20211212-1642"/>
+		<unit id="io.github.classgraph.source" version="4.8.138.v20211212-1642"/>
 		<unit id="io.github.java-diff-utils" version="4.8.0.v20201027-1614"/>
 		<unit id="io.github.java-diff-utils.source" version="4.8.0.v20201027-1614"/>
 		<unit id="io.grpc.grpc-context" version="1.29.0.v20200515-2048"/>
@@ -257,24 +257,24 @@
 		<unit id="org.apache.felix.gogo.shell.source" version="1.1.4.v20210111-1007"/>
 		<unit id="org.apache.felix.scr" version="2.1.24.v20200924-1939"/>
 		<unit id="org.apache.felix.scr.source" version="2.1.24.v20200924-1939"/>
-		<unit id="org.apache.httpcomponents.client5.httpclient5" version="5.0.2.v20201015-2258"/>
-		<unit id="org.apache.httpcomponents.client5.httpclient5-win" version="5.0.2.v20211029-0612"/>
-		<unit id="org.apache.httpcomponents.client5.httpclient5-win.source" version="5.0.2.v20211029-0612"/>
-		<unit id="org.apache.httpcomponents.client5.httpclient5.source" version="5.0.2.v20201015-2258"/>
-		<unit id="org.apache.httpcomponents.core5.httpcore5" version="5.0.2.v20201015-2258"/>
-		<unit id="org.apache.httpcomponents.core5.httpcore5-h2" version="5.0.2.v20210429-1809"/>
-		<unit id="org.apache.httpcomponents.core5.httpcore5-h2.source" version="5.0.2.v20210429-1809"/>
-		<unit id="org.apache.httpcomponents.core5.httpcore5.source" version="5.0.2.v20201015-2258"/>
+		<unit id="org.apache.httpcomponents.client5.httpclient5" version="5.1.2.v20211217-1500"/>
+		<unit id="org.apache.httpcomponents.client5.httpclient5-win" version="5.1.2.v20211217-1500"/>
+		<unit id="org.apache.httpcomponents.client5.httpclient5-win.source" version="5.1.2.v20211217-1500"/>
+		<unit id="org.apache.httpcomponents.client5.httpclient5.source" version="5.1.2.v20211217-1500"/>
+		<unit id="org.apache.httpcomponents.core5.httpcore5" version="5.1.2.v20211217-1500"/>
+		<unit id="org.apache.httpcomponents.core5.httpcore5-h2" version="5.1.2.v20211217-1500"/>
+		<unit id="org.apache.httpcomponents.core5.httpcore5-h2.source" version="5.1.2.v20211217-1500"/>
+		<unit id="org.apache.httpcomponents.core5.httpcore5.source" version="5.1.2.v20211217-1500"/>
 		<unit id="org.apache.httpcomponents.httpasyncclient" version="4.1.3.v20210128-2225"/>
 		<unit id="org.apache.httpcomponents.httpasyncclient.source" version="4.1.3.v20210128-2225"/>
 		<unit id="org.apache.httpcomponents.httpclient" version="4.5.13.v20210128-2225"/>
 		<unit id="org.apache.httpcomponents.httpclient.source" version="4.5.13.v20210128-2225"/>
 		<unit id="org.apache.httpcomponents.httpclient.win" version="4.5.13.v20211010-1849"/>
 		<unit id="org.apache.httpcomponents.httpclient.win.source" version="4.5.13.v20211010-1849"/>
-		<unit id="org.apache.httpcomponents.httpcore" version="4.4.14.v20210128-2225"/>
-		<unit id="org.apache.httpcomponents.httpcore-nio" version="4.4.5.v20210128-2225"/>
-		<unit id="org.apache.httpcomponents.httpcore-nio.source" version="4.4.5.v20210128-2225"/>
-		<unit id="org.apache.httpcomponents.httpcore.source" version="4.4.14.v20210128-2225"/>
+		<unit id="org.apache.httpcomponents.httpcore" version="4.4.15.v20220209-2345"/>
+		<unit id="org.apache.httpcomponents.httpcore-nio" version="4.4.15.v20220210-0013"/>
+		<unit id="org.apache.httpcomponents.httpcore-nio.source" version="4.4.15.v20220210-0013"/>
+		<unit id="org.apache.httpcomponents.httpcore.source" version="4.4.15.v20220209-2345"/>
 		<unit id="org.apache.jclouds.api.cloudwatch" version="1.8.0.v20160301-1110"/>
 		<unit id="org.apache.jclouds.api.cloudwatch.source" version="1.8.0.v20160301-1110"/>
 		<unit id="org.apache.jclouds.api.ec2" version="1.8.0.v20160301-1110"/>
@@ -303,8 +303,10 @@
 		<unit id="org.apache.jclouds.labs.docker.source" version="1.8.0.v20160301-1110"/>
 		<unit id="org.apache.jclouds.labs.openstack-neutron" version="1.8.0.v20160301-1110"/>
 		<unit id="org.apache.jclouds.labs.openstack-neutron.source" version="1.8.0.v20160301-1110"/>
-		<unit id="org.apache.logging.log4j" version="2.8.2.v20200818-1118"/>
-		<unit id="org.apache.logging.log4j.source" version="2.8.2.v20200818-1118"/>
+		<unit id="org.apache.log4j" version="1.2.19.v20220208-1728"/>
+		<unit id="org.apache.log4j.source" version="1.2.19.v20220208-1728"/>
+		<unit id="org.apache.logging.log4j" version="2.17.1.v20220106-2156"/>
+		<unit id="org.apache.logging.log4j.source" version="2.17.1.v20220106-2156"/>
 		<unit id="org.apache.lucene.analyzers-common" version="8.4.1.v20200122-1459"/>
 		<unit id="org.apache.lucene.analyzers-common.source" version="8.4.1.v20200122-1459"/>
 		<unit id="org.apache.lucene.analyzers-smartcn" version="8.4.1.v20200122-1459"/>
@@ -346,10 +348,10 @@
 		<unit id="org.apache.poi.source" version="4.1.1.v20200604-1524"/>
 		<unit id="org.apache.santuario.xmlsec" version="2.2.0.v20200818-1422"/>
 		<unit id="org.apache.santuario.xmlsec.source" version="2.2.0.v20200818-1422"/>
-		<unit id="org.apache.sshd.osgi" version="2.7.0.v20210623-0618"/>
-		<unit id="org.apache.sshd.osgi.source" version="2.7.0.v20210623-0618"/>
-		<unit id="org.apache.sshd.sftp" version="2.7.0.v20210623-0618"/>
-		<unit id="org.apache.sshd.sftp.source" version="2.7.0.v20210623-0618"/>
+		<unit id="org.apache.sshd.osgi" version="2.8.0.v20211227-1750"/>
+		<unit id="org.apache.sshd.osgi.source" version="2.8.0.v20211227-1750"/>
+		<unit id="org.apache.sshd.sftp" version="2.8.0.v20211227-1750"/>
+		<unit id="org.apache.sshd.sftp.source" version="2.8.0.v20211227-1750"/>
 		<unit id="org.apache.tika.core" version="1.24.1.v20211101-1915"/>
 		<unit id="org.apache.tika.core.source" version="1.24.1.v20211101-1915"/>
 		<unit id="org.apache.tika.parsers" version="1.24.1.v20211101-1915"/>
@@ -359,8 +361,8 @@
 		<unit id="org.apache.wsil4j" version="1.0.0.v20180522-1857"/>
 		<unit id="org.apache.xalan" version="2.7.2.v20201124-1837"/>
 		<unit id="org.apache.xalan.source" version="2.7.2.v20201124-1837"/>
-		<unit id="org.apache.xerces" version="2.12.1.v20210115-0812"/>
-		<unit id="org.apache.xerces.source" version="2.12.1.v20210115-0812"/>
+		<unit id="org.apache.xerces" version="2.12.2.v20220131-0835"/>
+		<unit id="org.apache.xerces.source" version="2.12.2.v20220131-0835"/>
 		<unit id="org.apache.xmlbeans" version="3.1.0.v20200922-1359"/>
 		<unit id="org.apache.xmlbeans.source" version="3.1.0.v20200922-1359"/>
 		<unit id="org.apache.xmlgraphics" version="2.6.0.v20210409-0748"/>
@@ -375,14 +377,14 @@
 		<unit id="org.apiguardian.source" version="1.1.2.v20211018-1956"/>
 		<unit id="org.assertj" version="3.20.2.v20210706-1104"/>
 		<unit id="org.assertj.source" version="3.20.2.v20210706-1104"/>
-		<unit id="org.bouncycastle.bcpg" version="1.69.0.v20210713-1924"/>
-		<unit id="org.bouncycastle.bcpg.source" version="1.69.0.v20210713-1924"/>
-		<unit id="org.bouncycastle.bcpkix" version="1.69.0.v20210713-1924"/>
-		<unit id="org.bouncycastle.bcpkix.source" version="1.69.0.v20210713-1924"/>
-		<unit id="org.bouncycastle.bcprov" version="1.69.0.v20210923-1401"/>
-		<unit id="org.bouncycastle.bcprov.source" version="1.69.0.v20210923-1401"/>
-		<unit id="org.bouncycastle.bcutil" version="1.69.0.v20210713-1924"/>
-		<unit id="org.bouncycastle.bcutil.source" version="1.69.0.v20210713-1924"/>
+		<unit id="org.bouncycastle.bcpg" version="1.70.0.v20220105-1522"/>
+		<unit id="org.bouncycastle.bcpg.source" version="1.70.0.v20220105-1522"/>
+		<unit id="org.bouncycastle.bcpkix" version="1.70.0.v20220105-1522"/>
+		<unit id="org.bouncycastle.bcpkix.source" version="1.70.0.v20220105-1522"/>
+		<unit id="org.bouncycastle.bcprov" version="1.70.0.v20220105-1522"/>
+		<unit id="org.bouncycastle.bcprov.source" version="1.70.0.v20220105-1522"/>
+		<unit id="org.bouncycastle.bcutil" version="1.70.0.v20220105-1522"/>
+		<unit id="org.bouncycastle.bcutil.source" version="1.70.0.v20220105-1522"/>
 		<unit id="org.conscrypt.conscrypt-openjdk-uber" version="2.5.1.v20210923-1401"/>
 		<unit id="org.conscrypt.conscrypt-openjdk-uber.source" version="2.5.1.v20210923-1401"/>
 		<unit id="org.dom4j" version="2.1.1.v20190321-1528"/>

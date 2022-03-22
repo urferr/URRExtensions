@@ -3,11 +3,11 @@
 <target name="Eclipse-EMF" sequenceNumber="6">
 <locations>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/releases/2021-12"/>
-		<unit id="org.eclipse.emf.sdk.feature.group" version="2.28.0.v20211110-0654"/>
+		<repository location="http://download.eclipse.org/releases/2022-03"/>
+		<unit id="org.eclipse.emf.sdk.feature.group" version="2.29.0.v20220226-1304"/>
 		<unit id="org.eclipse.emf.transaction.sdk.feature.group" version="1.12.0.201805140824"/>
 		<unit id="org.eclipse.emf.validation.sdk.feature.group" version="1.12.2.202008210805"/>
-		<unit id="org.eclipse.xsd.sdk.feature.group" version="2.28.0.v20210924-1719"/>
+		<unit id="org.eclipse.xsd.sdk.feature.group" version="2.29.0.v20211216-0600"/>
 	</location>
 </locations>
 </target>

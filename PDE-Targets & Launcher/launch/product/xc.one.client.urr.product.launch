@@ -13,8 +13,8 @@
         <setEntry value="com.xnife.context.application:6.0.0.SNAPSHOT:default:true:default:true"/>
         <setEntry value="com.xnife.remoting.client:6.0.0.SNAPSHOT:default:true:default:true"/>
         <setEntry value="org.apache.felix.scr:2.1.24.v20200924-1939:default:true:2:true"/>
-        <setEntry value="org.eclipse.core.runtime:3.24.0.v20210910-0750:default:true:2:true"/>
-        <setEntry value="org.eclipse.equinox.common:3.15.100.v20211021-1418:default:true:2:true"/>
+        <setEntry value="org.eclipse.core.runtime:3.24.100.v20220211-2001:default:true:2:true"/>
+        <setEntry value="org.eclipse.equinox.common:3.16.0.v20220211-2322:default:true:2:true"/>
         <setEntry value="org.eclipse.equinox.event:1.6.100.v20211021-1418:default:true:default:true"/>
         <setEntry value="org.eclipse.equinox.simpleconfigurator:1.4.0.v20210315-2228:default:true:1:true"/>
         <setEntry value="org.eclipse.equinox.weaving.aspectj:1.0.400.202111260940:default:true:1:true"/>

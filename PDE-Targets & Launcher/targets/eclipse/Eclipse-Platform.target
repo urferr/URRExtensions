@@ -3,8 +3,8 @@
 <target name="Eclipse-Platform" sequenceNumber="36">
 <locations>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/eclipse/updates/4.22"/>
-		<unit id="org.eclipse.platform.feature.group" version="4.22.0.v20211124-1800"/>
+		<repository location="http://download.eclipse.org/eclipse/updates/4.23"/>
+		<unit id="org.eclipse.platform.ide" version="4.23.0.I20220308-0310"/>
 	</location>
 </locations>
 <environment>
