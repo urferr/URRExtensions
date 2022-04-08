@@ -482,6 +482,17 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.profidata.xentis.env.shared.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalBundles.add("net.bytebuddy.byte-buddy-agent");
+		aConfiguration.additionalBundles.add("org.mockito.inline");
+		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
+		aConfiguration.additionalPackageDependencies.add("org.springframework.aop");
+		aConfiguration.additionalPackageDependencies.add("org.springframework.expression");
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
+		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
+		aConfiguration.additionalBundles.add("jcl.over.slf4j");
+		allBundles.put("com.profidata.xentis.env.workaround.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);

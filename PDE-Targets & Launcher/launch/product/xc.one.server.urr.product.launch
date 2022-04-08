@@ -34,9 +34,9 @@
         <setEntry value="com.xnife.http.server:6.0.0.SNAPSHOT:default:true:default:true"/>
         <setEntry value="com.xnife.logging.slf4j.over.jul:6.0.0.SNAPSHOT:default:true:2:true"/>
         <setEntry value="com.xnife.tools.jmx.osgiconsole:6.0.0.SNAPSHOT:default:true:default:true"/>
-        <setEntry value="org.eclipse.core.runtime:3.24.0.v20210910-0750:default:true:2:true"/>
+        <setEntry value="org.eclipse.core.runtime:3.24.100.v20220211-2001:default:true:2:true"/>
         <setEntry value="org.eclipse.equinox.cm:1.5.100.v20211021-1418:default:true:3:true"/>
-        <setEntry value="org.eclipse.equinox.common:3.15.100.v20211021-1418:default:true:2:true"/>
+        <setEntry value="org.eclipse.equinox.common:3.16.0.v20220211-2322:default:true:2:true"/>
         <setEntry value="org.eclipse.equinox.http.jetty:3.8.100.v20211021-1418:default:true:default:true"/>
         <setEntry value="org.eclipse.equinox.http.servlet:1.7.200.v20211021-1418:default:true:default:true"/>
         <setEntry value="org.eclipse.equinox.simpleconfigurator:1.4.0.v20210315-2228:default:true:1:true"/>
@@ -78,7 +78,7 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
     <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dosgi.clean=true -Dapplication.reporting.location=/working/xentis/var/report -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dlogback.configurationFile=logback-startup.xml -Dcom.profidata.xc.monitor.exitonfail=false -Dcom.xnife.logging.level.com.profidata.xc.one.server.monitor.application=debug -Dcom.xnife.logging.level.com.xnife.cache.impl.index=warn -Dcom.xnife.logging.level.org.hibernate.tool.hbm2ddl=info -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -Dcom.xnife.logging.level.com.profidata.xc.codevalue.service.impl.CodeValueServiceImpl=debug -Dorg.osgi.service.http.port=7830 -Dorg.eclipse.equinox.http.jetty.http.port=7830 -Dorg.eclipse.equinox.http.jetty.context.path=/xcas -Doracle.net.tns_admin=${env_var:TNS_ADMIN} -Dfile.encoding=&quot;UTF-8&quot; -Dxentis.logger.monstar.host=pdvmdev15 -Dspring.profiles.active=config,secret,oracle,idbinary,urr,ide -Dspring.boot.admin.client.url=http://pdvmdev15:7810 -Dspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7830 -ea -Xms256m -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication -XX:+ShowCodeDetailsInExceptionMessages --add-opens=java.base/java.lang=ALL-UNNAMED"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dosgi.clean=true -Dapplication.reporting.location=/working/xentis/var/report -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dlogback.configurationFile=logback-startup.xml -Dcom.profidata.xc.monitor.exitonfail=false -Dcom.xnife.logging.level.com.profidata.xc.one.server.monitor.application=debug -Dcom.xnife.logging.level.com.xnife.cache.impl.index=warn -Dcom.xnife.logging.level.org.hibernate.tool.hbm2ddl=info -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -Dcom.xnife.logging.level.com.profidata.xc.codevalue.service.impl.CodeValueServiceImpl=debug -Dorg.osgi.service.http.port=7830 -Dorg.eclipse.equinox.http.jetty.http.port=7830 -Dorg.eclipse.equinox.http.jetty.context.path=/xcas -Doracle.net.tns_admin=${env_var:TNS_ADMIN} -Dfile.encoding=&quot;UTF-8&quot; -Dxentis.logger.monstar.host=pdvmdev15 -Dspring.profiles.active=secret,oracle,idbinary,urr,ide -DXXXspring.boot.admin.client.url=http://pdvmdev15:7810 -DXXXspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7830 -ea -Xms256m -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication -XX:+ShowCodeDetailsInExceptionMessages --add-opens=java.base/java.lang=ALL-UNNAMED"/>
     <stringAttribute key="pde.version" value="3.3"/>
     <stringAttribute key="product" value="_com.profidata.xc.one.server.build.product.xcServer"/>
     <stringAttribute key="productFile" value="\PDE-Targets &amp; Launcher\products\xc.one.server.product"/>
@@ -179,8 +179,6 @@
         <setEntry value="net.logstash.logback.logstash-logback-encoder@default:default"/>
         <setEntry value="net.minidev.accessors-smart@default:default"/>
         <setEntry value="net.minidev.json-smart@default:default"/>
-        <setEntry value="org.apache.aries.spifly.dynamic.bundle@default:default"/>
-        <setEntry value="org.apache.aries.util@default:default"/>
         <setEntry value="org.apache.commons.beanutils@default:default"/>
         <setEntry value="org.apache.commons.codec@default:default"/>
         <setEntry value="org.apache.commons.collections@default:default"/>
@@ -188,8 +186,6 @@
         <setEntry value="org.apache.commons.fileupload@default:default"/>
         <setEntry value="org.apache.commons.io@default:default"/>
         <setEntry value="org.apache.commons.lang3@default:default"/>
-        <setEntry value="org.apache.commons.lang@default:default"/>
-        <setEntry value="org.apache.commons.logging@default:default"/>
         <setEntry value="org.apache.commons.pool2@default:default"/>
         <setEntry value="org.apache.felix.gogo.command@default:default"/>
         <setEntry value="org.apache.felix.gogo.runtime@default:default"/>

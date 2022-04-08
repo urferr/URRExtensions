@@ -76,7 +76,6 @@
         <setEntry value="com.fasterxml.jackson.core.jackson-databind@default:default"/>
         <setEntry value="com.fasterxml.jackson.datatype.jackson-datatype-jsr310@default:default"/>
         <setEntry value="com.fasterxml.uuid@default:default"/>
-        <setEntry value="com.github.virtuald.curvesapi@default:default"/>
         <setEntry value="com.google.gson@default:default"/>
         <setEntry value="com.ibm.icu@default:default"/>
         <setEntry value="com.jcraft.jsch@default:default"/>
@@ -157,8 +156,6 @@
         <setEntry value="net.minidev.accessors-smart@default:default"/>
         <setEntry value="net.minidev.json-smart@default:default"/>
         <setEntry value="org.apache.activemq.client@default:default"/>
-        <setEntry value="org.apache.aries.spifly.dynamic.bundle@default:default"/>
-        <setEntry value="org.apache.aries.util@default:default"/>
         <setEntry value="org.apache.avalon.api@default:default"/>
         <setEntry value="org.apache.batik.anim@default:default"/>
         <setEntry value="org.apache.batik.bridge@default:default"/>
@@ -189,7 +186,6 @@
         <setEntry value="org.apache.commons.io@default:default"/>
         <setEntry value="org.apache.commons.jxpath@default:default"/>
         <setEntry value="org.apache.commons.lang3@default:default"/>
-        <setEntry value="org.apache.commons.lang@default:default"/>
         <setEntry value="org.apache.commons.math3@default:default"/>
         <setEntry value="org.apache.commons.net@default:default"/>
         <setEntry value="org.apache.commons.text@default:default"/>

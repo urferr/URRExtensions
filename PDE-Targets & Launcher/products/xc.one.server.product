@@ -40,9 +40,9 @@
 -Dfile.encoding=&quot;UTF-8&quot;
 
 -Dxentis.logger.monstar.host=pdvmdev15
--Dspring.profiles.active=config,secret,oracle,idbinary,urr,ide
--Dspring.boot.admin.client.url=http://pdvmdev15:7810
--Dspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7830
+-Dspring.profiles.active=secret,oracle,idbinary,urr,ide
+-DXXXspring.boot.admin.client.url=http://pdvmdev15:7810
+-DXXXspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7830
 
 -ea
 -Xms256m
