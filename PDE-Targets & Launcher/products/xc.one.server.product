@@ -22,6 +22,7 @@
 -Dorg.aspectj.osgi.verbose=true
 -Dorg.aspectj.weaver.showWeaveInfo=true
 
+-Dlogback.configurationFile=logback-startup.xml
 -Dcom.profidata.xc.monitor.exitonfail=false
 -Dcom.xnife.logging.level.com.profidata.xc.one.server.monitor.application=debug
 
@@ -31,22 +32,17 @@
 
 -Dcom.xnife.logging.level.com.profidata.xc.codevalue.service.impl.CodeValueServiceImpl=debug
 
--Dorg.osgi.service.http.port=7016
--Dorg.eclipse.equinox.http.jetty.http.port=7016
+-Dorg.osgi.service.http.port=7830
+-Dorg.eclipse.equinox.http.jetty.http.port=7830
 -Dorg.eclipse.equinox.http.jetty.context.path=/xcas
 
 -Doracle.net.tns_admin=${env_var:TNS_ADMIN}
 -Dfile.encoding=&quot;UTF-8&quot;
 
- -Djavax.net.ssl.trustStore=//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/instances/xentis/var/https/XENTISTrustStore.jks
- -Djavax.net.ssl.trustStorePassword=changeit
-
--Dcom.sun.management.jmxremote.port=7072
--Dcom.sun.management.jmxremote.ssl=false
--Dcom.sun.management.jmxremote.authenticate=false
-
 -Dxentis.logger.monstar.host=pdvmdev15
--Dspring.zipkin.enabled=false
+-Dspring.profiles.active=secret,oracle,idbinary,urr,ide
+-DXXXspring.boot.admin.client.url=http://pdvmdev15:7810
+-DXXXspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7830
 
 -ea
 -Xms256m
@@ -89,12 +85,10 @@
       <plugin id="com.compxc.translation.service.sql" autoStart="true" startLevel="0" />
       <plugin id="com.eclipsesource.jaxrs.provider.gson" autoStart="true" startLevel="3" />
       <plugin id="com.eclipsesource.jaxrs.publisher" autoStart="true" startLevel="3" />
-      <plugin id="com.profidata.xc.admin.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.platform.server.service" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.calendar.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.codevalue.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.customizingconsole.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.data.service.messaging.remote.proxy" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.data.service.remote.http" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.data.service.remote.proxy" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.frontoffice.businessintelligence.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.frontoffice.server.metadata" autoStart="true" startLevel="0" />
@@ -110,21 +104,14 @@
       <plugin id="com.profidata.xc.optimizer.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.order.servicefacade.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.persistence.service.impl" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.platform.request.http" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.platform.request.tracing" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.requestcache.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.rest.admin.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.rest.analysis.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.rest.common.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.rest.data.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.rest.investmentcompliance.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.profidata.xc.rest.order.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.risk.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.rule.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.unified.service.impl" autoStart="true" startLevel="0" />
-      <plugin id="com.xnife.context.persistence" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.service.impl" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.http.server" autoStart="true" startLevel="0" />
-      <plugin id="com.xnife.logging.slf4j.logback.commandline" autoStart="true" startLevel="2" />
       <plugin id="com.xnife.logging.slf4j.over.jul" autoStart="true" startLevel="2" />
       <plugin id="com.xnife.tools.jmx.osgiconsole" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="2" />
@@ -134,7 +121,7 @@
       <plugin id="org.eclipse.equinox.http.servlet" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="1" />
-      <plugin id="org.eclipse.gemini.blueprint.extender" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.gemini.blueprint.extender" autoStart="true" startLevel="3" />
    </configurations>
 
 </product>
