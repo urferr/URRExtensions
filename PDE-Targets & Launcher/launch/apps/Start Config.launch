@@ -20,13 +20,13 @@
         <mapEntry key="EAMIS_APP_VAR" value="bin"/>
         <mapEntry key="EAMIS_CLUSTER_INSTANCE_NAME" value="Xentis"/>
         <mapEntry key="EAMIS_CLUSTER_NAME" value="local"/>
-        <mapEntry key="EAMIS_CONFIG_API_PORT" value="7027"/>
+        <mapEntry key="EAMIS_CONFIG_API_PORT" value="7127"/>
         <mapEntry key="EAMIS_CONFIG_CLEAN_RESOURCES" value="false"/>
         <mapEntry key="EAMIS_CONFIG_CLUSTERMODE" value="false"/>
         <mapEntry key="EAMIS_CONFIG_GIT_HOME" value="bin"/>
         <mapEntry key="EAMIS_CONFIG_SECURE" value="false"/>
         <mapEntry key="EAMIS_CONFIG_WORKMODE" value="ADMIN"/>
-        <mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://pdvmdev15.profidatagroup.com:7005?wireFormat.maxInactivityDuration=600000)"/>
+        <mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://pdvmdev15.profidatagroup.com:7105?wireFormat.maxInactivityDuration=600000)"/>
         <mapEntry key="EAMIS_PACKAGES" value="/working/xentis/packages"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>

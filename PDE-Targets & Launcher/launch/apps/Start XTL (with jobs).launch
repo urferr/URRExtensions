@@ -17,12 +17,11 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="EAMIS_CLUSTER_ETC" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/etc"/>
         <mapEntry key="EAMIS_CLUSTER_INSTANCE_NAME" value="xentis"/>
         <mapEntry key="EAMIS_CONFIG_SECURE" value="false"/>
         <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev15.profidatagroup.com"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
-        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7120"/>
+        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentis590branch_run/xentis/packages"/>
     </mapAttribute>
     <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
         <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
