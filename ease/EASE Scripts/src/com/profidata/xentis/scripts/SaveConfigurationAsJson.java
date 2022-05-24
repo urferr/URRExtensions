@@ -42,7 +42,7 @@ public class SaveConfigurationAsJson {
 	}
 
 	private void execute() {
-		AdditionalProjectConfigurations aConfiguration = createConfig("JavaSE-11", "org.eclipse.jdt.junit.JUNIT_CONTAINER/5");
+		AdditionalProjectConfigurations aConfiguration = createConfig("JavaSE-17", "org.eclipse.jdt.junit.JUNIT_CONTAINER/5");
 		IPath aAdditionalProjectConfigurationPath = ResourcesPlugin.getWorkspace().getRoot().getLocation().append("URRExtensions/ease/EASE Scripts").append("AdditionalProjectConfiguration.json");
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 

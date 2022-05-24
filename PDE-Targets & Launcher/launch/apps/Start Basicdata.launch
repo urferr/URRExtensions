@@ -19,9 +19,6 @@
         <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev15.profidatagroup.com:10010"/>
         <mapEntry key="SPRING_PROFILES_ACTIVE" value="secret,oracle,idbinary,urr,ide"/>
     </mapAttribute>
-    <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
-        <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
-    </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
