@@ -1,770 +1,771 @@
 {
-	"realm": "$(env:XENTIS_REALM)",
-	"enabled": true,
-	"editUsernameAllowed": true,
-	"loginTheme": "xentis",
-	"internationalizationEnabled": true,
-	"supportedLocales": [
-		"de",
-		"en",
-		"it",
-		"fr"
-	],
-	"defaultLocale": "en",
-	"roles": {
-		"realm": [
-			{
-				"name": "XENTIS_PRODUCER",
-				"description": "Users associated to this role are producer users",
-				"containerId": "xentis"
-			}
-		],
-		"client": {
-			"xentisServer": [],
-			"AUTHSERVICE": [],
-      		"xentisTools": [
-        		{
-          			"name": "XENTIS_SHELL"
-        		},
-        		{
-          			"name": "XENTIS_CRYPT"
-        		}
-      		],
-      		"artemisBroker": [
-        		{
-          			"name": "artemis_admin"
-        		},
-        		{
-          			"name": "artemis_jms"
-        		}
-      		]
-		}
-	},
+    "realm": "$(env:XENTIS_REALM)",
+    "enabled": true,
+    "editUsernameAllowed": true,
+    "loginTheme": "xentis",
+    "internationalizationEnabled": true,
+    "supportedLocales": [
+        "de",
+        "en",
+        "it",
+        "fr"
+    ],
+    "defaultLocale": "en",
+    "roles": {
+        "realm": [
+            {
+                "name": "XENTIS_PRODUCER",
+                "description": "Users associated to this role are producer users",
+                "containerId": "xentis"
+            }
+        ],
+        "client": {
+            "xentisServer": [],
+            "AUTHSERVICE": [],
+            "xentisTools": [
+                {
+                    "name": "XENTIS_SHELL"
+                },
+                {
+                    "name": "XENTIS_CRYPT"
+                }
+            ],
+            "artemisBroker": [
+                {
+                    "name": "artemis_admin"
+                },
+                {
+                    "name": "artemis_jms"
+                }
+            ]
+        }
+    },
     "users": [
         {
             "username": "service-account-idpserver",
-        	"serviceAccountClientId": "idpServer",
-          	"clientRoles": {
-        		"realm-management": [
-          			"view-realm",
-          			"manage-users"
-        		]
-        	}
+            "serviceAccountClientId": "idpServer",
+            "clientRoles": {
+                "realm-management": [
+                      "view-clients",
+                      "view-realm",
+                      "manage-users"
+                ]
+            }
         }
     ],
-	"clients": [
-		{
-			"clientId": "AUTHSERVICE",
-			"name": "AUTHSERVICE",
-			"description": "AUTHSERVICE service account to call XENTIS",
-			"protocol": "openid-connect",
-			"publicClient": false,
+    "clients": [
+        {
+            "clientId": "AUTHSERVICE",
+            "name": "AUTHSERVICE",
+            "description": "AUTHSERVICE service account to call XENTIS",
+            "protocol": "openid-connect",
+            "publicClient": false,
             "standardFlowEnabled": false,
             "directAccessGrantsEnabled": false,
-			"serviceAccountsEnabled": true,
-			"rootUrl": "$(env:XENTIS_BASE_URL)/",
-			"redirectUris": [],
-			"webOrigins": [],
+            "serviceAccountsEnabled": true,
+            "rootUrl": "$(env:XENTIS_BASE_URL)/",
+            "redirectUris": [],
+            "webOrigins": [],
             "adminUrl": "",
-			"defaultClientScopes": [
-				"web-origins",
-				"roles",
-				"profile",
-				"email"
-			],
-			"clientAuthenticatorType": "client-secret",
-			"secret": "30c42496-c22e-4797-a35b-4f4a004506ba"
-		},
-		{
-			"clientId": "xentisClient",
-			"name": "xentisClient",
-			"description": "",
-			"protocol": "openid-connect",
-			"publicClient": true,
-			"rootUrl": "$(env:XENTIS_BASE_URL)/",
-			"redirectUris": [
-				"$(env:XENTIS_EXTERNAL_URL)/*"
-			],
-			"webOrigins": [
+            "defaultClientScopes": [
+                "web-origins",
+                "roles",
+                "profile",
+                "email"
+            ],
+            "clientAuthenticatorType": "client-secret",
+            "secret": "30c42496-c22e-4797-a35b-4f4a004506ba"
+        },
+        {
+            "clientId": "xentisClient",
+            "name": "xentisClient",
+            "description": "",
+            "protocol": "openid-connect",
+            "publicClient": true,
+            "rootUrl": "$(env:XENTIS_BASE_URL)/",
+            "redirectUris": [
+                "$(env:XENTIS_EXTERNAL_URL)/*"
+            ],
+            "webOrigins": [
                 "*"
             ],
             "adminUrl": ""
-		},
-		{
-			"clientId": "xentisServer",
-			"name": "xentisServer",
-			"description": "",
-			"protocol": "openid-connect",
-			"publicClient": false,
+        },
+        {
+            "clientId": "xentisServer",
+            "name": "xentisServer",
+            "description": "",
+            "protocol": "openid-connect",
+            "publicClient": false,
             "standardFlowEnabled": false,
             "directAccessGrantsEnabled": false,
-			"serviceAccountsEnabled": true,
-			"rootUrl": "$(env:XENTIS_BASE_URL)/",
-			"redirectUris": [],
-			"webOrigins": [],
+            "serviceAccountsEnabled": true,
+            "rootUrl": "$(env:XENTIS_BASE_URL)/",
+            "redirectUris": [],
+            "webOrigins": [],
             "adminUrl": "",
             "attributes": {
-				"backchannel.logout.session.required": "false"
+                "backchannel.logout.session.required": "false"
             },
-			"clientAuthenticatorType": "client-secret",
-			"secret": "aeb87a87-7e0c-4cbe-af08-14301f3cead7"
-		},
-		{
-			"clientId": "xentisTools",
-			"name": "xentisTools",
-			"description": "",
-			"protocol": "openid-connect",
-			"publicClient": true,
+            "clientAuthenticatorType": "client-secret",
+            "secret": "aeb87a87-7e0c-4cbe-af08-14301f3cead7"
+        },
+        {
+            "clientId": "xentisTools",
+            "name": "xentisTools",
+            "description": "",
+            "protocol": "openid-connect",
+            "publicClient": true,
             "directAccessGrantsEnabled": false,
-			"rootUrl": "",
-			"redirectUris": [
-				"$(env:XENTIS_EXTERNAL_URL)/*"
-			],
-			"webOrigins": [],
-			"defaultClientScopes": [
-				"web-origins",
-				"roles",
-				"profile",
-				"email"
-			],
-      		"authenticationFlowBindingOverrides": {
-        		"browser": "browser"
-      		}
-		},
-		{
-			"clientId": "idpServer",
-			"name": "idpServer",
-			"description": "",
-			"protocol": "openid-connect",
-			"publicClient": false,
+            "rootUrl": "",
+            "redirectUris": [
+                "$(env:XENTIS_EXTERNAL_URL)/*"
+            ],
+            "webOrigins": [],
+            "defaultClientScopes": [
+                "web-origins",
+                "roles",
+                "profile",
+                "email"
+            ],
+            "authenticationFlowBindingOverrides": {
+                "browser": "browser"
+            }
+        },
+        {
+            "clientId": "idpServer",
+            "name": "idpServer",
+            "description": "",
+            "protocol": "openid-connect",
+            "publicClient": false,
             "standardFlowEnabled": false,
             "directAccessGrantsEnabled": false,
-			"serviceAccountsEnabled": true,
-			"rootUrl": "",
-			"redirectUris": [],
-			"webOrigins": [],
-			"defaultClientScopes": [
-				"web-origins",
-				"roles",
-				"profile",
-				"email"
-			],
-      		"authenticationFlowBindingOverrides": {
-        		"browser": "browser"
-      		},
-      		"clientAuthenticatorType": "client-secret",
-			"secret": "6196197d-5f0d-49b4-aa6c-e7d6e7a4a443"      		
-		},
-		{
-			"clientId": "artemisBroker",
-			"name": "artemisBroker",
-			"description": "",
-			"protocol": "openid-connect",
-			"publicClient": true,
+            "serviceAccountsEnabled": true,
+            "rootUrl": "",
+            "redirectUris": [],
+            "webOrigins": [],
+            "defaultClientScopes": [
+                "web-origins",
+                "roles",
+                "profile",
+                "email"
+            ],
+            "authenticationFlowBindingOverrides": {
+                "browser": "browser"
+            },
+            "clientAuthenticatorType": "client-secret",
+            "secret": "6196197d-5f0d-49b4-aa6c-e7d6e7a4a443"
+        },
+        {
+            "clientId": "artemisBroker",
+            "name": "artemisBroker",
+            "description": "",
+            "protocol": "openid-connect",
+            "publicClient": true,
             "standardFlowEnabled": false,
             "directAccessGrantsEnabled": true,
-			"rootUrl": "",
-			"redirectUris": [],
-			"webOrigins": [],
-			"defaultClientScopes": [
-				"web-origins",
-				"roles",
-				"profile",
-				"email"
-			],
-      		"authenticationFlowBindingOverrides": {
-        		"browser": "browser"
-      		}
-		}
-	],
-	"clientScopes": [
-		{
-			"name": "address",
-			"description": "OpenID Connect built-in scope: address",
-			"protocol": "openid-connect",
-			"attributes": {
-				"include.in.token.scope": "true",
-				"display.on.consent.screen": "false"
-			},
-			"protocolMappers": [
-				{
-					"name": "address",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-address-mapper",
-					"config": {
-						"user.attribute.formatted": "formatted",
-						"user.attribute.country": "country",
-						"user.attribute.postal_code": "postal_code",
-						"user.attribute.street": "street",
-						"user.attribute.region": "region",
-						"user.attribute.locality": "locality",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				}
-			]
-		},
-		{
-			"name": "email",
-			"description": "OpenID Connect built-in scope: email",
-			"protocol": "openid-connect",
-			"attributes": {
-				"include.in.token.scope": "true",
-				"display.on.consent.screen": "false"
-			},
-			"protocolMappers": [
-				{
-					"name": "email",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-property-mapper",
-					"config": {
-						"user.attribute": "email",
-						"claim.name": "email",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "email verified",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-property-mapper",
-					"config": {
-						"user.attribute": "emailVerified",
-						"claim.name": "email_verified",
-						"jsonType.label": "boolean",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				}
-			]
-		},
-		{
-			"name": "microprofile-jwt",
-			"description": "Microprofile - JWT built-in scope",
-			"protocol": "openid-connect",
-			"attributes": {
-				"include.in.token.scope": "true",
-				"display.on.consent.screen": "false"
-			},
-			"protocolMappers": [
-				{
-					"name": "groups",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-realm-role-mapper",
-					"config": {
-						"user.attribute": "foo",
-						"claim.name": "groups",
-						"jsonType.label": "String",
-						"multivalued": "true",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "upn",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-property-mapper",
-					"config": {
-						"user.attribute": "username",
-						"claim.name": "upn",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				}
-			]
-		},
-		{
-			"name": "offline_access",
-			"description": "OpenID Connect built-in scope: offline_access",
-			"protocol": "openid-connect",
-			"attributes": {
-				"display.on.consent.screen": "false"
-			}
-		},
-		{
-			"name": "phone",
-			"description": "OpenID Connect built-in scope: phone",
-			"protocol": "openid-connect",
-			"attributes": {
-				"include.in.token.scope": "true",
-				"display.on.consent.screen": "false"
-			},
-			"protocolMappers": [
-				{
-					"name": "phone number",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-attribute-mapper",
-					"config": {
-						"user.attribute": "phoneNumber",
-						"claim.name": "phone_number",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "phone number verified",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-attribute-mapper",
-					"config": {
-						"user.attribute": "phoneNumberVerified",
-						"claim.name": "phone_number_verified",
-						"jsonType.label": "boolean",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				}
-			]
-		},
-		{
-			"name": "profile",
-			"description": "OpenID Connect built-in scope: profile",
-			"protocol": "openid-connect",
-			"attributes": {
-				"include.in.token.scope": "true",
-				"display.on.consent.screen": "false"
-			},
-			"protocolMappers": [
-				{
-					"name": "birthdate",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-attribute-mapper",
-					"config": {
-						"user.attribute": "birthdate",
-						"claim.name": "birthdate",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "website",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-attribute-mapper",
-					"config": {
-						"user.attribute": "website",
-						"claim.name": "website",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "given name",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-property-mapper",
-					"config": {
-						"user.attribute": "firstName",
-						"claim.name": "given_name",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "family name",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-property-mapper",
-					"config": {
-						"user.attribute": "lastName",
-						"claim.name": "family_name",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "middle name",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-attribute-mapper",
-					"config": {
-						"user.attribute": "middleName",
-						"claim.name": "middle_name",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "locale",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-attribute-mapper",
-					"config": {
-						"user.attribute": "locale",
-						"claim.name": "locale",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "picture",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-attribute-mapper",
-					"config": {
-						"user.attribute": "picture",
-						"claim.name": "picture",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "full name",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-full-name-mapper",
-					"config": {
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "nickname",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-attribute-mapper",
-					"config": {
-						"user.attribute": "nickname",
-						"claim.name": "nickname",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "updated at",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-attribute-mapper",
-					"config": {
-						"user.attribute": "updatedAt",
-						"claim.name": "updated_at",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "profile",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-attribute-mapper",
-					"config": {
-						"user.attribute": "profile",
-						"claim.name": "profile",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "username",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-property-mapper",
-					"config": {
-						"user.attribute": "username",
-						"claim.name": "preferred_username",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "gender",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-attribute-mapper",
-					"config": {
-						"user.attribute": "gender",
-						"claim.name": "gender",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				},
-				{
-					"name": "zoneinfo",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-attribute-mapper",
-					"config": {
-						"user.attribute": "zoneinfo",
-						"claim.name": "zoneinfo",
-						"jsonType.label": "String",
-						"id.token.claim": "true",
-						"access.token.claim": "true",
-						"userinfo.token.claim": "true"
-					}
-				}
-			]
-		},
-		{
-			"name": "roles",
-			"description": "OpenID Connect scope for add user roles to the access token",
-			"protocol": "openid-connect",
-			"attributes": {
-				"include.in.token.scope": "false",
-				"display.on.consent.screen": "false"
-			},
-			"protocolMappers": [
-				{
-					"name": "client roles",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-client-role-mapper",
-					"config": {
-						"user.attribute": "foo",
-						"claim.name": "resource_access.${client_id}.roles",
-						"jsonType.label": "String",
-						"multivalued": "true",
-						"access.token.claim": "true"
-					}
-				},
-				{
-					"name": "realm roles",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usermodel-realm-role-mapper",
-					"config": {
-						"user.attribute": "foo",
-						"claim.name": "realm_access.roles",
-						"jsonType.label": "String",
-						"multivalued": "true",
-						"access.token.claim": "true"
-					}
-				},
-				{
-					"name": "audience resolve",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-audience-resolve-mapper",
-					"config": {}
-				}
-			]
-		},
-		{
-			"name": "web-origins",
-			"description": "OpenID Connect scope for add allowed web origins to the access token",
-			"protocol": "openid-connect",
-			"attributes": {
-				"include.in.token.scope": "false",
-				"display.on.consent.screen": "false"
-			},
-			"protocolMappers": [
-				{
-					"name": "allowed web origins",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-allowed-origins-mapper",
-					"config": {}
-				}
-			]
-		},
-		{
-			"name": "xentis",
-			"description": "Xentis data",
-			"protocol": "openid-connect",
-			"attributes": {
-				"display.on.consent.screen": "false"
-			},
-			"protocolMappers": [
-				{
-					"name": "HostAddress",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usersessionmodel-note-mapper",
-					"config": {
-						"user.session.note": "HOST_ADDRESS",
-						"access.token.claim": "true",
-						"claim.name": "hostAddress",
-						"jsonType.label": "String"
-					}
-				},
-				{
-					"name": "Hostname",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usersessionmodel-note-mapper",
-					"config": {
-						"user.session.note": "HOST_NAME",
-						"access.token.claim": "true",
-						"claim.name": "hostName",
-						"jsonType.label": "String"
-					}
-				},
-				{
-					"name": "Hostusername",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usersessionmodel-note-mapper",
-					"config": {
-						"user.session.note": "HOST_USER",
-						"access.token.claim": "true",
-						"claim.name": "hostUserName",
-						"jsonType.label": "String"
-					}
-				},
-				{
-					"name": "Workstation",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usersessionmodel-note-mapper",
-					"config": {
-						"user.session.note": "MACHINE_NAME",
-						"access.token.claim": "true",
-						"claim.name": "workstation",
-						"jsonType.label": "String"
-					}
-				},
-				{
-					"name": "UserLogId",
-					"protocol": "openid-connect",
-					"protocolMapper": "oidc-usersessionmodel-note-mapper",
-					"config": {
-						"user.session.note": "userLogId",
-						"access.token.claim": "true",
-						"claim.name": "userLogId",
-						"jsonType.label": "String"
-					}
-				},
-				{
-					"name": "xentis",
-					"protocol": "openid-connect",
-					"protocolMapper": "json-remote-claim",
-					"config": {
-						"access.token.claim": "true",
-						"claim.name": "xentis"
-					}
-				}
-			]
-		}
-	],
-	"defaultDefaultClientScopes": [
-		"profile",
-		"email",
-		"roles",
-		"web-origins",
-		"xentis"
-	],
-	"defaultOptionalClientScopes": [
-		"offline_access",
-		"address",
-		"phone",
-		"microprofile-jwt"
-	],
-	"authenticationFlows": [
-		{
-			"alias": "xentis",
-			"description": "browser based authentication",
-			"providerId": "basic-flow",
-			"topLevel": true,
-			"builtIn": false,
-			"authenticationExecutions": [
-				{
-					"authenticator": "auth-cookie",
-					"requirement": "ALTERNATIVE",
-					"priority": 10
-				},
-				{
-					"authenticator": "parameter-extractor-authenticator",
-					"requirement": "ALTERNATIVE",
-					"priority": 20
-				},
-				{
-					"authenticator": "auth-spnego",
-					"requirement": "DISABLED",
-					"priority": 30
-				},
-				{
-					"authenticator": "identity-provider-redirector",
-					"requirement": "ALTERNATIVE",
-					"priority": 40
-				},
-				{
-					"requirement": "ALTERNATIVE",
-					"priority": 50,
-					"flowAlias": "xentis forms",
-					"autheticatorFlow": true
-				}
-			]
-		},
-		{
-			"alias": "xentis Browser - Conditional OTP",
-			"description": "Flow to determine if the OTP is required for the authentication",
-			"providerId": "basic-flow",
-			"topLevel": false,
-			"builtIn": false,
-			"authenticationExecutions": [
-				{
-					"authenticator": "conditional-user-configured",
-					"requirement": "REQUIRED",
-					"priority": 10
-				},
-				{
-					"authenticator": "auth-otp-form",
-					"requirement": "REQUIRED",
-					"priority": 20
-				}
-			]
-		},
-		{
-			"alias": "xentis forms",
-			"description": "Username, password, otp and other auth forms.",
-			"providerId": "basic-flow",
-			"topLevel": false,
-			"builtIn": false,
-			"authenticationExecutions": [
-				{
-					"authenticator": "auth-username-password-form",
-					"requirement": "REQUIRED",
-					"priority": 10
-				},
-				{
-					"authenticator": "producer-password-authenticator",
-					"requirement": "REQUIRED",
-					"priority": 20
-				},
-				{
-					"authenticator": "user-valid-authenticator",
-					"requirement": "REQUIRED",
-					"priority": 30
-				},
-				{
-					"authenticator": "institute-selection-authenticator",
-					"requirement": "REQUIRED",
-					"priority": 40
-				},
-				{
-					"authenticator": "licence-check-authenticator",
-					"requirement": "REQUIRED",
-					"priority": 50
-				},
-				{
-					"requirement": "CONDITIONAL",
-					"priority": 60,
-					"flowAlias": "xentis Browser - Conditional OTP",
-					"autheticatorFlow": true
-				},
-				{
-					"authenticator": "xentis-notifier",
-					"requirement": "REQUIRED",
-					"priority": 70
-				}
-			]
-		}
-	],
-	"eventsListeners": [
-		"xentis-delete-session",
-		"jboss-logging"
-	],
-	"browserFlow": "xentis"
+            "rootUrl": "",
+            "redirectUris": [],
+            "webOrigins": [],
+            "defaultClientScopes": [
+                "web-origins",
+                "roles",
+                "profile",
+                "email"
+            ],
+            "authenticationFlowBindingOverrides": {
+                "browser": "browser"
+            }
+        }
+    ],
+    "clientScopes": [
+        {
+            "name": "address",
+            "description": "OpenID Connect built-in scope: address",
+            "protocol": "openid-connect",
+            "attributes": {
+                "include.in.token.scope": "true",
+                "display.on.consent.screen": "false"
+            },
+            "protocolMappers": [
+                {
+                    "name": "address",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-address-mapper",
+                    "config": {
+                        "user.attribute.formatted": "formatted",
+                        "user.attribute.country": "country",
+                        "user.attribute.postal_code": "postal_code",
+                        "user.attribute.street": "street",
+                        "user.attribute.region": "region",
+                        "user.attribute.locality": "locality",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "email",
+            "description": "OpenID Connect built-in scope: email",
+            "protocol": "openid-connect",
+            "attributes": {
+                "include.in.token.scope": "true",
+                "display.on.consent.screen": "false"
+            },
+            "protocolMappers": [
+                {
+                    "name": "email",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-property-mapper",
+                    "config": {
+                        "user.attribute": "email",
+                        "claim.name": "email",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "email verified",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-property-mapper",
+                    "config": {
+                        "user.attribute": "emailVerified",
+                        "claim.name": "email_verified",
+                        "jsonType.label": "boolean",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "microprofile-jwt",
+            "description": "Microprofile - JWT built-in scope",
+            "protocol": "openid-connect",
+            "attributes": {
+                "include.in.token.scope": "true",
+                "display.on.consent.screen": "false"
+            },
+            "protocolMappers": [
+                {
+                    "name": "groups",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-realm-role-mapper",
+                    "config": {
+                        "user.attribute": "foo",
+                        "claim.name": "groups",
+                        "jsonType.label": "String",
+                        "multivalued": "true",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "upn",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-property-mapper",
+                    "config": {
+                        "user.attribute": "username",
+                        "claim.name": "upn",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "offline_access",
+            "description": "OpenID Connect built-in scope: offline_access",
+            "protocol": "openid-connect",
+            "attributes": {
+                "display.on.consent.screen": "false"
+            }
+        },
+        {
+            "name": "phone",
+            "description": "OpenID Connect built-in scope: phone",
+            "protocol": "openid-connect",
+            "attributes": {
+                "include.in.token.scope": "true",
+                "display.on.consent.screen": "false"
+            },
+            "protocolMappers": [
+                {
+                    "name": "phone number",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "phoneNumber",
+                        "claim.name": "phone_number",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "phone number verified",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "phoneNumberVerified",
+                        "claim.name": "phone_number_verified",
+                        "jsonType.label": "boolean",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "profile",
+            "description": "OpenID Connect built-in scope: profile",
+            "protocol": "openid-connect",
+            "attributes": {
+                "include.in.token.scope": "true",
+                "display.on.consent.screen": "false"
+            },
+            "protocolMappers": [
+                {
+                    "name": "birthdate",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "birthdate",
+                        "claim.name": "birthdate",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "website",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "website",
+                        "claim.name": "website",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "given name",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-property-mapper",
+                    "config": {
+                        "user.attribute": "firstName",
+                        "claim.name": "given_name",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "family name",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-property-mapper",
+                    "config": {
+                        "user.attribute": "lastName",
+                        "claim.name": "family_name",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "middle name",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "middleName",
+                        "claim.name": "middle_name",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "locale",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "locale",
+                        "claim.name": "locale",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "picture",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "picture",
+                        "claim.name": "picture",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "full name",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-full-name-mapper",
+                    "config": {
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "nickname",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "nickname",
+                        "claim.name": "nickname",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "updated at",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "updatedAt",
+                        "claim.name": "updated_at",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "profile",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "profile",
+                        "claim.name": "profile",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "username",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-property-mapper",
+                    "config": {
+                        "user.attribute": "username",
+                        "claim.name": "preferred_username",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "gender",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "gender",
+                        "claim.name": "gender",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "zoneinfo",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "zoneinfo",
+                        "claim.name": "zoneinfo",
+                        "jsonType.label": "String",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "userinfo.token.claim": "true"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "roles",
+            "description": "OpenID Connect scope for add user roles to the access token",
+            "protocol": "openid-connect",
+            "attributes": {
+                "include.in.token.scope": "false",
+                "display.on.consent.screen": "false"
+            },
+            "protocolMappers": [
+                {
+                    "name": "client roles",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-client-role-mapper",
+                    "config": {
+                        "user.attribute": "foo",
+                        "claim.name": "resource_access.${client_id}.roles",
+                        "jsonType.label": "String",
+                        "multivalued": "true",
+                        "access.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "realm roles",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-realm-role-mapper",
+                    "config": {
+                        "user.attribute": "foo",
+                        "claim.name": "realm_access.roles",
+                        "jsonType.label": "String",
+                        "multivalued": "true",
+                        "access.token.claim": "true"
+                    }
+                },
+                {
+                    "name": "audience resolve",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-audience-resolve-mapper",
+                    "config": {}
+                }
+            ]
+        },
+        {
+            "name": "web-origins",
+            "description": "OpenID Connect scope for add allowed web origins to the access token",
+            "protocol": "openid-connect",
+            "attributes": {
+                "include.in.token.scope": "false",
+                "display.on.consent.screen": "false"
+            },
+            "protocolMappers": [
+                {
+                    "name": "allowed web origins",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-allowed-origins-mapper",
+                    "config": {}
+                }
+            ]
+        },
+        {
+            "name": "xentis",
+            "description": "Xentis data",
+            "protocol": "openid-connect",
+            "attributes": {
+                "display.on.consent.screen": "false"
+            },
+            "protocolMappers": [
+                {
+                    "name": "HostAddress",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usersessionmodel-note-mapper",
+                    "config": {
+                        "user.session.note": "HOST_ADDRESS",
+                        "access.token.claim": "true",
+                        "claim.name": "hostAddress",
+                        "jsonType.label": "String"
+                    }
+                },
+                {
+                    "name": "Hostname",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usersessionmodel-note-mapper",
+                    "config": {
+                        "user.session.note": "HOST_NAME",
+                        "access.token.claim": "true",
+                        "claim.name": "hostName",
+                        "jsonType.label": "String"
+                    }
+                },
+                {
+                    "name": "Hostusername",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usersessionmodel-note-mapper",
+                    "config": {
+                        "user.session.note": "HOST_USER",
+                        "access.token.claim": "true",
+                        "claim.name": "hostUserName",
+                        "jsonType.label": "String"
+                    }
+                },
+                {
+                    "name": "Workstation",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usersessionmodel-note-mapper",
+                    "config": {
+                        "user.session.note": "MACHINE_NAME",
+                        "access.token.claim": "true",
+                        "claim.name": "workstation",
+                        "jsonType.label": "String"
+                    }
+                },
+                {
+                    "name": "UserLogId",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usersessionmodel-note-mapper",
+                    "config": {
+                        "user.session.note": "userLogId",
+                        "access.token.claim": "true",
+                        "claim.name": "userLogId",
+                        "jsonType.label": "String"
+                    }
+                },
+                {
+                    "name": "xentis",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "json-remote-claim",
+                    "config": {
+                        "access.token.claim": "true",
+                        "claim.name": "xentis"
+                    }
+                }
+            ]
+        }
+    ],
+    "defaultDefaultClientScopes": [
+        "profile",
+        "email",
+        "roles",
+        "web-origins",
+        "xentis"
+    ],
+    "defaultOptionalClientScopes": [
+        "offline_access",
+        "address",
+        "phone",
+        "microprofile-jwt"
+    ],
+    "authenticationFlows": [
+        {
+            "alias": "xentis",
+            "description": "browser based authentication",
+            "providerId": "basic-flow",
+            "topLevel": true,
+            "builtIn": false,
+            "authenticationExecutions": [
+                {
+                    "authenticator": "auth-cookie",
+                    "requirement": "ALTERNATIVE",
+                    "priority": 10
+                },
+                {
+                    "authenticator": "parameter-extractor-authenticator",
+                    "requirement": "ALTERNATIVE",
+                    "priority": 20
+                },
+                {
+                    "authenticator": "auth-spnego",
+                    "requirement": "DISABLED",
+                    "priority": 30
+                },
+                {
+                    "authenticator": "identity-provider-redirector",
+                    "requirement": "ALTERNATIVE",
+                    "priority": 40
+                },
+                {
+                    "requirement": "ALTERNATIVE",
+                    "priority": 50,
+                    "flowAlias": "xentis forms",
+                    "autheticatorFlow": true
+                }
+            ]
+        },
+        {
+            "alias": "xentis Browser - Conditional OTP",
+            "description": "Flow to determine if the OTP is required for the authentication",
+            "providerId": "basic-flow",
+            "topLevel": false,
+            "builtIn": false,
+            "authenticationExecutions": [
+                {
+                    "authenticator": "conditional-user-configured",
+                    "requirement": "REQUIRED",
+                    "priority": 10
+                },
+                {
+                    "authenticator": "auth-otp-form",
+                    "requirement": "REQUIRED",
+                    "priority": 20
+                }
+            ]
+        },
+        {
+            "alias": "xentis forms",
+            "description": "Username, password, otp and other auth forms.",
+            "providerId": "basic-flow",
+            "topLevel": false,
+            "builtIn": false,
+            "authenticationExecutions": [
+                {
+                    "authenticator": "auth-username-password-form",
+                    "requirement": "REQUIRED",
+                    "priority": 10
+                },
+                {
+                    "authenticator": "producer-password-authenticator",
+                    "requirement": "REQUIRED",
+                    "priority": 20
+                },
+                {
+                    "authenticator": "user-valid-authenticator",
+                    "requirement": "REQUIRED",
+                    "priority": 30
+                },
+                {
+                    "authenticator": "institute-selection-authenticator",
+                    "requirement": "REQUIRED",
+                    "priority": 40
+                },
+                {
+                    "authenticator": "licence-check-authenticator",
+                    "requirement": "REQUIRED",
+                    "priority": 50
+                },
+                {
+                    "requirement": "CONDITIONAL",
+                    "priority": 60,
+                    "flowAlias": "xentis Browser - Conditional OTP",
+                    "autheticatorFlow": true
+                },
+                {
+                    "authenticator": "xentis-notifier",
+                    "requirement": "REQUIRED",
+                    "priority": 70
+                }
+            ]
+        }
+    ],
+    "eventsListeners": [
+        "xentis-delete-session",
+        "jboss-logging"
+    ],
+    "browserFlow": "xentis"
 }
