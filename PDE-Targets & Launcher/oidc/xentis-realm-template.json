@@ -51,6 +51,58 @@
                       "manage-users"
                 ]
             }
+        },
+        {
+            "username": "artemis",
+            "enabled": true,
+            "clientRoles": {
+                "artemisBroker": [
+                      "artemis_admin"
+                ]
+            },
+            "credentials": [
+                {
+                      "type": "password",
+                      "value": "artemis"
+                }
+            ]
+        },
+        {
+            "username": "jms_client",
+            "enabled": true,
+            "clientRoles": {
+                "artemisBroker": [
+                      "artemis_jms"
+                ]
+            },
+            "credentials": [
+                {
+                      "type": "password",
+                      "value": "jms_client"
+                }
+            ]
+        },
+        {
+            "username": "pd_urr",
+            "enabled": true,
+            "email": "reto.urfer@profidata.com",
+            "firstName": "Reto",
+            "lastName": "Urfer",
+            "realmRoles": [
+                 "XENTIS_PRODUCER"
+            ],
+            "clientRoles": {
+                "xentisTools": [
+                      "XENTIS_CRYPT",
+                      "XENTIS_SHELL"
+                ]
+            },
+            "credentials": [
+                {
+                      "type": "password",
+                      "value": "test"
+                }
+            ]
         }
     ],
     "clients": [

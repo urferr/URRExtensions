@@ -510,6 +510,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.mockito");
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalPackageDependencies.add("org.apache.commons.text.lookup");
+		aConfiguration.additionalPackageDependencies.add("com.fasterxml.uuid");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		aConfiguration.additionalBundles.add("net.bytebuddy.byte-buddy-agent");
 		aConfiguration.additionalBundles.add("org.mockito.inline");
