@@ -3,9 +3,9 @@
 <target name="Eclipse-PDE" sequenceNumber="23">
 <locations>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/eclipse/updates/4.23"/>
-		<unit id="org.eclipse.pde.feature.group" version="3.14.1100.v20220308-0310"/>
-		<unit id="org.eclipse.pde.source.feature.group" version="3.14.1100.v20220308-0310"/>
+		<repository location="http://download.eclipse.org/eclipse/updates/4.24"/>
+		<unit id="org.eclipse.pde.feature.group" version="3.14.1200.v20220607-0700"/>
+		<unit id="org.eclipse.pde.source.feature.group" version="3.14.1200.v20220607-0700"/>
 	</location>
 </locations>
 <environment>
