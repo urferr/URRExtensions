@@ -12,7 +12,6 @@
     <mapAttribute key="org.eclipse.jdt.launching.CONNECT_MAP">
         <mapEntry key="hostname" value="pdvmdev15"/>
         <mapEntry key="port" value="7031"/>
-        <mapEntry key="timeout" value="20000"/>
     </mapAttribute>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xentis.javamisxc"/>
     <stringAttribute key="org.eclipse.jdt.launching.VM_CONNECTOR_ID" value="org.eclipse.jdt.launching.socketAttachConnector"/>

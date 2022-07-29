@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="XC One Client Product" uid="xc.one.client" id="_com.profidata.xc.one.client.build.product.xcClient" application="com.compxc.workbench.presentation.application" version="0.0.0" useFeatures="true" includeLaunchers="true">
+<product name="XC One Client Product" uid="xc.one.client" id="_com.profidata.xc.one.client.build.product.xcClient" application="com.compxc.workbench.presentation.application" version="0.0.0" useFeatures="true" includeLaunchers="true" autoIncludeRequirements="true">
 
    <aboutInfo>
       <image path="/com.compxc.workbench.branding/images/about/about.gif"/>
@@ -43,7 +43,8 @@
 -Djavax.net.ssl.trustStorePassword=changeit
 
 -Djxbrowser.chromium.dir=./browser
--DXXXjxbrowser.logging.level=INFO
+-DXXXjxbrowser.logging.level=FINE
+-DXXXdevTools.port=9222
 
 -Xms512m
 -Xmx1024m
