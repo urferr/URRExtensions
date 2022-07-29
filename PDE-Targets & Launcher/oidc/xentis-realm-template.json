@@ -817,6 +817,7 @@
     ],
     "eventsListeners": [
         "xentis-delete-session",
+        "xentis-update-login-info-session",
         "jboss-logging"
     ],
     "browserFlow": "xentis"
