@@ -414,7 +414,6 @@
         <setEntry value="com.profidata.org.jfree.chart.configuration@default:default"/>
         <setEntry value="com.profidata.platform.client.integritycheck@default:default"/>
         <setEntry value="com.profidata.platform.client.service@default:true"/>
-        <setEntry value="com.profidata.reporting.common@default:default"/>
         <setEntry value="com.profidata.risk.commons@default:default"/>
         <setEntry value="com.profidata.xc.activemq.client.configuration@default:default"/>
         <setEntry value="com.profidata.xc.admin.presentation@default:default"/>
@@ -478,6 +477,7 @@
         <setEntry value="com.profidata.xentis.jni@default:default"/>
         <setEntry value="com.profidata.xentis.jxbrowser.chromium.license@default:default"/>
         <setEntry value="com.profidata.xentis.kommserver.shared@default:default"/>
+        <setEntry value="com.profidata.xentis.reporting.common@default:default"/>
         <setEntry value="com.profidata.xentis.syscode@default:default"/>
         <setEntry value="com.profidata.xentis.ui.base@default:default"/>
         <setEntry value="com.profidata.xentis.user.shared@default:default"/>

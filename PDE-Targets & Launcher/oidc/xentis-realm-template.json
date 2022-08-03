@@ -690,6 +690,42 @@
                     }
                 },
                 {
+                    "name": "Failed Login Count",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "lastFailedLoginCount",
+                        "id.token.claim": "true",
+                        "access.token.claim": "false",
+                        "claim.name": "failedLoginCount",
+                        "jsonType.label": "int"
+                    }
+                },
+                {
+                    "name": "Last Login Date",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "lastLoginDate",
+                        "id.token.claim": "true",
+                        "access.token.claim": "false",
+                        "claim.name": "lastLoginDate",
+                        "jsonType.label": "String"
+                    }
+                },
+                {
+                    "name": "Last Session State",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "config": {
+                        "user.attribute": "lastSessionState",
+                        "id.token.claim": "true",
+                        "access.token.claim": "false",
+                        "claim.name": "lastSessionState",
+                        "jsonType.label": "String"
+                    }
+                }, 
+                {
                     "name": "xentis",
                     "protocol": "openid-connect",
                     "protocolMapper": "json-remote-claim",

@@ -447,7 +447,7 @@ public class SaveConfigurationAsJson {
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
-		allBundles.put("com.profidata.reporting.common.test", aConfiguration);
+		allBundles.put("com.profidata.xentis.reporting.common.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
