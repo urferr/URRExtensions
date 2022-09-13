@@ -11,6 +11,9 @@
         "fr"
     ],
     "defaultLocale": "en",
+    "attributes": {
+        "frontendUrl": "$(env:XENTIS_FRONTEND_URL)"
+    },
     "roles": {
         "realm": [
             {
@@ -28,14 +31,17 @@
                 },
                 {
                     "name": "XENTIS_CRYPT"
-                }
-            ],
-            "artemisBroker": [
-                {
-                    "name": "artemis_admin"
                 },
                 {
-                    "name": "artemis_jms"
+                    "name": "amq-admin"
+                }
+            ],
+            "amq-broker": [
+                {
+                    "name": "amq-admin"
+                },
+                {
+                    "name": "amq-client"
                 }
             ]
         }
@@ -53,32 +59,32 @@
             }
         },
         {
-            "username": "artemis",
+            "username": "amq-admin",
             "enabled": true,
             "clientRoles": {
-                "artemisBroker": [
-                      "artemis_admin"
+                "amq-broker": [
+                      "amq-admin"
                 ]
             },
             "credentials": [
                 {
                       "type": "password",
-                      "value": "artemis"
+                      "value": "amq-admin"
                 }
             ]
         },
         {
-            "username": "jms_client",
+            "username": "amq-client",
             "enabled": true,
             "clientRoles": {
-                "artemisBroker": [
-                      "artemis_jms"
+                "amq-broker": [
+                      "amq-client"
                 ]
             },
             "credentials": [
                 {
                       "type": "password",
-                      "value": "jms_client"
+                      "value": "amq-client"
                 }
             ]
         },
@@ -94,7 +100,8 @@
             "clientRoles": {
                 "xentisTools": [
                       "XENTIS_CRYPT",
-                      "XENTIS_SHELL"
+                      "XENTIS_SHELL",
+                      "amq-admin"
                 ]
             },
             "credentials": [
@@ -139,7 +146,7 @@
                 "$(env:XENTIS_EXTERNAL_URL)/*"
             ],
             "webOrigins": [
-                "*"
+                "$(env:XENTIS_EXTERNAL_URL)"
             ],
             "adminUrl": ""
         },
@@ -173,7 +180,9 @@
             "redirectUris": [
                 "$(env:XENTIS_EXTERNAL_URL)/*"
             ],
-            "webOrigins": [],
+            "webOrigins": [
+                "$(env:XENTIS_EXTERNAL_URL)"
+            ],
             "defaultClientScopes": [
                 "web-origins",
                 "roles",
@@ -209,8 +218,8 @@
             "secret": "6196197d-5f0d-49b4-aa6c-e7d6e7a4a443"
         },
         {
-            "clientId": "artemisBroker",
-            "name": "artemisBroker",
+            "clientId": "amq-broker",
+            "name": "amq-broker",
             "description": "",
             "protocol": "openid-connect",
             "publicClient": true,
