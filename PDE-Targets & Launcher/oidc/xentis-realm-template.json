@@ -20,11 +20,20 @@
                 "name": "XENTIS_PRODUCER",
                 "description": "Users associated to this role are producer users",
                 "containerId": "xentis"
+            },
+            {
+                "name": "default-roles-$(env:XENTIS_REALM)",
+                "composite": true,
+                "composites": {
+                    "client": {
+                        "xentisClient": [
+                            "amq-client"
+                        ]
+                    }
+                }
             }
         ],
         "client": {
-            "xentisServer": [],
-            "AUTHSERVICE": [],
             "xentisTools": [
                 {
                     "name": "XENTIS_SHELL"
@@ -34,6 +43,11 @@
                 },
                 {
                     "name": "amq-admin"
+                }
+            ],
+            "xentisClient": [
+                {
+                    "name": "amq-client"
                 }
             ],
             "amq-broker": [
@@ -70,21 +84,6 @@
                 {
                       "type": "password",
                       "value": "amq-admin"
-                }
-            ]
-        },
-        {
-            "username": "amq-client",
-            "enabled": true,
-            "clientRoles": {
-                "amq-broker": [
-                      "amq-client"
-                ]
-            },
-            "credentials": [
-                {
-                      "type": "password",
-                      "value": "amq-client"
                 }
             ]
         },
