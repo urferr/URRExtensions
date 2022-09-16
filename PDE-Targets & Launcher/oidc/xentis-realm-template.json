@@ -174,7 +174,6 @@
             "description": "",
             "protocol": "openid-connect",
             "publicClient": true,
-            "directAccessGrantsEnabled": false,
             "rootUrl": "",
             "redirectUris": [
                 "$(env:XENTIS_EXTERNAL_URL)/*"
