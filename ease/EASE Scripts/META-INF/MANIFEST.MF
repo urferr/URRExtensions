@@ -9,8 +9,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.resources,
  org.eclipse.core.runtime,
  org.eclipse.jdt.core,
- org.eclipse.pde.core,
- org.eclipse.pde.runtime
+ org.eclipse.pde.core
 Import-Package: com.google.gson,
  com.profidata.eclipse.project.model,
  com.profidata.eclipse.project.model.fix
