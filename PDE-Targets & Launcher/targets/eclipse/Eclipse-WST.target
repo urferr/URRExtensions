@@ -3,11 +3,11 @@
 <target name="Eclipse-WST" sequenceNumber="8">
 <locations>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/releases/2022-06"/>
+		<repository location="http://download.eclipse.org/releases/2022-12"/>
 		<unit id="org.eclipse.wst.common.fproj.feature.group" version="3.7.3.v202111212041"/>
 		<unit id="org.eclipse.wst.common_core.feature.feature.group" version="3.23.0.v202108200212"/>
-		<unit id="org.eclipse.wst.web_core.feature.feature.group" version="3.26.0.v202204042240"/>
-		<unit id="org.eclipse.wst.web_ui.feature.feature.group" version="3.26.0.v202204091445"/>
+		<unit id="org.eclipse.wst.web_core.feature.feature.group" version="3.28.0.v202211200019"/>
+		<unit id="org.eclipse.wst.web_ui.feature.feature.group" version="3.28.0.v202211200019"/>
 	</location>
 </locations>
 </target>

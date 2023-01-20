@@ -7,9 +7,9 @@
 		<repository location="http://download.eclipse.org/e4/snapshots/org.eclipse.e4.tools/latest/"/>
 	</location>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/eclipse/updates/4.24"/>
-		<unit id="org.eclipse.e4.core.tools.feature.source.feature.group" version="4.24.0.v20220420-0901"/>
-		<unit id="org.eclipse.swt.tools.feature.feature.group" version="3.108.500.v20220423-0849"/>
+		<repository location="http://download.eclipse.org/eclipse/updates/4.26"/>
+		<unit id="org.eclipse.e4.core.tools.feature.source.feature.group" version="4.26.0.v20221111-1233"/>
+		<unit id="org.eclipse.swt.tools.feature.feature.group" version="3.108.700.v20220914-2245"/>
 	</location>
 </locations>
 </target>

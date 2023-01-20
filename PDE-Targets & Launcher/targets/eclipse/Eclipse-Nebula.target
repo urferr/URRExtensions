@@ -2,14 +2,14 @@
 <?pde version="3.8"?>
 <target name="Eclipse-Nebula" sequenceNumber="3">
 <locations>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.nebula.widgets.formattedtext.feature.feature.group" version="1.0.0.202109012045"/>
-<unit id="org.eclipse.nebula.widgets.radiogroup.feature.feature.group" version="0.1.0.202109012045"/>
-<repository location="http://download.eclipse.org/nebula/incubation/snapshot"/>
-</location>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<unit id="org.eclipse.nebula.feature.feature.group" version="2.4.3.202011020719"/>
-		<repository location="http://download.eclipse.org/nebula/releases/latest"/>
+		<repository location="https://download.eclipse.org/nebula/incubation/snapshot"/>
+		<unit id="org.eclipse.nebula.widgets.formattedtext.feature.feature.group" version="1.0.0.202212191050"/>
+		<unit id="org.eclipse.nebula.widgets.radiogroup.feature.feature.group" version="0.1.0.202212191050"/>
+	</location>
+	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+		<repository location="https://download.eclipse.org/nebula/releases/latest"/>
+		<unit id="org.eclipse.nebula.feature.feature.group" version="2.7.2.202208171809"/>
 	</location>
 </locations>
 </target>

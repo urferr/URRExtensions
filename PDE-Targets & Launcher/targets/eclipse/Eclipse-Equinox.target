@@ -7,8 +7,8 @@
 		<unit id="org.eclipse.contribution.weaving.feature.group" version="2.2.4.202111260940"/>
 	</location>
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="http://download.eclipse.org/eclipse/updates/4.24"/>
-		<unit id="org.eclipse.equinox.sdk.feature.group" version="3.23.400.v20220516-2155"/>
+		<repository location="http://download.eclipse.org/eclipse/updates/4.26"/>
+		<unit id="org.eclipse.equinox.sdk.feature.group" version="3.23.600.v20221116-1440"/>
 	</location>
 </locations>
 </target>
