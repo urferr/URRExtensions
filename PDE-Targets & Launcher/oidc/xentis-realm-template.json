@@ -73,19 +73,13 @@
             }
         },
         {
-            "username": "amq-admin",
-            "enabled": true,
+            "username": "service-account-amq-broker",
+            "serviceAccountClientId": "amq-broker",
             "clientRoles": {
                 "amq-broker": [
                       "amq-admin"
                 ]
-            },
-            "credentials": [
-                {
-                      "type": "password",
-                      "value": "amq-admin"
-                }
-            ]
+            }
         },
         {
             "username": "pd_urr",
@@ -220,22 +214,20 @@
             "name": "amq-broker",
             "description": "",
             "protocol": "openid-connect",
-            "publicClient": true,
+            "publicClient": false,
             "standardFlowEnabled": false,
-            "directAccessGrantsEnabled": true,
+            "directAccessGrantsEnabled": false,
+            "serviceAccountsEnabled": true,
             "rootUrl": "",
             "redirectUris": [],
             "webOrigins": [],
-            "defaultClientScopes": [
-                "web-origins",
-                "roles",
-                "profile",
-                "email"
-            ],
-            "authenticationFlowBindingOverrides": {
-                "browser": "browser"
-            }
-        }
+            "adminUrl": "",
+            "attributes": {
+                "backchannel.logout.session.required": "false"
+            },
+            "clientAuthenticatorType": "client-secret",
+            "secret": "KoHiZHDkbUNiGvWlFYpDDum6rEUTXHxG"
+         }
     ],
     "clientScopes": [
         {
@@ -856,6 +848,60 @@
                     "priority": 70
                 }
             ]
+        },
+        {
+            "alias": "Xentis Direct grant",
+            "description": "OpenID Connect Resource Owner Grant",
+            "providerId": "basic-flow",
+            "topLevel": true,
+            "builtIn": false,
+            "authenticationExecutions": [
+                {
+                    "authenticator": "direct-grant-validate-username",
+                    "requirement": "REQUIRED",
+                    "priority": 10
+                },
+                {
+                    "authenticator": "direct-grant-validate-password",
+                    "requirement": "REQUIRED",
+                    "priority": 20
+                },
+                {
+                    "authenticator": "parameter-extractor-authenticator",
+                    "requirement": "REQUIRED",
+                    "priority": 30
+                },
+                {
+                    "authenticator": "identity-provider-redirector",
+                    "requirement": "ALTERNATIVE",
+                    "priority": 40
+                },
+                {
+                    "requirement": "CONDITIONAL",
+                    "priority": 31,
+                    "flowAlias": "Xentis Direct grant Direct Grant - Conditional OTP",
+                    "autheticatorFlow": true
+                }
+            ]
+        },
+        {
+            "alias": "Xentis Direct grant Direct Grant - Conditional OTP",
+            "description": "Flow to determine if the OTP is required for the authentication",
+            "providerId": "basic-flow",
+            "topLevel": false,
+            "builtIn": false,
+            "authenticationExecutions": [
+                {
+                    "authenticator": "conditional-user-configured",
+                    "requirement": "REQUIRED",
+                    "priority": 10
+                },
+                {
+                    "authenticator": "direct-grant-validate-otp",
+                    "requirement": "REQUIRED",
+                    "priority": 20
+                }
+            ]
         }
     ],
     "eventsListeners": [
@@ -863,5 +909,6 @@
         "xentis-update-login-info-session",
         "jboss-logging"
     ],
-    "browserFlow": "xentis"
+    "browserFlow": "xentis",
+    "directGrantFlow": "Xentis Direct grant"
 }
