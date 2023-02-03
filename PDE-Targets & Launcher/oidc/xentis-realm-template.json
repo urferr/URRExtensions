@@ -2,6 +2,8 @@
     "realm": "$(env:XENTIS_REALM)",
     "enabled": true,
     "editUsernameAllowed": true,
+    "verifyEmail": true,
+    "resetPasswordAllowed": true,
     "smtpServer": {
         "port": "1025",
         "host": "pdvmdev15.profidatagroup.com",
