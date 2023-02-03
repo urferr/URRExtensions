@@ -99,6 +99,9 @@
                  "XENTIS_PRODUCER"
             ],
             "clientRoles": {
+                "account": [
+                      "manage-account"
+                ],
                 "xentisTools": [
                       "XENTIS_CRYPT",
                       "XENTIS_SHELL",
@@ -149,7 +152,11 @@
             "webOrigins": [
                 "$(env:XENTIS_EXTERNAL_URL)"
             ],
-            "adminUrl": ""
+            "adminUrl": "",
+            "authenticationFlowBindingOverrides": {
+                "browser": "xentis",
+                "direct_grant": "Xentis Direct grant"
+            }
         },
         {
             "clientId": "xentisServer",
@@ -166,6 +173,10 @@
             "adminUrl": "",
             "attributes": {
                 "backchannel.logout.session.required": "false"
+            },
+            "authenticationFlowBindingOverrides": {
+                "browser": "xentis",
+                "direct_grant": "Xentis Direct grant"
             },
             "clientAuthenticatorType": "client-secret",
             "secret": "aeb87a87-7e0c-4cbe-af08-14301f3cead7"
@@ -188,10 +199,7 @@
                 "roles",
                 "profile",
                 "email"
-            ],
-            "authenticationFlowBindingOverrides": {
-                "browser": "browser"
-            }
+            ]
         },
         {
             "clientId": "idpServer",
@@ -211,9 +219,6 @@
                 "profile",
                 "email"
             ],
-            "authenticationFlowBindingOverrides": {
-                "browser": "browser"
-            },
             "clientAuthenticatorType": "client-secret",
             "secret": "6196197d-5f0d-49b4-aa6c-e7d6e7a4a443"
         },
@@ -920,7 +925,5 @@
         "xentis-delete-session",
         "xentis-update-login-info-session",
         "jboss-logging"
-    ],
-    "browserFlow": "xentis",
-    "directGrantFlow": "Xentis Direct grant"
+    ]
 }
