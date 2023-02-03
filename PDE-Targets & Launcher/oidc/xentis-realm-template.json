@@ -2,6 +2,12 @@
     "realm": "$(env:XENTIS_REALM)",
     "enabled": true,
     "editUsernameAllowed": true,
+    "smtpServer": {
+        "port": "1025",
+        "host": "pdvmdev15.profidatagroup.com",
+        "from": "xentis@profidata.com",
+        "fromDisplayName": "Xentis"
+    },
     "loginTheme": "xentis",
     "internationalizationEnabled": true,
     "supportedLocales": [
@@ -454,16 +460,15 @@
                 {
                     "name": "locale",
                     "protocol": "openid-connect",
-                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "protocolMapper": "oidc-usersessionmodel-note-mapper",
                     "config": {
-                        "user.attribute": "locale",
-                        "claim.name": "locale",
-                        "jsonType.label": "String",
+                        "user.session.note": "locale",
                         "id.token.claim": "true",
                         "access.token.claim": "true",
-                        "userinfo.token.claim": "true"
+                        "claim.name": "locale",
+                        "jsonType.label": "String"
                     }
-                },
+                }, 
                 {
                     "name": "picture",
                     "protocol": "openid-connect",
@@ -723,7 +728,7 @@
                         "claim.name": "lastSessionState",
                         "jsonType.label": "String"
                     }
-                }, 
+                },
                 {
                     "name": "xentis",
                     "protocol": "openid-connect",
@@ -832,20 +837,25 @@
                     "priority": 40
                 },
                 {
-                    "authenticator": "licence-check-authenticator",
+                    "authenticator": "locale-selection-authenticator",
                     "requirement": "REQUIRED",
                     "priority": 50
                 },
                 {
+                    "authenticator": "licence-check-authenticator",
+                    "requirement": "REQUIRED",
+                    "priority": 60
+                },
+                {
                     "requirement": "CONDITIONAL",
-                    "priority": 60,
+                    "priority": 70,
                     "flowAlias": "xentis Browser - Conditional OTP",
                     "autheticatorFlow": true
                 },
                 {
                     "authenticator": "xentis-notifier",
                     "requirement": "REQUIRED",
-                    "priority": 70
+                    "priority": 80
                 }
             ]
         },
