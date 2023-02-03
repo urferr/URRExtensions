@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  webshell:
+      image: registry:5000/urr/profidata/webshell:latest
+      command: ["ttyd", "-t", "titleFixed=XENTIS-Shell", "-t", "fontSize=18", "-t", "theme={\"background\": \"#122945\", \"foreground\": \"#FFFFFF\"}", "podman-remote", "exec", "-it", "xentismst_xentis_1", "xentis"]
+      volumes:
+        - /run/user/$UID/podman/podman.sock:/run/podman/podman.sock
+      ports:
+        - 7681:7681
