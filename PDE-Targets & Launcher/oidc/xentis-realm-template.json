@@ -2,7 +2,7 @@
     "realm": "$(env:XENTIS_REALM)",
     "enabled": true,
     "editUsernameAllowed": true,
-    "verifyEmail": true,
+    "verifyEmail": false,
     "resetPasswordAllowed": true,
     "smtpServer": {
         "port": "1025",
@@ -118,28 +118,6 @@
     ],
     "clients": [
         {
-            "clientId": "AUTHSERVICE",
-            "name": "AUTHSERVICE",
-            "description": "AUTHSERVICE service account to call XENTIS",
-            "protocol": "openid-connect",
-            "publicClient": false,
-            "standardFlowEnabled": false,
-            "directAccessGrantsEnabled": false,
-            "serviceAccountsEnabled": true,
-            "rootUrl": "$(env:XENTIS_BASE_URL)/",
-            "redirectUris": [],
-            "webOrigins": [],
-            "adminUrl": "",
-            "defaultClientScopes": [
-                "web-origins",
-                "roles",
-                "profile",
-                "email"
-            ],
-            "clientAuthenticatorType": "client-secret",
-            "secret": "30c42496-c22e-4797-a35b-4f4a004506ba"
-        },
-        {
             "clientId": "xentisClient",
             "name": "xentisClient",
             "description": "",
@@ -173,10 +151,6 @@
             "adminUrl": "",
             "attributes": {
                 "backchannel.logout.session.required": "false"
-            },
-            "authenticationFlowBindingOverrides": {
-                "browser": "xentis",
-                "direct_grant": "Xentis Direct grant"
             },
             "clientAuthenticatorType": "client-secret",
             "secret": "aeb87a87-7e0c-4cbe-af08-14301f3cead7"
@@ -844,25 +818,30 @@
                     "priority": 40
                 },
                 {
-                    "authenticator": "locale-selection-authenticator",
+                    "authenticator": "licence-check-authenticator",
                     "requirement": "REQUIRED",
                     "priority": 50
                 },
                 {
-                    "authenticator": "licence-check-authenticator",
+                    "authenticator": "locale-selection-authenticator",
                     "requirement": "REQUIRED",
                     "priority": 60
                 },
                 {
+                    "authenticator": "ldap-sync-authenticator",
+                    "requirement": "REQUIRED",
+                    "priority": 70
+                },
+                {
                     "requirement": "CONDITIONAL",
-                    "priority": 70,
+                    "priority": 80,
                     "flowAlias": "xentis Browser - Conditional OTP",
                     "autheticatorFlow": true
                 },
                 {
                     "authenticator": "xentis-notifier",
                     "requirement": "REQUIRED",
-                    "priority": 80
+                    "priority": 90
                 }
             ]
         },
@@ -887,11 +866,6 @@
                     "authenticator": "parameter-extractor-authenticator",
                     "requirement": "REQUIRED",
                     "priority": 30
-                },
-                {
-                    "authenticator": "identity-provider-redirector",
-                    "requirement": "ALTERNATIVE",
-                    "priority": 40
                 },
                 {
                     "requirement": "CONDITIONAL",
