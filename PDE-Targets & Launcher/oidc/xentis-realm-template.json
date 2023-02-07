@@ -803,6 +803,11 @@
                     "priority": 10
                 },
                 {
+                    "authenticator": "xentis-reachable-authenticator",
+                    "requirement": "REQUIRED",
+                    "priority": 11
+                },
+                {
                     "authenticator": "producer-password-authenticator",
                     "requirement": "REQUIRED",
                     "priority": 20
