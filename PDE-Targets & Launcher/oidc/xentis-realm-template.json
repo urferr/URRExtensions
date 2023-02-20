@@ -36,6 +36,9 @@
                     "client": {
                         "xentisClient": [
                             "amq-client"
+                        ],
+                        "account": [
+                            "manage-account"
                         ]
                     }
                 }
@@ -99,9 +102,6 @@
                  "XENTIS_PRODUCER"
             ],
             "clientRoles": {
-                "account": [
-                      "manage-account"
-                ],
                 "xentisTools": [
                       "XENTIS_CRYPT",
                       "XENTIS_SHELL",
