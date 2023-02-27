@@ -664,6 +664,18 @@
                     }
                 },
                 {
+                    "name": "licences",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usersessionmodel-note-mapper",
+                    "config": {
+                        "user.session.note": "licences",
+                        "access.token.claim": "true",
+                        "id.token.claim": "false",
+                        "claim.name": "licences",
+                        "jsonType.label": "JSON"
+                    }
+                },
+                {
                     "name": "UserLogId",
                     "protocol": "openid-connect",
                     "protocolMapper": "oidc-usersessionmodel-note-mapper",
