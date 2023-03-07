@@ -854,11 +854,6 @@
                     "priority": 80,
                     "flowAlias": "xentis Browser - Conditional OTP",
                     "autheticatorFlow": true
-                },
-                {
-                    "authenticator": "xentis-notifier",
-                    "requirement": "REQUIRED",
-                    "priority": 90
                 }
             ]
         },
