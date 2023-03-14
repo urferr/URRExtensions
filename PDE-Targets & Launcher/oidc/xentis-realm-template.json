@@ -676,17 +676,6 @@
                     }
                 },
                 {
-                    "name": "UserLogId",
-                    "protocol": "openid-connect",
-                    "protocolMapper": "oidc-usersessionmodel-note-mapper",
-                    "config": {
-                        "user.session.note": "userLogId",
-                        "access.token.claim": "true",
-                        "claim.name": "userLogId",
-                        "jsonType.label": "String"
-                    }
-                },
-                {
                     "name": "Failed Login Count",
                     "protocol": "openid-connect",
                     "protocolMapper": "oidc-usermodel-attribute-mapper",
