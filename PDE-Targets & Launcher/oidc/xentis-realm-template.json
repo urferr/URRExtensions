@@ -127,9 +127,7 @@
             "redirectUris": [
                 "$(env:XENTIS_EXTERNAL_URL)/*"
             ],
-            "webOrigins": [
-                "$(env:XENTIS_EXTERNAL_URL)"
-            ],
+            "webOrigins": [],
             "adminUrl": "",
             "authenticationFlowBindingOverrides": {
                 "browser": "xentis",
@@ -165,9 +163,7 @@
             "redirectUris": [
                 "$(env:XENTIS_EXTERNAL_URL)/*"
             ],
-            "webOrigins": [
-                "$(env:XENTIS_EXTERNAL_URL)"
-            ],
+            "webOrigins": [],
             "defaultClientScopes": [
                 "web-origins",
                 "roles",
@@ -217,6 +213,27 @@
          }
     ],
     "clientScopes": [
+        {
+            "name": "acr",
+            "description": "OpenID Connect scope for add acr (authentication context class reference) to the token",
+            "protocol": "openid-connect",
+            "attributes": {
+                "include.in.token.scope": "false",
+                "display.on.consent.screen": "false"
+            },
+            "protocolMappers": [
+                {
+                    "name": "acr loa level",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-acr-mapper",
+                    "consentRequired": false,
+                    "config": {
+                        "id.token.claim": "true",
+                        "access.token.claim": "true"
+                    }
+                }
+            ]
+        },
         {
             "name": "address",
             "description": "OpenID Connect built-in scope: address",
@@ -724,10 +741,12 @@
         }
     ],
     "defaultDefaultClientScopes": [
+        "role_list",
         "profile",
         "email",
         "roles",
         "web-origins",
+        "acr",
         "xentis"
     ],
     "defaultOptionalClientScopes": [
