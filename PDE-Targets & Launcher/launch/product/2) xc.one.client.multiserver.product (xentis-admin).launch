@@ -12,11 +12,11 @@
         <setEntry value="com.profidata.xentis.javamis.client:0.0.0:default:true:default:true"/>
         <setEntry value="com.xnife.context.application:6.0.0.SNAPSHOT:default:true:default:true"/>
         <setEntry value="com.xnife.remoting.client:6.0.0.SNAPSHOT:default:true:default:true"/>
-        <setEntry value="org.apache.felix.scr:2.1.24.v20200924-1939:default:true:2:true"/>
-        <setEntry value="org.eclipse.core.runtime:3.25.0.v20220506-1157:default:true:2:true"/>
-        <setEntry value="org.eclipse.equinox.common:3.16.100.v20220315-2327:default:true:2:true"/>
+        <setEntry value="org.apache.felix.scr:2.2.4:default:true:2:true"/>
+        <setEntry value="org.eclipse.core.runtime:3.26.100.v20221021-0005:default:true:2:true"/>
+        <setEntry value="org.eclipse.equinox.common:3.17.0.v20221108-1156:default:true:2:true"/>
         <setEntry value="org.eclipse.equinox.event:1.6.100.v20211021-1418:default:true:default:true"/>
-        <setEntry value="org.eclipse.equinox.simpleconfigurator:1.4.0.v20210315-2228:default:true:1:true"/>
+        <setEntry value="org.eclipse.equinox.simpleconfigurator:1.4.200.v20221111-1340:default:true:1:true"/>
         <setEntry value="org.eclipse.equinox.weaving.aspectj:1.0.400.202204060052:default:true:1:true"/>
         <setEntry value="org.eclipse.gemini.blueprint.extender:3.0.0.M01:default:true:default:true"/>
     </setAttribute>
@@ -31,7 +31,7 @@
     <booleanAttribute key="clearConfig" value="true"/>
     <booleanAttribute key="clearws" value="true"/>
     <booleanAttribute key="clearwslog" value="false"/>
-    <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/3) xc.one.client.multiserver.product"/>
+    <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/2) xc.one.client.multiserver.product (xentis-admin)"/>
     <booleanAttribute key="default" value="false"/>
     <setAttribute key="deselected_workspace_bundles"/>
     <stringAttribute key="featureDefaultLocation" value="workspace"/>
@@ -46,24 +46,26 @@
     <setAttribute key="name.schedenig.eclipse.grepconsole.NotificationsEnabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+    <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
     <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/xentisjava/infrastructure/eclipse/prototype/Start One Client Prototype.prototype&quot;/&gt;&#13;&#10;"/>
     <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="XENTIS_REMOTE_BASE-URL" value="http://pdvmapp209.profidatagroup.com:1320"/>
+        <mapEntry key="XENTIS_REMOTE_HOSTNAME" value="pdvmapp209.profidata.com"/>
+        <mapEntry key="XENTIS_REMOTE_PORT" value="1200"/>
     </mapAttribute>
     <stringAttribute key="org.eclipse.debug.core.source_locator_id" value="org.eclipse.pde.ui.launcher.PDESourceLookupDirector"/>
     <stringAttribute key="org.eclipse.debug.core.source_locator_memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;sourceLookupDirector&gt;&#13;&#10;&lt;sourceContainers duplicates=&quot;false&quot;&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;archive detectRoot=&amp;quot;true&amp;quot; path=&amp;quot;D:\JavaTargets\xc-target.platform-e46-2.3.x\plugins\org.eclipse.equinox.launcher.source_1.3.200.v20160318-1642.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.externalArchive&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;archive detectRoot=&amp;quot;true&amp;quot; path=&amp;quot;D:\JavaTargets\xc-target.platform-e46-2.3.x\plugins\org.eclipse.osgi.source_3.11.1.v20160708-1632.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.externalArchive&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;archive detectRoot=&amp;quot;true&amp;quot; path=&amp;quot;D:\JavaEnvironment\8.0\src.zip&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.externalArchive&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;javaProject name=&amp;quot;JavAMIS&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.javaProject&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.ratex.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.env.server.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.jms.shared.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/avalon-framework-4.1.5.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.env.client.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.env.shared.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.ui.base.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.etl.commons.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.jni.common.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.jni.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.sn.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/hawtbuf-1.11.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;default/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.default&quot;/&gt;&#13;&#10;&lt;/sourceContainers&gt;&#13;&#10;&lt;/sourceLookupDirector&gt;&#13;&#10;"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console -clearPersistedState"/>
     <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true -Dosgi.clean=true -Dorg.eclipse.update.reconcile=false -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=false -Dfile.encoding=UTF-8 -Dcom.xnife.runtime.mode=DEVELOPMENT -Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective -Dspring.security.strategy=MODE_GLOBAL -Dlogback.configurationFile=logback-startup.xml -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -Dcom.xnife.logging.level.ksLogger=warn -Djavax.net.ssl.trustStore=${workspace_loc}/xentisjava/truststore/XENTISTrustStore.jks -Djavax.net.ssl.trustStorePassword=changeit -Djxbrowser.chromium.dir=./browser -Djxbrowser.logging.level=FINE -Xms512m -Xmx1024m -XX:+UseStringDeduplication -XX:+ShowCodeDetailsInExceptionMessages --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/sun.awt.windows=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/sun.java2d.opengl=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true -Dosgi.clean=true -Dorg.eclipse.update.reconcile=false -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=false -Dfile.encoding=UTF-8 -Dcom.xnife.runtime.mode=DEVELOPMENT -Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective -Dspring.security.strategy=MODE_GLOBAL -Dlogback.configurationFile=logback-startup.xml -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -Dcom.xnife.logging.level.ksLogger=warn -Djavax.net.ssl.trustStore=${workspace_loc}/xentisjava/truststore/XENTISTrustStore.jks -Djavax.net.ssl.trustStorePassword=changeit -Djxbrowser.chromium.dir=./browser -DXXXjxbrowser.logging.level=FINE -DXXXdevTools.port=9222 -Xms512m -Xmx1024m -XX:+UseStringDeduplication -XX:+ShowCodeDetailsInExceptionMessages --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/sun.awt.windows=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/sun.java2d.opengl=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED"/>
     <stringAttribute key="pde.version" value="3.3"/>
     <stringAttribute key="product" value="_com.profidata.xc.one.client.build.product.xcClient"/>
     <stringAttribute key="productFile" value="\PDE-Targets &amp; Launcher\products\xc.one.client.product"/>
     <setAttribute key="selected_features">
         <setEntry value="_com.compxc.eclipse.rcp.feature:default"/>
+        <setEntry value="_com.compxc.eclipse4.spy.feature:default"/>
         <setEntry value="_com.compxc.xentis.rcp.feature:default"/>
     </setAttribute>
     <setAttribute key="selected_target_bundles">
@@ -84,7 +86,6 @@
         <setEntry value="com.nimbusds.jose.jwt@default:default"/>
         <setEntry value="com.nimbusds.lang.tag@default:default"/>
         <setEntry value="com.nimbusds.oauth2.oidc.sdk@default:default"/>
-        <setEntry value="com.profidata.web.browser@default:default"/>
         <setEntry value="com.profidatagroup.util.keymigration.model@default:default"/>
         <setEntry value="com.sun.istack.commons-runtime@default:default"/>
         <setEntry value="com.sun.jna.platform@default:default"/>
@@ -92,7 +93,8 @@
         <setEntry value="com.sun.mail.javax.mail@default:default"/>
         <setEntry value="com.sun.xml.bind@default:default"/>
         <setEntry value="com.teamdev.jxbrowser.chromium.win32.win32.x86_64@default:default"/>
-        <setEntry value="com.teamdev.jxbrowser.chromium@default:default"/>
+        <setEntry value="com.teamdev.jxbrowser.swing@default:default"/>
+        <setEntry value="com.teamdev.jxbrowser@default:default"/>
         <setEntry value="com.xnife.albireo.core@default:default"/>
         <setEntry value="com.xnife.aspectj.eclipse.e4.ui.css.swt@default:default"/>
         <setEntry value="com.xnife.aspectj.eclipse.equinox.localization@default:default"/>
@@ -198,8 +200,6 @@
         <setEntry value="org.apache.httpcomponents.httpcore@default:default"/>
         <setEntry value="org.apache.mina.core@default:default"/>
         <setEntry value="org.apache.poi@default:default"/>
-        <setEntry value="org.apache.xml.resolver@default:default"/>
-        <setEntry value="org.apache.xml.serializer@default:default"/>
         <setEntry value="org.apache.xmlbeans@default:default"/>
         <setEntry value="org.apache.xmlgraphics.commons@default:default"/>
         <setEntry value="org.aspectj.runtime@default:default"/>
@@ -207,6 +207,8 @@
         <setEntry value="org.bouncycastle.bcpg@default:default"/>
         <setEntry value="org.bouncycastle.bcprov@default:default"/>
         <setEntry value="org.dom4j@default:default"/>
+        <setEntry value="org.eclipse.ant.core@default:default"/>
+        <setEntry value="org.eclipse.compare.core@default:default"/>
         <setEntry value="org.eclipse.core.commands@default:default"/>
         <setEntry value="org.eclipse.core.contenttype.nl_de@default:default"/>
         <setEntry value="org.eclipse.core.contenttype@default:default"/>
@@ -231,6 +233,7 @@
         <setEntry value="org.eclipse.core.runtime@2:true"/>
         <setEntry value="org.eclipse.core.variables.nl_de@default:default"/>
         <setEntry value="org.eclipse.core.variables@default:default"/>
+        <setEntry value="org.eclipse.debug.core@default:default"/>
         <setEntry value="org.eclipse.draw2d@default:default"/>
         <setEntry value="org.eclipse.e4.core.commands@default:default"/>
         <setEntry value="org.eclipse.e4.core.contexts@default:default"/>
@@ -240,6 +243,16 @@
         <setEntry value="org.eclipse.e4.core.di@default:default"/>
         <setEntry value="org.eclipse.e4.core.services@default:default"/>
         <setEntry value="org.eclipse.e4.emf.xpath@default:default"/>
+        <setEntry value="org.eclipse.e4.tools.bundle.spy@default:default"/>
+        <setEntry value="org.eclipse.e4.tools.context.spy@default:default"/>
+        <setEntry value="org.eclipse.e4.tools.css.spy@default:default"/>
+        <setEntry value="org.eclipse.e4.tools.emf.ui.spy.aspectj@default:default"/>
+        <setEntry value="org.eclipse.e4.tools.emf.ui@default:default"/>
+        <setEntry value="org.eclipse.e4.tools.event.spy@default:default"/>
+        <setEntry value="org.eclipse.e4.tools.model.spy@default:default"/>
+        <setEntry value="org.eclipse.e4.tools.preference.spy@default:default"/>
+        <setEntry value="org.eclipse.e4.tools.services@default:default"/>
+        <setEntry value="org.eclipse.e4.tools.spy@default:default"/>
         <setEntry value="org.eclipse.e4.ui.bindings@default:default"/>
         <setEntry value="org.eclipse.e4.ui.css.core@default:default"/>
         <setEntry value="org.eclipse.e4.ui.css.swt.nl_de@default:default"/>
@@ -258,6 +271,8 @@
         <setEntry value="org.eclipse.e4.ui.workbench@default:default"/>
         <setEntry value="org.eclipse.emf.common.ui@default:default"/>
         <setEntry value="org.eclipse.emf.common@default:default"/>
+        <setEntry value="org.eclipse.emf.databinding.edit@default:default"/>
+        <setEntry value="org.eclipse.emf.databinding@default:default"/>
         <setEntry value="org.eclipse.emf.ecore.change@default:default"/>
         <setEntry value="org.eclipse.emf.ecore.xmi@default:default"/>
         <setEntry value="org.eclipse.emf.ecore@default:default"/>
@@ -271,9 +286,26 @@
         <setEntry value="org.eclipse.equinox.common@2:true"/>
         <setEntry value="org.eclipse.equinox.console@default:default"/>
         <setEntry value="org.eclipse.equinox.event@default:true"/>
+        <setEntry value="org.eclipse.equinox.frameworkadmin.equinox@default:default"/>
+        <setEntry value="org.eclipse.equinox.frameworkadmin@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.artifact.repository@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.core@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.director.app@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.director@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.engine@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.garbagecollector@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.jarprocessor@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.metadata.repository@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.metadata@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.publisher.eclipse@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.publisher@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.repository.tools@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.repository@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.touchpoint.eclipse@default:default"/>
         <setEntry value="org.eclipse.equinox.preferences@default:default"/>
         <setEntry value="org.eclipse.equinox.registry@default:default"/>
         <setEntry value="org.eclipse.equinox.security@default:default"/>
+        <setEntry value="org.eclipse.equinox.simpleconfigurator.manipulator@default:default"/>
         <setEntry value="org.eclipse.equinox.simpleconfigurator@1:true"/>
         <setEntry value="org.eclipse.equinox.weaving.aspectj@1:true"/>
         <setEntry value="org.eclipse.equinox.weaving.caching@default:default"/>
@@ -282,6 +314,10 @@
         <setEntry value="org.eclipse.gemini.blueprint.extender@default:true"/>
         <setEntry value="org.eclipse.gemini.blueprint.io@default:default"/>
         <setEntry value="org.eclipse.help@default:default"/>
+        <setEntry value="org.eclipse.jdt.core@default:default"/>
+        <setEntry value="org.eclipse.jdt.debug@default:default"/>
+        <setEntry value="org.eclipse.jdt.launching@default:default"/>
+        <setEntry value="org.eclipse.jdt.ui@default:default"/>
         <setEntry value="org.eclipse.jetty.client@default:default"/>
         <setEntry value="org.eclipse.jetty.http@default:default"/>
         <setEntry value="org.eclipse.jetty.io@default:default"/>
@@ -303,8 +339,11 @@
         <setEntry value="org.eclipse.osgi.services@default:default"/>
         <setEntry value="org.eclipse.osgi.util@default:default"/>
         <setEntry value="org.eclipse.osgi@default:default"/>
+        <setEntry value="org.eclipse.pde.build@default:default"/>
+        <setEntry value="org.eclipse.pde.core@default:default"/>
         <setEntry value="org.eclipse.swt.win32.win32.x86_64@default:default"/>
         <setEntry value="org.eclipse.swt@default:default"/>
+        <setEntry value="org.eclipse.team.core@default:default"/>
         <setEntry value="org.eclipse.text.nl_de@default:default"/>
         <setEntry value="org.eclipse.text@default:default"/>
         <setEntry value="org.eclipse.ui.forms.nl_de@default:default"/>
@@ -317,6 +356,7 @@
         <setEntry value="org.eclipse.ui.workbench.nl_de@default:default"/>
         <setEntry value="org.eclipse.ui.workbench@default:default"/>
         <setEntry value="org.eclipse.ui@default:default"/>
+        <setEntry value="org.eclipse.update.configurator@default:default"/>
         <setEntry value="org.eclipse.urischeme@default:default"/>
         <setEntry value="org.eclipse.wst.common.core@default:default"/>
         <setEntry value="org.eclipse.wst.common.uriresolver@default:default"/>
@@ -338,7 +378,16 @@
         <setEntry value="org.objectweb.asm.tree@default:default"/>
         <setEntry value="org.objectweb.asm.util@default:default"/>
         <setEntry value="org.objectweb.asm@default:default"/>
+        <setEntry value="org.osgi.service.cm@default:default"/>
+        <setEntry value="org.osgi.service.component@default:default"/>
+        <setEntry value="org.osgi.service.device@default:default"/>
+        <setEntry value="org.osgi.service.event@default:default"/>
+        <setEntry value="org.osgi.service.metatype@default:default"/>
         <setEntry value="org.osgi.service.prefs@default:default"/>
+        <setEntry value="org.osgi.service.provisioning@default:default"/>
+        <setEntry value="org.osgi.service.upnp@default:default"/>
+        <setEntry value="org.osgi.service.useradmin@default:default"/>
+        <setEntry value="org.osgi.service.wireadmin@default:default"/>
         <setEntry value="org.osgi.util.function@default:default"/>
         <setEntry value="org.osgi.util.measurement@default:default"/>
         <setEntry value="org.osgi.util.position@default:default"/>
@@ -348,6 +397,8 @@
         <setEntry value="org.quickfixj.messages-fix42@default:default"/>
         <setEntry value="org.quickfixj.messages-fix44@default:default"/>
         <setEntry value="org.reactivestreams.reactive.streams@default:default"/>
+        <setEntry value="org.sat4j.core@default:default"/>
+        <setEntry value="org.sat4j.pb@default:default"/>
         <setEntry value="org.springframework.aop@default:default"/>
         <setEntry value="org.springframework.aspects@default:default"/>
         <setEntry value="org.springframework.beans@default:default"/>
@@ -377,7 +428,7 @@
         <setEntry value="org.springframework.web@default:default"/>
         <setEntry value="org.springframework.webflux@default:default"/>
         <setEntry value="org.springframework.webmvc@default:default"/>
-        <setEntry value="org.tukaani.xz*1.9.0.v20210624-1259@default:default"/>
+        <setEntry value="org.tukaani.xz@default:default"/>
         <setEntry value="org.w3c.css.sac@default:default"/>
         <setEntry value="org.w3c.dom.events@default:default"/>
         <setEntry value="org.w3c.dom.smil@default:default"/>
@@ -414,7 +465,6 @@
         <setEntry value="com.profidata.org.jfree.chart.configuration@default:default"/>
         <setEntry value="com.profidata.platform.client.integritycheck@default:default"/>
         <setEntry value="com.profidata.platform.client.service@default:true"/>
-        <setEntry value="com.profidata.reporting.common@default:default"/>
         <setEntry value="com.profidata.risk.commons@default:default"/>
         <setEntry value="com.profidata.xc.activemq.client.configuration@default:default"/>
         <setEntry value="com.profidata.xc.admin.presentation@default:default"/>
@@ -478,9 +528,11 @@
         <setEntry value="com.profidata.xentis.jni@default:default"/>
         <setEntry value="com.profidata.xentis.jxbrowser.chromium.license@default:default"/>
         <setEntry value="com.profidata.xentis.kommserver.shared@default:default"/>
+        <setEntry value="com.profidata.xentis.reporting.common@default:default"/>
         <setEntry value="com.profidata.xentis.syscode@default:default"/>
         <setEntry value="com.profidata.xentis.ui.base@default:default"/>
         <setEntry value="com.profidata.xentis.user.shared@default:default"/>
+        <setEntry value="com.profidata.xentis.webbrowser@default:default"/>
         <setEntry value="com.profidata.xnife.albireo.core.configuration@default:default"/>
     </setAttribute>
     <booleanAttribute key="show_selected_only" value="false"/>

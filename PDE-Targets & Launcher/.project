@@ -16,11 +16,6 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>jamavis_config</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/xentisjava/target/platform/Resources/config</locationURI>
-		</link>
-		<link>
 			<name>xentisjava-buildsrc</name>
 			<type>2</type>
 			<locationURI>WORKSPACE_LOC/xentisjava/buildSrc</locationURI>
