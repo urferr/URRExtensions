@@ -9,7 +9,7 @@
     </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ALLOW_TERMINATE" value="false"/>
     <mapAttribute key="org.eclipse.jdt.launching.CONNECT_MAP">
-        <mapEntry key="hostname" value="pdvmdev15.profidatagroup.com"/>
+        <mapEntry key="hostname" value="pdvmdev15.profidata.com"/>
         <mapEntry key="port" value="10047"/>
     </mapAttribute>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.keycloak.login"/>

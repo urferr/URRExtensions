@@ -6,6 +6,7 @@
     <setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+    <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
     <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/xentisjava/infrastructure/eclipse/prototype/Start Excel Reporting Slave Prototype.prototype&quot;/&gt;&#13;&#10;"/>
     <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
@@ -16,7 +17,7 @@
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="SERVER_PORT" value="7036"/>
-        <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev15.profidatagroup.com:10010"/>
+        <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev15.profidata.com:10010"/>
         <mapEntry key="SPRING_PROFILES_ACTIVE" value="secret,urr,ide"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>

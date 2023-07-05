@@ -74,7 +74,7 @@
     <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="HOSTNAME" value="ws-2724"/>
-        <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev15.profidatagroup.com:10010"/>
+        <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev15.profidata.com:10010"/>
         <mapEntry key="SPRING_PROFILES_ACTIVE" value="secret,oracle,idbinary,urr,ide"/>
     </mapAttribute>
     <stringAttribute key="org.eclipse.debug.core.source_locator_id" value="org.eclipse.pde.ui.launcher.PDESourceLookupDirector"/>

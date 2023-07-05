@@ -51,7 +51,7 @@
     <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="SPRING_PROFILES_ACTIVE" value="urr,ide"/>
-        <mapEntry key="XENTIS_REMOTE_HOSTNAME" value="pdvmdev15.profidatagroup.com"/>
+        <mapEntry key="XENTIS_REMOTE_HOSTNAME" value="pdvmdev15.profidata.com"/>
         <mapEntry key="XENTIS_REMOTE_PORT" value="7025"/>
     </mapAttribute>
     <stringAttribute key="org.eclipse.debug.core.source_locator_id" value="org.eclipse.pde.ui.launcher.PDESourceLookupDirector"/>
