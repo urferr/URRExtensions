@@ -18,7 +18,7 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="SERVER_PORT" value="7046"/>
+        <mapEntry key="SERVER_PORT" value="7146"/>
         <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev15.profidata.com:10010"/>
         <mapEntry key="SPRING_PROFILES_ACTIVE" value="secret,urr,artemis,ide"/>
     </mapAttribute>

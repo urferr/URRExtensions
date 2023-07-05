@@ -16,7 +16,7 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="SERVER_PORT" value="7044"/>
+        <mapEntry key="SERVER_PORT" value="7144"/>
         <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev15.profidata.com:10010"/>
         <mapEntry key="SPRING_PROFILES_ACTIVE" value="secret,urr,artemis,ide"/>
         <mapEntry key="XENTIS_RUNTIME_DIR" value="/working/xentis/var"/>

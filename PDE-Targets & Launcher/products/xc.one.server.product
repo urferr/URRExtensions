@@ -32,15 +32,15 @@
 
 -Dcom.xnife.logging.level.com.profidata.xc.codevalue.service.impl.CodeValueServiceImpl=debug
 
--Dorg.osgi.service.http.port=7030
--Dorg.eclipse.equinox.http.jetty.http.port=7030
+-Dorg.osgi.service.http.port=7130
+-Dorg.eclipse.equinox.http.jetty.http.port=7130
 -Dorg.eclipse.equinox.http.jetty.context.path=/xcas
 
 -Doracle.net.tns_admin=${env_var:TNS_ADMIN}
 -Dfile.encoding=&quot;UTF-8&quot;
 
--DXXXspring.boot.admin.client.url=http://pdvmdev15:7010
--DXXXspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7030
+-DXXXspring.boot.admin.client.url=http://pdvmdev15:7110
+-DXXXspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7130
 
 -ea
 -Xms256m
