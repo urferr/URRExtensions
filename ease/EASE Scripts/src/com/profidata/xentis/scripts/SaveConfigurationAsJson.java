@@ -434,6 +434,7 @@ public class SaveConfigurationAsJson {
 		ProjectConfiguration aConfiguration;
 
 		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		allBundles.put("com.profidata.xc.customizingconsole.presentation.test", aConfiguration);
 
