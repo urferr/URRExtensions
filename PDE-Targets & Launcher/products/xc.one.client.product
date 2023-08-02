@@ -35,7 +35,6 @@
 
 -Dspring.security.strategy=MODE_GLOBAL
 
-
 -Dlogback.configurationFile=logback-startup.xml
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
 -Dcom.xnife.logging.level.ksLogger=warn
