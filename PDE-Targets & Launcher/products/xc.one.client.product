@@ -44,6 +44,7 @@
 -Djavax.net.ssl.trustStorePassword=changeit
 
 -Djxbrowser.chromium.dir=./browser
+-DXXXjxbrowser.devtools.show=true
 -DXXXjxbrowser.logging.level=FINE
 -DXXXdevTools.port=9222
 
