@@ -40,7 +40,7 @@
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
 -Dcom.xnife.logging.level.ksLogger=warn
 
--Djavax.net.ssl.trustStore=${workspace_loc}/xentisjava/truststore/XENTISTrustStore.jks
+-Djavax.net.ssl.trustStore=${workspace_loc}/xentis/xentisjava/truststore/XENTISTrustStore.jks
 -Djavax.net.ssl.trustStorePassword=changeit
 
 -Djxbrowser.chromium.dir=./browser
