@@ -60,13 +60,12 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console -clearPersistedState"/>
     <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true -Dosgi.clean=true -Dorg.eclipse.update.reconcile=false -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=false -Dfile.encoding=UTF-8 -Dcom.xnife.runtime.mode=DEVELOPMENT -Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective -Dspring.security.strategy=MODE_GLOBAL -Dlogback.configurationFile=logback-startup.xml -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -Dcom.xnife.logging.level.ksLogger=warn -Djavax.net.ssl.trustStore=${workspace_loc}/xentisjava/truststore/XENTISTrustStore.jks -Djavax.net.ssl.trustStorePassword=changeit -Djxbrowser.chromium.dir=./browser -DXXXjxbrowser.logging.level=FINE -DXXXdevTools.port=9222 -Xms512m -Xmx1024m -XX:+UseStringDeduplication -XX:+ShowCodeDetailsInExceptionMessages --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/sun.awt.windows=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/sun.java2d.opengl=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true -Dosgi.clean=true -Dorg.eclipse.update.reconcile=false -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=false -Dfile.encoding=UTF-8 -Dcom.xnife.runtime.mode=DEVELOPMENT -Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective -Dspring.security.strategy=MODE_GLOBAL -Dlogback.configurationFile=logback-startup.xml -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -Dcom.xnife.logging.level.ksLogger=warn -Djavax.net.ssl.trustStore=${workspace_loc}/xentis/xentisjava/truststore/XENTISTrustStore.jks -Djavax.net.ssl.trustStorePassword=changeit -Djxbrowser.chromium.dir=./browser -DXXXjxbrowser.logging.level=FINE -DXXXdevTools.port=9222 -Xms512m -Xmx1024m -XX:+UseStringDeduplication -XX:+ShowCodeDetailsInExceptionMessages --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/sun.awt.windows=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/sun.java2d.opengl=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED"/>
     <stringAttribute key="pde.version" value="3.3"/>
     <stringAttribute key="product" value="_com.profidata.xc.one.client.build.product.xcClient"/>
     <stringAttribute key="productFile" value="\PDE-Targets &amp; Launcher\products\xc.one.client.product"/>
     <setAttribute key="selected_features">
         <setEntry value="_com.compxc.eclipse.rcp.feature:default"/>
-        <setEntry value="_com.compxc.eclipse4.spy.feature:default"/>
         <setEntry value="_com.compxc.xentis.rcp.feature:default"/>
     </setAttribute>
     <setAttribute key="selected_target_bundles">
@@ -174,8 +173,6 @@
         <setEntry value="org.bouncycastle.bcpg@default:default"/>
         <setEntry value="org.bouncycastle.bcprov@default:default"/>
         <setEntry value="org.dom4j@default:default"/>
-        <setEntry value="org.eclipse.ant.core@default:default"/>
-        <setEntry value="org.eclipse.compare.core@default:default"/>
         <setEntry value="org.eclipse.core.commands@default:default"/>
         <setEntry value="org.eclipse.core.contenttype.nl_de@default:default"/>
         <setEntry value="org.eclipse.core.contenttype@default:default"/>
@@ -200,7 +197,6 @@
         <setEntry value="org.eclipse.core.runtime@2:true"/>
         <setEntry value="org.eclipse.core.variables.nl_de@default:default"/>
         <setEntry value="org.eclipse.core.variables@default:default"/>
-        <setEntry value="org.eclipse.debug.core@default:default"/>
         <setEntry value="org.eclipse.draw2d@default:default"/>
         <setEntry value="org.eclipse.e4.core.commands@default:default"/>
         <setEntry value="org.eclipse.e4.core.contexts@default:default"/>
@@ -210,16 +206,6 @@
         <setEntry value="org.eclipse.e4.core.di@default:default"/>
         <setEntry value="org.eclipse.e4.core.services@default:default"/>
         <setEntry value="org.eclipse.e4.emf.xpath@default:default"/>
-        <setEntry value="org.eclipse.e4.tools.bundle.spy@default:default"/>
-        <setEntry value="org.eclipse.e4.tools.context.spy@default:default"/>
-        <setEntry value="org.eclipse.e4.tools.css.spy@default:default"/>
-        <setEntry value="org.eclipse.e4.tools.emf.ui.spy.aspectj@default:default"/>
-        <setEntry value="org.eclipse.e4.tools.emf.ui@default:default"/>
-        <setEntry value="org.eclipse.e4.tools.event.spy@default:default"/>
-        <setEntry value="org.eclipse.e4.tools.model.spy@default:default"/>
-        <setEntry value="org.eclipse.e4.tools.preference.spy@default:default"/>
-        <setEntry value="org.eclipse.e4.tools.services@default:default"/>
-        <setEntry value="org.eclipse.e4.tools.spy@default:default"/>
         <setEntry value="org.eclipse.e4.ui.bindings@default:default"/>
         <setEntry value="org.eclipse.e4.ui.css.core@default:default"/>
         <setEntry value="org.eclipse.e4.ui.css.swt.nl_de@default:default"/>
@@ -238,8 +224,6 @@
         <setEntry value="org.eclipse.e4.ui.workbench@default:default"/>
         <setEntry value="org.eclipse.emf.common.ui@default:default"/>
         <setEntry value="org.eclipse.emf.common@default:default"/>
-        <setEntry value="org.eclipse.emf.databinding.edit@default:default"/>
-        <setEntry value="org.eclipse.emf.databinding@default:default"/>
         <setEntry value="org.eclipse.emf.ecore.change@default:default"/>
         <setEntry value="org.eclipse.emf.ecore.xmi@default:default"/>
         <setEntry value="org.eclipse.emf.ecore@default:default"/>
@@ -253,26 +237,9 @@
         <setEntry value="org.eclipse.equinox.common@2:true"/>
         <setEntry value="org.eclipse.equinox.console@default:default"/>
         <setEntry value="org.eclipse.equinox.event@default:true"/>
-        <setEntry value="org.eclipse.equinox.frameworkadmin.equinox@default:default"/>
-        <setEntry value="org.eclipse.equinox.frameworkadmin@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.artifact.repository@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.core@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.director.app@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.director@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.engine@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.garbagecollector@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.jarprocessor@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.metadata.repository@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.metadata@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.publisher.eclipse@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.publisher@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.repository.tools@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.repository@default:default"/>
-        <setEntry value="org.eclipse.equinox.p2.touchpoint.eclipse@default:default"/>
         <setEntry value="org.eclipse.equinox.preferences@default:default"/>
         <setEntry value="org.eclipse.equinox.registry@default:default"/>
         <setEntry value="org.eclipse.equinox.security@default:default"/>
-        <setEntry value="org.eclipse.equinox.simpleconfigurator.manipulator@default:default"/>
         <setEntry value="org.eclipse.equinox.simpleconfigurator@1:true"/>
         <setEntry value="org.eclipse.equinox.weaving.aspectj@1:true"/>
         <setEntry value="org.eclipse.equinox.weaving.caching@default:default"/>
@@ -281,10 +248,6 @@
         <setEntry value="org.eclipse.gemini.blueprint.extender@default:true"/>
         <setEntry value="org.eclipse.gemini.blueprint.io@default:default"/>
         <setEntry value="org.eclipse.help@default:default"/>
-        <setEntry value="org.eclipse.jdt.core@default:default"/>
-        <setEntry value="org.eclipse.jdt.debug@default:default"/>
-        <setEntry value="org.eclipse.jdt.launching@default:default"/>
-        <setEntry value="org.eclipse.jdt.ui@default:default"/>
         <setEntry value="org.eclipse.jetty.client@default:default"/>
         <setEntry value="org.eclipse.jetty.http@default:default"/>
         <setEntry value="org.eclipse.jetty.io@default:default"/>
@@ -306,11 +269,8 @@
         <setEntry value="org.eclipse.osgi.services@default:default"/>
         <setEntry value="org.eclipse.osgi.util@default:default"/>
         <setEntry value="org.eclipse.osgi@default:default"/>
-        <setEntry value="org.eclipse.pde.build@default:default"/>
-        <setEntry value="org.eclipse.pde.core@default:default"/>
         <setEntry value="org.eclipse.swt.win32.win32.x86_64@default:default"/>
         <setEntry value="org.eclipse.swt@default:default"/>
-        <setEntry value="org.eclipse.team.core@default:default"/>
         <setEntry value="org.eclipse.text.nl_de@default:default"/>
         <setEntry value="org.eclipse.text@default:default"/>
         <setEntry value="org.eclipse.ui.forms.nl_de@default:default"/>
@@ -323,7 +283,6 @@
         <setEntry value="org.eclipse.ui.workbench.nl_de@default:default"/>
         <setEntry value="org.eclipse.ui.workbench@default:default"/>
         <setEntry value="org.eclipse.ui@default:default"/>
-        <setEntry value="org.eclipse.update.configurator@default:default"/>
         <setEntry value="org.eclipse.urischeme@default:default"/>
         <setEntry value="org.eclipse.wst.common.core@default:default"/>
         <setEntry value="org.eclipse.wst.common.uriresolver@default:default"/>
@@ -364,8 +323,6 @@
         <setEntry value="org.quickfixj.messages-fix42@default:default"/>
         <setEntry value="org.quickfixj.messages-fix44@default:default"/>
         <setEntry value="org.reactivestreams.reactive.streams@default:default"/>
-        <setEntry value="org.sat4j.core@default:default"/>
-        <setEntry value="org.sat4j.pb@default:default"/>
         <setEntry value="org.springframework.aop@default:default"/>
         <setEntry value="org.springframework.aspects@default:default"/>
         <setEntry value="org.springframework.beans@default:default"/>
