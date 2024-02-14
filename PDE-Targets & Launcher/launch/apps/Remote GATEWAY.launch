@@ -9,8 +9,8 @@
     </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ALLOW_TERMINATE" value="false"/>
     <mapAttribute key="org.eclipse.jdt.launching.CONNECT_MAP">
-        <mapEntry key="hostname" value="pdvmdev15"/>
-        <mapEntry key="port" value="7021"/>
+        <mapEntry key="hostname" value="pdvmdev24.profidata.com"/>
+        <mapEntry key="port" value="7121"/>
     </mapAttribute>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="gateway"/>
     <stringAttribute key="org.eclipse.jdt.launching.VM_CONNECTOR_ID" value="org.eclipse.jdt.launching.socketAttachConnector"/>

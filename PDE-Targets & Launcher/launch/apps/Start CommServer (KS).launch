@@ -16,6 +16,7 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="SPRING_CLOUD_CONFIG_LABEL" value="6.0.0"/>
         <mapEntry key="SPRING_PROFILES_ACTIVE" value="urr,ide"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>

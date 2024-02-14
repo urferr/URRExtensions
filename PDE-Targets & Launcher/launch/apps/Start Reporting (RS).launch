@@ -19,7 +19,8 @@
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="SERVER_PORT" value="7140"/>
-        <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev15.profidata.com:10010"/>
+        <mapEntry key="SPRING_CLOUD_CONFIG_LABEL" value="6.0.0"/>
+        <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev24.profidata.com:10010"/>
         <mapEntry key="SPRING_PROFILES_ACTIVE" value="urr,ide"/>
     </mapAttribute>
     <stringAttribute key="org.eclipse.debug.core.source_locator_id" value="org.eclipse.jdt.launching.sourceLocator.JavaSourceLookupDirector"/>
