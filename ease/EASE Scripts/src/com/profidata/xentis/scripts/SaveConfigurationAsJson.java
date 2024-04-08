@@ -199,6 +199,10 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.xnife.presentation.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
+		allBundles.put("com.xnife.osgi.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		aConfiguration.additionalBundles.add("jcl.over.slf4j");
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
@@ -279,6 +283,32 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		allBundles.put("com.profidata.xc.metadata.service.impl.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("io.netty.channel.unix");
+		aConfiguration.additionalPackageDependencies.add("io.netty.handler.codec");
+		aConfiguration.additionalPackageDependencies.add("io.netty.handler.codec.dns");
+		aConfiguration.additionalPackageDependencies.add("io.netty.handler.codec.http2");
+		aConfiguration.additionalPackageDependencies.add("io.netty.resolver");
+		aConfiguration.additionalPackageDependencies.add("io.netty.resolver.dns");
+		aConfiguration.additionalPackageDependencies.add("okhttp3");
+		aConfiguration.additionalPackageDependencies.add("okio");
+		aConfiguration.additionalPackageDependencies.add("org.springframework.expression");
+		aConfiguration.additionalPackageDependencies.add("org.springframework.http.codec");
+		allBundles.put("com.profidata.xc.persistence.service.impl.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalPackageDependencies.add("io.netty.channel.unix");
+		aConfiguration.additionalPackageDependencies.add("io.netty.handler.codec");
+		aConfiguration.additionalPackageDependencies.add("io.netty.handler.codec.dns");
+		aConfiguration.additionalPackageDependencies.add("io.netty.handler.codec.http2");
+		aConfiguration.additionalPackageDependencies.add("io.netty.resolver");
+		aConfiguration.additionalPackageDependencies.add("io.netty.resolver.dns");
+		aConfiguration.additionalPackageDependencies.add("okhttp3");
+		aConfiguration.additionalPackageDependencies.add("okio");
+		aConfiguration.additionalPackageDependencies.add("org.springframework.expression");
+		aConfiguration.additionalPackageDependencies.add("org.springframework.http.codec");
+		allBundles.put("com.profidata.platform.client.service.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
@@ -511,6 +541,9 @@ public class SaveConfigurationAsJson {
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalPackageDependencies.add("org.apache.commons.text.lookup");
 		aConfiguration.additionalPackageDependencies.add("com.fasterxml.uuid");
+		aConfiguration.additionalPackageDependencies.add("net.minidev.json");
+		aConfiguration.additionalPackageDependencies.add("com.nimbusds.openid.connect.sdk.token");
+		aConfiguration.additionalPackageDependencies.add("com.nimbusds.oauth2.sdk.token");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		aConfiguration.additionalBundles.add("net.bytebuddy.byte-buddy-agent");
 		aConfiguration.additionalBundles.add("org.mockito.inline");
