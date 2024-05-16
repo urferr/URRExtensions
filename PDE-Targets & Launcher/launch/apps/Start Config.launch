@@ -6,6 +6,7 @@
     <setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+    <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
     <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/xentisjava/infrastructure/eclipse/prototype/Start Config Prototype.prototype&quot;/&gt;&#13;&#10;"/>
     <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
@@ -20,13 +21,13 @@
         <mapEntry key="EAMIS_APP_VAR" value="bin"/>
         <mapEntry key="EAMIS_CLUSTER_INSTANCE_NAME" value="Xentis"/>
         <mapEntry key="EAMIS_CLUSTER_NAME" value="local"/>
-        <mapEntry key="EAMIS_CONFIG_API_PORT" value="7027"/>
+        <mapEntry key="EAMIS_CONFIG_API_PORT" value="7327"/>
         <mapEntry key="EAMIS_CONFIG_CLEAN_RESOURCES" value="false"/>
         <mapEntry key="EAMIS_CONFIG_CLUSTERMODE" value="false"/>
         <mapEntry key="EAMIS_CONFIG_GIT_HOME" value="bin"/>
         <mapEntry key="EAMIS_CONFIG_SECURE" value="false"/>
         <mapEntry key="EAMIS_CONFIG_WORKMODE" value="ADMIN"/>
-        <mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://pdvmdev15.profidatagroup.com:7005?wireFormat.maxInactivityDuration=600000)"/>
+        <mapEntry key="EAMIS_JMS_URL" value="failover://(tcp://pdvmdev15.profidatagroup.com:7305?wireFormat.maxInactivityDuration=600000)"/>
         <mapEntry key="EAMIS_PACKAGES" value="/working/xentis/packages"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>

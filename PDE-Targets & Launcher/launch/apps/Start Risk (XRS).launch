@@ -8,6 +8,7 @@
     <setAttribute key="name.schedenig.eclipse.grepconsole.NotificationsEnabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+    <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
     <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/xentisjava/infrastructure/eclipse/prototype/Start Risk (XRS) Prototype.prototype&quot;/&gt;&#13;&#10;"/>
     <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
@@ -17,12 +18,12 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="EAMIS_CLUSTER_ETC" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/etc"/>
+        <mapEntry key="EAMIS_CLUSTER_ETC" value="//pdvmdev24/urr/urr/xentis580branch_run/xentis/etc"/>
         <mapEntry key="EAMIS_CLUSTER_INSTANCE_NAME" value="xentis"/>
         <mapEntry key="EAMIS_CONFIG_SECURE" value="false"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev15.profidatagroup.com"/>
-        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7020"/>
-        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev15/urr/urr/xentisMSTbranch_run/xentis/packages"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_NODE" value="pdvmdev24.profidatagroup.com"/>
+        <mapEntry key="EAMIS_HTTPGATEWAY_PORT" value="7320"/>
+        <mapEntry key="EAMIS_PACKAGES" value="//pdvmdev24/urr/urr/xentis580branch_run/xentis/packages"/>
     </mapAttribute>
     <stringAttribute key="org.eclipse.debug.core.source_locator_id" value="org.eclipse.jdt.launching.sourceLocator.JavaSourceLookupDirector"/>
     <stringAttribute key="org.eclipse.debug.core.source_locator_memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;sourceLookupDirector&gt;&#13;&#10;&lt;sourceContainers duplicates=&quot;false&quot;&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;archive detectRoot=&amp;quot;true&amp;quot; path=&amp;quot;D:\JavaProjects\xc552\ws\xentisjava\target\platform\plugins\activemq-client-5.15.3-sources.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.externalArchive&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;archive detectRoot=&amp;quot;true&amp;quot; path=&amp;quot;D:\Java\.gradle\caches\modules-2\files-2.1\com.ers.riskengine\re-service-public-api\2017.1.03.9\2f429a31117239d81d49c85106f64682a0d83c9a\re-service-public-api-2017.1.03.9-sources.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.externalArchive&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;default/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.default&quot;/&gt;&#13;&#10;&lt;/sourceContainers&gt;&#13;&#10;&lt;/sourceLookupDirector&gt;&#13;&#10;"/>
