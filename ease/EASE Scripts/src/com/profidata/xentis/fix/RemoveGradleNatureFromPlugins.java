@@ -6,11 +6,11 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.IProject;
@@ -38,7 +38,7 @@ public class RemoveGradleNatureFromPlugins {
 
 		ignoreTestFragmentDependencies = new HashMap<>();
 
-		somePackages = new HashSet<>();
+		somePackages = new TreeSet<>();
 		somePackages.add("com.profidata.etl.commons");
 		somePackages.add("com.profidata.xentis.env.client");
 		somePackages.add("com.profidata.xentis.env.server");
@@ -47,7 +47,7 @@ public class RemoveGradleNatureFromPlugins {
 		somePackages.add("com.profidatagroup.javamis.client.ui.mainframe.schnittstelle.editor"); // don't know were it gets from???
 		ignoreTestFragmentDependencies.put("com.profidata.xentis.javamis.test", somePackages);
 
-		somePackages = new HashSet<>();
+		somePackages = new TreeSet<>();
 		somePackages.add("com.profidatagroup.javamis.client.rmi.presentation.snRATEX.definition"); // don't know were it gets from???
 		ignoreTestFragmentDependencies.put("com.profidata.xentis.javamis.integration", somePackages);
 
@@ -78,7 +78,7 @@ public class RemoveGradleNatureFromPlugins {
 					ProjectWrapper aProjectWrapper = ProjectWrapper.of(theProject)
 							.asJavaProject()
 							.createTestFragmentPackageDependencies(aWorkspace, () -> {
-								Set<String> someAdditionalPackages = new HashSet<>();
+								Set<String> someAdditionalPackages = new TreeSet<>();
 								// package org.hamcrest is opften used to run unit tests
 								someAdditionalPackages.add("org.hamcrest");
 
@@ -200,7 +200,7 @@ public class RemoveGradleNatureFromPlugins {
 
 			aProjectWrapper
 					.createTestFragmentManifest(theProject, "JavaSE-1.8", () -> {
-						Set<String> someAdditionalPackages = new HashSet<>();
+						Set<String> someAdditionalPackages = new TreeSet<>();
 						// package org.hamcrest is opften used to run unit tests
 						someAdditionalPackages.add("org.hamcrest;core=split");
 
