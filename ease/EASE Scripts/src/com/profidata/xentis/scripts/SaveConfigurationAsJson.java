@@ -416,15 +416,28 @@ public class SaveConfigurationAsJson {
 		allBundles.put("com.compxc.frontoffice.presentation.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
-		aConfiguration.additionalPackageDependencies.add("org.springframework.remoting.support");
+		aConfiguration.additionalPackageDependencies.add("com.xnife.springframework.remoting.support");
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalPackageDependencies.add("org.springframework.expression");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		allBundles.put("com.profidata.xc.frontoffice.server.metadata.test", aConfiguration);
 
 		aConfiguration = new ProjectConfiguration(null);
+		aConfiguration.additionalClasspathEntries.add(new ClasspathEntry(ClasspathEntryType.Project, "com.profidata.xc.frontoffice.server.remote.proxy"));
+		aConfiguration.additionalPackageDependencies.add("javax.annotation");
+		aConfiguration.additionalPackageDependencies.add("javax.transaction");
+		aConfiguration.additionalPackageDependencies.add("com.profidata.xc.frontoffice.servicefacade");
+		aConfiguration.additionalPackageDependencies.add("org.springframework.expression");
+		aConfiguration.additionalPackageDependencies.add("org.springframework.security.config.oauth2.client");
+		aConfiguration.additionalPackageDependencies.add("com.nimbusds.common.contenttype");
+		aConfiguration.additionalPackageDependencies.add("net.minidev.asm");
+		aConfiguration.additionalPackageDependencies.add("org.jboss.logging");
+		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
+		allBundles.put("com.profidata.xc.frontoffice.server.remote.proxy.test", aConfiguration);
+
+		aConfiguration = new ProjectConfiguration(null);
 		aConfiguration.additionalPackageDependencies.add("org.hamcrest;core=split");
-		aConfiguration.additionalPackageDependencies.add("org.springframework.remoting.support");
+		aConfiguration.additionalPackageDependencies.add("com.xnife.springframework.remoting.support");
 		aConfiguration.additionalPackageDependencies.add("org.mockito.stubbing");
 		aConfiguration.additionalBundles.addAll(someAdditionalTestRuntimeBundles);
 		allBundles.put("com.profidata.xc.frontoffice.service.impl.test", aConfiguration);

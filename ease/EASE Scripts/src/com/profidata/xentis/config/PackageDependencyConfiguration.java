@@ -105,7 +105,7 @@ public class PackageDependencyConfiguration {
 		additionalTestFragmentPackageDependencies.put("com.compxc.frontoffice.presentation.test", somePackages);
 
 		somePackages = new TreeSet<>();
-		somePackages.add("org.springframework.remoting.support");
+		somePackages.add("com.xnife.springframework.remoting.support");
 		somePackages.add("org.mockito.stubbing");
 		additionalTestFragmentPackageDependencies.put("com.profidata.xc.frontoffice.service.impl.test", somePackages);
 
@@ -122,7 +122,7 @@ public class PackageDependencyConfiguration {
 		additionalTestFragmentPackageDependencies.put("com.profidata.xc.rest.analysis.service.impl.test", somePackages);
 
 		somePackages = new TreeSet<>();
-		somePackages.add("org.springframework.remoting.support");
+		somePackages.add("com.xnife.springframework.remoting.support");
 		additionalTestFragmentPackageDependencies.put("com.profidata.xc.frontoffice.server.metadata.test", somePackages);
 	}
 
