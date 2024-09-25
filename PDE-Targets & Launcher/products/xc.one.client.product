@@ -39,6 +39,7 @@
 
 -Dlogback.configurationFile=logback-startup.xml
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
+-Dcom.xnife.logging.level.com.xnife.remoting.reactive.WebClientLogInterceptor=debug
 -Dcom.xnife.logging.level.ksLogger=warn
 -DXXXcom.xnife.logging.level.org.apache.activemq.transport.failover=trace
 -DXXXcom.xnife.logging.level.com.profidatagroup.javamis.client.ui.JavAmisLoader=debug

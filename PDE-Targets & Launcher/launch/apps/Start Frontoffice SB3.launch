@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <setAttribute key="name.schedenig.eclipse.grepconsole.DisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.EnabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.FilterDisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.FilterEnabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
+    <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
+    <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
+    <stringAttribute key="org.eclipse.debug.core.ATTR_PROTOTYPE" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/xentisjava/infrastructure/eclipse/prototype/Start Frontoffice Prototype SB3.prototype&quot;/&gt;&#13;&#10;"/>
+    <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/com.profidata.frontoffice.app/src/main/java/com/profidata/frontoffice/app/FrontofficeStarter.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="SERVER_PORT" value="7158"/>
+        <mapEntry key="SPRING_CLOUD_CONFIG_LABEL" value="6.0.0"/>
+        <mapEntry key="SPRING_PROFILES_ACTIVE" value="secret,oracle,idbinary,urr,ide,OA3Validate"/>
+        <mapEntry key="XENTIS_SERVICE_CONFIG-URL" value="http://pdvmdev24.profidata.com:10010"/>
+    </mapAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.frontoffice.app.FrontofficeStarter"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="com.profidata.frontoffice.app"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.frontoffice.app"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Duser.language=en&#13;&#10;-Duser.country=US&#13;&#10;&#13;&#10;-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;-Dfile.encoding=UTF-8&#13;&#10;&#13;&#10;-Dlogging.level.org.hibernate.SQL=debug&#13;&#10;-DXXXlogging.level.org.hibernate.type.descriptor.sql.BasicBinder=trace&#13;&#10;-DXXXlogging.level.org.hibernate.orm.jdbc.bind=trace&#13;&#10;&#13;&#10;-Dspring.mvc.problemdetails.enabled=true&#13;&#10;-Dserver.error.include-stacktrace=NEVER&#13;&#10;&#13;&#10;&#13;&#10;--add-opens java.base/jdk.internal.misc=ALL-UNNAMED"/>
+</launchConfiguration>
