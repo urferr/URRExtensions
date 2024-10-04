@@ -12,12 +12,13 @@
         <setEntry value="com.profidata.xentis.javamis.client:0.0.0:default:true:default:true"/>
         <setEntry value="com.xnife.context.application:0.0.0:default:true:default:true"/>
         <setEntry value="com.xnife.remoting.client:0.0.0:default:true:default:true"/>
-        <setEntry value="org.apache.felix.scr:2.2.4:default:true:2:true"/>
-        <setEntry value="org.eclipse.core.runtime:3.26.100.v20221021-0005:default:true:2:true"/>
-        <setEntry value="org.eclipse.equinox.common:3.17.0.v20221108-1156:default:true:2:true"/>
-        <setEntry value="org.eclipse.equinox.event:1.6.100.v20211021-1418:default:true:default:true"/>
-        <setEntry value="org.eclipse.equinox.simpleconfigurator:1.4.200.v20221111-1340:default:true:1:true"/>
-        <setEntry value="org.eclipse.equinox.weaving.aspectj:1.0.400.202204060052:default:true:1:true"/>
+        <setEntry value="org.apache.felix.scr:2.2.6:default:true:2:true"/>
+        <setEntry value="org.apache.logging.log4j.to.slf4j:2.21.1:default:true:default:true"/>
+        <setEntry value="org.eclipse.core.runtime:3.29.0.v20230726-0617:default:true:2:true"/>
+        <setEntry value="org.eclipse.equinox.common:3.18.100.v20230730-1117:default:true:2:true"/>
+        <setEntry value="org.eclipse.equinox.event:1.6.200.v20230120-0604:default:true:default:true"/>
+        <setEntry value="org.eclipse.equinox.simpleconfigurator:1.4.300.v20230630-1506:default:true:1:true"/>
+        <setEntry value="org.eclipse.equinox.weaving.aspectj:1.0.400.202311040357:default:true:1:true"/>
         <setEntry value="org.eclipse.gemini.blueprint.extender:3.0.0.M01:default:true:default:true"/>
     </setAttribute>
     <booleanAttribute key="append.args" value="true"/>
@@ -59,13 +60,15 @@
     <stringAttribute key="org.eclipse.debug.core.source_locator_memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;sourceLookupDirector&gt;&#13;&#10;&lt;sourceContainers duplicates=&quot;false&quot;&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;archive detectRoot=&amp;quot;true&amp;quot; path=&amp;quot;D:\JavaTargets\xc-target.platform-e46-2.3.x\plugins\org.eclipse.equinox.launcher.source_1.3.200.v20160318-1642.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.externalArchive&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;archive detectRoot=&amp;quot;true&amp;quot; path=&amp;quot;D:\JavaTargets\xc-target.platform-e46-2.3.x\plugins\org.eclipse.osgi.source_3.11.1.v20160708-1632.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.externalArchive&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;archive detectRoot=&amp;quot;true&amp;quot; path=&amp;quot;D:\JavaEnvironment\8.0\src.zip&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.externalArchive&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;javaProject name=&amp;quot;JavAMIS&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.javaProject&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.ratex.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.env.server.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.jms.shared.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/avalon-framework-4.1.5.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.env.client.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.env.shared.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.ui.base.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.etl.commons.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.jni.common.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.jni.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/com.profidata.xentis.sn.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;packageFragmentRoot handle=&amp;quot;=JavAMIS/xentis-externals\/lib\/hawtbuf-1.11.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.jdt.launching.sourceContainer.packageFragmentRoot&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;default/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.default&quot;/&gt;&#13;&#10;&lt;/sourceContainers&gt;&#13;&#10;&lt;/sourceLookupDirector&gt;&#13;&#10;"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console -clearPersistedState"/>
     <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true -Dosgi.clean=true -Dorg.eclipse.update.reconcile=false -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=false -Dfile.encoding=UTF-8 -Dcom.xnife.runtime.mode=DEVELOPMENT -Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective -Dspring.security.strategy=MODE_GLOBAL -Dlogback.configurationFile=logback-startup.xml -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -Dcom.xnife.logging.level.ksLogger=warn -Djavax.net.ssl.trustStore=${workspace_loc}/xentis/xentisjava/truststore/XENTISTrustStore.jks -Djavax.net.ssl.trustStorePassword=changeit -Djxbrowser.chromium.dir=./browser -DXXXjxbrowser.devtools.show=true -DXXXjxbrowser.logging.level=FINE -DXXXdevTools.port=9222 -Xms512m -Xmx1024m -XX:+UseStringDeduplication -XX:+ShowCodeDetailsInExceptionMessages --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/sun.awt.windows=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/sun.java2d.opengl=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true -Dosgi.clean=true -Dorg.eclipse.update.reconcile=false -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=false -Dfile.encoding=UTF-8 -Dcom.xnife.runtime.mode=DEVELOPMENT -Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective -DXXXcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.backoffice.presentation.perspective.XentisPerspective -Dspring.security.strategy=MODE_GLOBAL -Dlogback.configurationFile=logback-startup.xml -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -Dcom.xnife.logging.level.ksLogger=warn -DXXXcom.xnife.logging.level.org.apache.activemq.transport.failover=trace -DXXXcom.xnife.logging.level.com.profidatagroup.javamis.client.ui.JavAmisLoader=debug -DXXXxentis.remote.amq-protocol=tcp -DXXXxentis.remote.amq-hostname=127.0.0.1 -DXXXxentis.remote.amq-port=7106 -Djavax.net.ssl.trustStore=${workspace_loc}/xentis/xentisjava/truststore/XENTISTrustStore.jks -Djavax.net.ssl.trustStorePassword=changeit -Djxbrowser.chromium.dir=./browser -DXXXjxbrowser.devtools.show=true -DXXXjxbrowser.logging.level=FINE -DXXXdevTools.port=9222 -Xms512m -Xmx1024m -XX:+UseStringDeduplication -XX:+ShowCodeDetailsInExceptionMessages --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/sun.awt.windows=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/sun.java2d.opengl=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED"/>
     <stringAttribute key="pde.version" value="3.3"/>
     <stringAttribute key="product" value="_com.profidata.xc.one.client.build.product.xcClient"/>
     <stringAttribute key="productFile" value="\PDE-Targets &amp; Launcher\products\xc.one.client.product"/>
+    <stringAttribute key="productName" value="XC One Client Product"/>
+    <stringAttribute key="productVersion" value="0.0.0"/>
+    <setAttribute key="root_features"/>
     <setAttribute key="selected_features">
         <setEntry value="_com.compxc.eclipse.rcp.feature:default"/>
         <setEntry value="_com.compxc.xentis.rcp.feature:default"/>
@@ -89,8 +92,8 @@
         <setEntry value="com.nimbusds.oauth2.oidc.sdk@default:default"/>
         <setEntry value="com.profidatagroup.util.keymigration.model@default:default"/>
         <setEntry value="com.sun.istack.commons-runtime@default:default"/>
-        <setEntry value="com.sun.jna.platform@default:default"/>
-        <setEntry value="com.sun.jna@default:default"/>
+        <setEntry value="com.sun.jna*5.14.0@default:default"/>
+        <setEntry value="com.sun.jna.platform*5.14.0@default:default"/>
         <setEntry value="com.sun.mail.javax.mail@default:default"/>
         <setEntry value="com.sun.xml.bind@default:default"/>
         <setEntry value="com.teamdev.jxbrowser.chromium.win32.win32.x86_64@default:default"/>
@@ -102,10 +105,10 @@
         <setEntry value="jakarta.servlet-api@default:default"/>
         <setEntry value="javassist@default:default"/>
         <setEntry value="javax.activation@default:default"/>
+        <setEntry value="javax.annotation*1.3.5.v20201224@default:default"/>
         <setEntry value="javax.annotation.jsr305@default:default"/>
-        <setEntry value="javax.annotation@default:default"/>
         <setEntry value="javax.ejb-api@default:default"/>
-        <setEntry value="javax.el@default:default"/>
+        <setEntry value="javax.el-api@default:default"/>
         <setEntry value="javax.inject@default:default"/>
         <setEntry value="javax.jms.api@default:default"/>
         <setEntry value="javax.jws.jsr181-api@default:default"/>
@@ -119,7 +122,6 @@
         <setEntry value="javax.xml.ws@default:default"/>
         <setEntry value="jcl.over.slf4j@default:default"/>
         <setEntry value="jul.to.slf4j@default:default"/>
-        <setEntry value="log4j.over.slf4j@default:default"/>
         <setEntry value="net.bytebuddy.byte-buddy@default:default"/>
         <setEntry value="net.minidev.accessors-smart@default:default"/>
         <setEntry value="net.minidev.json-smart@default:default"/>
@@ -162,9 +164,15 @@
         <setEntry value="org.apache.felix.gogo.shell@default:default"/>
         <setEntry value="org.apache.felix.scr@2:true"/>
         <setEntry value="org.apache.fop.core@default:default"/>
+        <setEntry value="org.apache.fop.events@default:default"/>
+        <setEntry value="org.apache.fop.util@default:default"/>
         <setEntry value="org.apache.httpcomponents.httpclient@default:default"/>
         <setEntry value="org.apache.httpcomponents.httpcore@default:default"/>
+        <setEntry value="org.apache.logging.log4j.api@default:default"/>
+        <setEntry value="org.apache.logging.log4j.to.slf4j@default:true"/>
         <setEntry value="org.apache.mina.core@default:default"/>
+        <setEntry value="org.apache.poi.ooxml.full@default:default"/>
+        <setEntry value="org.apache.poi.ooxml@default:default"/>
         <setEntry value="org.apache.poi@default:default"/>
         <setEntry value="org.apache.xmlbeans@default:default"/>
         <setEntry value="org.apache.xmlgraphics.commons@default:default"/>
@@ -240,7 +248,7 @@
         <setEntry value="org.eclipse.equinox.security@default:default"/>
         <setEntry value="org.eclipse.equinox.simpleconfigurator@1:true"/>
         <setEntry value="org.eclipse.equinox.weaving.aspectj@1:true"/>
-        <setEntry value="org.eclipse.equinox.weaving.caching@default:default"/>
+        <setEntry value="org.eclipse.equinox.weaving.caching*1.2.300.v20230425-1618@default:default"/>
         <setEntry value="org.eclipse.equinox.weaving.hook@default:default"/>
         <setEntry value="org.eclipse.gemini.blueprint.core@default:default"/>
         <setEntry value="org.eclipse.gemini.blueprint.extender@default:true"/>
@@ -481,6 +489,7 @@
         <setEntry value="com.xnife.presentation@default:default"/>
         <setEntry value="com.xnife.remoting.client@default:true"/>
         <setEntry value="com.xnife.remoting.ftp@default:default"/>
+        <setEntry value="com.xnife.remoting.spring.context.insource@default:default"/>
         <setEntry value="com.xnife.remoting@default:default"/>
         <setEntry value="com.xnife.resource@default:default"/>
         <setEntry value="com.xnife.security@default:default"/>

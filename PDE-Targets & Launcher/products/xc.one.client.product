@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="XC One Client Product" uid="xc.one.client" id="_com.profidata.xc.one.client.build.product.xcClient" application="com.compxc.workbench.presentation.application" version="0.0.0" useFeatures="true" includeLaunchers="true" autoIncludeRequirements="true">
+<product name="XC One Client Product" id="_com.profidata.xc.one.client.build.product.xcClient" application="com.compxc.workbench.presentation.application" version="0.0.0" type="features" includeLaunchers="true" includeJRE="true" autoIncludeRequirements="true">
 
    <aboutInfo>
       <image path="/com.compxc.workbench.branding/images/about/about.gif"/>
@@ -32,6 +32,7 @@
 
 -Dcom.xnife.runtime.mode=DEVELOPMENT
 -Dcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.frontoffice.presentation.perspective.ExecutionPerspective
+-DXXXcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.backoffice.presentation.perspective.XentisPerspective
 
 -Dspring.security.strategy=MODE_GLOBAL
 
@@ -39,6 +40,13 @@
 -Dlogback.configurationFile=logback-startup.xml
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
 -Dcom.xnife.logging.level.ksLogger=warn
+-DXXXcom.xnife.logging.level.org.apache.activemq.transport.failover=trace
+-DXXXcom.xnife.logging.level.com.profidatagroup.javamis.client.ui.JavAmisLoader=debug
+    
+-DXXXxentis.remote.amq-protocol=tcp
+-DXXXxentis.remote.amq-hostname=127.0.0.1
+-DXXXxentis.remote.amq-port=7106
+
 
 -Djavax.net.ssl.trustStore=${workspace_loc}/xentis/xentisjava/truststore/XENTISTrustStore.jks
 -Djavax.net.ssl.trustStorePassword=changeit
@@ -102,6 +110,7 @@
       <plugin id="com.xnife.context.application" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.remoting.client" autoStart="true" startLevel="0" />
       <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
+      <plugin id="org.apache.logging.log4j.to.slf4j" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="0" />
