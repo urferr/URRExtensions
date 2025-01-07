@@ -8,7 +8,7 @@
     <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
     <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/com.profidata.xc.frontoffice.server.remote.proxy.test/moduleTest-java/com/profidata/xc/frontoffice/server/remote/proxy/api/rest/FrontOfficeQueryServiceProxyTest.java"/>
+        <listEntry value="/com.profidata.xc.codevalue.server.remote.proxy.test/moduleTest-java/com/profidata/xc/codevalue/server/remote/proxy/CodeValueServiceModuleTestMOBI.java"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="1"/>
@@ -20,7 +20,7 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.xc.frontoffice.server.remote.proxy.api.rest.FrontOfficeQueryServiceProxyTest"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xc.frontoffice.server.remote.proxy.test"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-ea&#13;&#10;&#13;&#10;-Djavax.net.ssl.trustStore=${workspace_loc}/xentis/xentisjava/truststore/XENTISTrustStore.jks&#13;&#10;-Djavax.net.ssl.trustStorePassword=changeit&#13;&#10;-Dxentis.moduletest.configfile=D:/JavaProjects/xentis/600/module-test.properties"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.xc.codevalue.server.remote.proxy.CodeValueServiceModuleTestMOBI"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xc.codevalue.server.remote.proxy.test"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-ea&#13;&#10;&#13;&#10;-Djavax.net.ssl.trustStore=${workspace_loc}/xentis/xentisjava/truststore/XENTISTrustStore.jks&#13;&#10;-Djavax.net.ssl.trustStorePassword=changeit&#13;&#10;-Dxentis.moduletest.configfile=D:/JavaProjects/xentis/main/module-test.properties"/>
 </launchConfiguration>
