@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="XC One Server Product" uid="xc.one.server" id="_com.profidata.xc.one.server.build.product.xcServer" application="org.eclipse.ui.ide.workbench" version="0.0.0" type="features" includeLaunchers="true" autoIncludeRequirements="true">
+<product name="XC One Server Product" uid="xc.one.server" id="_com.profidata.xc.one.server.build.product.xcServer" version="0.0.0" type="features" includeLaunchers="true" autoIncludeRequirements="true">
 
    <configIni use="default">
    </configIni>
@@ -37,15 +37,15 @@
 
 -Dcom.xnife.logging.level.com.profidata.xc.codevalue.service.impl.CodeValueServiceImpl=debug
 
--Dorg.osgi.service.http.port=7130
--Dorg.eclipse.equinox.http.jetty.http.port=7130
+-Dorg.osgi.service.http.port=7030
+-Dorg.eclipse.equinox.http.jetty.http.port=7030
 -Dorg.eclipse.equinox.http.jetty.context.path=/xcas
 
 -Doracle.net.tns_admin=${env_var:TNS_ADMIN}
 -Dfile.encoding=&quot;UTF-8&quot;
 
--DXXXspring.boot.admin.client.url=http://pdvmdev24:7110
--DXXXspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7130
+-DXXXspring.boot.admin.client.url=http://pdvmdev24:7010
+-DXXXspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7030
 
 -ea
 -Xms256m
