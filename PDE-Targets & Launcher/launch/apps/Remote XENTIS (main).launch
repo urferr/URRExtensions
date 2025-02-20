@@ -15,7 +15,7 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ALLOW_TERMINATE" value="false"/>
     <mapAttribute key="org.eclipse.jdt.launching.CONNECT_MAP">
         <mapEntry key="hostname" value="pdvmdev24.profidata.com"/>
-        <mapEntry key="port" value="7101"/>
+        <mapEntry key="port" value="7001"/>
     </mapAttribute>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.xentis.app.server"/>
     <stringAttribute key="org.eclipse.jdt.launching.VM_CONNECTOR_ID" value="org.eclipse.jdt.launching.socketAttachConnector"/>
