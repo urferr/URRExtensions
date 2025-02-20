@@ -16,10 +16,10 @@
         <listEntry value="1"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="SERVER_PORT" value="7132"/>
-        <mapEntry key="SPRING_CLOUD_CONFIG_LABEL" value="6.0.0"/>
+        <mapEntry key="SERVER_PORT" value="7032"/>
+        <mapEntry key="SPRING_CLOUD_CONFIG_LABEL" value="main"/>
         <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev24.profidata.com:10010"/>
-        <mapEntry key="SPRING_PROFILES_ACTIVE" value="secret,oracle,idbinary,urr,ide,OA3Validate"/>
+        <mapEntry key="SPRING_PROFILES_ACTIVE" value="secret,oracle,idbinary,main,urr,ide,OA3Validate"/>
     </mapAttribute>
     <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
         <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
@@ -32,5 +32,5 @@
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.profidata.user.app.UserStarter"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="com.profidata.user.app"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.profidata.user.app"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dspring.boot.admin.client.url=http://pdvmdev15:7802&#13;&#10;-Dspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7829&#13;&#10;-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;-Dfile.encoding=UTF-8&#13;&#10;&#13;&#10;-Dlogging.level.org.springframework.web=DEBUG&#13;&#10;&#13;&#10;--add-opens java.base/jdk.internal.misc=ALL-UNNAMED"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dspring.boot.admin.client.url=http://pdvmdev15:7802&#13;&#10;-Dspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7829&#13;&#10;-Doracle.net.tns_admin=${env_var:TNS_ADMIN}&#13;&#10;-Dfile.encoding=UTF-8&#13;&#10;&#13;&#10;-Dlogging.level.org.springframework.web=DEBUG&#13;&#10;&#13;&#10;-Dserver.error.include-stacktrace=NEVER&#13;&#10;&#13;&#10;--add-opens java.base/jdk.internal.misc=ALL-UNNAMED"/>
 </launchConfiguration>
