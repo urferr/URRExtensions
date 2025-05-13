@@ -11,13 +11,9 @@
         <setEntry value="com.profidata.xc.codevalue.service.impl:0.0.0:default:true:default:true"/>
         <setEntry value="com.profidata.xc.customizingconsole.service.impl:0.0.0:default:true:default:true"/>
         <setEntry value="com.profidata.xc.data.service.remote.proxy:0.0.0:default:true:default:true"/>
-        <setEntry value="com.profidata.xc.frontoffice.businessintelligence.impl:0.0.0:default:true:default:true"/>
-        <setEntry value="com.profidata.xc.frontoffice.server.metadata:5.5.9900:default:true:default:true"/>
         <setEntry value="com.profidata.xc.frontoffice.service.impl:0.0.0:default:true:default:true"/>
         <setEntry value="com.profidata.xc.frontoffice.servicefacade.impl:0.0.0:default:true:default:true"/>
         <setEntry value="com.profidata.xc.localization.service.impl:0.0.0:default:true:default:true"/>
-        <setEntry value="com.profidata.xc.metadata.service.impl:0.0.0:default:true:default:true"/>
-        <setEntry value="com.profidata.xc.migration.service.impl:0.0.0:default:true:default:true"/>
         <setEntry value="com.profidata.xc.objectquery.service.impl:0.0.0:default:true:default:true"/>
         <setEntry value="com.profidata.xc.one.server.configuration:0.0.0:default:true:default:true"/>
         <setEntry value="com.profidata.xc.one.server.monitor:0.0.0:default:true:2:true"/>
@@ -44,7 +40,7 @@
         <setEntry value="org.eclipse.gemini.blueprint.extender:3.0.0.M01:default:true:3:true"/>
     </setAttribute>
     <booleanAttribute key="append.args" value="true"/>
-    <stringAttribute key="application" value="org.eclipse.ui.ide.workbench"/>
+    <stringAttribute key="application" value=""/>
     <booleanAttribute key="askclear" value="true"/>
     <booleanAttribute key="automaticAdd" value="false"/>
     <booleanAttribute key="automaticIncludeRequirements" value="true"/>
@@ -54,7 +50,7 @@
     <booleanAttribute key="clearConfig" value="true"/>
     <booleanAttribute key="clearws" value="true"/>
     <booleanAttribute key="clearwslog" value="false"/>
-    <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/xc.one.server.urr.product"/>
+    <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/xc.one.server.urr.product (main-fut)"/>
     <booleanAttribute key="default" value="false"/>
     <setAttribute key="deselected_workspace_bundles"/>
     <stringAttribute key="featureDefaultLocation" value="workspace"/>
@@ -74,9 +70,9 @@
     <booleanAttribute key="org.eclipse.debug.core.IS_PROTOTYPE" value="false"/>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="HOSTNAME" value="ws-2724"/>
-        <mapEntry key="SPRING_CLOUD_CONFIG_LABEL" value="6.0.0"/>
+        <mapEntry key="SPRING_CLOUD_CONFIG_LABEL" value="main"/>
         <mapEntry key="SPRING_CLOUD_CONFIG_URI" value="http://pdvmdev24.profidata.com:10010"/>
-        <mapEntry key="SPRING_PROFILES_ACTIVE" value="secret,oracle,idbinary,urr,ide"/>
+        <mapEntry key="SPRING_PROFILES_ACTIVE" value="secret,oracle,idbinary,fut,urr,ide"/>
     </mapAttribute>
     <stringAttribute key="org.eclipse.debug.core.source_locator_id" value="org.eclipse.pde.ui.launcher.PDESourceLookupDirector"/>
     <stringAttribute key="org.eclipse.debug.core.source_locator_memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;sourceLookupDirector&gt;&#13;&#10;&lt;sourceContainers duplicates=&quot;false&quot;&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;archive detectRoot=&amp;quot;true&amp;quot; path=&amp;quot;D:\JavaEnvironment\8.0\src.zip&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.externalArchive&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;archive detectRoot=&amp;quot;true&amp;quot; path=&amp;quot;D:\JavaTargets\xc-target.platform-e45-2.2.x_BLUEPRINT20\plugins\gemini-blueprint-extender-2.0.0.RELEASE-sources.jar&amp;quot;/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.externalArchive&quot;/&gt;&#13;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;&amp;#13;&amp;#10;&amp;lt;default/&amp;gt;&amp;#13;&amp;#10;&quot; typeId=&quot;org.eclipse.debug.core.containerType.default&quot;/&gt;&#13;&#10;&lt;/sourceContainers&gt;&#13;&#10;&lt;/sourceLookupDirector&gt;&#13;&#10;"/>
@@ -84,7 +80,7 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
     <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dosgi.clean=true -Dapplication.reporting.location=/working/xentis/var/report -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dlogback.configurationFile=logback-startup.xml -Dcom.profidata.xc.monitor.exitonfail=false -Dcom.xnife.logging.level.com.profidata.xc.one.server.monitor.application=debug -Dcom.xnife.logging.level.com.xnife.cache.impl.index=warn -Dcom.xnife.logging.level.org.hibernate.tool.hbm2ddl=info -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -Dcom.xnife.logging.level.org.hibernate.SQL=debug -DXXXcom.xnife.logging.level.org.hibernate.type.descriptor.sql.BasicBinder=trace -DXXXcom.xnife.logging.level.org.hibernate.orm.jdbc.bind=trace -Dcom.xnife.logging.level.com.profidata.xc.codevalue.service.impl.CodeValueServiceImpl=debug -Dorg.osgi.service.http.port=7130 -Dorg.eclipse.equinox.http.jetty.http.port=7130 -Dorg.eclipse.equinox.http.jetty.context.path=/xcas -Doracle.net.tns_admin=${env_var:TNS_ADMIN} -Dfile.encoding=&quot;UTF-8&quot; -DXXXspring.boot.admin.client.url=http://pdvmdev24:7110 -DXXXspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7130 -ea -Xms256m -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication -XX:+ShowCodeDetailsInExceptionMessages --add-opens=java.base/java.lang=ALL-UNNAMED"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dosgi.clean=true -Dapplication.reporting.location=/working/xentis/var/report -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook -Daj.weaving.verbose=true -Dorg.aspectj.osgi.verbose=true -Dorg.aspectj.weaver.showWeaveInfo=true -Dlogback.configurationFile=logback-startup.xml -Dcom.profidata.xc.monitor.exitonfail=false -Dcom.xnife.logging.level.com.profidata.xc.one.server.monitor.application=debug -Dcom.xnife.logging.level.com.xnife.cache.impl.index=warn -Dcom.xnife.logging.level.org.hibernate.tool.hbm2ddl=info -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug -Dcom.xnife.logging.level.org.hibernate.SQL=debug -DXXXcom.xnife.logging.level.org.hibernate.type.descriptor.sql.BasicBinder=trace -DXXXcom.xnife.logging.level.org.hibernate.orm.jdbc.bind=trace -Dcom.xnife.logging.level.com.profidata.xc.codevalue.service.impl.CodeValueServiceImpl=debug -Dorg.osgi.service.http.port=7030 -Dorg.eclipse.equinox.http.jetty.http.port=7030 -Dorg.eclipse.equinox.http.jetty.context.path=/xcas -Doracle.net.tns_admin=${env_var:TNS_ADMIN} -Dfile.encoding=&quot;UTF-8&quot; -DXXXspring.boot.admin.client.url=http://pdvmdev24:7010 -DXXXspring.boot.admin.client.instance.service-base-url=http://ws-2724.profidata.com:7030 -ea -Xms256m -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:+UseStringDeduplication -XX:+ShowCodeDetailsInExceptionMessages --add-opens=java.base/java.lang=ALL-UNNAMED"/>
     <stringAttribute key="pde.version" value="3.3"/>
     <stringAttribute key="product" value="_com.profidata.xc.one.server.build.product.xcServer"/>
     <stringAttribute key="productFile" value="\PDE-Targets &amp; Launcher\products\xc.one.server.product"/>
@@ -312,7 +308,6 @@
         <setEntry value="com.profidata.xc.calendar@default:default"/>
         <setEntry value="com.profidata.xc.codevalue.osgi@default:default"/>
         <setEntry value="com.profidata.xc.codevalue.persistence@default:default"/>
-        <setEntry value="com.profidata.xc.codevalue.server.remote@default:default"/>
         <setEntry value="com.profidata.xc.codevalue.service.impl@default:true"/>
         <setEntry value="com.profidata.xc.codevalue@default:default"/>
         <setEntry value="com.profidata.xc.customizingconsole.persistence.configuration@default:default"/>
@@ -341,9 +336,6 @@
         <setEntry value="com.profidata.xc.data.service@default:default"/>
         <setEntry value="com.profidata.xc.decisiontree.server.remote@default:default"/>
         <setEntry value="com.profidata.xc.file.server.remote@default:default"/>
-        <setEntry value="com.profidata.xc.frontoffice.businessintelligence.impl@default:true"/>
-        <setEntry value="com.profidata.xc.frontoffice.persistence.configuration@default:default"/>
-        <setEntry value="com.profidata.xc.frontoffice.server.metadata@default:true"/>
         <setEntry value="com.profidata.xc.frontoffice.server.remote@default:default"/>
         <setEntry value="com.profidata.xc.frontoffice.service.impl@default:true"/>
         <setEntry value="com.profidata.xc.frontoffice.servicefacade.impl@default:true"/>
@@ -351,18 +343,10 @@
         <setEntry value="com.profidata.xc.localization.server.remote@default:default"/>
         <setEntry value="com.profidata.xc.localization.service.impl@default:true"/>
         <setEntry value="com.profidata.xc.localization@default:default"/>
-        <setEntry value="com.profidata.xc.metadata.osgi@default:default"/>
         <setEntry value="com.profidata.xc.metadata.resource@default:default"/>
-        <setEntry value="com.profidata.xc.metadata.server.remote@default:default"/>
-        <setEntry value="com.profidata.xc.metadata.service.data.service@default:default"/>
-        <setEntry value="com.profidata.xc.metadata.service.impl@default:true"/>
         <setEntry value="com.profidata.xc.metadata@default:default"/>
         <setEntry value="com.profidata.xc.middleoffice.persistence.configuration@default:default"/>
-        <setEntry value="com.profidata.xc.migration.server.remote@default:default"/>
-        <setEntry value="com.profidata.xc.migration.service.impl@default:true"/>
-        <setEntry value="com.profidata.xc.migration.service@default:default"/>
         <setEntry value="com.profidata.xc.namespace@default:default"/>
-        <setEntry value="com.profidata.xc.objectquery.server.remote@default:default"/>
         <setEntry value="com.profidata.xc.objectquery.service.impl@default:true"/>
         <setEntry value="com.profidata.xc.objectquery@default:default"/>
         <setEntry value="com.profidata.xc.one.server.configuration@default:true"/>
@@ -424,7 +408,7 @@
         <setEntry value="com.xnife.persistence.hibernate@default:default"/>
         <setEntry value="com.xnife.remoting.client@default:default"/>
         <setEntry value="com.xnife.remoting.imperative@default:default"/>
-        <setEntry value="com.xnife.remoting.spring.context.insource@default:default"/>
+        <setEntry value="com.xnife.remoting.reactive@default:default"/>
         <setEntry value="com.xnife.remoting@default:default"/>
         <setEntry value="com.xnife.security@default:default"/>
         <setEntry value="com.xnife.spring.osgi@default:default"/>

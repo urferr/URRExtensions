@@ -35,11 +35,11 @@
 -DXXXcom.xnife.presentation.workbench.InitialPerspectiveId=com.compxc.backoffice.presentation.perspective.XentisPerspective
 
 -Dspring.security.strategy=MODE_GLOBAL
-
+-Dslf4j.provider=ch.qos.logback.classic.spi.LogbackServiceProvider
 
 -Dlogback.configurationFile=logback-startup.xml
 -Dcom.xnife.logging.level.com.xnife.remoting.util.LogMethodInterceptor=debug
--Dcom.xnife.logging.level.com.xnife.remoting.reactive.WebClientLogInterceptor=debug
+-Dcom.xnife.logging.level.com.profidata.basic.remoting.reactive.WebClientLogInterceptor=debug
 -Dcom.xnife.logging.level.ksLogger=warn
 -DXXXcom.xnife.logging.level.org.apache.activemq.transport.failover=trace
 -DXXXcom.xnife.logging.level.com.profidatagroup.javamis.client.ui.JavAmisLoader=debug
@@ -105,13 +105,13 @@
       <plugin id="com.compxc.workbench.presentation" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.platform.client.service" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.customizingconsole.application" autoStart="true" startLevel="0" />
+      <plugin id="com.profidata.xc.frontoffice.metadata.application" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.messaging.application" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xc.one.client.configuration" autoStart="true" startLevel="0" />
       <plugin id="com.profidata.xentis.javamis.client" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.context.application" autoStart="true" startLevel="0" />
       <plugin id="com.xnife.remoting.client" autoStart="true" startLevel="0" />
       <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
-      <plugin id="org.apache.logging.log4j.to.slf4j" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="0" />
